@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+  		<groupId>osivia.site</groupId>
+		<artifactId>osivia-site-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+ 	</parent>
+
+	<groupId>osivia.site</groupId>
+	<artifactId>osivia-site-test</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-SNAPSHOT</version>
+
+	<name>Portlet test OSIVIA</name>
+	<description>Portlet test  site OSIVIA </description>
+
+	<properties>
+ 		<portlet-api.version>2.0</portlet-api.version>
+		<servlet-api.version>2.4</servlet-api.version>
+		<commons-logging.version>1.1.1</commons-logging.version>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<version>${portlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>   
+
+	 	<dependency>
+			<groupId>toutatice-portail.core</groupId>
+	     		<artifactId>toutatice-portail-api</artifactId>
+	     		<version>${toutatice.core.version}</version>
+	     		<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId> 
+			<version>${commons-logging.version}</version>   
+			<scope>provided</scope>
+		</dependency>
+
+
+  	</dependencies>
+
+
+ <profiles>	 
+   <profile>
+     <id>deploy-toutatice-modules</id>
+     <build>
+		<plugins>
+     <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-antrun-plugin</artifactId>
+      <executions>
+      <execution>
+        <id>copy-jar</id>
+        <goals>
+            <goal>run</goal>
+          </goals>        
+        <configuration>
+          <tasks>
+                 <copy file="${basedir}/target/${project.build.finalName}.war" todir="${deploy.demo.dir}" />
+          </tasks>
+        </configuration>
+        <phase>package</phase>
+      </execution>
+      </executions>
+    </plugin>
+		</plugins>
+	</build>
+  </profile>
+ </profiles>	
+
+ 
+</project>
