@@ -23,6 +23,7 @@
 	   <module>osivia-portail-portlets-utils</module>
  	   <module>osivia-portail-charte</module>
  	   <module>osivia-portail-cms-nuxeo-web</module>
+ 	   <module>osivia-portail-portlet-solutions</module>
 	</modules>
 
 
