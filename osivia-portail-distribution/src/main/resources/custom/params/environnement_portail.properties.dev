@@ -1,5 +1,5 @@
 #page d'erreur par défaut
-error.default_page_uri=/toutatice-portail-demo-charte/error/errorPage.jsp
+error.default_page_uri=/osivia-portail-charte/error/errorPage.jsp
 
 
 

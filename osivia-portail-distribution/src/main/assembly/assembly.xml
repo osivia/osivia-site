@@ -14,14 +14,9 @@
       <unpack>false</unpack>
       <scope>runtime</scope>
 	<includes>
-		<include>toutatice-portail.demo:toutatice-portail-demo-cms-nuxeo-web:war:${project.version}</include>
-        	<include>toutatice-portail.demo:toutatice-portail-demo-test-portlet:war:${project.version}</include>
-		<include>toutatice-portail.demo:toutatice-portail-demo-user-module:war:${project.version}</include>
-        	<include>toutatice-portail.demo:toutatice-portail-demo-charte:war:${project.version}</include>
-		<include>toutatice-portail.demo:toutatice-portail-demo-spring3-portlet:war:${project.version}</include>
-		<include>toutatice-services.faq:toutatice-faq-portail:war:${toutatice.faq.version}</include>
-		<include>toutatice-services.rss:toutatice-rss-portail:war:${toutatice.rss.version}</include>
-		<include>toutatice-services.dashboard.ecm:toutatice-dashboard-ecm-portail:war:${toutatice.dashboard.ecm.version}</include>
+		<include>osivia.site:osivia-portail-charte:war:${project.version}</include>
+		<include>osivia.site:osivia-portail-cms-nuxeo-web:war:${project.version}</include>
+		<include>osivia.site:osivia-portail-portlet-solutions:war:${project.version}</include>        	
        	</includes>
     </dependencySet>
    </dependencySets>
