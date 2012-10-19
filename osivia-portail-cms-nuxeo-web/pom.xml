@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<parent>
-		<groupId>osivia.site</groupId>
-		<artifactId>osivia-site</artifactId>
+  		<groupId>osivia.site</groupId>
+		<artifactId>osivia-site-parent</artifactId>
 		<version>1.0-SNAPSHOT</version>
-	</parent>
+ 	</parent>
 
 	<groupId>osivia.site</groupId>
 	<artifactId>osivia-portail-cms-nuxeo-web</artifactId>
