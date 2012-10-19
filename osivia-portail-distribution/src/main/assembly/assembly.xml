@@ -38,6 +38,8 @@
 		<exclude>custom/params/environnement_portail.properties.*</exclude>
 		<exclude>jboss-as/server/production/run.conf.*</exclude>
 		<exclude>jboss-as/server/production/conf/jboss-log4j.*</exclude>
+		<exclude>jboss-as/server/production/deploy/jboss-portal-ha.sar/conf/identity/ldap_identity-config.xml</exclude>
+		<exclude>jboss-as/server/production/deploy/jboss-portal-ha.sar/conf/identity/profile-config.xml</exclude>
      	  </excludes>
       </fileSet>
 
