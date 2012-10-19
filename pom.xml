@@ -24,6 +24,7 @@
  	   <module>osivia-portail-charte</module>
  	   <module>osivia-portail-cms-nuxeo-web</module>
  	   <module>osivia-portail-portlet-solutions</module>
+ 	   <module>osivia-portail-distribution</module>
 	</modules>
 
 
