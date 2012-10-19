@@ -1,0 +1,1254 @@
+
+/* style de base bootstrap à virer plus tard*/
+body {
+    padding-bottom: 40px;
+    line-height: 20px;
+}
+
+p {
+	line-height: 20px;	
+}
+
+.container {
+	width: 1230px;	
+}
+
+.span10 {
+	width: 930px;	
+}
+
+.span4 {
+	width: 375px;
+	margin-left: 20px;
+}
+
+.span5 {
+	width: 520px;
+	margin-left: 15px;
+}
+
+/**************** ENSEMBLE DE LA PAGE *******************/
+
+ 
+h1, h2, h3, .sous-titre-section-texte, .intro-section-texte 
+{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+h3 {
+	line-height: normal;
+}
+
+p, a, li, .text-slide
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#page
+{
+    width: 1024px;
+    margin: 0 35px;
+}
+
+.col
+{
+    width: 50%;
+    float: left;
+}
+
+/* Layout 1l2c JBoss Portal */
+
+.col-position {
+	float: left;
+	width: 40%;
+}
+
+#portal-container {
+	width:1230px;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+#content-container {
+	margin-top: 0px;
+}
+
+/**************** LIGNE LOGO OSIVIA *******************/
+
+#logo-entete
+{
+}
+
+#ligneentete
+{
+    background: url("images/ligne-bleu-top.jpg") center 64px repeat-x transparent;
+    overflow: hidden;
+    width: 1230px;
+}
+
+#ligneentete h1
+{
+    margin: 0;
+    padding: 0;
+}
+
+/**************** MENU *******************/
+
+.menu-et-recherche
+{
+    margin: 0 -20px 0 0px;
+    padding-left: 96px;
+    position: relative;
+}
+
+.choix-langues{
+    position: absolute;
+    left: -15px; top: 14px;
+    list-style: none;
+    background: #fff;
+    margin: 0;
+}
+.choix-langues li
+{
+    padding-left: 40px;
+    background: #fff;
+    margin-bottom: 10px;
+    line-height: 13px;
+}
+.choix-langues li.selected{
+    background: #7e8564;
+}
+.choix-langues a{
+    background: #fff;   
+    color: #7e8564;
+    text-decoration: none;
+    display: block;
+    padding: 0 0 0 15px;
+    line-height: 13px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+	margin-bottom: 0px;	
+}
+
+.navbar-inner
+{
+    padding-left: 0px;
+    text-transform: uppercase;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    filter: none;
+    box-shadow: none;
+}
+
+.navbar .brand
+{
+    float: none;
+    width: 281px;
+}
+
+.navbar .nav
+{
+    overflow: visible;
+    margin: 0;
+}
+
+.navbar .nav li.last
+{
+    
+}
+.navbar .nav li a span
+{
+    display: block;
+    background: #fff;
+    padding: 10px 25px 10px;
+}
+.navbar .nav li a
+{
+    padding: 0;
+    height: 63px;
+    background: #e7eba9;
+    font-size: 18px;
+}
+
+.navbar .nav li.first a span
+{
+    
+}
+
+.navbar .nav li.current a
+{
+    color: #3f6568;
+    background: #7dcad0 url("images/arrow.png") bottom center no-repeat;
+}
+
+
+/* Inutilisé */
+.navbar .nav li a:hover
+{
+    color: #3f6568;
+    background: #7dcad0 url("images/arrow.png") bottom center no-repeat;
+}
+
+.maxWidth div:hover
+{ 
+    color: #3f6568;
+    background: #7dcad0 url("images/arrow.png") bottom center no-repeat;
+}
+
+.subMenuHidden {
+	visibility: hidden;	
+}
+
+.subMenuShow {
+	visibility: visible;
+	z-idex: 120;	
+}
+
+
+/************ Formulaire recherche *************/
+
+.ligne-recherche
+{
+    overflow: hidden;
+    height: 23px;
+    /*width: 318px;*/
+    background: #e7eba9;
+    margin-top: 40px;
+}
+
+.form-search
+{
+    float: right;
+    padding: 1px 30px 0px 15px;
+    margin-bottom: 0;
+    background: #7e8565;
+    height: 23px;
+}
+
+.form-search .input-append
+{
+    height: 20px;
+    padding-bottom: 3px;
+}
+
+.form-search .input-append .search-query
+{
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    background-color: #dcd7d4;
+    padding: 0px 10px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+
+.form-search .input-append text
+{
+    border: none;
+}
+
+.form-search .input-append .btn
+{
+    margin: 0px 0px 0px 8px;
+    padding: 0px 14px;
+    border-radius: 0 0 0 0;
+    border-color: transparent;
+    background-image: none;
+    border-style: none;
+    box-shadow: none;
+    background-color: #dceabf;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+}
+
+.form-search .input-append .btn submit
+{
+    border-top: none;
+    border-bottom: none;
+}
+
+.input-append .search-query
+{
+    vertical-align: middle;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder
+{
+    color: black;
+    font-weight: bold;
+}
+
+.input-append .search-query:-webkit-input-placeholder 
+{
+    vertical-align: bottom;
+}
+
+/********* SLIDE SHOW ************/
+
+
+
+#slide-complet
+{
+    display: block;
+    position: relative;
+    min-height: 447px;
+    
+}
+
+.text-slide
+{
+    padding: 0 635px 0 0;
+    margin-left: 98px;
+    overflow: hidden;
+    font-size: 14px;
+    height: 291px;
+}
+
+.text-slide h4
+{
+    font-size: 14px;
+}
+.titre-slide h2
+{
+    font-size: 30px;
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    color: #606940;
+    padding-left: 98px;
+}
+
+.titre-slide h3
+{
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: normal;
+    color: #606940;
+    background: #f1f1f1 repeat-x;
+    padding-left: 98px;
+    line-height: 38px;
+}
+
+.titre-slide a
+{
+    color: #606940;
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    
+}
+
+.titre-slide a:hover
+{
+    text-decoration: none;   
+}
+
+.titre-slide h3:hover {
+	background-color: #8DEAFB;
+}
+
+.titre-slide .slide-bleu
+{
+    background: #8deafb repeat-x;
+}
+
+.img-solution-container {
+	background-color: white;
+    height: 424px;
+    position: absolute;
+    right: 107px;
+    text-align: center;
+    top: 50px;
+    width: 503px;
+}
+
+.img-solution {
+
+}
+
+
+
+/********** Actualités **************/
+
+.nuxeo-list-actualite ul {
+	margin-left: 0px;
+}
+
+.nuxeo-list-actualite li {
+	list-style: none;
+}
+
+.actus
+{
+    overflow: hidden;
+    height: 146px;
+}
+#actus h2
+{
+    background: none repeat scroll 0 0 #bdeaed;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 18px;
+    margin-top: 0;
+    padding-top: 16px;
+        
+}
+
+.actus h3
+{
+    font-size: 13px;
+    color: #7e8564;
+    line-height: normal;
+    margin: 25px 0 0 0;
+    text-transform: none;
+}
+
+.actus h3 a
+{
+  color: #7e8564; 
+  text-decoration: none;
+}
+
+.actus h3 a:hover { 
+  text-decoration: underline;
+}
+
+.actus img
+{
+    float: left;
+    border: 3px solid #7e8564;
+    margin-right: 25px;
+}
+
+.actus div
+{
+    text-align: left;
+    font-size: 13px;
+    line-height: 20px;
+    padding-left: 111px;
+}
+
+.date
+{
+    color: #13525a;
+    margin-top: 10px;
+    margin-bottom: 10px;
+margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+/******* Encadrés *******/
+
+.nuxeo-list-encadre ul {
+	padding-left: 0px;
+	margin-left: 0px;
+	margin-bottom: 0;
+}
+
+.nuxeo-list-encadre_niveau2 {
+	margin-left: 1px;
+    margin-top: -10px;
+}
+
+.nuxeo-list-encadre_niveau2 ul {
+	list-style-type:none; 
+}
+
+.nuxeo-list-visuel_niveau2 ul {
+	margin-bottom: 0px;
+}
+
+/******* Forge, Normalisation, Modules, Recrutement... *********/
+
+.bloc-titre 
+{
+    background-color: #AEE6FF;
+    margin: 43px 0 5px -10px;
+    text-align: right;
+}
+.vert-clair .bloc-titre 
+{
+    background-color: #b9d47f;
+}
+
+.plein-bleu .bloc-titre 
+{
+    background-color: white;
+}
+
+.section-damiers .article .plein-bleu h2
+{
+    background: #AEE6FF;
+}
+
+.plein-bleu .bloc-titre h2{
+    color:black;
+    background: #AEE6FF;
+    
+}
+
+.plein-bleu {
+    background-color: #aee6ff;
+}
+
+
+
+.read-more
+{
+    font-size: 11px;
+    color: #5f693f;
+    background-image: url("images/carre-bleu.jpg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 13px;
+}
+
+.vert-clair a.read-more
+{
+    background-image: url("images/carre-vert-pomme.jpg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 13px;
+}
+
+.plein-bleu a.read-more
+{
+    background-image: url("images/carre-blanc.jpg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 13px;
+}
+
+
+.article {
+    border:solid 2px #ccc;
+    height: 196px;
+    padding-left: 10px;
+    position: relative;
+    width: 47%;
+    float: left;
+}
+
+.article.noborder 
+{
+   border-right: none;
+}
+
+.article a
+{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+} 
+
+.article a:hover 
+{
+	color: #7e8564;
+}
+
+
+.bloc-titre h2
+{
+    display: inline;
+    line-height: 20px;
+    padding: 2px 5px;
+}
+
+.article img {
+	width: 100%;
+}
+
+.article-img-container {
+	height: 55%;
+	overflow-y: hidden;
+}
+
+
+/********** pied de page ************/
+
+footer .container
+{
+    background: #7dcad0;
+}
+
+.titres-footer
+{
+    list-style-type: none;
+    margin: 0 0 0 -15px;
+    padding: 0 0 0 0;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+ul.titres-footer li
+{
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 50px 0 15px;
+    margin: 15px 0;
+    border-right: 1px solid black;
+    overflow: hidden;
+    height: 180px;
+     
+}
+
+ul.titres-footer li ul
+{
+    margin-left: 0;
+    
+    
+}
+
+ul.titres-footer ul li
+{
+    display: block;
+    padding: 2px 0 2px 0;
+    margin: 0;
+    border-right: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 12px;
+    height: 20px;
+    
+}
+
+.titres-footer h2
+{
+    font-size: 16px;
+    margin-bottom: 0px;
+    
+}
+.titres-footer h2 a
+{
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ul.titres-footer ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+
+ul.titres-footer li.last
+{
+    border-right: none;
+}
+
+.derniere-ligne li
+{
+    display: inline-block;
+    margin-left: -24px;
+    padding: 5px 60px 2px 0;
+    
+}
+/****** FOOTER DERNIERE LIGNE*****/
+
+footer .derniere-ligne
+{
+    background: #4f6677;
+    text-transform: uppercase;
+}
+
+.derniere-ligne a
+{
+    color: white;
+}
+
+/***** lignes couleurs ******/
+
+.bottom-bleu
+{
+    background-image: url("images/ligne-bleue-bottom.jpg");
+    background-position: bottom center;
+    background-repeat: repeat-x;
+}
+
+.bottom-vert-pistache
+{
+    background-image: url("images/ligne-pistache-bottom.jpg");
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    padding-bottom: 10px;
+}
+
+.ligne-vert-kaki
+{
+    background-image: url("images/ligne-vert-kaki.jpg");
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    padding-bottom: 10px;
+}
+
+/**** Niveau 1 ****/
+
+table [class*="span"] {
+	display: block;
+    float: none;
+    margin-left: 30px;
+}
+
+.img-container-niv1 {
+	float: right;
+	width: 632px;
+	height: 386px;
+    line-height: 386px;
+}
+
+.illustration
+{
+    height: 386px;
+	line-height: 386px;
+}
+
+.illustration img {
+	vertical-align: middle;
+}
+
+.illustration-container {
+	float:left;
+	width: 491px;
+	text-align: center;
+}
+
+.container-lgn-vert-niv1 {
+	text-align: center;	
+	display:inline-block;
+  	vertical-align:middle;
+  	width:119px;
+}
+
+.lgn-vert-niv1 {
+	background: transparent url("images/image-ligne-kaki.jpg") repeat-x center;
+}
+
+/**** Titre des pages (intégration, offre... ) ***/
+
+.span10 h2
+{
+    font-size: 36px;
+    font-weight: normal;
+    color: #4f6677;
+}    
+    
+/*** Section texte ***/    
+
+
+
+.section-texte h3
+{
+    font-size: 16px;
+    text-transform: none;
+    margin: 0 0 5px 0;
+    font-weight: normal;
+}
+
+.section-texte h4
+{
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section-texte p
+{
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 15px;
+}
+
+.section-texte ul li
+{
+    font-size: 12px;
+    color: #4a4c4b
+}
+
+p.sous-titre
+{
+    font-size: 24px;
+    color: black;
+    text-transform: none;
+    margin-top: 17px;
+    margin-bottom: 17px;
+    line-height: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro-section-texte
+{
+    font-size: 16px;
+    color: black;
+    text-transform: none;
+}
+
+.texte-gras
+{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/*** Menu gauche ***/
+
+.menu-gauche
+{
+    float: left;
+    display: inline-block;
+    width: 210px;
+    border-top: 7px solid #e7eba9;   
+}
+
+
+.menu-gauche ul li
+{
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    background-color: #e7eba9;
+}
+
+
+.menu-gauche a
+{
+    color: black;
+    outline: none;
+}
+
+.menu-gauche li a:hover
+{
+    text-decoration: none;
+    
+}
+.menu-gauche li:hover
+{
+    background-color: #BDEAED;
+}
+
+.menu-gauche ul
+{
+  margin-left: 0;
+  border-bottom: 10px solid #7dcad0;
+}
+
+.menu-gauche ul li a
+{
+    display: block;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+/*.menu-gauche .sous-menu
+{
+    border-top: 15px;
+    margin-left: 7px;
+    border-left: 1px solid black;
+    border-bottom: none;
+    margin-top: 7px;
+}
+
+.menu-gauche .sous-menu li
+{
+    text-transform: none;
+    font-weight: normal;
+    border-bottom: 1px solid white;
+    padding-left: 10px;
+    line-height: 22px;
+    padding-bottom: 0;
+
+    
+}
+
+.menu-gauche .current .sous-menu li
+{
+  
+    background-color: #BDEAED;
+    
+}
+
+.menu-gauche .sous-menu li a 
+{
+  border:none;
+  background: none;
+  padding-left: 5px;
+}
+.menu-gauche .sous-menu li:hover
+{
+    background-color: white;
+}*/
+
+.menu-gauche .current
+{
+    background : #bdeaed;
+}
+
+/*.menu-gauche .current a
+{
+    background: url("images/fleche-bas.png") no-repeat bottom left;
+    padding-bottom: 7px;
+    padding-left: 0;
+    border-bottom: none;
+    
+}
+
+.accordion-group {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.menu-gauche .current .sous-menu a 
+{
+    padding:0;
+}
+
+.menu-gauche .first a
+{
+    border-top: none;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.menu-gauche .last a
+{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.menu-gauche .last.current a
+{
+    border-bottom: none;
+}
+
+.menu-gauche .last
+{
+    border-bottom: 6px solid white;
+}
+
+.menu-gauche .sous-menu li.active 
+{
+    background-color: white;
+    font-weight: bold;
+    border-left: solid 2px black;
+}*/
+
+ul.level_0 li {
+	border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+ul.level_0 li a {
+	border-top: 1px solid black;
+}
+
+ul.level_0 li.first a.first {
+	border-top: none;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+ul.level_0 li.last {
+	margin-bottom: 6px;
+}
+
+ul.level_0 li.last a.last {
+	border-bottom: 1px solid black;
+	padding-bottom: 17px;
+    padding-top: 8px
+}
+
+ul.level_0 li.current a.current {
+	background: url("images/fleche-bas.png") no-repeat bottom left;
+    padding-bottom: 7px;
+    padding-left: 0;
+    border-bottom: none;
+}
+
+ul.level_0 li.current.last a.current.last {
+	border-bottom: none;
+}
+
+ul.level_1 {
+	border-top: 15px;
+    margin-left: 7px;
+    border-left: 1px solid black;
+    border-bottom: none;
+    margin-top: 7px;
+}
+
+ul.level_1 li {
+	background-color: #BDEAED;
+	padding-left: 0px;
+}
+
+ul.level_1 li a {
+	text-transform: none;
+    font-weight: normal;
+    border-bottom: 1px solid white;
+    line-height: 22px;
+    padding-bottom: 0;
+    border-top: none;
+}
+
+ul.level_1 li:hover {
+    background-color: white;
+}
+
+ul.level_1 li.current a.current {
+	background: none;
+	padding:0;	
+}
+
+ul.level_1 li.current {
+	background-color: white;
+    font-weight: bold;
+    border-left: solid 2px black;	
+}
+
+/**** page integration ****/
+
+.illustration-niv2
+{
+    float: right;
+    height: 163px;
+    width: 458px;
+    margin-left: -70px;
+    margin-top: -20px;
+    padding-left: 10px;
+    z-index: 100;
+    text-align: left;
+}
+
+.no-decalage
+{
+    margin-right: 0;
+}
+
+.integration
+{
+    margin-left: -2px;
+}
+
+#section-damiers .colonne li
+{
+    width: 100%;
+}
+
+
+
+/**** sous-partie d'une rubrique (niveau 3) ****/
+
+p.sous-titre-blue
+{
+    font-size : 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #3e6568;
+}
+
+/*** bordure milieu page niveau 3 ***/
+
+.border-right
+{
+    border-right: 1px solid black;
+    padding-right: 15px;
+}
+
+/*** Encadres ***/
+
+.section-damiers
+{
+    line-height: normal;
+    display: block;
+    float: left;
+    margin-bottom: 2px;
+    overflow: hidden;
+}
+
+.section-damiers h2
+{
+    font-size: 18px;
+    font-weight: normal;
+    color: #ccc;
+    background: white;
+    text-transform: uppercase;
+}
+
+/* Non applicable dans notre layout */
+.section-damiers ul
+{
+    margin-left: 0;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.section-damiers h3
+{
+    font-size: 14px;
+    line-height: normal;
+    text-transform: none;
+}
+
+.section-damiers p
+{
+    font-size: 12px;
+    line-height: normal;
+}
+
+/***** Niveau 2, Encadrés niveau 2 *****/
+
+.span10-niv2 {
+	margin-left: 0px;
+}
+
+.span6-niv2 {
+	margin-left: 0px;
+}
+
+.article-niv2 {
+	height: 150px;
+	 width: 300px;
+	border: none;
+	padding-left: 0px;
+	border-left: 1px solid #7e8564;
+}
+
+.article-niv2 h3 {
+	padding-left: 10px;
+}
+
+.bloc-titre-niv2 {
+	padding-top: 20px;
+    text-align: right;
+}
+
+.bloc-titre-niv2 h2
+{
+    line-height: 16px;
+    padding-left: 5px;
+    padding-top: 2px;
+    color: black;
+}
+
+.article-niv2 .article-niv2-footer {
+	height: 7px;
+}
+
+.bloc-titre-niv2-color-1, .bloc-titre-niv2-color-1 h2 
+{
+    background-color: #AEE6FF;
+}
+
+.article-niv2-footer-color-1 {
+	background-color: #AEE6FF;
+}
+
+.bloc-titre-niv2-color-2, .bloc-titre-niv2-color-2 h2
+{
+    background-color: #AEE6FF;
+}
+
+.article-niv2-footer-color-2 {
+	background-color: #AEE6FF;
+}
+
+.bloc-titre-niv2-color-3, .bloc-titre-niv2-color-3 h2
+{
+    background-color: #b9d47f;
+}
+
+.article-niv2-footer-color-3{
+	background-color: #b9d47f;
+}
+
+.article-niv2-bottom {
+	position: absolute;
+    bottom: 0px;
+    width: 100%;	
+}
+
+.article-niv2-bottom a {
+	position: absolute;
+    right: 10px;
+    bottom: 10px;	
+}
+
+.container-lgn-vert-niv2 {
+	display: inline-block;
+	width: 94px;
+	height: 6px;	
+}
+
+.illustration-niv2-container {
+	text-align: right;
+	margin-left: -2px;
+}
+
+/***** Niveau 3 *****/
+
+.col-left-niv3 {
+	width: 58%;
+}
+
+.col-right-niv3 {
+	width: 22%;
+}
+
+.lgn-niv3 {
+	float:left;
+	width:100%;	
+}
+
+.nuxeo-list-une_niveau3_1c .section-texte p{
+	line-height: 20px;
+}
+
+.nuxeo-list-une_niveau3_1c ul {
+	margin-left: 0px;
+}
+
+.nuxeo-list-une_titre_niveau3_1c ul {
+	 margin-left: 0px;
+}
+
+.illustration-niv3 {
+    margin-top: -20px;
+}
+
+.illustration-niv3 img {
+	height: auto;
+	width: 270px;
+}
+
+.img-ligne-kaki {
+	background: transparent url("images/image-ligne-kaki.jpg") repeat-x bottom;
+	width: 131px;
+	position: absolute;
+	left: 275px;
+	bottom: -5px;
+}
+
+.img-container-niv3 {
+	position: relative;
+	float: right;
+	width: 406px;
+}
+
+
+/********************/
+
+
+
+

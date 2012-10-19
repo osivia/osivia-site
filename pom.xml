@@ -10,12 +10,13 @@
 
 	<properties>
 		<deploy.demo.dir>${toutatice-portail-runtime-dir}/custom/deploy</deploy.demo.dir>
-		<toutatice.core.version>2.0-RC1</toutatice.core.version>
-		<toutatice.cms.version>2.0-RC1</toutatice.cms.version>
+		<toutatice.core.version>2.0-RC2</toutatice.core.version>
+		<toutatice.cms.version>2.0-RC2</toutatice.cms.version>
 	</properties>
 
 	<modules>
 	   <module>osivia-site-test</module>
+ 	   <module>osivia-portail-charte</module>
 	</modules>
 
 	<build>
