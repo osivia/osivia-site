@@ -12,12 +12,49 @@
 		<deploy.demo.dir>${toutatice-portail-runtime-dir}/custom/deploy</deploy.demo.dir>
 		<toutatice.core.version>2.0-RC2</toutatice.core.version>
 		<toutatice.cms.version>2.0-RC2</toutatice.cms.version>
+		<portlet-api.version>2.0</portlet-api.version>
+		<servlet-api.version>2.4</servlet-api.version>
+		<commons-logging.version>1.1.1</commons-logging.version>
+
 	</properties>
 
 	<modules>
 	   <module>osivia-site-test</module>
  	   <module>osivia-portail-charte</module>
+ 	   <module>osivia-portail-cms-nuxeo-web</module>
 	</modules>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<version>${portlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>   
+
+	 	<dependency>
+			<groupId>toutatice-portail.core</groupId>
+	     		<artifactId>toutatice-portail-api</artifactId>
+	     		<version>${toutatice.core.version}</version>
+	     		<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId> 
+			<version>${commons-logging.version}</version>   
+			<scope>provided</scope>
+		</dependency>
+ 	</dependencies>
+
 
 	<build>
 			<plugins>
