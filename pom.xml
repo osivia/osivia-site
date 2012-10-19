@@ -20,6 +20,7 @@
 
 	<modules>
 	   <module>osivia-site-test</module>
+	   <module>osivia-portail-portlets-utils</module>
  	   <module>osivia-portail-charte</module>
  	   <module>osivia-portail-cms-nuxeo-web</module>
 	</modules>
