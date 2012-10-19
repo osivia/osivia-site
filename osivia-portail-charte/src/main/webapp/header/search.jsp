@@ -22,17 +22,18 @@ PortalControllerContext ctx =  (PortalControllerContext) request.getAttribute("p
 Map<String, String> props = new HashMap<String, String>();
 Map<String, String> params = new HashMap<String, String>();
 
-String advancedSearchUrl = urlFactory.getStartPageUrl(ctx, "/default", "advanced_search", "/default/templates/advanced_search", props, params);
 %>
 
 
 <script type="text/javascript">
 function onsubmitGlobalSearch( form)
 {
+
    var searchUrl = "<%=searchUrl%>";
    
    searchUrl = searchUrl.replace("__REPLACE_KEYWORDS__", form.keywords.value);
    form.action = searchUrl;
+   
 
 }
 </script>
@@ -40,7 +41,7 @@ function onsubmitGlobalSearch( form)
 <div class="ligne-recherche">
 	<form class="form-search" onsubmit="return onsubmitGlobalSearch( this);" method="post">
 		<div class="input-append">
-			<input type="text" class="span2 search-query" placeholder="RECHERCHER">
+			<input type="text" class="span2 search-query"  name="keywords" placeholder="RECHERCHER">
 				<button type="submit" class="btn">VALIDER</button>
 		</div>
 	</form>

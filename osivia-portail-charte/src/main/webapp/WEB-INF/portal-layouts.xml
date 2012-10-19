@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layouts>
 	
+	
+	<layout>
+		<name>osivia-1col</name>
+		<uri>/layouts/osivia1c/index.jsp</uri>
+		<uri state="maximized">/layouts/osivia1c/maximized.jsp</uri>
+		<regions>
+			<region name="virtual"/>
+			<region name="col1"/>
+		</regions>
+	</layout>
+	
 	<layout>
 		<name>osivia-3cols</name>
 		<uri>/layouts/osivia3c/index.jsp</uri>
