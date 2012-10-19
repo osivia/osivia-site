@@ -1,0 +1,22 @@
+#page d'erreur par défaut
+error.default_page_uri=/toutatice-portail-demo-charte/error/errorPage.jsp
+
+
+
+
+#affichage des infos de debug dans les portlets
+#nuxeo.debugHtml=1
+
+
+
+#forcer le cache des portlets (UNIQUEMENT EN DEBUG !!!!)
+portlets.expirationSecs=0
+
+#timeout des caches en secondes
+nuxeo.cacheTimeout=0
+
+#permet de générer les traces des appels Nuxeo(en level DEBUG)
+nuxeo.debugMode=1
+
+#active les gestionnaire de statut
+statut.actif=true
