@@ -18,7 +18,6 @@ UserPortal siteMap = (UserPortal) request.getAttribute("pia.siteMap");
  
 %>
 
-footer2
 
 <div id="footer-container">
 
