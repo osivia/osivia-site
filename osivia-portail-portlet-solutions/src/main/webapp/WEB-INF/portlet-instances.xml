@@ -5,6 +5,7 @@
 >
 <deployments>
   	<deployment>
+  	    <if-exists>overwrite</if-exists>
   		<instance>
 			<display-name xml:lang="en">Toutatice - Portlet Solutions</display-name>
 			<display-name xml:lang="fr">Toutatice - Portlet Solutions</display-name>

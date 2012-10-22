@@ -22,6 +22,9 @@
 <portlet:defineObjects />
 
 
+<div id="slider">
+
+
 <div class="container">
 	<div class="ligne-vert-kaki">
 		<div class="row">
@@ -39,8 +42,10 @@ String contenuFormat = null;
 String srcImage = null;
 String urlDoc = null;
 
+
 Document selectedDoc = null;
 int indexDoc = 0;
+int indexSelectedDoc = 0;
 
 String currentPath = renderRequest.getParameter(ISolutionsConstantes.PARAM_CURR_ITEM_PATH);
 
@@ -58,6 +63,7 @@ String currentPath = renderRequest.getParameter(ISolutionsConstantes.PARAM_CURR_
 				// Insertion barre d'item
 				nuxeoCtrl.setCurrentDoc(doc);
 				nuxeoCtrl.insertContentMenuBarItems();	
+				indexSelectedDoc = indexDoc;
 		 }
 		
 		if(indexDoc == ISolutionsConstantes.SOLUTIONS_MENU_ID){
@@ -68,6 +74,8 @@ String currentPath = renderRequest.getParameter(ISolutionsConstantes.PARAM_CURR_
 			 if(doc.getPath().equals(currentPath)) {
 					currentClass =  ISolutionsConstantes.CURRENT_CLASS;
 					selectedDoc = doc;
+					
+
 			 }
 			 
 	    }
@@ -128,5 +136,34 @@ String currentPath = renderRequest.getParameter(ISolutionsConstantes.PARAM_CURR_
 	</div>
 </div>
 
+</div>
+
+
+<%
+
+String nextUrl = "NO_REFRESH";
+
+if( currentPath == null || ("1".equals(renderRequest.getParameter(ISolutionsConstantes.PARAM_AJAX_MODE))))	{
+
+	Document nextSliderDoc = null;
+	nextSliderDoc = docs.get(( indexSelectedDoc + 1 ) % docs.size());
+
+
+	PortletURL jsPortletUrl = renderResponse.createRenderURL();
+	jsPortletUrl.setParameter(ISolutionsConstantes.PARAM_CURR_ITEM_PATH, nextSliderDoc.getPath());
+	jsPortletUrl.setParameter(ISolutionsConstantes.PARAM_AJAX_MODE, "1");
+ 	nextUrl = jsPortletUrl.toString();
+
+ 	
+}
+
+
+
+%>					
+
+
+<script type="text/javascript" language="Javascript">
+   activeSlider( $('slider'), '<%= nextUrl %>');
+</script>
 
 
