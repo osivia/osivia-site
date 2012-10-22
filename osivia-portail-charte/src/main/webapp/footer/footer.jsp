@@ -18,37 +18,60 @@ UserPortal siteMap = (UserPortal) request.getAttribute("pia.siteMap");
  
 %>
 
+<footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="offset1 span10">
+                           
 
-<div id="footer-container">
 
 <%!public void displayItem(javax.servlet.jsp.JspWriter out, List<UserPage> pageList, int level,
 			int maxLevels) throws IOException {
 
-		String cssClass = "";
-		cssClass = "level_" + level;
 		
+		String ulClass = "";
+		
+		if( level == 0)
+			ulClass = "titres-footer";
 
 		
-		out.println("<ul class=\"" + cssClass + "\">");
+		out.println("<ul class=\"" + ulClass + "\">");
 		
 		int iChild = 0;
 
 
 		for (UserPage child : pageList) {
+			
+			
 			{
-				String li = "<li class=\"" + cssClass + "\"";
-				li += ">";
-
-				out.println(li);
-
-				out.println("<a  class=\"" + cssClass + "\"  href=\"" + child.getUrl() + "\">" + child.getName() + "</a>");
-
-				if (child.getChildren().size() > 0) {
-					if( level + 1 < maxLevels)
-							displayItem(out, child.getChildren(), level + 1, maxLevels);
+				
+				if(!"accueil".equalsIgnoreCase(child.getName()))	{
+				
+					String liClass = "";
+					
+					if( iChild == pageList.size() -1)
+						 liClass = "";
+					
+					String li = "<li class=\"" + liClass + "\"";
+					li += ">";
+	
+					out.println(li);
+					
+					if( level == 0)
+						out.println("<h2>");
+	
+					out.println("<a  href=\"" + child.getUrl() + "\">" + child.getName() + "</a>");
+					
+					if( level == 0)
+						out.println("</h2>");				
+	
+					if (child.getChildren().size() > 0) {
+						if( level + 1 < maxLevels)
+								displayItem(out, child.getChildren(), level + 1, maxLevels);
+					}
+	
+					out.println("</li>");
 				}
-
-				out.println("</li>");
 				
 				iChild ++;
 			}
@@ -59,12 +82,33 @@ UserPortal siteMap = (UserPortal) request.getAttribute("pia.siteMap");
 	}%>
 
 <%
-		displayItem(out, siteMap.getUserPages(), 0, 3);
+		displayItem(out, siteMap.getUserPages(), 0, 2);
 %>
 
 
 
 
-
-
-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="derniere-ligne">
+                    <div class="row">
+                        <div class="offset1 span7">
+                            <ul>
+                                <li>
+                                    <a href="#">Mentions Légales</a>
+                                </li>
+                                <li>
+                                    <a href="#">Nous contacter</a>
+                                </li>
+                                <li>
+                                    <a href="#">Crédit</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>

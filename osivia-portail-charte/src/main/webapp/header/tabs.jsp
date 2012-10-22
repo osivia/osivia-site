@@ -12,8 +12,6 @@
 <%@ page import="fr.toutatice.portail.api.charte.Breadcrumb"%>
 <%@page import="fr.toutatice.portail.api.charte.BreadcrumbItem"%>
 
-<!- test jss -->
-
 <%
 UserPortal userPortal = (UserPortal) request.getAttribute("pia.userPortal");
 Object currentPageId = request.getAttribute("pia.currentPageId");
