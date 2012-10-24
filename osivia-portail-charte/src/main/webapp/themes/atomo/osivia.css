@@ -1093,7 +1093,7 @@ p.sous-titre-blue
     font-size: 18px;
     line-height: normal;
     text-transform: none;
-    color: #7E8564;
+    /*color: #7E8564;*/
 }
 
 .section-damiers p,div
