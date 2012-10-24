@@ -15,8 +15,11 @@
    String wizzardMode = (String) request.getAttribute("pia.WIZZARD_MODE");
 %>
 
-<%
-   if (principal == null)
+<% if(principal != null){ %>
+	
+<div class="toolbar-container-show">
+
+<%  if (principal == null)
    {
 %>
 
@@ -65,5 +68,8 @@ else
    
 %>&nbsp;&nbsp;<a href="<%= signOutURL %>"><%= rb.getString("LOGOUT") %></a>
 <%
-   }
+   } %>
+   </div>
+   <%
+} 
 %>

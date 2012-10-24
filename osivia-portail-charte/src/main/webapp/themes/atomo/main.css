@@ -111,21 +111,6 @@ div#pageSettings .wizzardMenu	{
     width: 200px;
     z-index: 10;
 }
- 
-
- 
-
-#toolbar {
-	background-color: #B8D68F;
-    float: right;
-    height: 95px;
-    left: 800px;
-    margin-right: 20px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 180px;
-}
 
 #toolbar a {	
 	padding: 6px 12px 0 0;

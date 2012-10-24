@@ -44,6 +44,19 @@ img {
 	padding-top: 20px;
 }
 
+.toolbar-container-show {
+	background-color: #B8D68F;
+    float: right;
+    height: 115px;
+    left: 800px;
+    margin-right: 20px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 180px;
+}
+
+
 /**************** ENSEMBLE DE LA PAGE *******************/
 
  
@@ -474,7 +487,7 @@ input:-moz-placeholder, textarea:-moz-placeholder
     color: #13525a;
     margin-top: 10px;
     margin-bottom: 10px;
-margin-top: 5px;
+	margin-top: 5px;
     margin-bottom: 5px;
     font-size: 12px;
 }
@@ -1080,6 +1093,7 @@ p.sous-titre-blue
     font-size: 18px;
     line-height: normal;
     text-transform: none;
+    color: #7E8564;
 }
 
 .section-damiers p,div
@@ -1212,15 +1226,26 @@ p.sous-titre-blue
 
 .lgn-niv3 {
 	float:left;
-	width:100%;	
+	width:970px;	
 }
 
-.nuxeo-list-une_niveau3_1c .section-texte p{
+.nuxeo-list-une_niveau3_1c .span5 {
+	width: 470px;
+	float: left;
+    margin-left: 30px;
+    min-height: 1px;	
+}
+
+.nuxeo-list-une_niveau3_1c .section-texte p {
 	line-height: 20px;
 }
 
 .nuxeo-list-une_niveau3_1c ul {
 	margin-left: 0px;
+}
+
+.nuxeo-list-une_niveau3_1c .section-texte ul {
+	margin-left: 15px;
 }
 
 .nuxeo-list-une_titre_niveau3_1c ul {
