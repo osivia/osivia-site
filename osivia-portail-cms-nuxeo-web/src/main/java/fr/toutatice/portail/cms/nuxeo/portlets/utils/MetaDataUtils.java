@@ -30,7 +30,7 @@ public class MetaDataUtils {
 	/**
 	 * Des informations sont portées par les méta-données.
 	 * Cette méthode récupère le nom d'un lien renseigné dans une méta-donnée
-	 * sous la forme: nom_lien:"<nom_d__lien>"
+	 * sous la forme: nom_lien:"<nom_du_lien>"
 	 * 
 	 * @param document Contenu Nuxeo
 	 * @param metaData Méta-donnée du contenu Nuxeo

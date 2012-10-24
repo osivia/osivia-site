@@ -32,7 +32,7 @@ Document doc = (Document) renderRequest.getAttribute("doc");
 %>
 <div class="img-container-niv3">
 	<div class="illustration-niv3 no-decalage">
-		<img src="<%=ctx.getLink(doc, CMSCustomizer.TEMPLATE_DOWNLOAD).getUrl()%>"/>
+		<span><img src="<%=ctx.getLink(doc, CMSCustomizer.TEMPLATE_DOWNLOAD).getUrl()%>"/></span>
 	</div>
 	<div class="img-ligne-kaki">&nbsp;</div>
 </div>

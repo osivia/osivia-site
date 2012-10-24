@@ -51,7 +51,7 @@ if( contenu != null){
 String image = "";
 PropertyMap map = doc.getProperties().getMap("annonce:image");
 if( map != null && map.getString("data") != null){	
-	image = "<div class=\"article-img-container\"><img src=\""+ ctx.createFileLink(doc, "annonce:image") + "\" /></div>";
+	image = "<div class=\"article-img-container\"><span class=\"article-img\"><img src=\""+ ctx.createFileLink(doc, "annonce:image") + "\" /></span></div>";
 }
 
 String linkName = MetaDataUtils.getLinkNameFromMetaData(doc, MetaDataUtils.SOURCE_META_DATA);
