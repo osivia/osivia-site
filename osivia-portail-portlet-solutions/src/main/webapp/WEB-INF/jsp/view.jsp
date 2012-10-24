@@ -68,17 +68,17 @@ String currentPath = renderRequest.getParameter(ISolutionsConstantes.PARAM_CURR_
 		
 		if(indexDoc == ISolutionsConstantes.SOLUTIONS_MENU_ID){
 			hSize = ISolutionsConstantes.H2;
+			/* Cas du premier appel à la Portlet*/
+			if(currentPath == null){
+				currentClass =  ISolutionsConstantes.CURRENT_CLASS;
+				selectedDoc = doc;
+			}
+	    }  
+		
+		if(doc.getPath().equals(currentPath)) {
+			currentClass =  ISolutionsConstantes.CURRENT_CLASS;
 			selectedDoc = doc;
-	    } else {
-	    	
-			 if(doc.getPath().equals(currentPath)) {
-					currentClass =  ISolutionsConstantes.CURRENT_CLASS;
-					selectedDoc = doc;
-					
-
-			 }
-			 
-	    }
+		}
 		
 		PortletURL itemUrl = renderResponse.createRenderURL();
 		itemUrl.setParameter(ISolutionsConstantes.PARAM_CURR_ITEM_PATH, doc.getPath());

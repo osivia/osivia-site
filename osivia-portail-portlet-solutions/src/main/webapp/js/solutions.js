@@ -17,7 +17,7 @@ function activeSlider(  container, url )	{
 		clearTimeout( timer);
 	
 	if( url != "NO_REFRESH"){
-		timer = setTimeout("sliderTimeOut()", 2000);
+		timer = setTimeout("sliderTimeOut()", 5000);
 	}
 }
 
