@@ -27,6 +27,7 @@
 <div id="portal-container">
    <div id="sizer">
       <div id="expander">
+      <div class="container">
       <div id="ligneentete">        
          <jsp:include page="../../header/logo.jsp" />
          
@@ -34,8 +35,8 @@
 		        	
 		         <div id="header_utils"> 
 			         <div id="header">
-			         	<p:region regionName='toolbar' regionID='toolbar'/>	
-			         	<p:region regionName="pageSettings" regionID="pageSettings"/> 	             
+			         	<p:region regionName='toolbar' regionID='toolbar'/>
+			         	<p:region regionName="pageSettings" regionID="pageSettings"/> 		             
 				             <div class="menu-et-recherche">
 				             	<div class="navbar">
 									<div class="navbar-inner">
@@ -43,10 +44,9 @@
 								
 								        <!-- navigation tabs and such -->
 								        <p:region regionName='tabs' regionID='tabs'/>
-							             
+								             
 								        <p:region regionName='search' regionID='search'/>
-				                  
-				             <div id="spacer"></div>
+
 			             </div>
 			           </div>
 			          </div> 
@@ -55,16 +55,29 @@
 									 
 			</div>
          </div>
-         
-         <p:region regionName='breadcrumb' regionID='breadcrumb'/>
-         
-         <div id="content-container" style="width:100%">
-         	<div id="marge" style="width:5.3%; float:left; padding-top: 100%;">&nbsp;</div>
-         	<div id="content">
-               <p:region regionName='maximized' regionID='regionMaximized'/>
-            </div>
          </div>
-            <hr class="cleaner"/>
+         
+         <div id="content-container">
+	         	<div style="width:100%">
+	               <p:region regionName='lgn1' regionID='regionLgn1'/>
+	            </div>
+	     <div class="container bottom-vert-pistache">
+	     	<div class="row">
+				<div class="span12">
+					<div class="">
+						<div class="row"> 
+	            		<div class="offset1 span10"> 
+			            	<div class="col bottom-bleu">
+			               		<p:region regionName='col1' regionID='regionCol1'/>
+			            	</div>   
+			            	<div class="col"> 
+			               		<p:region regionName='col2' regionID='regionCol2'/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
          </div>
       </div> 
    </div>
@@ -73,6 +86,6 @@
 <p:region regionName='footer' regionID='footer'/>
 
 <p:region regionName='AJAXFooter' regionID='AJAXFooter'/>
-
+</div>
 </body>
 </html>

@@ -46,7 +46,7 @@
  
 								        <p:region regionName='search' regionID='search'/>
 				                  
-				             <div id="spacer"></div>
+			
 			             </div>
 			           </div>
 			          </div> 
@@ -54,14 +54,12 @@
 				</div>  
 									 
 			</div>
-         </div>
-         
-         <p:region regionName='breadcrumb' regionID='breadcrumb'/>     
+         </div>    
          
           <div id="content-container">
-         <div class="container">
+         <div class="container bottom-vert-pistache">
          <div class="row">
-			<div class="span12 bottom-vert-pistache">
+			<div class="span12">
 				<div class="row">
 			          <div class="menu-gauche span2">
 			             
@@ -78,16 +76,15 @@
 				</div>
 			</div>
 			</div>
-            <hr class="cleaner"/>
          </div>           
 
       </div>
    </div>
-</div>
+
 
 <p:region regionName='footer' regionID='footer'/>
 
 <p:region regionName='AJAXFooter' regionID='AJAXFooter'/>
-
+</div>
 </body>
 </html>

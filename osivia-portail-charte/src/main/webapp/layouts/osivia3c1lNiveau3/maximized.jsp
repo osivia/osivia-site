@@ -46,7 +46,6 @@
  
 								        <p:region regionName='search' regionID='search'/>
 				                  
-				             <div id="spacer"></div>
 			             </div>
 			           </div>
 			          </div> 
@@ -54,33 +53,39 @@
 				</div>  
 									 
 			</div>
-         </div>
+         </div>               
          
-         <p:region regionName='breadcrumb' regionID='breadcrumb'/>                
-         
-         <div id="content-container">
-            <table id="layout-table" width="100%">
-              <tr>
-                <td valign="top" width="15%">
-                  <p:region regionName='col1' regionID='regionCol1'/>
-                </td>
-                <td valign="top" width="60%">
-                   <p:region regionName='maximized' regionID='regionMaximized'/>
-                 </td>
-                <td valign="top" width="25%">
-                   <p:region regionName='col3' regionID='regionCol3'/>
-                </td>
-                 </tr>
-            </table>
-            <hr class="cleaner"/>
+        <div id="content-container">
+         <div class="container bottom-vert-pistache">
+         <div class="row">
+			<div class="span12">
+				<div class="row">
+			           <div class="menu-gauche span2">
+			             <p:region regionName='col1' regionID='regionCol1'/>
+			          </div>
+			          <div class="span10">
+				          	<div class="col col-left-niv3">
+						       <p:region regionName='col2' regionID='regionCol2'/>
+						    </div>
+						    <div class="col col-right-niv3">
+						       <p:region regionName='col3' regionID='regionCol1'/>
+						    </div>
+						    <div class="lgn-niv3">
+		               			<p:region regionName='lgn1' regionID='regionLgn1'/>
+		            		</div>
+					   </div>
+					</div>
+				</div>
+			</div>
+			</div>
          </div>
       </div>
    </div>
-</div>
+
 
 <p:region regionName='footer' regionID='footer'/>
 
 <p:region regionName='AJAXFooter' regionID='AJAXFooter'/>
-
+</div>
 </body>
 </html>

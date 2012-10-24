@@ -9,12 +9,25 @@ p {
 	line-height: 20px;	
 }
 
+#content-container {
+	min-height: 200px;	
+}
+
 .container {
 	width: 1230px;	
+} 
+
+img {
+	max-height: 100%;
+	max-width: 100%;	
 }
 
 .span10 {
 	width: 930px;	
+}
+
+.span3-max {
+	margin-left: 0px;
 }
 
 .span4 {
@@ -25,6 +38,10 @@ p {
 .span5 {
 	width: 520px;
 	margin-left: 15px;
+}
+
+#content-container {
+	padding-top: 20px;
 }
 
 /**************** ENSEMBLE DE LA PAGE *******************/
@@ -40,9 +57,10 @@ h3 {
 	line-height: normal;
 }
 
-p, a, li, .text-slide
+p, li 
 {
     font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
 }
 
 #page
@@ -130,6 +148,10 @@ p, a, li, .text-slide
     font-family: 'Montserrat', sans-serif;
 }
 
+#tabs {
+	max-width: 815px;	
+}
+
 .navbar {
 	margin-bottom: 0px;	
 }
@@ -165,7 +187,7 @@ p, a, li, .text-slide
 {
     display: block;
     background: #fff;
-    padding: 10px 25px 10px;
+    padding: 10px 19px 10px;
 }
 .navbar .nav li a
 {
@@ -214,9 +236,7 @@ p, a, li, .text-slide
 
 .ligne-recherche
 {
-    overflow: hidden;
     height: 23px;
-    /*width: 318px;*/
     background: #e7eba9;
     margin-top: 40px;
 }
@@ -227,7 +247,7 @@ p, a, li, .text-slide
     padding: 1px 30px 0px 15px;
     margin-bottom: 0;
     background: #7e8565;
-    height: 23px;
+    height: 22px;
 }
 
 .form-search .input-append
@@ -311,20 +331,21 @@ input:-moz-placeholder, textarea:-moz-placeholder
     height: 291px;
 }
 
-.text-slide h4
+.text-slide h4,p
 {
     font-size: 14px;
 }
-.titre-slide h2
+.titre-slide h2 
 {
     font-size: 30px;
     font-weight: normal;
     font-family: 'Montserrat', sans-serif;
+    background: #f1f1f1 repeat-x;
     color: #606940;
     padding-left: 98px;
 }
 
-.titre-slide h3
+.titre-slide h3 
 {
     text-transform: uppercase;
     font-size: 48px;
@@ -345,12 +366,24 @@ input:-moz-placeholder, textarea:-moz-placeholder
     
 }
 
+.titre-slide h2 a {
+	background-color: white;
+    display: inline-block;
+    margin-left: -3px;
+    padding-left: 4px;
+    padding-right: 539px;	
+}
+
 .titre-slide a:hover
 {
     text-decoration: none;   
 }
 
 .titre-slide h3:hover {
+	background-color: #8DEAFB;
+}
+
+.titre-slide h2:hover {
 	background-color: #8DEAFB;
 }
 
@@ -369,8 +402,9 @@ input:-moz-placeholder, textarea:-moz-placeholder
     width: 503px;
 }
 
-.img-solution {
-
+.img-solution img {
+	max-height: 90%;
+	max-width: 90%;
 }
 
 
@@ -403,7 +437,7 @@ input:-moz-placeholder, textarea:-moz-placeholder
 
 .actus h3
 {
-    font-size: 13px;
+    font-size: 16px;
     color: #7e8564;
     line-height: normal;
     margin: 25px 0 0 0;
@@ -503,7 +537,7 @@ margin-top: 5px;
 
 .read-more
 {
-    font-size: 11px;
+    font-size: 12px;
     color: #5f693f;
     background-image: url("images/carre-bleu.jpg");
     background-position: left center;
@@ -547,7 +581,11 @@ margin-top: 5px;
     position: absolute;
     right: 5px;
     bottom: 5px;
-} 
+}
+
+.article li {
+	font-size: 12px;	
+}
 
 .article a:hover 
 {
@@ -568,10 +606,13 @@ margin-top: 5px;
 }
 
 .article-img-container {
-	height: 55%;
-	overflow-y: hidden;
+	height: 100px;
+	text-align: center;
 }
 
+.article-img {
+	line-height: 100px;
+}
 
 /********** pied de page ************/
 
@@ -719,6 +760,7 @@ table [class*="span"] {
 
 .illustration-container {
 	float:left;
+	height: 386px;
 	width: 491px;
 	text-align: center;
 }
@@ -728,10 +770,16 @@ table [class*="span"] {
 	display:inline-block;
   	vertical-align:middle;
   	width:119px;
+  	line-height: 386px;
 }
 
 .lgn-vert-niv1 {
 	background: transparent url("images/image-ligne-kaki.jpg") repeat-x center;
+}
+
+.img-container-niv1 .illustration-container .illustration img {
+	max-height: 85%;
+	max-width: 85%;
 }
 
 /**** Titre des pages (intégration, offre... ) ***/
@@ -804,6 +852,10 @@ p.sous-titre
 	border-bottom: 10px solid #7dcad0; 
 }
 
+.nuxeo-publish-navigation li.current a {
+	font-size: 13px;	
+}
+
 .menu-gauche
 {
     float: left;
@@ -828,6 +880,8 @@ p.sous-titre
 {
     color: black;
     outline: none;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 13px;
 }
 
 .menu-gauche li a:hover
@@ -857,6 +911,10 @@ p.sous-titre
 .menu-gauche .current
 {
     background : #bdeaed;
+}
+
+div.nuxeo-publish-navigation ul a.current {
+	font-size: 13px;	
 }
 
 .level_0 {
@@ -893,7 +951,7 @@ ul.level_0 li.last a.last {
 ul.level_0 li.current a.current {
 	background: url("images/fleche-bas.png") no-repeat bottom left;
     padding-bottom: 7px;
-    padding-left: 0;
+    padding-left: 5px;
     border-bottom: none;
 }
 
@@ -1019,15 +1077,16 @@ p.sous-titre-blue
 
 .section-damiers h3
 {
-    font-size: 14px;
+    font-size: 18px;
     line-height: normal;
     text-transform: none;
 }
 
-.section-damiers p
+.section-damiers p,div
 {
     font-size: 12px;
     line-height: normal;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /***** Niveau 2, Encadrés niveau 2 *****/
@@ -1038,14 +1097,24 @@ p.sous-titre-blue
 
 .span6-niv2 {
 	margin-left: 0px;
+	width: 571px;
+}
+
+.span6-niv2-max {
+	padding-left: 25px;	
 }
 
 .article-niv2 {
-	height: 150px;
+	height: 177px;
 	 width: 300px;
 	border: none;
 	padding-left: 0px;
 	border-left: 1px solid #7e8564;
+}
+
+.article-niv2-description {
+	height: 80px;
+    overflow-y: hidden;
 }
 
 .article-niv2 h3 {
@@ -1066,7 +1135,7 @@ p.sous-titre-blue
 }
 
 .article-niv2 .article-niv2-footer {
-	height: 7px;
+	height: 6px;
 }
 
 .bloc-titre-niv2-color-1, .bloc-titre-niv2-color-1 h2 
@@ -1110,7 +1179,7 @@ p.sous-titre-blue
 
 .container-lgn-vert-niv2 {
 	display: inline-block;
-	width: 94px;
+	width: 93px;
 	height: 6px;	
 }
 
@@ -1119,16 +1188,16 @@ p.sous-titre-blue
     float: right;
     height: 163px;
     width: 458px;
-    margin-left: -70px;
+    margin-left: -69px;
     margin-top: -20px;
     padding-left: 10px;
     z-index: 100;
-    text-align: left;
+    text-align: center;
 }
 
 .illustration-niv2-container {
 	text-align: right;
-	margin-left: -2px;
+	margin-left: -4px;
 }
 
 /***** Niveau 3 *****/
@@ -1159,19 +1228,21 @@ p.sous-titre-blue
 }
 
 .illustration-niv3 {
-    margin-top: -20px;
+    float: left;
+    margin-top: -30px;
+    text-align: right;
+    width: 297px;
 }
 
-.illustration-niv3 img {
-	height: auto;
-	width: 270px;
+.illustration-niv3.no-decalage span {
+    padding-right: 18px;
 }
 
 .img-ligne-kaki {
 	background: transparent url("images/image-ligne-kaki.jpg") repeat-x bottom;
 	width: 131px;
 	position: absolute;
-	left: 275px;
+	left: 296px;
 	bottom: -5px;
 }
 
@@ -1179,6 +1250,7 @@ p.sous-titre-blue
 	position: relative;
 	float: right;
 	width: 406px;
+	margin-bottom: 13px;
 }
 
 
