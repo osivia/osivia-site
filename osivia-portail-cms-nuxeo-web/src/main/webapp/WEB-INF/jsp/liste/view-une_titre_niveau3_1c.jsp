@@ -32,6 +32,9 @@ Document doc = (Document) renderRequest.getAttribute("doc");
 
 NuxeoController ctx = (NuxeoController) renderRequest.getAttribute("ctx")	;
 
+ctx.setCurrentDoc( doc);
+ctx.insertContentMenuBarItems();
+
 String titre = doc.getString("dc:title","");
 
 String resume = doc.getString("dc:description","");

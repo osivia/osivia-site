@@ -26,10 +26,15 @@
 
 <%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.PropertyMap"%><portlet:defineObjects />
 
+
+
 <%
 Document doc = (Document) renderRequest.getAttribute("doc");
 
 NuxeoController ctx = (NuxeoController) renderRequest.getAttribute("ctx")	;
+
+ctx.setCurrentDoc( doc);
+ctx.insertContentMenuBarItems();
 
 String titre = doc.getString("dc:title","");
 
