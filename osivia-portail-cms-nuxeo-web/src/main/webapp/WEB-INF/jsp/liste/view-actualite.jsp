@@ -57,7 +57,13 @@ String description = Formater.formatDescription(doc);
 	</a>
 </h3>
 <p class="date"><%= date %></p>
-<p><%= description %></p>
+<% if(!"".equals(srcImage)){ %>
+<div class="actualite-description">
+	<p><%= description %></p>
+</div>
+<% } else { %>
+	<p><%= description %></p>
+<% } %>
 </div>
 
 
