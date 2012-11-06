@@ -67,12 +67,7 @@
 					<div class="">
 						<div class="row"> 
 	            		<div class="offset1 span10"> 
-			            	<div class="col bottom-bleu">
-			               		<p:region regionName='col1' regionID='regionCol1'/>
-			            	</div>   
-			            	<div class="col"> 
-			               		<p:region regionName='col2' regionID='regionCol2'/>
-							</div>
+			               	<p:region regionName='maximized' regionID='regionMaximized'/>
 						</div>
 					</div>
 				</div>

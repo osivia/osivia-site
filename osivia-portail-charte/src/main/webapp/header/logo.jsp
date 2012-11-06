@@ -9,13 +9,6 @@
 <%
 
 StringBuffer url = new StringBuffer();
-url.append("http://");
-url.append(request.getServerName());
-int port = request.getServerPort();
-if(port != 80){
-	url.append(":");
-	url.append(port);
-}
 url.append("/");
 url.append(request.getRequestURI().split("/")[1]);
 url.append("/");

@@ -28,17 +28,9 @@ int nbPages = (Integer) renderRequest.getAttribute("nbPages")	;
 String nuxeoRequest = (String) renderRequest.getAttribute("nuxeoRequest")	;
 String selectors = (String) renderRequest.getAttribute("selectors")	;
 
-/* Méthode spécifique d'affichage du titre de la liste Actualités ... */
-String bottomClass = "";
-if("actualite".equals(style)){ %>
-<div id="actus">
-	<h2>actualités</h2>
-</div>
-<% bottomClass = " bottom_bleu";
-}
 %> 
 
-<div class="nuxeo-list-<%=style%><%= bottomClass %>">
+<div class="nuxeo-list-<%=style%>">
 
 
 <div class="no-ajax-link">

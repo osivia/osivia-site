@@ -11,7 +11,6 @@ import org.nuxeo.ecm.automation.client.jaxrs.model.Document;
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.MenuBarFormater;
 import fr.toutatice.portail.core.cms.CMSHandlerProperties;
 import fr.toutatice.portail.core.cms.CMSServiceCtx;
-import fr.toutatice.portail.cms.nuxeo.portlets.customizer.DemoMenuBarFormater;
 
 /**
  * Ce customizer permet de définir :
@@ -30,8 +29,8 @@ import fr.toutatice.portail.cms.nuxeo.portlets.customizer.DemoMenuBarFormater;
  * 
  */
 public class CMSCustomizer extends DefaultCMSCustomizer {
-	
-	public static final String ACTUALITE = "actualite";	
+
+	public static final String ACTUALITE = "actualite";
 	public static final String ENCADRE = "encadre";
 
 	public static final String ENCADRE_NIVEAU2 = "encadre_niveau2";
@@ -40,12 +39,12 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 	public static final String UNE_TITRE_NIVEAU3_1C = "une_titre_niveau3_1c";
 	public static final String UNE_NIVEAU3_1C = "une_niveau3_1c";
 	public static final String VISUEL_NIVEAU3 = "visuel_niveau3";
-	
+
 	public static final String BLOG_SCHEMAS = "dublincore,common, toutatice, note";
 	public static final String ANNONCE_SCHEMAS = "dublincore,common, toutatice, note, annonce";
 
-	public static String TEMPLATE_DOWNLOAD = "download";	
-	
+	public static String TEMPLATE_DOWNLOAD = "download";
+
 	public CMSCustomizer(PortletContext ctx) {
 		super(ctx);
 
@@ -96,6 +95,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 	 * On détermine le player associé à chaque item
 	 */
 
+	@Override
 	public CMSHandlerProperties getCMSPlayer(CMSServiceCtx ctx) throws Exception {
 
 		Document doc = (Document) ctx.getDoc();
@@ -103,12 +103,11 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 		if ("FaqFolder".equals(doc.getType()) || "Question".equals(doc.getType()))
 			return getCMSFaqPlayer(ctx);
 
-			
 		return super.getCMSPlayer(ctx);
 
 	}
-	
-	
+
+	@Override
 	public String getNuxeoNativeViewerUrl(CMSServiceCtx ctx) {
 
 		String url = null;
@@ -120,20 +119,17 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 					+ "/view_documents?tabId=tab_slideshow";
 
 		}
-		
+
 		if ("Forum".equals(doc.getType())) {
 			url = getDefaultExternalViewer(ctx);
 
 		}
-		
 
 		return url;
 
 	}
 
-
-
-
+	@Override
 	public MenuBarFormater getMenuBarFormater() {
 		if (menuBarFormater == null) {
 			menuBarFormater = new DemoMenuBarFormater(portletCtx, this, getCMSService());
@@ -142,7 +138,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 		return menuBarFormater;
 	}
 
-	
+	@Override
 	public CMSHandlerProperties getCMSDefaultPlayer(CMSServiceCtx ctx) throws Exception {
 
 		Document doc = (Document) ctx.getDoc();
@@ -150,9 +146,8 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 		Map<String, String> windowProperties = new HashMap<String, String>();
 
 		windowProperties.put("pia.cms.scope", ctx.getScope());
-		
+
 		windowProperties.put("pia.hideTitle", "1");
-		
 
 		windowProperties.put("pia.cms.displayLiveVersion", ctx.getDisplayLiveVersion());
 		windowProperties.put("pia.cms.hideMetaDatas", ctx.getHideMetaDatas());
