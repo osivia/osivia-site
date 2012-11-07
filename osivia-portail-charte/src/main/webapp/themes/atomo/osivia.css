@@ -1073,6 +1073,7 @@ ul.level_1 li.current {
 .no-decalage
 {
     margin-right: 0;
+    margin-left: -28px;
 }
 
 .integration
@@ -1300,7 +1301,8 @@ p.sous-titre-blue
     float: left;
     margin-top: -30px;
     text-align: right;
-    width: 297px;
+    width: 300px;
+    height: 175px;
 }
 
 .illustration-niv3.no-decalage span {
@@ -1331,11 +1333,6 @@ p.sous-titre-blue
 
 .titres-footer li h2 a {
 	font-family: 'Arial', sans-serif;
-}
-
-.illustration-niv3 span img {
-	max-width: none;
-	max-height: none;
 }
 
 .section-texte img {
