@@ -4,8 +4,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-	   <title>Soci�t� Osivia</title>
-	   <meta http-equiv="Content-Type" content="text/html;"/>
+	   <title>Osivia - Editeur d'une solution globale de portail, ECM</title>
+	   	<meta http-equiv="Content-Type" content="text/html;"/>
+	   	<meta http-equiv="Content-language" content="fr-FR" />
+		<meta name="author" content="Osivia Portal" />
+		<meta name="copyright" content="Osivia" />
+		<meta name="description" content="Osivia Portal est une plateforme globale de portail robuste, performante et flexible. Elle est normalis&eacute;e (J2EE, JSR286) et permet de r&eacute;pondre aux différentes attentes fonctionnelles et techniques du march&eacute; « Xnet, ECM » avec une orientation naturelle vers les clients disposant d’une organisation complexe." />
+		<meta name="keywords" content="JSR286, JBoss, Nuxeo, Portal, Portail, GED, CMS, ECM, publish, e-commerce, content management, development framework" />
+		<meta name="generator" content="Osivia Portal" />
 	   <!-- to correct the unsightly Flash of Unstyled Content. -->
 	   <script type="text/javascript"></script>
 	   
