@@ -2,6 +2,8 @@
 error.default_page_uri=/osivia-portail-charte/error/errorPage.jsp
 
 
+#schemas additionnels de navigation (separés par une virgule)
+nuxeo.navigationSchemas=wcm_navigation
 
 
 #affichage des infos de debug dans les portlets
