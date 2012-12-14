@@ -30,6 +30,15 @@ String selectors = (String) renderRequest.getAttribute("selectors")	;
 
 %> 
 
+<% if( nuxeoRequest != null)	{ %>
+
+		<div class="displayRequest" style="border: 1px; border-style: solid"> 
+			<%= nuxeoRequest %>
+		</div>
+
+<%	} %>
+
+
 <div class="nuxeo-list-<%=style%>">
 
 

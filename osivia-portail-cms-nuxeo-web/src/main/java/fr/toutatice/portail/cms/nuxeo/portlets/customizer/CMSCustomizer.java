@@ -9,6 +9,7 @@ import javax.portlet.PortletContext;
 import org.nuxeo.ecm.automation.client.jaxrs.model.Document;
 
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.MenuBarFormater;
+import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.NavigationItemAdaptor;
 import fr.toutatice.portail.core.cms.CMSHandlerProperties;
 import fr.toutatice.portail.core.cms.CMSServiceCtx;
 
@@ -49,6 +50,14 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 		super(ctx);
 
 	}
+	
+	public NavigationItemAdaptor getNavigationItemAdaptor()	{
+		if( navigationItemAdaptor == null){
+			navigationItemAdaptor = new CustomNavigationItemAdaptor(portletCtx, this, getCMSService());
+		}
+		
+		return navigationItemAdaptor;
+	}
 
 	public static List<ListTemplate> getListTemplates() {
 
@@ -66,9 +75,10 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 		return templates;
 	}
 
+
 	public static String getSearchSchema() {
 
-		return "dublincore,common, toutatice";
+		return "dublincore,common, toutatice, wcm_navigation, wcm_content";
 
 	}
 

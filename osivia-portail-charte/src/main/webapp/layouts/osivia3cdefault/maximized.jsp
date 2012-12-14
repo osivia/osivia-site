@@ -5,38 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 	   <title>Osivia - Editeur d'une solution globale de portail, ECM</title>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="pragma" content="no-cache" />
-		
-		
-		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-		<meta name="DC.Title" content="Osivia - Editeur d'une solution globale de portail, ECM" />
-		<meta name="DC.Creator" content="Osivia" />
-		<meta name="DC.Subject" lang="fr-FR" content="" />
-		<meta name="DC.Description" lang="fr-FR" content="" />
-		<meta name="DC.Publisher" content="Osivia" />
-		<meta name="DC.Date.created" scheme="W3CDTF" content="20121120" />
-		<meta name="DC.Date.modified" scheme="W3CDTF" content="20121126" />
-		<meta name="DC.Language" scheme="RFC3066" content="fr-FR" />
-		<meta name="DC.Rights" content="Copyright &copy; Osivia" />
-
-	
-
-		<meta name="author" lang="fr-FR" content="Osivia" />
+	   	<meta http-equiv="Content-Type" content="text/html;"/>
+	   	<meta http-equiv="Content-language" content="fr-FR" />
+		<meta name="author" content="Osivia Portal" />
+		<meta name="copyright" content="Osivia" />
+		<meta name="description" content="Osivia Portal est une plateforme globale de portail robuste, performante et flexible. Elle est normalis&eacute;e (J2EE, JSR286) et permet de r&eacute;pondre aux différentes attentes fonctionnelles et techniques du march&eacute; « Xnet, ECM » avec une orientation naturelle vers les clients disposant d’une organisation complexe." />
 		<meta name="keywords" content="JSR286, JBoss, Nuxeo, Portal, Portail, GED, CMS, ECM, publish, e-commerce, content management, development framework" />
-		<meta name="description" content="Osivia Portal est une plateforme globale de portail robuste, performante et flexible." />
-		<meta name="Date-Creation-yyyymmdd" content="20121120" />
-		<meta name="Date-Revision-yyyymmdd" content="20121126" />
-		<meta name="copyright" content="Copyright &copy; Osivia" />
-		<meta name="reply-to" content="contact@osivia.com" />
-		<meta name="category" content="Internet" />
-		<meta name="robots" content="index, follow" />
-		<meta name="distribution" content="global" />
-		<meta name="identifier-url" content="http://www.osivia.com/" />
-		<meta name="resource-type" content="document" />
-		<meta name="expires" content="-1" />
-		<meta name="Generator" content="Osivia Portal" />
-		<meta name="Formatter" content="Osivia Portal" />
+		<meta name="generator" content="Osivia Portal" />
 	   <!-- to correct the unsightly Flash of Unstyled Content. -->
 	   <script type="text/javascript"></script>
 	   
@@ -86,24 +61,23 @@
 			</div>
          </div>               
          
-        <div id="content-container">
+         <div id="content-container">
          <div class="container bottom-vert-pistache">
          <div class="row">
 			<div class="span12">
 				<div class="row">
-			           <div class="menu-gauche span2">
+			          <div class="menu-gauche span2" style="width:20%">
 			             <p:region regionName='col1' regionID='regionCol1'/>
 			          </div>
-			          <div class="span10">
-				          	<div class="col col-left-niv3">
-						       <p:region regionName='maximized' regionID='regionMaximized'/>
-						    </div>
-						    <div class="col col-right-niv3">
-						       <p:region regionName='col3' regionID='regionCol1'/>
-						    </div>
-						    <div class="lgn-niv3">
-		               			<p:region regionName='lgn1' regionID='regionLgn1'/>
-		            		</div>
+			          <div class="span10" style="width:70%">
+						<div class="row">
+					           <div class="span4" style="width:70%">
+					              <p:region regionName='maximized' regionID='regionMaximized'/>
+					           </div>
+					           <div class="span6 row span5" style="width:25%">
+					              <p:region regionName='col3' regionID='regionCol3'/>
+					           </div>
+					      </div>
 					   </div>
 					</div>
 				</div>

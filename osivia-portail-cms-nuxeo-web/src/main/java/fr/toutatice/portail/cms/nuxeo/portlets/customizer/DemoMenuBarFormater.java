@@ -10,11 +10,11 @@ import fr.toutatice.portail.api.menubar.MenubarItem;
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.MenuBarFormater;
 
 /**
- * Customization de la barre de menu des portlets
- * Pour démonstration, on renomme l'item permalink
+ * Customization de la barre de menu des portlets Pour démonstration, on renomme
+ * l'item permalink
  * 
  * @author jeanseb
- *
+ * 
  */
 public class DemoMenuBarFormater extends MenuBarFormater {
 
@@ -23,8 +23,9 @@ public class DemoMenuBarFormater extends MenuBarFormater {
 		super(portletCtx, customizer, cmsService);
 
 	}
-	
-	protected void addPermaLinkItem(List<MenubarItem> menuBar,String url) throws Exception {
+
+	@Override
+	protected void addPermaLinkItem(List<MenubarItem> menuBar, String url) throws Exception {
 		MenubarItem item = new MenubarItem("Permalink", MenubarItem.ORDER_PORTLET_SPECIFIC_CMS, url, null,
 				"portlet-menuitem-permalink", null);
 		item.setAjaxDisabled(true);
@@ -32,12 +33,10 @@ public class DemoMenuBarFormater extends MenuBarFormater {
 
 	}
 
-	@Override
-	protected void addAdministrationLinkItem(List<MenubarItem> menuBar,
-			Document doc, String url) throws Exception {
+	protected void addAdministrationLinkItem(List<MenubarItem> menuBar, Document doc, String url) throws Exception {
 
-		MenubarItem item = new MenubarItem("Modifier dans Nuxeo", MenubarItem.ORDER_PORTLET_SPECIFIC_CMS + 2,
-				url, null, "portlet-menuitem-nuxeo-edit", "nuxeo");
+		MenubarItem item = new MenubarItem("Modifier dans Nuxeo", MenubarItem.ORDER_PORTLET_SPECIFIC_CMS + 2, url,
+				null, "portlet-menuitem-nuxeo-edit", "nuxeo");
 		item.setAjaxDisabled(true);
 		menuBar.add(item);
 	}

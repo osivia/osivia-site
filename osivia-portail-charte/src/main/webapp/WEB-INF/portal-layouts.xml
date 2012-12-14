@@ -61,4 +61,29 @@
 		</regions>
 	</layout>
 	
+	<layout>
+		<name>osivia-3col-default</name>
+		<uri>/layouts/osivia3cdefault/index.jsp</uri>
+		<uri state="maximized">/layouts/osivia3cdefault/maximized.jsp</uri> 
+		<regions>
+			<region name="virtual"/>
+			<region name="col1"/>
+			<region name="col2"/>
+			<region name="col3"/>
+		</regions>
+	</layout>
+	
+	<layout>
+		<name>osivia-1lgn3col-default</name>
+		<uri>/layouts/osivia1l3cdefault/index.jsp</uri>
+		<uri state="maximized">/layouts/osivia1l3cdefault/maximized.jsp</uri> 
+		<regions>
+			<region name="virtual"/>
+			<region name="lgn1"/>
+			<region name="col1"/>
+			<region name="col2"/>
+			<region name="col3"/>
+		</regions>
+	</layout>
+	
 </layouts>
