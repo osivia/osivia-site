@@ -10,8 +10,8 @@
 
 	<properties>
 		<deploy.demo.dir>${toutatice-portail-runtime-dir}/custom/deploy</deploy.demo.dir>
-		<toutatice.core.version>2.0-RC2</toutatice.core.version>
-		<toutatice.cms.version>2.0-RC2</toutatice.cms.version>
+		<toutatice.core.version>2.0-SNAPSHOT</toutatice.core.version>
+		<toutatice.cms.version>2.0-SNAPSHOT</toutatice.cms.version>
 		<portlet-api.version>2.0</portlet-api.version>
 		<servlet-api.version>2.4</servlet-api.version>
 		<commons-logging.version>1.1.1</commons-logging.version>
@@ -19,7 +19,6 @@
 	</properties>
 
 	<modules>
-	   <module>osivia-site-test</module>
 	   <module>osivia-portail-portlets-utils</module>
  	   <module>osivia-portail-charte</module>
  	   <module>osivia-portail-cms-nuxeo-web</module>
