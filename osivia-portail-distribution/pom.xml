@@ -11,7 +11,7 @@
 	<artifactId>osivia-portail-distribution</artifactId>
 
   <properties>
-	<toutatice.distribution.version>2.0-RC2</toutatice.distribution.version>
+	<toutatice.distribution.version>2.0-SNAPSHOT</toutatice.distribution.version>
 	<src-env>prod</src-env>
         <dest-env>prod</dest-env>
  </properties>
@@ -40,6 +40,13 @@
 	<version>${project.version}</version>
 	<type>war</type>
   </dependency>
+  
+  <dependency>
+	<groupId>osivia.portal</groupId>
+	<artifactId>osivia-portal-portlet-publication-infos</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<type>war</type>
+  </dependency>
 
  <dependency>
 	<groupId>toutatice-portail.distribution</groupId>
@@ -64,7 +71,7 @@
            	<id>dev</id>
             	<properties>
                 	<dest-env>dev</dest-env>
-			<src-env>dev</src-env>
+					<src-env>dev</src-env>
 	         </properties>
         </profile>
 
