@@ -10,7 +10,7 @@
   <dependencySets>
 
     <dependencySet>
-      <outputDirectory>/portal-${dest-env}-${project.version}/custom/deploy</outputDirectory>
+      <outputDirectory>/portal-osivia-${dest-env}-${project.version}/custom/deploy</outputDirectory>
       <unpack>false</unpack>
       <scope>runtime</scope>
 	<includes>
@@ -25,7 +25,7 @@
 	<!-- socle -->
 
 	<fileSet>
-	  <outputDirectory>/portal-${dest-env}-${project.version}</outputDirectory>
+	  <outputDirectory>/portal-osivia-${dest-env}-${project.version}</outputDirectory>
           <directory>target/toutatice-distribution</directory>
  	    <includes>
 		<include>jboss-as/**</include>
@@ -44,7 +44,7 @@
       </fileSet>
 
 	<fileSet>
-	  <outputDirectory>/portal-${dest-env}-${project.version}</outputDirectory>
+	  <outputDirectory>/portal-osivia-${dest-env}-${project.version}</outputDirectory>
           <directory>src/main/resources</directory>
 	  <excludes>
 		<exclude>custom/params/environnement_portail.properties.*</exclude>
@@ -60,17 +60,17 @@
 	<files>
   		<file>
                         <source>src/main/resources/custom/params/environnement_portail.properties.${dest-env}</source>
-                        <outputDirectory>/portal-${dest-env}-${project.version}/custom/params</outputDirectory>
+                        <outputDirectory>/portal-osivia-${dest-env}-${project.version}/custom/params</outputDirectory>
                         <destName>environnement_portail.properties</destName>
                 </file>
 		<file>
 			<source>src/main/resources/jboss-as/server/production/run.conf.${dest-env}</source>
-			<outputDirectory>/portal-${dest-env}-${project.version}/jboss-as/server/production</outputDirectory>
+			<outputDirectory>/portal-osivia-${dest-env}-${project.version}/jboss-as/server/production</outputDirectory>
 			<destName>run.conf</destName>
 		</file>
 		<file>
                         <source>target/toutatice-distribution/jboss-as/server/production/conf/jboss-log4j.xml.${src-env}</source>
-                        <outputDirectory>/portal-${dest-env}-${project.version}/jboss-as/server/production/conf</outputDirectory>
+                        <outputDirectory>/portal-osivia-${dest-env}-${project.version}/jboss-as/server/production/conf</outputDirectory>
                         <destName>jboss-log4j.xml</destName>
                 </file>
 
