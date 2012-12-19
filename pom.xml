@@ -110,6 +110,7 @@
 
 
   <scm>
+
     <developerConnection>scm:svn:http://www.osivia.com/repos/osivia-site/trunk</developerConnection>
   </scm>
 
