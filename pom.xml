@@ -8,6 +8,7 @@
 	<packaging>pom</packaging>
 	<name>osivia-site</name>
 
+
 	<properties>
 		<deploy.demo.dir>${toutatice-portail-runtime-dir}/custom/deploy</deploy.demo.dir>
 		<toutatice.core.version>2.0-SNAPSHOT</toutatice.core.version>
