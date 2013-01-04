@@ -1,10 +1,10 @@
-<%@ page import="fr.toutatice.portail.api.charte.UserPage" %>
-<%@ page import="fr.toutatice.portail.api.charte.UserPortal" %>
+<%@ page import="org.osivia.portal.api.charte.UserPage" %>
+<%@ page import="org.osivia.portal.api.charte.UserPortal" %>
 
 <%@page import="java.util.List"%>
 
-<%@ page import="fr.toutatice.portail.api.charte.Breadcrumb"%>
-<%@page import="fr.toutatice.portail.api.charte.BreadcrumbItem"%>
+<%@ page import="org.osivia.portal.api.charte.Breadcrumb"%>
+<%@page import="org.osivia.portal.api.charte.BreadcrumbItem"%>
 
 <%
 

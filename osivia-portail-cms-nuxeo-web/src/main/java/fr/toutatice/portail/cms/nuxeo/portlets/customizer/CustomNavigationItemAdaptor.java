@@ -1,15 +1,11 @@
 package fr.toutatice.portail.cms.nuxeo.portlets.customizer;
 
-import java.util.Map;
-
 import javax.portlet.PortletContext;
 
 import org.nuxeo.ecm.automation.client.jaxrs.model.Document;
 
-import fr.toutatice.portail.cms.nuxeo.portlets.customizer.DefaultCMSCustomizer;
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.NavigationItemAdaptor;
 import fr.toutatice.portail.cms.nuxeo.portlets.service.CMSService;
-import fr.toutatice.portail.core.cms.CMSItem;
 
 public class CustomNavigationItemAdaptor extends NavigationItemAdaptor {
 	

@@ -27,7 +27,7 @@ String urlAccueil = "/portal/";
 	   <script type="text/javascript"></script>
 	   
 	   
-	   <link type="text/css" href="/toutatice-portail-custom-web-assets/common-css/common.css" id="settings_css" rel="stylesheet">
+	   <link type="text/css" href="/osivia-portal-custom-web-assets/common-css/common.css" id="settings_css" rel="stylesheet">
 	   <link href="/osivia-portail-charte/themes/atomo/main.css" id="main_css" type="text/css" rel="stylesheet">
 	   <link rel="stylesheet" href="/osivia-portail-charte/themes/atomo/bootstrap.css" type="text/css"/>
 	   <link rel="stylesheet" href="/osivia-portail-charte/themes/atomo/osivia.css" type="text/css"/>

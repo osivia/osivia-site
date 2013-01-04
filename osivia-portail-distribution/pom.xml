@@ -9,9 +9,11 @@
 
 	<groupId>osivia.site</groupId>
 	<artifactId>osivia-portail-distribution</artifactId>
+	<packaging>pom</packaging>
 
   <properties>
-	<toutatice.distribution.version>2.0-SNAPSHOT</toutatice.distribution.version>
+	<osivia.portal.distribution.version>2.0-SNAPSHOT</osivia.portal.distribution.version>
+	<toutatice.cms.distribution.version>2.0-SNAPSHOT</toutatice.cms.distribution.version>
 	<src-env>prod</src-env>
         <dest-env>prod</dest-env>
  </properties>
@@ -40,18 +42,11 @@
 	<version>${project.version}</version>
 	<type>war</type>
   </dependency>
-  
-  <dependency>
-	<groupId>osivia.portal</groupId>
-	<artifactId>osivia-portal-portlet-publication-infos</artifactId>
-	<version>1.0-SNAPSHOT</version>
-	<type>war</type>
-  </dependency>
 
  <dependency>
 	<groupId>toutatice-portail.distribution</groupId>
 	<artifactId>toutatice-portail-distribution</artifactId>
-	<version>${toutatice.distribution.version}</version>
+	<version>${toutatice.cms.distribution.version}</version>
 	<type>zip</type>
   </dependency>
 
@@ -71,7 +66,7 @@
            	<id>dev</id>
             	<properties>
                 	<dest-env>dev</dest-env>
-					<src-env>dev</src-env>
+			<src-env>dev</src-env>
 	         </properties>
         </profile>
 
@@ -99,8 +94,8 @@
                <artifactItems>
                  <artifactItem>
                    <groupId>toutatice-portail.distribution</groupId>
-                   <artifactId>toutatice-portail-distribution</artifactId>
-                   <version>${toutatice.distribution.version}</version>
+		   <artifactId>toutatice-portail-distribution</artifactId>
+		   <version>${toutatice.cms.distribution.version}</version>
                    <type>zip</type>
                    <overWrite>true</overWrite>
                    <outputDirectory>${project.build.directory}/toutatice-distribution</outputDirectory>
@@ -135,7 +130,7 @@
                   </descriptors>
                   <finalName>osivia-site-distribution</finalName>
                   <appendAssemblyId>false</appendAssemblyId>
-	 	  <attach>false</attach>
+	 	  			<attach>false</attach>
                 </configuration>
                 <goals>
                   <goal>single</goal>

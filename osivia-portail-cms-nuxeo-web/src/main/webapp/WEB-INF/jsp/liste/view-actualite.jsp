@@ -10,7 +10,7 @@
 
 <%@page import="javax.portlet.WindowState"%>
 
-<%@page import="fr.toutatice.portail.api.urls.Link"%>
+<%@page import="org.osivia.portal.api.urls.Link"%>
 
 <%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.Blob"%>
 

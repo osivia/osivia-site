@@ -6,7 +6,7 @@
 
 	<link rel="stylesheet" media="print" type="text/css" href="/toutatice-portail-demo-charte/print/print.css" />
 	
-	<script type="text/javascript" src="/toutatice-portail-custom-web-assets/js/jquery.js"></script>	
+	<script type="text/javascript" src="/osivia-portal-custom-web-assets/js/jquery.js"></script>	
 	<script type='text/javascript' src='/portal-ajax/dyna/prototype.js'></script>
 	<script type='text/javascript' src='/portal-ajax/dyna/effects.js'></script>
 	<script type='text/javascript' src='/portal-ajax/dyna/dyna.js'></script>

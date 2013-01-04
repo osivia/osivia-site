@@ -5,8 +5,8 @@ import java.util.List;
 import javax.portlet.PortletContext;
 
 import org.nuxeo.ecm.automation.client.jaxrs.model.Document;
+import org.osivia.portal.api.menubar.MenubarItem;
 
-import fr.toutatice.portail.api.menubar.MenubarItem;
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.MenuBarFormater;
 
 /**

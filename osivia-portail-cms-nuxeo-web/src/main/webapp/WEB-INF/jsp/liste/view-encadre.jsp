@@ -20,7 +20,7 @@
 <%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.Document"%>
 <%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.PropertyList"%>
 
-<%@page import="fr.toutatice.portail.api.urls.Link"%>
+<%@page import="org.osivia.portal.api.urls.Link"%>
 
 <%@page import="fr.toutatice.portail.cms.nuxeo.portlets.bridge.StringHelper"%>
 <%@page import="fr.toutatice.portail.cms.nuxeo.portlets.bridge.Formater"%>

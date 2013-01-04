@@ -37,9 +37,9 @@
  		</dependency>
  		
  		<dependency>
- 			<groupId>toutatice-portail.core</groupId>
-			<artifactId>toutatice-portail-custom-lib-utils</artifactId>
-			<version>${toutatice.core.version}</version>
+ 			<groupId>org.osivia.portal.core</groupId>
+			<artifactId>osivia-portal-custom-lib-utils</artifactId>
+			<version>${osivia.portal.version}</version>
 			<scope>provided</scope>
  		</dependency>
 

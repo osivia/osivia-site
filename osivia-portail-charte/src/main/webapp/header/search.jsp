@@ -7,8 +7,8 @@
 <%@ page import="java.util.Iterator" %>
 <%@ page import="java.util.ArrayList" %>
 
-<%@page import="fr.toutatice.portail.api.urls.IPortalUrlFactory"%>
-<%@page import="fr.toutatice.portail.api.contexte.PortalControllerContext"%>
+<%@page import="org.osivia.portal.api.urls.IPortalUrlFactory"%>
+<%@page import="org.osivia.portal.api.contexte.PortalControllerContext"%>
 
 
 <%

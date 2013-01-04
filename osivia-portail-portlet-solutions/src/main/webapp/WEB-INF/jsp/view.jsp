@@ -17,7 +17,7 @@
 
 <%@page import="javax.portlet.ResourceURL"%>
 <%@page import="javax.portlet.WindowState"%>
-<%@page import="fr.toutatice.portail.api.menubar.MenubarItem"%>
+<%@page import="org.osivia.portal.api.menubar.MenubarItem"%>
 
 <portlet:defineObjects />
 

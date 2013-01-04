@@ -39,12 +39,12 @@
 		<meta name="Formatter" content="Osivia Portal" />
 	   <script type="text/javascript"></script>
 	   
-	  <script type="text/javascript" src="/toutatice-portail-custom-web-assets/js/jquery.js"></script>	   
+	  <script type="text/javascript" src="/osivia-portal-custom-web-assets/js/jquery.js"></script>	   
 
 
 	   <p:headerContent/>
 
-	   <link rel="stylesheet" id="settings_css" href="/toutatice-portail-custom-web-assets/common-css/common.css" type="text/css"/>
+	   <link rel="stylesheet" id="settings_css" href="/osivia-portal-custom-web-assets/common-css/common.css" type="text/css"/>
 	   
 	   
 	   <p:theme themeName="osivia-site"/>

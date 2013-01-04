@@ -7,8 +7,8 @@
 
 <%@ page import="java.util.ArrayList" %>
 
-<%@ page import="fr.toutatice.portail.api.charte.Breadcrumb"%>
-<%@page import="fr.toutatice.portail.api.charte.BreadcrumbItem"%>
+<%@ page import="org.osivia.portal.api.charte.Breadcrumb"%>
+<%@page import="org.osivia.portal.api.charte.BreadcrumbItem"%>
 
 <%
 Breadcrumb breadcrumb = (Breadcrumb) request.getAttribute("pia.breadcrumb");

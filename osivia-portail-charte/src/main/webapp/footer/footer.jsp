@@ -1,17 +1,17 @@
 <%@page import="java.io.IOException"%>
 <%@page import="java.util.List"%>
-<%@page import="fr.toutatice.portail.api.contexte.PortalControllerContext"%>
+<%@page import="org.osivia.portal.api.contexte.PortalControllerContext"%>
 <%@page import="java.net.URLEncoder"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
-<%@page import="fr.toutatice.portail.api.urls.IPortalUrlFactory"%>
+<%@page import="org.osivia.portal.api.urls.IPortalUrlFactory"%>
 <%@ page import="java.util.Iterator" %>
 
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="fr.toutatice.portail.api.charte.UserPage" %>
-<%@ page import="fr.toutatice.portail.api.charte.UserPortal" %>
-<%@ page import="fr.toutatice.portail.api.charte.Breadcrumb"%>
-<%@page import="fr.toutatice.portail.api.charte.BreadcrumbItem"%>
+<%@ page import="org.osivia.portal.api.charte.UserPage" %>
+<%@ page import="org.osivia.portal.api.charte.UserPortal" %>
+<%@ page import="org.osivia.portal.api.charte.Breadcrumb"%>
+<%@page import="org.osivia.portal.api.charte.BreadcrumbItem"%>
 
 <%
 UserPortal siteMap = (UserPortal) request.getAttribute("pia.siteMap");

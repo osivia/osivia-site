@@ -7,11 +7,12 @@ import java.util.Map;
 import javax.portlet.PortletContext;
 
 import org.nuxeo.ecm.automation.client.jaxrs.model.Document;
+import org.osivia.portal.core.cms.CMSHandlerProperties;
+import org.osivia.portal.core.cms.CMSServiceCtx;
 
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.MenuBarFormater;
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.NavigationItemAdaptor;
-import fr.toutatice.portail.core.cms.CMSHandlerProperties;
-import fr.toutatice.portail.core.cms.CMSServiceCtx;
+
 
 /**
  * Ce customizer permet de définir :
