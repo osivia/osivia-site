@@ -12,7 +12,7 @@ nuxeo.navigationSchemas=wcm_navigation
 
 
 #forcer le cache des portlets (UNIQUEMENT EN DEBUG !!!!)
-portlets.expirationSecs=0
+portlets.expirationSecs=120
 
 #timeout des caches en secondes
 nuxeo.cacheTimeout=0

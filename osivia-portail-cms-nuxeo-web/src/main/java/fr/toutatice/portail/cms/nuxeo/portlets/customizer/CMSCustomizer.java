@@ -89,9 +89,9 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
 		Map<String, String> windowProperties = new HashMap<String, String>();
 
-		windowProperties.put("pia.cms.scope", ctx.getScope());
-		windowProperties.put("pia.cms.uri", doc.getPath());
-		windowProperties.put("pia.hideDecorators", "1");
+		windowProperties.put("osivia.cms.scope", ctx.getScope());
+		windowProperties.put("osivia.cms.uri", doc.getPath());
+		windowProperties.put("osivia.hideDecorators", "1");
 		windowProperties.put("theme.dyna.partial_refresh_enabled", "false");
 
 		CMSHandlerProperties linkProps = new CMSHandlerProperties();
@@ -156,15 +156,15 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
 		Map<String, String> windowProperties = new HashMap<String, String>();
 
-		windowProperties.put("pia.cms.scope", ctx.getScope());
+		windowProperties.put("osivia.cms.scope", ctx.getScope());
 
-		windowProperties.put("pia.hideTitle", "1");
+		windowProperties.put("osivia.hideTitle", "1");
 
-		windowProperties.put("pia.cms.displayLiveVersion", ctx.getDisplayLiveVersion());
-		windowProperties.put("pia.cms.hideMetaDatas", ctx.getHideMetaDatas());
-		windowProperties.put("pia.cms.uri", doc.getPath());
-		windowProperties.put("pia.cms.publishPathAlreadyConverted", "1");
-		windowProperties.put("pia.hideDecorators", "1");
+		windowProperties.put("osivia.cms.displayLiveVersion", ctx.getDisplayLiveVersion());
+		windowProperties.put("osivia.cms.hideMetaDatas", ctx.getHideMetaDatas());
+		windowProperties.put("osivia.cms.uri", doc.getPath());
+		windowProperties.put("osivia.cms.publishPathAlreadyConverted", "1");
+		windowProperties.put("osivia.hideDecorators", "1");
 		windowProperties.put("theme.dyna.partial_refresh_enabled", "false");
 
 		CMSHandlerProperties linkProps = new CMSHandlerProperties();
