@@ -1,3 +1,4 @@
+<%@page import="org.osivia.portal.api.Constants"%>
 <%@page import="java.util.List"%>
 <%@page import="org.osivia.portal.api.contexte.PortalControllerContext"%>
 <%@page import="java.net.URLEncoder"%>
@@ -13,8 +14,8 @@
 <%@page import="org.osivia.portal.api.charte.BreadcrumbItem"%>
 
 <%
-UserPortal userPortal = (UserPortal) request.getAttribute("pia.userPortal");
-Object currentPageId = request.getAttribute("pia.currentPageId");
+UserPortal userPortal = (UserPortal) request.getAttribute(Constants.ATTR_USER_PORTAL);
+Object currentPageId = request.getAttribute(Constants.ATTR_PAGE_ID);
   
 %>
 
@@ -92,7 +93,7 @@ Object currentPageId = request.getAttribute("pia.currentPageId");
 
 //Get first tab
 
-Integer firstTab = (Integer) request.getAttribute("pia.firstTab");
+Integer firstTab = (Integer) request.getAttribute(Constants.ATTR_FIRST_TAB);
 
 if( firstTab == null)
 	firstTab = new Integer(0);

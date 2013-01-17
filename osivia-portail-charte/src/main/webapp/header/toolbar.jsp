@@ -1,3 +1,4 @@
+<%@page import="org.osivia.portal.api.Constants"%>
 <%@ page import="org.jboss.portal.api.PortalURL" %>
 <%@ page import="org.jboss.portal.identity.User" %>
 <%@page import="java.util.ResourceBundle"%>
@@ -10,9 +11,9 @@
    PortalURL adminPortalURL = (PortalURL)request.getAttribute("org.jboss.portal.header.ADMIN_PORTAL_URL");
    PortalURL signOutURL = (PortalURL)request.getAttribute("org.jboss.portal.header.SIGN_OUT_URL");
    
-   PortalURL monEspaceURL = (PortalURL)request.getAttribute("pia.MON_ESPACE_URL");
-   PortalURL wizzardURL = (PortalURL)request.getAttribute("pia.WIZZARD_URL");
-   String wizzardMode = (String) request.getAttribute("pia.WIZZARD_MODE");
+   PortalURL monEspaceURL = (PortalURL)request.getAttribute(Constants.ATTR_MY_SPACE_URL);
+   PortalURL wizzardURL = (PortalURL)request.getAttribute(Constants.ATTR_WIZZARD_URL);
+   String wizzardMode = (String) request.getAttribute(Constants.ATTR_WIZZARD_MODE);
 %>
 
 <% if(principal != null){ %>

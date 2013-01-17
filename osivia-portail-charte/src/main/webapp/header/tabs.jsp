@@ -1,3 +1,4 @@
+<%@page import="org.osivia.portal.api.Constants"%>
 <%@page import="java.util.List"%>
 <%@page import="org.osivia.portal.api.contexte.PortalControllerContext"%>
 <%@page import="java.net.URLEncoder"%>
@@ -13,8 +14,8 @@
 <%@page import="org.osivia.portal.api.charte.BreadcrumbItem"%>
 
 <%
-UserPortal userPortal = (UserPortal) request.getAttribute("pia.userPortal");
-Object currentPageId = request.getAttribute("pia.currentPageId");
+UserPortal userPortal = (UserPortal) request.getAttribute(Constants.ATTR_USER_PORTAL);
+Object currentPageId = request.getAttribute(Constants.ATTR_PAGE_ID);
 
 //Get current tab
 

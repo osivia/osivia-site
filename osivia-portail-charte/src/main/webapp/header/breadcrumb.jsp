@@ -1,3 +1,4 @@
+<%@page import="org.osivia.portal.api.Constants"%>
 <%@page import="java.util.List"%>
 <%@page import="java.net.URLEncoder"%>
 <%@page import="java.util.Map"%>
@@ -11,7 +12,7 @@
 <%@page import="org.osivia.portal.api.charte.BreadcrumbItem"%>
 
 <%
-Breadcrumb breadcrumb = (Breadcrumb) request.getAttribute("pia.breadcrumb");
+Breadcrumb breadcrumb = (Breadcrumb) request.getAttribute(Constants.ATTR_BREADCRUMB);
 %>
 
 

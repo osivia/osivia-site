@@ -47,7 +47,7 @@
    -->
     <tag>
       <name>headerContent</name>
-      <tag-class>fr.gouv.education.pia.portail.socle.page</tag-class>
+      <tag-class>fr.gouv.education.osivia.portail.socle.page</tag-class>
       <body-content>empty</body-content>
    </tag>
 </taglib>

@@ -1,3 +1,4 @@
+<%@page import="org.osivia.portal.api.Constants"%>
 <%@page import="java.io.IOException"%>
 <%@page import="java.util.List"%>
 <%@page import="org.osivia.portal.api.contexte.PortalControllerContext"%>
@@ -14,7 +15,7 @@
 <%@page import="org.osivia.portal.api.charte.BreadcrumbItem"%>
 
 <%
-UserPortal siteMap = (UserPortal) request.getAttribute("pia.siteMap");
+UserPortal siteMap = (UserPortal) request.getAttribute(Constants.ATTR_SITE_MAP);
  
 %>
 

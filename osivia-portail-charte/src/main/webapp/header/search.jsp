@@ -1,3 +1,4 @@
+<%@page import="org.osivia.portal.api.Constants"%>
 <%@page import="java.util.List"%>
 
 <%@page import="java.net.URLEncoder"%>
@@ -14,10 +15,10 @@
 <%
 
 
-String searchUrl = (String) request.getAttribute("pia.searchUrl");   
+String searchUrl = (String) request.getAttribute(Constants.ATTR_SEARCH_URL);   
 
-IPortalUrlFactory urlFactory = (IPortalUrlFactory) request.getAttribute("pia.urlfactory");
-PortalControllerContext ctx =  (PortalControllerContext) request.getAttribute("pia.ctrlctx");
+IPortalUrlFactory urlFactory = (IPortalUrlFactory) request.getAttribute(Constants.ATTR_URL_FACTORY);
+PortalControllerContext ctx =  (PortalControllerContext) request.getAttribute(Constants.ATTR_PORTAL_CTX);
 
 Map<String, String> props = new HashMap<String, String>();
 Map<String, String> params = new HashMap<String, String>();
