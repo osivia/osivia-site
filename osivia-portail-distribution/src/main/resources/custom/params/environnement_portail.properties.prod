@@ -24,4 +24,4 @@ statut.actif=true
 
 
 #Delai en secondes au dela duquel les webservices (Nuxeo, RSS, ...) tombent en timeout
-toutatice.webServiceTimeOut=30
+ws.webServiceTimeOut=30

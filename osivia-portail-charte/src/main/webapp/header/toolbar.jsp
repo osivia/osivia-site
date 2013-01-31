@@ -61,7 +61,7 @@ else
    if (wizzardURL != null)
    {
 	   String title = "Mode édition";
-	   if( "normal".equals(wizzardMode))
+	   if( "1".equals(wizzardMode))
 		   title = "Sortir du mode édition";
 	   //TODO : accès RB
 %>&nbsp;&nbsp;<a href="<%= wizzardURL %>"><%= title %></a><br/><%
