@@ -13,14 +13,10 @@
 		<meta name="keywords" content="JSR286, JBoss, Nuxeo, Portal, Portail, GED, CMS, ECM, publish, e-commerce, content management, development framework" />
 		<meta name="generator" content="Osivia Portal" />
 	   <!-- to correct the unsightly Flash of Unstyled Content. -->
-	   <script type="text/javascript"></script>
-	   
-	  <script type="text/javascript" src="/osivia-portal-custom-web-assets/js/jquery.js"></script>	   
+	   <script type="text/javascript"></script>  
 
 
 	   <p:headerContent/>
-
-	   <link rel="stylesheet" id="settings_css" href="/osivia-portal-custom-web-assets/common-css/common.css" type="text/css"/>
 	   
 	   
 	   <p:theme themeName="osivia-site"/>

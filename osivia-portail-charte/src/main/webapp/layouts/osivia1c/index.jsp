@@ -40,14 +40,11 @@
 		
 
 	   <!-- to correct the unsightly Flash of Unstyled Content. -->
-	   <script type="text/javascript"></script>
-	   
-	  <script type="text/javascript" src="/osivia-portal-custom-web-assets/js/jquery.js"></script>	   
+	   <script type="text/javascript"></script>	   
 
 
 	   <p:headerContent/>
 
-	   <link rel="stylesheet" id="settings_css" href="/osivia-portal-custom-web-assets/common-css/common.css" type="text/css"/>
 	   
 	   
 	   <p:theme themeName="osivia-site"/>

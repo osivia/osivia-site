@@ -26,7 +26,7 @@ public class DemoMenuBarFormater extends MenuBarFormater {
 
 	@Override
 	protected void addPermaLinkItem(List<MenubarItem> menuBar, String url) throws Exception {
-		MenubarItem item = new MenubarItem("Permalink", MenubarItem.ORDER_PORTLET_SPECIFIC_CMS, url, null,
+		MenubarItem item = new MenubarItem("PERMLINK","Permalink", MenubarItem.ORDER_PORTLET_SPECIFIC_CMS, url, null,
 				"portlet-menuitem-permalink", null);
 		item.setAjaxDisabled(true);
 		menuBar.add(item);
@@ -35,7 +35,7 @@ public class DemoMenuBarFormater extends MenuBarFormater {
 
 	protected void addAdministrationLinkItem(List<MenubarItem> menuBar, Document doc, String url) throws Exception {
 
-		MenubarItem item = new MenubarItem("Modifier dans Nuxeo", MenubarItem.ORDER_PORTLET_SPECIFIC_CMS + 2, url,
+		MenubarItem item = new MenubarItem("EDIT", "Modifier dans Nuxeo", MenubarItem.ORDER_PORTLET_SPECIFIC_CMS + 2, url,
 				null, "portlet-menuitem-nuxeo-edit", "nuxeo");
 		item.setAjaxDisabled(true);
 		menuBar.add(item);

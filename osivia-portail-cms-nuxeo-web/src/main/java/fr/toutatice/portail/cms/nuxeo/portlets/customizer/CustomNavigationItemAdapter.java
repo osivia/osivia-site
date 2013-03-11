@@ -4,12 +4,12 @@ import javax.portlet.PortletContext;
 
 import org.nuxeo.ecm.automation.client.jaxrs.model.Document;
 
-import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.NavigationItemAdaptor;
+import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.NavigationItemAdapter;
 import fr.toutatice.portail.cms.nuxeo.portlets.service.CMSService;
 
-public class CustomNavigationItemAdaptor extends NavigationItemAdaptor {
+public class CustomNavigationItemAdapter extends NavigationItemAdapter {
 	
-	public CustomNavigationItemAdaptor(PortletContext portletCtx, DefaultCMSCustomizer customizer, CMSService cmsService) {
+	public CustomNavigationItemAdapter(PortletContext portletCtx, DefaultCMSCustomizer customizer, CMSService cmsService) {
 		super(portletCtx,  customizer,  cmsService);
 	};
 	
