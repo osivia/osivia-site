@@ -51,8 +51,9 @@
 	  <excludes>
 		<exclude>custom/params/environnement_portail.properties.*</exclude>
 		<exclude>/jboss-as/server/production/run.conf.*</exclude>
-     	  </excludes>
-        </fileSet>
+		<exclude>jboss-as/server/production/conf/jboss-log4j.*</exclude>
+     </excludes>
+    </fileSet>
 
 
       </fileSets>
