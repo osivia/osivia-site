@@ -52,7 +52,8 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
 	}
 	
-	public NavigationItemAdapter getNavigationItemAdaptor()	{
+	@Override
+	public NavigationItemAdapter getNavigationItemAdapter()	{
 		if( navigationItemAdapter == null){
 			navigationItemAdapter = new CustomNavigationItemAdapter(portletCtx, this, getCMSService());
 		}
