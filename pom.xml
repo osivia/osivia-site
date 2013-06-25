@@ -6,18 +6,18 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>osivia.site</groupId>
+    <groupId>org.osivia.site</groupId>
     <artifactId>osivia-site-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>osivia-site</name>
+    <name>Site OSIVIA - parent</name>
 
 
     <properties>
 
         <deploy.demo.dir>${toutatice-portail-runtime-dir}/custom/deploy</deploy.demo.dir>
-        <osivia.portal.version>2.1-SNAPSHOT</osivia.portal.version>
-        <toutatice.cms.version>2.1-SNAPSHOT</toutatice.cms.version>
+        <osivia.portal.version>2.1-RC1</osivia.portal.version>
+        <toutatice.cms.version>2.1-RC1</toutatice.cms.version>
         <portlet-api.version>2.0</portlet-api.version>
         <servlet-api.version>2.4</servlet-api.version>
 
@@ -30,12 +30,13 @@
     
 
     <modules>
-        <module>osivia-portail-portlets-utils</module>
-        <module>osivia-portail-charte</module>
-        <module>osivia-portail-charte-community</module>
-        <module>osivia-portail-cms-nuxeo-web</module>
-        <module>osivia-portail-portlet-solutions</module>
-        <module>osivia-portail-distribution</module>
+        <module>osivia-site-portlets-utils</module>
+        <module>osivia-site-charte</module>
+        <module>osivia-site-charte-community</module>
+        <module>osivia-site-cms-nuxeo-web</module>
+        <module>osivia-site-portlet-solutions</module>
+        <module>osivia-site-distribution</module>
+        <module>osivia-site-internationalization-customizer</module>
     </modules>
 
 

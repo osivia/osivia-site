@@ -1,75 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
+
   	<parent>
-  		<groupId>osivia.site</groupId>
+  		<groupId>org.osivia.site</groupId>
 		<artifactId>osivia-site-parent</artifactId>
 		<version>1.0-SNAPSHOT</version>
  	</parent>
 
-	<groupId>osivia.site</groupId>
-	<artifactId>osivia-portail-distribution</artifactId>
-	<!--<packaging>pom</packaging>-->
+	<artifactId>osivia-site-distribution</artifactId>
+    <name>Site OSIVIA - distribution</name>
 
-  <properties>
-	<osivia.portal.distribution.version>2.1-SNAPSHOT</osivia.portal.distribution.version>
-    <osivia.portal.services.wiki.version>2.1-SNAPSHOT</osivia.portal.services.wiki.version>
-	<toutatice.cms.distribution.version>2.1-SNAPSHOT</toutatice.cms.distribution.version>
-	<src-env>prod</src-env>
+    <properties>
+        <osivia.portal.distribution.version>2.1-RC1</osivia.portal.distribution.version>
+        <osivia.portal.services.wiki.version>1.0-RC1</osivia.portal.services.wiki.version>
+        <toutatice.cms.distribution.version>2.1-RC1</toutatice.cms.distribution.version>
+        <src-env>prod</src-env>
         <dest-env>prod</dest-env>
- </properties>
+    </properties>
 
 
- <dependencies>
+    <dependencies>
 
- <dependency>
-	<groupId>osivia.site</groupId>
-	<artifactId>osivia-portail-charte</artifactId>
-	<version>${project.version}</version>
-	<type>war</type>
-  </dependency>
-  
-  <dependency>
-    <groupId>osivia.site</groupId>
-    <artifactId>osivia-portail-charte-community</artifactId>
-    <version>${project.version}</version>
-    <type>war</type>
-  </dependency>
+        <dependency>
+            <groupId>org.osivia.site</groupId>
+            <artifactId>osivia-site-charte</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
 
-  <dependency>
-	<groupId>osivia.site</groupId>
-	<artifactId>osivia-portail-cms-nuxeo-web</artifactId>
-	<version>${project.version}</version>
-	<type>war</type>
-  </dependency>
+        <dependency>
+            <groupId>org.osivia.site</groupId>
+            <artifactId>osivia-site-charte-community</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
 
+        <dependency>
+            <groupId>org.osivia.site</groupId>
+            <artifactId>osivia-site-cms-nuxeo-web</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
 
-  <dependency>
-	<groupId>osivia.site</groupId>
-	<artifactId>osivia-portail-portlet-solutions</artifactId>
-	<version>${project.version}</version>
-	<type>war</type>
-  </dependency>
-  
-  <dependency>
-    <groupId>org.osivia.portal.services</groupId>
-    <artifactId>osivia-services-wiki</artifactId>
-    <version>${osivia.portal.services.wiki.version}</version>
-    <type>war</type>
-  </dependency>
+        <dependency>
+            <groupId>org.osivia.site</groupId>
+            <artifactId>osivia-site-portlet-solutions</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
 
- <dependency>
-	<groupId>toutatice-portail.distribution</groupId>
-	<artifactId>toutatice-portail-distribution</artifactId>
-	<version>${toutatice.cms.distribution.version}</version>
-	<type>zip</type>
-  </dependency>
+        <dependency>
+            <groupId>org.osivia.services</groupId>
+            <artifactId>osivia-services-wiki</artifactId>
+            <version>${osivia.portal.services.wiki.version}</version>
+            <type>war</type>
+        </dependency>
 
- </dependencies>
+        <dependency>
+            <groupId>toutatice-portail.distribution</groupId>
+            <artifactId>toutatice-portail-distribution</artifactId>
+            <version>${toutatice.cms.distribution.version}</version>
+            <type>zip</type>
+        </dependency>
 
-<profiles>
+    </dependencies>
 
-<!-- environnements alternatifs -->
+    <profiles>
+
+    <!-- environnements alternatifs -->
 
         <profile>
 		<activation>
