@@ -5,7 +5,7 @@
 
     <groupId>org.osivia.site</groupId>
     <artifactId>osivia-site-parent</artifactId>
-    <version>1.0-RC1</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Site OSIVIA - parent</name>
 
@@ -126,7 +126,7 @@
 
 
     <scm>
-        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/tags/1.0-RC1</developerConnection>
+        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/trunk</developerConnection>
     </scm>
 
 
