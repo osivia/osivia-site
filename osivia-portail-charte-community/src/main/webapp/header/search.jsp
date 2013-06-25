@@ -1,3 +1,4 @@
+<%@page import="java.util.ResourceBundle"%>
 <%@page import="org.osivia.portal.api.Constants"%>
 <%@page import="java.util.List"%>
 
@@ -13,39 +14,23 @@
 
 
 <%
+ResourceBundle rb = ResourceBundle.getBundle("Resource", request.getLocale());
 String searchUrl = (String) request.getAttribute(Constants.ATTR_SEARCH_URL);   
 
-IPortalUrlFactory urlFactory = (IPortalUrlFactory) request.getAttribute(Constants.ATTR_URL_FACTORY);
-PortalControllerContext ctx =  (PortalControllerContext) request.getAttribute(Constants.ATTR_PORTAL_CTX);
-
-Map<String, String> props = new HashMap<String, String>();
-Map<String, String> params = new HashMap<String, String>();
 %>
 
 
 <script type="text/javascript">
-function onsubmitGlobalSearch( form)
-{
-
+function onsubmitGlobalSearch(form) {
    var searchUrl = "<%=searchUrl%>";
    
    searchUrl = searchUrl.replace("__REPLACE_KEYWORDS__", form.keywords.value);
    form.action = searchUrl;
-   
-
 }
 </script>
 
 <form onsubmit="return onsubmitGlobalSearch(this);" method="post">
-    <input type="text" id="search-text" name="keywords" placeholder="RECHERCHER">
-    <button type="submit" id="search-submit">OK</button>
+    <input type="text" id="search-text" name="keywords" placeholder="<%=rb.getString("SEARCH_PLACEHOLDER") %>">
+    <button type="submit" id="search-submit"><%=rb.getString("SEARCH_SUBMIT") %></button>
 </form>
-
-
-<!-- <form onsubmit="return onsubmitGlobalSearch( this);" method="post">
-		 <span class="search">
-			<input class="inputSearch" type="text" size="10" value=" RECHERCHER" name="keywords">&nbsp;&nbsp;<input type="submit" value=" VALIDER">
-		 </span>
-     </form> -->
-
 

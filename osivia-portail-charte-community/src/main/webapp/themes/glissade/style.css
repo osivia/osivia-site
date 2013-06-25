@@ -105,20 +105,6 @@ a:hover {
     color: #FFFFFF;
 }
 
-#toolbar a.editionInactive {
-    padding-left: 35px;
-    background-image: url('images/checkbox-uncheck.png');
-    background-repeat: no-repeat;
-    background-position: 15px 0;
-}
-
-#toolbar a.editionActive {
-    padding-left: 35px;
-    background-image: url('images/checkbox-check.png');
-    background-repeat: no-repeat;
-    background-position: 15px 0;
-}
-
 #toolbar .toolbar-menu {
     display: inline-block;
 }
@@ -162,7 +148,28 @@ a:hover {
     color: #FFFFFF;
 }
 
-#toolbar a#cache-init {
+#toolbar ul a.uncheck {
+    padding-left: 35px;
+    background-image: url('images/checkbox-uncheck.png');
+    background-repeat: no-repeat;
+    background-position: 15px 0;
+}
+
+#toolbar ul a.check {
+    padding-left: 35px;
+    background-image: url('images/checkbox-check.png');
+    background-repeat: no-repeat;
+    background-position: 15px 0;
+}
+
+#toolbar hr {	   
+    border: medium none;
+    background-color: #888888;
+    height: 1px;
+    margin: 4px 12px;
+}
+
+#toolbar a#refresh-page {
     background-image: url('images/refresh.png');
     background-repeat: no-repeat;
     background-position: center;
