@@ -6,71 +6,43 @@
 
 <%
    ResourceBundle rb = ResourceBundle.getBundle("Resource", request.getLocale());
-   Principal principal = (Principal)request.getAttribute("org.jboss.portal.header.PRINCIPAL");
-   PortalURL loginURL = (PortalURL)request.getAttribute("org.jboss.portal.header.LOGIN_URL");
-   PortalURL adminPortalURL = (PortalURL)request.getAttribute("org.jboss.portal.header.ADMIN_PORTAL_URL");
-   PortalURL signOutURL = (PortalURL)request.getAttribute("org.jboss.portal.header.SIGN_OUT_URL");
+   Principal principal = (Principal)request.getAttribute(Constants.ATTR_TOOLBAR_PRINCIPAL);
    
-   PortalURL monEspaceURL = (PortalURL)request.getAttribute(Constants.ATTR_MY_SPACE_URL);
-   PortalURL wizzardURL = (PortalURL)request.getAttribute(Constants.ATTR_WIZZARD_URL);
-   String wizzardMode = (String) request.getAttribute(Constants.ATTR_WIZZARD_MODE);
+   PortalURL loginURL = (PortalURL)request.getAttribute(Constants.ATTR_TOOLBAR_LOGIN_URL);
+   PortalURL signOutURL = (PortalURL)request.getAttribute(Constants.ATTR_TOOLBAR_SIGN_OUT_URL);   
+   PortalURL monEspaceURL = (PortalURL)request.getAttribute(Constants.ATTR_TOOLBAR_MY_SPACE_URL);
+   PortalURL refreshPageUrl = (PortalURL) request.getAttribute(Constants.ATTR_TOOLBAR_REFRESH_PAGE_URL);
+
+   String administrationHtmlContent = (String) request.getAttribute(Constants.ATTR_TOOLBAR_ADMINISTRATION_CONTENT);
 %>
-
-<% if(principal != null){ %>
-	
-<div class="toolbar-container-show">
-
-<%  if (principal == null)
-   {
-%>
-
-<%if(request.getAttribute("ssoEnabled") == null){%>
-
-      <a href="<%= loginURL %>"><%= rb.getString("LOGIN") %></a>
-
-<%}else{%>
-<a href="<%= loginURL %>"><%= rb.getString("LOGIN") %></a>
-<%}%>
 
 
 <%
-}
-else
-{
-%>
-
-
-
-<%= rb.getString("LOGGED") %>: <%= principal.getName() %><br/><br/>
-
-<%
- 
+if(principal != null) {
+    %>
+<div id="toolbar-display">
+    <div class="gauche">
+        <%=administrationHtmlContent %>
+    </div>
     
-   if (monEspaceURL != null)
-   {
-%>&nbsp;&nbsp;<a href="<%= monEspaceURL %>"><%= rb.getString("MON_ESPACE") %></a><br/><%
-   }
-   
-
-   if (adminPortalURL != null)
-   {
-%>&nbsp;&nbsp;<a href="<%= adminPortalURL %>"><%= rb.getString("ADMIN") %></a><br/><%
-   }
-
- 
-   if (wizzardURL != null)
-   {
-	   String title = "Mode édition";
-	   if( "1".equals(wizzardMode))
-		   title = "Sortir du mode édition";
-	   //TODO : accès RB
-%>&nbsp;&nbsp;<a href="<%= wizzardURL %>"><%= title %></a><br/><%
-   }
-   
-%>&nbsp;&nbsp;<a href="<%= signOutURL %>"><%= rb.getString("LOGOUT") %></a>
-<%
-   } %>
-   </div>
-   <%
+    <div class="droite">
+        <p><%= rb.getString("LOGGED") %> : <%= principal.getName() %></p>
+    
+        <% 
+        if (monEspaceURL != null) {
+            %>
+            <a href="<%= monEspaceURL %>"><%= rb.getString("MON_ESPACE") %></a>
+            <%
+        }
+        %>
+    
+        <!-- Utilisateur et déconnexion -->
+        <a href="<%=signOutURL %>"><%=rb.getString("LOGOUT") %></a>    
+    
+        <!-- Actualisation de la page -->
+        <a id="refresh-page" href="<%=refreshPageUrl %>" title="<%=rb.getString("REFRESH_PAGE") %>">&nbsp;</a>
+    </div>
+</div>
+    <%
 } 
 %>

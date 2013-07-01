@@ -44,6 +44,122 @@ img {
 	padding-top: 20px;
 }
 
+
+/* Toolbar */
+#toolbar {
+    visibility: hidden;
+}
+
+#toolbar-display {
+    text-align: right;
+    height: 24px;
+    background-color: #DCDDDC;
+    box-shadow: 0 2px #C5C7C6;
+    padding: 0 10px;
+    visibility: visible;
+}
+
+#toolbar .gauche {
+    float: left;
+}
+
+#toolbar .droite {
+    float: right;
+}
+
+#toolbar a, #toolbar p {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 0 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #373737;
+}
+
+#toolbar a:HOVER {
+    background: #5D781D;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#toolbar .toolbar-menu {
+    display: inline-block;
+}
+
+#toolbar a.toolbar-menu-title {
+    display: inline-block;
+    padding-right: 30px;
+    background-image: url('images/fleche-menu.png');
+    background-repeat: no-repeat;
+    background-position: right -4px;
+}
+
+#toolbar ul {
+    position: absolute;
+    padding: 0;
+    border-top: 1px solid #C5C7C6;
+    background-color: #DCDDDC;
+    box-shadow: 2px 2px #C5C7C6;
+    visibility: hidden;
+    z-index: 3;
+}
+
+#toolbar .toolbar-menu:HOVER ul, #toolbar a:HOVER ul {
+    visibility: visible;
+}
+
+#toolbar ul li {
+    display: block;
+}
+
+#toolbar ul a {
+    display: block;
+    font-size: 10px;
+    line-height: 22px;
+    text-align: left;
+}
+
+#toolbar ul a:HOVER {
+    background: #5D781D;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#toolbar ul a.uncheck {
+    padding-left: 35px;
+    background-image: url('images/checkbox-uncheck.png');
+    background-repeat: no-repeat;
+    background-position: 15px 0;
+}
+
+#toolbar ul a.check {
+    padding-left: 35px;
+    background-image: url('images/checkbox-check.png');
+    background-repeat: no-repeat;
+    background-position: 15px 0;
+}
+
+#toolbar hr {      
+    border: medium none;
+    background-color: #888888;
+    height: 1px;
+    margin: 4px 12px;
+}
+
+#toolbar a#refresh-page {
+    background-image: url('images/refresh.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+    padding: 0 3px;
+}
+
+
+/* 
 .toolbar-container-show {
 	background-color: #B8D68F;
     float: right;
@@ -54,7 +170,7 @@ img {
     text-align: center;
     top: 0;
     width: 180px;
-}
+} */
 
 
 /**************** ENSEMBLE DE LA PAGE *******************/

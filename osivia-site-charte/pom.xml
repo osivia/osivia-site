@@ -10,9 +10,10 @@
 
 	<artifactId>osivia-site-charte</artifactId>
 	<packaging>war</packaging>
-	<name>Site OSIVIA - charte</name>
+	<name>Site OSIVIA - Charte</name>
 	<description>Charte du site web OSIVIA</description>
 	
+    
 	<profiles>	 
 	   <profile>
 	     <id>deploy-osivia-modules</id>

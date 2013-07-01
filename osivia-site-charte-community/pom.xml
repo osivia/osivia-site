@@ -10,7 +10,7 @@
 
 	<artifactId>osivia-site-charte-community</artifactId>
 	<packaging>war</packaging>
-	<name>Site OSIVIA - charte communautaire</name>
+	<name>Site OSIVIA - Charte communautaire</name>
 	<description>Charte du site communautaire OSIVIA</description>
 	
 	<profiles>	 

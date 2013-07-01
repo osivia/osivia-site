@@ -55,14 +55,15 @@
    <div id="sizer">
       <div id="expander">
       <div class="container">
-      <div id="ligneentete">        
+      <div id="ligneentete">
+         <p:region regionName='toolbar' regionID='toolbar'/>
+                 
          <jsp:include page="../../header/logo.jsp" />
          
 	        <div id="global_header">
 		        	
 		         <div id="header_utils"> 
 			         <div id="header">
-			         	<p:region regionName='toolbar' regionID='toolbar'/>
 			         	<p:region regionName="pageSettings" regionID="pageSettings"/> 		             
 				             <div class="menu-et-recherche">
 				             	<div class="navbar">

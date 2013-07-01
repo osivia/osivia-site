@@ -1,30 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
 
     <groupId>org.osivia.site</groupId>
     <artifactId>osivia-site-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Site OSIVIA - parent</name>
+    <name>Site OSIVIA - Parent</name>
 
 
     <properties>
-
-        <deploy.demo.dir>${toutatice-portail-runtime-dir}/custom/deploy</deploy.demo.dir>
-        <osivia.portal.version>2.1-RC1</osivia.portal.version>
-        <toutatice.cms.version>2.1-RC1</toutatice.cms.version>
-        <portlet-api.version>2.0</portlet-api.version>
-        <servlet-api.version>2.4</servlet-api.version>
-
-        <!-- Commons -->
-        <commons-logging.version>1.1.1</commons-logging.version>
-        <commons-lang.version>2.6</commons-lang.version>
-        <commons-collections.version>3.2.1</commons-collections.version>
-
+        <osivia-portal.version>2.1-RC2</osivia-portal.version>
+        <toutatice-cms.version>2.1-RC2</toutatice-cms.version>
+        <nuxeo-automation-client.version>5.4.2</nuxeo-automation-client.version>
     </properties>
-    
+
 
     <modules>
         <module>osivia-site-portlets-utils</module>
@@ -37,53 +30,110 @@
     </modules>
 
 
+    <prerequisites>
+        <maven>2.0.9</maven>
+    </prerequisites>
+
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- OSIVIA portal -->
+
+            <dependency>
+                <groupId>org.osivia.portal</groupId>
+                <artifactId>osivia-portal-dependencies</artifactId>
+                <version>${osivia-portal.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.osivia.portal</groupId>
+                <artifactId>osivia-portal-dependencies-test</artifactId>
+                <version>${osivia-portal.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.osivia.portal.core</groupId>
+                <artifactId>osivia-portal-custom-lib-utils</artifactId>
+                <version>${osivia-portal.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+
+            <!-- Toutatice CMS -->
+
+            <dependency>
+                <groupId>toutatice-portail.cms</groupId>
+                <artifactId>toutatice-portail-cms-nuxeo-lib</artifactId>
+                <version>${toutatice-cms.version}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>toutatice-portail.cms</groupId>
+                <artifactId>toutatice-portail-cms-nuxeo-shared-lib</artifactId>
+                <version>${toutatice-cms.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>toutatice-portail.cms</groupId>
+                <artifactId>toutatice-portail-cms-nuxeo-web</artifactId>
+                <version>${toutatice-cms.version}</version>
+                <type>war</type>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>toutatice-portail.cms</groupId>
+                <artifactId>toutatice-portail-cms-nuxeo-web</artifactId>
+                <version>${toutatice-cms.version}</version>
+                <type>warpath</type>
+                <!-- <exclusions>
+                    <exclusion>
+                        <groupId>xerces</groupId>
+                        <artifactId>xercesImpl</artifactId>
+                    </exclusion>
+                </exclusions> -->
+                <scope>compile</scope>
+            </dependency>
+
+
+            <!-- Nuxeo -->
+
+            <dependency>
+                <groupId>org.nuxeo.ecm.automation</groupId>
+                <artifactId>nuxeo-automation-client</artifactId>
+                <version>${nuxeo-automation-client.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
     <dependencies>
-        <dependency>
-            <groupId>javax.portlet</groupId>
-            <artifactId>portlet-api</artifactId>
-            <version>${portlet-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
+
+        <!-- OSIVIA portal -->
 
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>${servlet-api.version}</version>
-            <scope>provided</scope>
+            <groupId>org.osivia.portal</groupId>
+            <artifactId>osivia-portal-dependencies</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.osivia.portal</groupId>
-            <artifactId>osivia-portal-api</artifactId>
-            <version>${osivia.portal.version}</version>
-            <scope>provided</scope>
+            <artifactId>osivia-portal-dependencies-test</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-            <version>${commons-logging.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>${commons-lang.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-collections</groupId>
-            <artifactId>commons-collections</artifactId>
-            <version>${commons-collections.version}</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
 
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -121,7 +171,6 @@
             </plugin>
 
         </plugins>
-
     </build>
 
 
@@ -141,6 +190,4 @@
         </snapshotRepository>
     </distributionManagement>
 
-
 </project>
-

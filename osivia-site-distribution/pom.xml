@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-  	<parent>
-  		<groupId>org.osivia.site</groupId>
-		<artifactId>osivia-site-parent</artifactId>
-		<version>1.0-SNAPSHOT</version>
- 	</parent>
+    <parent>
+        <groupId>org.osivia.site</groupId>
+        <artifactId>osivia-site-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-	<artifactId>osivia-site-distribution</artifactId>
-    <name>Site OSIVIA - distribution</name>
+    <artifactId>osivia-site-distribution</artifactId>
+    <name>Site OSIVIA - Distribution</name>
+
 
     <properties>
-        <osivia.portal.distribution.version>2.1-RC1</osivia.portal.distribution.version>
-        <osivia.portal.services.wiki.version>1.0-RC1</osivia.portal.services.wiki.version>
-        <toutatice.cms.distribution.version>2.1-RC1</toutatice.cms.distribution.version>
+        <osivia-services-wiki.version>1.0-RC2</osivia-services-wiki.version>
+
         <src-env>prod</src-env>
         <dest-env>prod</dest-env>
     </properties>
@@ -53,142 +56,136 @@
         <dependency>
             <groupId>org.osivia.services</groupId>
             <artifactId>osivia-services-wiki</artifactId>
-            <version>${osivia.portal.services.wiki.version}</version>
+            <version>${osivia-services-wiki.version}</version>
             <type>war</type>
         </dependency>
 
         <dependency>
             <groupId>toutatice-portail.distribution</groupId>
             <artifactId>toutatice-portail-distribution</artifactId>
-            <version>${toutatice.cms.distribution.version}</version>
+            <version>${toutatice-cms.version}</version>
             <type>zip</type>
         </dependency>
 
     </dependencies>
 
+
     <profiles>
-
-    <!-- environnements alternatifs -->
-
+    
+        <!-- Environnements alternatifs -->
         <profile>
-		<activation>
-      			<property>
-        			<name>env</name>
-				<value>dev</value>
-      			</property>
-    		</activation>
-           	<id>dev</id>
-            	<properties>
-                	<dest-env>dev</dest-env>
-			<src-env>dev</src-env>
-	         </properties>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>dev</value>
+                </property>
+            </activation>
+            <id>dev</id>
+            <properties>
+                <dest-env>dev</dest-env>
+                <src-env>dev</src-env>
+            </properties>
         </profile>
 
+        <profile>
+            <id>unpack</id>
+            <build>
+                <defaultGoal>package</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <version>2.4</version>
+                        <executions>
+                            <execution>
+                                <id>unpack</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>unpack</goal>
+                                </goals>
+                                <configuration>
+                                    <artifactItems>
+                                        <artifactItem>
+                                            <groupId>toutatice-portail.distribution</groupId>
+                                            <artifactId>toutatice-portail-distribution</artifactId>
+                                            <version>${toutatice.cms.distribution.version}</version>
+                                            <type>zip</type>
+                                            <overWrite>true</overWrite>
+                                            <outputDirectory>${project.build.directory}/toutatice-distribution</outputDirectory>
+                                        </artifactItem>
+                                    </artifactItems>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>pack</id>
+            <build>
+                <defaultGoal>package</defaultGoal>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-assembly-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>zip-demo</id>
+                                <phase>process-resources</phase>
+                                <configuration>
+                                    <descriptors>
+                                        <descriptor>src/main/assembly/assembly.xml</descriptor>
+                                    </descriptors>
+                                    <finalName>osivia-site-distribution</finalName>
+                                    <appendAssemblyId>false</appendAssemblyId>
+                                    <attach>false</attach>
+                                </configuration>
+                                <goals>
+                                    <goal>single</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.2</version>
+                        <executions>
+                            <execution>
+                                <id>publish</id>
+                                <phase>package</phase>
+                                <configuration>
+                                    <tasks>
+                                        <copy
+                                            file="${basedir}/target/osivia-site-distribution.zip"
+                                            tofile="${portal-pack-dir}/osivia-site-distribution-${dest-env}-${project.version}.zip"
+                                            overwrite="true" />
+                                    </tasks>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 
-<profile>
-      <id>unpack</id>
-      <build>
-        <defaultGoal>package</defaultGoal>
-        <plugins>
-
-
-	<plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-dependency-plugin</artifactId>
-         <version>2.4</version>
-         <executions>
-           <execution>
-             <id>unpack</id>
-             <phase>generate-resources</phase>
-             <goals>
-               <goal>unpack</goal>
-             </goals>
-             <configuration>
-               <artifactItems>
-                 <artifactItem>
-                   <groupId>toutatice-portail.distribution</groupId>
-		   <artifactId>toutatice-portail-distribution</artifactId>
-		   <version>${toutatice.cms.distribution.version}</version>
-                   <type>zip</type>
-                   <overWrite>true</overWrite>
-                   <outputDirectory>${project.build.directory}/toutatice-distribution</outputDirectory>
-                 </artifactItem>
-               </artifactItems>
-              </configuration>
-           </execution>
-         </executions>
-       </plugin>
-
-        </plugins>
-      </build>
-    </profile>
-
-   <profile>
-
-
-      <id>pack</id>
-      <build>
-        <defaultGoal>package</defaultGoal>
-        <plugins>
-           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>zip-demo</id>
-                <phase>process-resources</phase>
-                <configuration>
-                  <descriptors>
-                    <descriptor>src/main/assembly/assembly.xml</descriptor>
-                  </descriptors>
-                  <finalName>osivia-site-distribution</finalName>
-                  <appendAssemblyId>false</appendAssemblyId>
-	 	  			<attach>false</attach>
-                </configuration>
-                <goals>
-                  <goal>single</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-antrun-plugin</artifactId>
-            <version>1.2</version>
-            <executions>
-              <execution>
-                <id>publish</id>
-                <phase>package</phase>
-                <configuration>
-            		<tasks>
-                 	  <copy file="${basedir}/target/osivia-site-distribution.zip" tofile="${portal-pack-dir}/osivia-site-distribution-${dest-env}-${project.version}.zip" overwrite="true" />
-          		</tasks>
-                 </configuration>
-                <goals>
-                  <goal>run</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
-
-
-
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.2.1</version>
-         </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.2.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
-
