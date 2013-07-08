@@ -9,7 +9,7 @@
 <%@ page import="java.util.ArrayList" %>
 
 <%@page import="org.osivia.portal.api.urls.IPortalUrlFactory"%>
-<%@page import="org.osivia.portal.api.contexte.PortalControllerContext"%>
+<%@page import="org.osivia.portal.api.context.PortalControllerContext"%>
 
 
 <%

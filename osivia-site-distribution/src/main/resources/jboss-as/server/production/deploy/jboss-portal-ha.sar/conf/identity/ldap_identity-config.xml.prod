@@ -105,19 +105,18 @@
       </module>
    </modules>
 
-   <options>
+     <options>
       <option-group>
         <group-name>common</group-name>
         <option>
            <name>userCtxDN</name>
-           <value>ou=personnes,dc=ent-bretagne,dc=fr</value>
+           <value>ou=personnes,dc=osivia,dc=org</value>
         </option>
         <option>
            <name>roleCtxDN</name>
-           <value>ou=profils,ou=groupes,dc=ent-bretagne,dc=fr</value>
+           <value>ou=profils,ou=groupes,dc=osivia,dc=org</value>
         </option>
      </option-group>
 
    </options>
-
 </identity-configuration>

@@ -512,8 +512,8 @@ width: 100%;
 
 }
 
-.portlet-titlebar-center {	
-	height: 25px;
+.portlet-titlebar-center, .portlet-header {	
+	height: 32px;
 	font-size: 1em;
 	color: #FFFFFF;
 	background: url(images/img09.gif) repeat-x;
@@ -773,7 +773,7 @@ width: 100%;
 
 }
 
-.important .portlet-titlebar-center {	
+.important .portlet-titlebar-center, .important .portlet-header {	
 	height: 25px;
 	font-size: 1em;
 	font-weight: bold;
@@ -802,7 +802,7 @@ width: 100%;
 
 }
 
- .pedagogie .portlet-titlebar-center {	
+.pedagogie .portlet-titlebar-center, .pedagogie .portlet-header {	
 	height: 25px;
 	font-size: 1em;
 	font-weight: bold;
@@ -830,7 +830,7 @@ width: 100%;
 
 }
 
- .annonce .portlet-titlebar-center {	
+ .annonce .portlet-titlebar-center, .annonce .portlet-header {	
 	height: 25px;
 	font-size: 1em;
 	font-weight: bold;

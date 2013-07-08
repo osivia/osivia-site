@@ -1,10 +1,8 @@
-<%@ page import="org.osivia.portal.api.charte.UserPage" %>
-<%@ page import="org.osivia.portal.api.charte.UserPortal" %>
-
+<%@page import="org.osivia.portal.api.theming.UserPage" %>
+<%@page import="org.osivia.portal.api.theming.UserPortal" %>
+<%@page import="org.osivia.portal.api.theming.Breadcrumb"%>
+<%@page import="org.osivia.portal.api.theming.BreadcrumbItem"%>
 <%@page import="java.util.List"%>
-
-<%@ page import="org.osivia.portal.api.charte.Breadcrumb"%>
-<%@page import="org.osivia.portal.api.charte.BreadcrumbItem"%>
 
 <%
 
@@ -30,6 +28,6 @@ String urlAccueil = url.toString();
 
 <div class="navbar">
 	<div class="navbar-inner">
-	    <h1><a class="brand" href="<%= urlAccueil %>"><img src="/osivia-portail-charte/themes/atomo/images/logo-osivia.jpg" id="logo-entete" alt="Logo Osivia" title="Logo Osivia"/></a></h1>
+	    <h1><a class="brand" href="<%= urlAccueil %>"><img src="/osivia-site-charte/themes/atomo/images/logo-osivia.jpg" id="logo-entete" alt="Logo Osivia" title="Logo Osivia"/></a></h1>
 	</div>
 </div>

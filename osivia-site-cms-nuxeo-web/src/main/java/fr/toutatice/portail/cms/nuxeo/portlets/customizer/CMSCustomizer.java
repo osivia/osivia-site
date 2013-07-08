@@ -21,19 +21,19 @@ import fr.toutatice.portail.core.nuxeo.NuxeoConnectionProperties;
 
 /**
  * Ce customizer permet de définir :
- * 
+ *
  * de nouveaux templates de listes le schéma du moteur de recherche la
  * visualisation des contenus via les 3 méthodes suivantes
  * getPortletDelegatedLink (appelé depuis la couche portlet quand la
  * visualisation est à traiter par une ressource du portlet) getCmsPlayer
  * (appelé depuis la couche CMS dans les autres cas) getExternalViewer (appelée
  * à partir des 2 précédentes)
- * 
- * 
+ *
+ *
  * Le template d'affichage est WEB-INF/jsp/liste/view-[nom-du-template].jsp
- * 
+ *
  * @author jeanseb
- * 
+ *
  */
 public class CMSCustomizer extends DefaultCMSCustomizer {
 
@@ -76,11 +76,11 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         templates.add(new ListTemplate(ACTUALITE, "Actualité", ANNONCE_SCHEMAS));
         templates.add(new ListTemplate(ENCADRE, "Encadré", ANNONCE_SCHEMAS));
         templates.add(new ListTemplate(ENCADRE_NIVEAU2, "Encadré niveau 2", DEFAULT_SCHEMAS));
-        templates.add(new ListTemplate(VISUEL_NIVEAU2, "Visuel niveau 2", BLOG_SCHEMAS));
+        templates.add(new ListTemplate(VISUEL_NIVEAU2, "Visuel niveau 2", DEFAULT_SCHEMAS));
         templates.add(new ListTemplate(UNE_NIVEAU2, "Une niveau 2", BLOG_SCHEMAS));
         templates.add(new ListTemplate(UNE_NIVEAU3_1C, "Une niveau 3 - 1 colonne", BLOG_SCHEMAS));
         templates.add(new ListTemplate(UNE_TITRE_NIVEAU3_1C, "Une Titre niveau 3 - 1 colonne", BLOG_SCHEMAS));
-        templates.add(new ListTemplate(VISUEL_NIVEAU3, "Visuel niveau 3", BLOG_SCHEMAS));
+        templates.add(new ListTemplate(VISUEL_NIVEAU3, "Visuel niveau 3", DEFAULT_SCHEMAS));
 
         return templates;
     }

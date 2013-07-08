@@ -1,5 +1,5 @@
 #page d'erreur par défaut
-error.default_page_uri=/osivia-portail-charte/error/errorPage.jsp
+error.defaultPageUri=/osivia-site-charte/error/errorPage.jsp
 
 
 #schemas additionnels de navigation (separés par une virgule)
@@ -12,13 +12,16 @@ nuxeo.navigationSchemas=wcm_navigation
 
 
 #forcer le cache des portlets (UNIQUEMENT EN DEBUG !!!!)
-portlets.expirationSecs=120
+#portlets.expirationSecs=120
 
 #timeout des caches en secondes
-nuxeo.cacheTimeout=0
+nuxeo.cacheTimeout=60
 
 #permet de générer les traces des appels Nuxeo(en level DEBUG)
 nuxeo.debugMode=1
 
 #active les gestionnaire de statut
-statut.actif=true
+status.active=true
+
+# Rendu des portlets en "div"
+portlets.rendering=div

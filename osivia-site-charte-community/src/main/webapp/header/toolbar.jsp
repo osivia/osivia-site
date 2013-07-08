@@ -1,7 +1,6 @@
 <%@page import="org.apache.commons.lang.BooleanUtils"%>
 <%@page import="org.apache.commons.lang.StringUtils"%>
 <%@page import="org.osivia.portal.api.Constants" %>
-<%@page import="org.jboss.portal.api.PortalURL" %>
 <%@page import="java.util.ResourceBundle" %>
 <%@page import="java.security.Principal" %>
 
@@ -12,9 +11,9 @@
 ResourceBundle rb = ResourceBundle.getBundle("Resource", request.getLocale());
 Principal principal = (Principal) request.getAttribute(Constants.ATTR_TOOLBAR_PRINCIPAL);
 
-PortalURL loginUrl = (PortalURL) request.getAttribute(Constants.ATTR_TOOLBAR_LOGIN_URL);
-PortalURL signOutUrl = (PortalURL) request.getAttribute(Constants.ATTR_TOOLBAR_SIGN_OUT_URL);
-PortalURL refreshPageUrl = (PortalURL) request.getAttribute(Constants.ATTR_TOOLBAR_REFRESH_PAGE_URL);
+String loginUrl = (String) request.getAttribute(Constants.ATTR_TOOLBAR_LOGIN_URL);
+String signOutUrl = (String) request.getAttribute(Constants.ATTR_TOOLBAR_SIGN_OUT_URL);
+String refreshPageUrl = (String) request.getAttribute(Constants.ATTR_TOOLBAR_REFRESH_PAGE_URL);
 
 String administrationHtmlContent = (String) request.getAttribute(Constants.ATTR_TOOLBAR_ADMINISTRATION_CONTENT);
 %>

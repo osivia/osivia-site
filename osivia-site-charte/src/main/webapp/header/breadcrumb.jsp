@@ -8,8 +8,8 @@
 
 <%@ page import="java.util.ArrayList" %>
 
-<%@ page import="org.osivia.portal.api.charte.Breadcrumb"%>
-<%@page import="org.osivia.portal.api.charte.BreadcrumbItem"%>
+<%@ page import="org.osivia.portal.api.theming.Breadcrumb"%>
+<%@page import="org.osivia.portal.api.theming.BreadcrumbItem"%>
 
 <%
 Breadcrumb breadcrumb = (Breadcrumb) request.getAttribute(Constants.ATTR_BREADCRUMB);

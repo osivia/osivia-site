@@ -20,6 +20,7 @@
                 <include>org.osivia.site:osivia-site-charte-community:war:${project.version}</include>
                 <include>org.osivia.site:osivia-site-cms-nuxeo-web:war:${project.version}</include>
                 <include>org.osivia.site:osivia-site-portlet-solutions:war:${project.version}</include>
+                <include>org.osivia.site:osivia-site-internationalization-customizer:war:${project.version}</include>
                 <include>org.osivia.services:osivia-services-wiki:war:${osivia-services-wiki.version}</include>
             </includes>
         </dependencySet>
@@ -54,6 +55,7 @@
                 <exclude>custom/params/environnement_portail.properties.*</exclude>
                 <exclude>/jboss-as/server/production/run.conf.*</exclude>
                 <exclude>jboss-as/server/production/conf/jboss-log4j.*</exclude>
+                <exclude>jboss-as/server/production/deploy/jboss-portal-ha.sar/conf/identity/ldap_identity-config.*</exclude>
             </excludes>
         </fileSet>
     </fileSets>
@@ -85,6 +87,11 @@
             <source>src/main/resources/jboss-as/server/production/deploy/jboss-portal-ha.sar/portal-core.war/css/login.css</source>
             <outputDirectory>/portal-osivia-${dest-env}-${project.version}/jboss-as/server/production/deploy/jboss-portal-ha.sar/portal-core.war/css</outputDirectory>
             <destName>login.css</destName>
+        </file>
+        <file>
+            <source>src/main/resources/jboss-as/server/production/deploy/jboss-portal-ha.sar/conf/identity/ldap_identity-config.xml.${dest-env}</source>
+            <outputDirectory>/portal-osivia-${dest-env}-${project.version}/jboss-as/server/production/deploy/jboss-portal-ha.sar/conf/identity</outputDirectory>
+            <destName>ldap_identity-config.xml</destName>
         </file>
     </files>
 

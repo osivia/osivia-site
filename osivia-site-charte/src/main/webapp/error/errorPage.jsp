@@ -28,10 +28,10 @@ String urlAccueil = "/portal/";
 	   
 	   
 	   <link type="text/css" href="/osivia-portal-custom-web-assets/common-css/common.css" id="settings_css" rel="stylesheet">
-	   <link href="/osivia-portail-charte/themes/atomo/main.css" id="main_css" type="text/css" rel="stylesheet">
-	   <link rel="stylesheet" href="/osivia-portail-charte/themes/atomo/bootstrap.css" type="text/css"/>
-	   <link rel="stylesheet" href="/osivia-portail-charte/themes/atomo/osivia.css" type="text/css"/>
-	   <link href="/osivia-portail-charte/themes/atomo/images/favicon/favicon.ico" type="image/x-icon" rel="shortcut icon">
+	   <link href="/osivia-site-charte/themes/atomo/main.css" id="main_css" type="text/css" rel="stylesheet">
+	   <link rel="stylesheet" href="/osivia-site-charte/themes/atomo/bootstrap.css" type="text/css"/>
+	   <link rel="stylesheet" href="/osivia-site-charte/themes/atomo/osivia.css" type="text/css"/>
+	   <link href="/osivia-site-charte/themes/atomo/images/favicon/favicon.ico" type="image/x-icon" rel="shortcut icon">
 	   
 </head>
 
@@ -43,7 +43,7 @@ String urlAccueil = "/portal/";
          <div id="ligneentete">      
          	<div class="navbar">
 				<div class="navbar-inner">
-	    			<h1><a class="brand" href="<%= urlAccueil %>"><img src="/osivia-portail-charte/themes/atomo/images/logo-osivia.jpg" id="logo-entete" alt="Logo Osivia" title="Logo Osivia"/></a></h1>
+	    			<h1><a class="brand" href="<%= urlAccueil %>"><img src="/osivia-site-charte/themes/atomo/images/logo-osivia.jpg" id="logo-entete" alt="Logo Osivia" title="Logo Osivia"/></a></h1>
 				</div>
 			</div>
          

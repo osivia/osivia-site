@@ -4,7 +4,7 @@ body {
     background: #E5E6DD;
     font-family: 'Oxygen', sans-serif;
     font-size: 13px;
-    color: #8A8985;
+    color: #6E6D69;
 }
 
 h1,h2,h3,.portlet-titlebar-title {
@@ -47,7 +47,7 @@ a:hover {
 
 #wrapper {
     overflow: hidden;
-    background: #F1F2E9;
+    background: #F8F9F0;
 }
 
 .container {
@@ -500,6 +500,12 @@ section {
     border-bottom: 3px solid #E0E1D6;
 }
 
+#one-column #tbox1 .portlet-header,#tbox2 .portlet-header {
+	margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #E0E1D6;
+}
+
 #one-column #tbox1 .portlet-titlebar-title,#tbox2 .portlet-titlebar-title {
     color: #373737;
     font-size: 26px;
@@ -512,7 +518,6 @@ section {
     width: auto;
     max-width: 320px;
     margin-right: 40px;
-    margin-bottom: 40px;
 }
 
 #multi-columns #tbox1 .dyna-window-content {
@@ -536,13 +541,17 @@ section {
     text-transform: uppercase;
 }
 
+/** Contenu central */
+#tbox2 {
+	overflow: hidden;
+}
+
 /** Contenu à droite */
 #tbox3 {
     float: right;
     width: auto;
     max-width: 500px;
     margin-left: 40px;
-    margin-bottom: 40px;
     color: #787878;
 }
 

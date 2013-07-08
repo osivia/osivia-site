@@ -1,5 +1,5 @@
 #page d'erreur par défaut
-error.default_page_uri=/osivia-portail-charte/error/errorPage.jsp
+error.defaultPageUri=/osivia-site-charte/error/errorPage.jsp
 
 
 #schemas additionnels de navigation (separés par une virgule)
@@ -20,7 +20,7 @@ nuxeo.cacheTimeout=60
 #nuxeo.debugHtml=1
 
 #active les gestionnaire de statut
-statut.actif=true
+status.active=true
 
 
 #Delai en secondes au dela duquel les webservices (Nuxeo, RSS, ...) tombent en timeout

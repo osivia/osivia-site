@@ -554,7 +554,7 @@ input:-moz-placeholder, textarea:-moz-placeholder
     height: 146px;
 }
 
-.titre-bleu .portlet-titlebar-center
+.titre-bleu .portlet-titlebar-center, .titre-bleu .portlet-header
 {
     background: none repeat scroll 0 0 #bdeaed;
     font-size: 24px;
@@ -796,7 +796,7 @@ ul.titres-footer li
     margin: 15px 0;
     border-right: 1px solid black;
     overflow: hidden;
-    height: 180px;
+    min-height: 180px;
      
 }
 
@@ -816,7 +816,7 @@ ul.titres-footer ul li
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 12px;
-    height: 20px;
+    min-height: 20px;
     
 }
 
@@ -898,7 +898,7 @@ table [class*="span"] {
 }
 
 .img-container-niv1 {
-	float: right;
+	/* float: right; */
 	width: 632px;
 	height: 386px;
     line-height: 386px;
@@ -1343,7 +1343,7 @@ p.sous-titre-blue
 
 .illustration-niv2
 {
-    float: right;
+    /* float: right; */
     height: 163px;
     width: 458px;
     margin-left: -69px;
@@ -1398,7 +1398,7 @@ p.sous-titre-blue
 
 .illustration-niv3 {
     float: left;
-    margin-top: -30px;
+    /* margin-top: -30px; */
     text-align: right;
     width: 300px;
     height: 175px;
@@ -1418,7 +1418,8 @@ p.sous-titre-blue
 
 .img-container-niv3 {
 	position: relative;
-	float: right;
+	/* float: right; */
+	height: 175px;
 	width: 406px;
 	margin-bottom: 13px;
 }
