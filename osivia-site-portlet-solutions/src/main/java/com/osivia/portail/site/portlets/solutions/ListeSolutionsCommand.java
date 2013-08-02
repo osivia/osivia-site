@@ -6,7 +6,7 @@ import org.nuxeo.ecm.automation.client.jaxrs.Session;
 import org.nuxeo.ecm.automation.client.jaxrs.model.Documents;
 
 import fr.toutatice.portail.cms.nuxeo.api.INuxeoCommand;
-import fr.toutatice.portail.cms.nuxeo.core.NuxeoQueryFilter;
+import fr.toutatice.portail.cms.nuxeo.api.NuxeoQueryFilter;
 
 public class ListeSolutionsCommand implements INuxeoCommand {
 
@@ -23,8 +23,8 @@ public class ListeSolutionsCommand implements INuxeoCommand {
 
 		request = session.newRequest("Document.Query");
 
-		
-		String nuxeoRequest = "ecm:path STARTSWITH '" + path
+
+		String nuxeoRequest = "ecm:path STARTSWITH '" + this.path
 		+ "' ORDER BY ecm:pos ";
 
 		// Insertion du filtre sur les élements publiés
@@ -43,7 +43,7 @@ public class ListeSolutionsCommand implements INuxeoCommand {
 	}
 
 	public String getId() {
-		return "ListeSolutions/" + path;
+		return "ListeSolutions/" + this.path;
 	};
 
 }

@@ -35,16 +35,6 @@ if (principal == null) {
 
 
 <div class="droite">
-
-    <!-- Menu de raccourcis -->
-    <div class="toolbar-menu">
-        <a class="toolbar-menu-title"><%=rb.getString("MENU_SHORTCUTS") %></a>
-        <ul>
-            <!-- Accès à l'accueil -->
-            <li><a href="/portal"><%=rb.getString("SUBMENU_HOME_ACCESS") %></a></li>            
-        </ul>
-    </div>
-
     <!-- Utilisateur et déconnexion -->
     <a href="<%=signOutUrl%>"><%=principal.getName() %> - <%=rb.getString("LOGOUT") %></a>    
 

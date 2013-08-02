@@ -22,10 +22,10 @@ import org.osivia.portal.api.windows.WindowFactory;
 
 import com.osivia.portail.site.portlets.utils.IConstantes;
 
+import fr.toutatice.portail.cms.nuxeo.api.CMSPortlet;
 import fr.toutatice.portail.cms.nuxeo.api.NuxeoController;
 import fr.toutatice.portail.cms.nuxeo.api.NuxeoException;
-import fr.toutatice.portail.cms.nuxeo.core.CMSPortlet;
-import fr.toutatice.portail.cms.nuxeo.core.PortletErrorHandler;
+import fr.toutatice.portail.cms.nuxeo.api.PortletErrorHandler;
 
 public class PortletSolutions extends CMSPortlet {
 
@@ -37,8 +37,8 @@ public class PortletSolutions extends CMSPortlet {
 	public void init(PortletConfig config) throws PortletException {
 		super.init(config);
 
-		portalUrlFactory = (IPortalUrlFactory) getPortletContext().getAttribute("UrlService");
-		if (portalUrlFactory == null) {
+		this.portalUrlFactory = (IPortalUrlFactory) this.getPortletContext().getAttribute("UrlService");
+		if (this.portalUrlFactory == null) {
 			throw new PortletException("Cannot start PortletSolutions due to service unavailability");
 		}
 	}
@@ -48,7 +48,7 @@ public class PortletSolutions extends CMSPortlet {
 		try {
 			response.setContentType(IConstantes.HTML_TEXT_TYPE);
 
-			NuxeoController nuxeoCtrl = new NuxeoController(request, response, getPortletContext());
+			NuxeoController nuxeoCtrl = new NuxeoController(request, response, this.getPortletContext());
 
 			PortalWindow window = WindowFactory.getWindow(request);
 			String solutionSPath = window.getProperty(ISolutionsConstantes.PATH_PROP);
@@ -60,7 +60,7 @@ public class PortletSolutions extends CMSPortlet {
 				request.setAttribute("docs", docs);
 				request.setAttribute("nuxeoCtrl", nuxeoCtrl);
 
-				PortletRequestDispatcher dispatcher = getPortletContext().getRequestDispatcher(
+				PortletRequestDispatcher dispatcher = this.getPortletContext().getRequestDispatcher(
 						ISolutionsConstantes.VIEW_JSP);
 				dispatcher.include(request, response);
 
@@ -74,8 +74,9 @@ public class PortletSolutions extends CMSPortlet {
 		} catch (NuxeoException e) {
 			PortletErrorHandler.handleGenericErrors(response, e);
 		} catch (Exception e) {
-			if (!(e instanceof PortletException))
-				throw new PortletException(e);
+			if (!(e instanceof PortletException)) {
+                throw new PortletException(e);
+            }
 		}
 
 	}
@@ -89,12 +90,13 @@ public class PortletSolutions extends CMSPortlet {
 		PortalWindow window = WindowFactory.getWindow(req);
 		String path = window.getProperty(ISolutionsConstantes.PATH_PROP);
 
-		if (path == null)
-			path = "";
+		if (path == null) {
+            path = "";
+        }
 
 		req.setAttribute(ISolutionsConstantes.PARAM_PATH, path);
 
-		rd = getPortletContext().getRequestDispatcher(ISolutionsConstantes.ADMIN_JSP);
+		rd = this.getPortletContext().getRequestDispatcher(ISolutionsConstantes.ADMIN_JSP);
 		rd.include(req, res);
 
 	}
@@ -103,15 +105,16 @@ public class PortletSolutions extends CMSPortlet {
 	public void processAction(ActionRequest req, ActionResponse res) throws IOException, PortletException {
 
 		if (IConstantes.ADMIN_USER.equals(req.getPortletMode().toString())
-				&& req.getParameter(ISolutionsConstantes.PARAM_MODIF_PREFS) != null) {
+				&& (req.getParameter(ISolutionsConstantes.PARAM_MODIF_PREFS) != null)) {
 
 			PortalWindow window = WindowFactory.getWindow(req);
 			String path = req.getParameter(ISolutionsConstantes.PARAM_PATH);
 
-			if (path != null && path.length() > 0)
-				window.setProperty(ISolutionsConstantes.PATH_PROP, path);
-			else
-				window.setProperty(ISolutionsConstantes.PATH_PROP, null);
+			if ((path != null) && (path.length() > 0)) {
+                window.setProperty(ISolutionsConstantes.PATH_PROP, path);
+            } else {
+                window.setProperty(ISolutionsConstantes.PATH_PROP, null);
+            }
 
 			res.setPortletMode(PortletMode.VIEW);
 			res.setWindowState(WindowState.NORMAL);

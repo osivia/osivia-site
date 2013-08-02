@@ -1,5 +1,4 @@
 <%@page import="org.osivia.portal.api.Constants"%>
-<%@page import="org.jboss.portal.identity.User" %>
 <%@page import="java.util.ResourceBundle"%>
 <%@page import="java.security.Principal" %>
 

@@ -2,7 +2,7 @@
 <%@page import="fr.toutatice.portail.cms.nuxeo.portlets.utils.MetaDataUtils"%>
 
 <%@page import="org.osivia.portal.api.urls.Link"%>
-<%@page import="fr.toutatice.portail.cms.nuxeo.portlets.bridge.VocabularyHelper"%>
+<%@page import="fr.toutatice.portail.cms.nuxeo.api.VocabularyHelper"%>
 <%@page import="fr.toutatice.portail.cms.nuxeo.api.NuxeoController"%>
 <%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.PropertyMap"%>
 <%@page import="fr.toutatice.portail.cms.nuxeo.portlets.bridge.Formater"%>

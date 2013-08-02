@@ -12,11 +12,11 @@ import org.osivia.portal.core.cms.CMSException;
 import org.osivia.portal.core.cms.CMSHandlerProperties;
 import org.osivia.portal.core.cms.CMSServiceCtx;
 
-import fr.toutatice.portail.cms.nuxeo.core.NuxeoQueryFilter;
+import fr.toutatice.portail.cms.nuxeo.api.NuxeoQueryFilter;
+import fr.toutatice.portail.cms.nuxeo.api.services.NuxeoConnectionProperties;
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.MenuBarFormater;
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.NavigationItemAdapter;
 import fr.toutatice.portail.cms.nuxeo.portlets.list.DocumentQueryCommand;
-import fr.toutatice.portail.core.nuxeo.NuxeoConnectionProperties;
 
 
 /**

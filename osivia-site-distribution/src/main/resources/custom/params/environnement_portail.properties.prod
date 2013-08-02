@@ -25,3 +25,7 @@ status.active=true
 
 #Delai en secondes au dela duquel les webservices (Nuxeo, RSS, ...) tombent en timeout
 ws.webServiceTimeOut=30
+
+# Rendu des portlets en "div"
+portlets.rendering=div
+

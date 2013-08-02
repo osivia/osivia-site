@@ -40,8 +40,7 @@ Iterator<UserPage> pages = userPortal.getUserPages().iterator();
 
 while (pages.hasNext()){  
 	UserPage userPage = pages.next();
-	if(!"accueil".equalsIgnoreCase(userPage.getName())
-			&& !"templates".equalsIgnoreCase(userPage.getName())){
+	if(!"templates".equalsIgnoreCase(userPage.getName())){
 		String className = "";
 		if(indexPage == 0){
 			className = "first";
