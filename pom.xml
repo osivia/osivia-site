@@ -10,9 +10,9 @@
 
 
     <properties>
-        <osivia-portal.version>2.1-RC3</osivia-portal.version>
-        <osivia-services-wiki.version>1.0-RC3</osivia-services-wiki.version>
-        <toutatice-cms.version>2.1-RC3</toutatice-cms.version>
+        <osivia-portal.version>2.1-SNAPSHOT</osivia-portal.version>
+        <osivia-services-wiki.version>1.0-SNAPSHOT</osivia-services-wiki.version>
+        <toutatice-cms.version>2.1-SNAPSHOT</toutatice-cms.version>
         <nuxeo-automation-client.version>5.4.2</nuxeo-automation-client.version>
     </properties>
 
@@ -64,9 +64,9 @@
 
             <dependency>
                 <groupId>toutatice-portail.cms</groupId>
-                <artifactId>toutatice-portail-cms-nuxeo-lib</artifactId>
+                <artifactId>toutatice-portail-cms-nuxeo-api</artifactId>
                 <version>${toutatice-cms.version}</version>
-                <scope>compile</scope>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -89,12 +89,6 @@
                 <artifactId>toutatice-portail-cms-nuxeo-web</artifactId>
                 <version>${toutatice-cms.version}</version>
                 <type>warpath</type>
-                <!-- <exclusions>
-                    <exclusion>
-                        <groupId>xerces</groupId>
-                        <artifactId>xercesImpl</artifactId>
-                    </exclusion>
-                </exclusions> -->
                 <scope>compile</scope>
             </dependency>
 
