@@ -10,9 +10,9 @@
 
 
     <properties>
-        <osivia-portal.version>2.1-SNAPSHOT</osivia-portal.version>
-        <osivia-services-wiki.version>1.0-SNAPSHOT</osivia-services-wiki.version>
-        <toutatice-cms.version>2.1-SNAPSHOT</toutatice-cms.version>
+        <osivia-portal.version>2.1-RC4</osivia-portal.version>
+        <osivia-services-wiki.version>1.0-RC4</osivia-services-wiki.version>
+        <toutatice-cms.version>2.1-RC4</toutatice-cms.version>
         <nuxeo-automation-client.version>5.4.2</nuxeo-automation-client.version>
     </properties>
 
