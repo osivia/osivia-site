@@ -29,18 +29,13 @@ if (principal == null) {
     <%
 } else {       
     %>
-<div class="gauche">
     <%=administrationHtmlContent %>
-</div>
 
-
-<div class="droite">
     <!-- Utilisateur et déconnexion -->
     <a href="<%=signOutUrl%>"><%=principal.getName() %> - <%=rb.getString("LOGOUT") %></a>    
 
     <!-- Actualisation de la page -->
     <a id="refresh-page" href="<%=refreshPageUrl %>" title="<%=rb.getString("REFRESH_PAGE") %>">&nbsp;</a>
-</div>
     <%
 }
 %>
