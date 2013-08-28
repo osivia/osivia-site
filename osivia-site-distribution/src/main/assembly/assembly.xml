@@ -2,7 +2,7 @@
     xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
-    
+
     <id>bin</id>
     <formats>
         <format>zip</format>
@@ -12,7 +12,7 @@
 
     <dependencySets>
         <dependencySet>
-            <outputDirectory>/portal-osivia-${dest-env}-${project.version}/custom/deploy</outputDirectory>
+            <outputDirectory>/${artifactId}-${dest-env}-${project.version}/custom/deploy</outputDirectory>
             <unpack>false</unpack>
             <scope>runtime</scope>
             <includes>
@@ -30,7 +30,7 @@
     <fileSets>
         <!-- socle -->
         <fileSet>
-            <outputDirectory>/portal-osivia-${dest-env}-${project.version}</outputDirectory>
+            <outputDirectory>/${artifactId}-${dest-env}-${project.version}</outputDirectory>
             <directory>target/toutatice-distribution</directory>
             <includes>
                 <include>jboss-as/**</include>
@@ -49,7 +49,7 @@
         </fileSet>
 
         <fileSet>
-            <outputDirectory>/portal-osivia-${dest-env}-${project.version}</outputDirectory>
+            <outputDirectory>/${artifactId}-${dest-env}-${project.version}</outputDirectory>
             <directory>src/main/resources</directory>
             <excludes>
                 <exclude>custom/params/environnement_portail.properties.*</exclude>
@@ -65,32 +65,32 @@
     <files>
         <file>
             <source>src/main/resources/custom/params/environnement_portail.properties.${dest-env}</source>
-            <outputDirectory>/portal-osivia-${dest-env}-${project.version}/custom/params</outputDirectory>
+            <outputDirectory>/${artifactId}-${dest-env}-${project.version}/custom/params</outputDirectory>
             <destName>environnement_portail.properties</destName>
         </file>
         <file>
             <source>src/main/resources/jboss-as/server/production/run.conf.${dest-env}</source>
-            <outputDirectory>/portal-osivia-${dest-env}-${project.version}/jboss-as/server/production</outputDirectory>
+            <outputDirectory>/${artifactId}-${dest-env}-${project.version}/jboss-as/server/production</outputDirectory>
             <destName>run.conf</destName>
         </file>
         <file>
             <source>target/toutatice-distribution/jboss-as/server/production/conf/jboss-log4j.xml.${src-env}</source>
-            <outputDirectory>/portal-osivia-${dest-env}-${project.version}/jboss-as/server/production/conf</outputDirectory>
+            <outputDirectory>/${artifactId}-${dest-env}-${project.version}/jboss-as/server/production/conf</outputDirectory>
             <destName>jboss-log4j.xml</destName>
         </file>
         <file>
             <source>src/main/resources/jboss-as/server/production/deploy/jboss-portal-ha.sar/portal-server.war/login.jsp</source>
-            <outputDirectory>/portal-osivia-${dest-env}-${project.version}/jboss-as/server/production/deploy/jboss-portal-ha.sar/portal-server.war</outputDirectory>
+            <outputDirectory>/${artifactId}-${dest-env}-${project.version}/jboss-as/server/production/deploy/jboss-portal-ha.sar/portal-server.war</outputDirectory>
             <destName>login.jsp</destName>
         </file>
         <file>
             <source>src/main/resources/jboss-as/server/production/deploy/jboss-portal-ha.sar/portal-core.war/css/login.css</source>
-            <outputDirectory>/portal-osivia-${dest-env}-${project.version}/jboss-as/server/production/deploy/jboss-portal-ha.sar/portal-core.war/css</outputDirectory>
+            <outputDirectory>/${artifactId}-${dest-env}-${project.version}/jboss-as/server/production/deploy/jboss-portal-ha.sar/portal-core.war/css</outputDirectory>
             <destName>login.css</destName>
         </file>
         <file>
             <source>src/main/resources/jboss-as/server/production/deploy/jboss-portal-ha.sar/conf/identity/ldap_identity-config.xml.${dest-env}</source>
-            <outputDirectory>/portal-osivia-${dest-env}-${project.version}/jboss-as/server/production/deploy/jboss-portal-ha.sar/conf/identity</outputDirectory>
+            <outputDirectory>/${artifactId}-${dest-env}-${project.version}/jboss-as/server/production/deploy/jboss-portal-ha.sar/conf/identity</outputDirectory>
             <destName>ldap_identity-config.xml</destName>
         </file>
     </files>
