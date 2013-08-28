@@ -112,20 +112,6 @@ div#pageSettings .wizzardMenu	{
     z-index: 10;
 }
 
-#toolbar a {	
-	padding: 6px 12px 0 0;
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: x-small;
-	font-weight: bold;
-	color: #FFFFFF;
-}
-
-#toolbar a:hover {
-	text-decoration: underline;
-	color: #EA672E;
-}
-
 .sub-menu-height {
 	height: 17px;
 }

@@ -48,105 +48,26 @@ img {
 /* Toolbar */
 #toolbar {
     visibility: hidden;
+    padding: 0;
 }
 
 #toolbar-display {
-    text-align: right;
-    height: 24px;
+    visibility: visible;
     background-color: #DCDDDC;
     box-shadow: 0 2px #C5C7C6;
-    padding: 0 10px;
-    visibility: visible;
-}
-
-#toolbar .gauche {
-    float: left;
-}
-
-#toolbar .droite {
-    float: right;
+    padding: 0 10px 0 0;
 }
 
 #toolbar a, #toolbar p {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 24px;
-    padding: 0 15px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #373737;
-}
-
-#toolbar a:HOVER {
-    background: #5D781D;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-#toolbar .toolbar-menu {
-    display: inline-block;
-}
-
-#toolbar a.toolbar-menu-title {
-    display: inline-block;
-    padding-right: 30px;
-    background-image: url('images/fleche-menu.png');
-    background-repeat: no-repeat;
-    background-position: right -4px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 #toolbar ul {
-    position: absolute;
-    padding: 0;
-    border-top: 1px solid #C5C7C6;
-    background-color: #DCDDDC;
-    box-shadow: 2px 2px #C5C7C6;
-    visibility: hidden;
-    z-index: 3;
+    z-index: 200;	
 }
 
-#toolbar .toolbar-menu:HOVER ul, #toolbar a:HOVER ul {
+#toolbar hr {
     visibility: visible;
-}
-
-#toolbar ul li {
-    display: block;
-}
-
-#toolbar ul a {
-    display: block;
-    font-size: 10px;
-    line-height: 22px;
-    text-align: left;
-}
-
-#toolbar ul a:HOVER {
-    background: #5D781D;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-#toolbar ul a.uncheck {
-    padding-left: 35px;
-    background-image: url('images/checkbox-uncheck.png');
-    background-repeat: no-repeat;
-    background-position: 15px 0;
-}
-
-#toolbar ul a.check {
-    padding-left: 35px;
-    background-image: url('images/checkbox-check.png');
-    background-repeat: no-repeat;
-    background-position: 15px 0;
-}
-
-#toolbar hr {      
-    border: medium none;
-    background-color: #888888;
-    height: 1px;
-    margin: 4px 12px;
 }
 
 #toolbar a#refresh-page {
@@ -158,19 +79,6 @@ img {
     padding: 0 3px;
 }
 
-
-/* 
-.toolbar-container-show {
-	background-color: #B8D68F;
-    float: right;
-    height: 115px;
-    left: 800px;
-    margin-right: 20px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 180px;
-} */
 
 
 /**************** ENSEMBLE DE LA PAGE *******************/

@@ -19,27 +19,23 @@
 if(principal != null) {
     %>
 <div id="toolbar-display">
-    <div class="gauche">
-        <%=administrationHtmlContent %>
-    </div>
-    
-    <div class="droite">
-        <p><%= rb.getString("LOGGED") %> : <%= principal.getName() %></p>
-    
-        <% 
-        if (monEspaceURL != null) {
-            %>
-            <a href="<%= monEspaceURL %>"><%= rb.getString("MON_ESPACE") %></a>
-            <%
-        }
+    <%=administrationHtmlContent %>
+
+    <p><%= rb.getString("LOGGED") %> : <%= principal.getName() %></p>
+
+    <% 
+    if (monEspaceURL != null) {
         %>
-    
-        <!-- Utilisateur et déconnexion -->
-        <a href="<%=signOutURL %>"><%=rb.getString("LOGOUT") %></a>    
-    
-        <!-- Actualisation de la page -->
-        <a id="refresh-page" href="<%=refreshPageUrl %>" title="<%=rb.getString("REFRESH_PAGE") %>">&nbsp;</a>
-    </div>
+        <a href="<%= monEspaceURL %>"><%= rb.getString("MON_ESPACE") %></a>
+        <%
+    }
+    %>
+
+    <!-- Utilisateur et déconnexion -->
+    <a href="<%=signOutURL %>"><%=rb.getString("LOGOUT") %></a>    
+
+    <!-- Actualisation de la page -->
+    <a id="refresh-page" href="<%=refreshPageUrl %>" title="<%=rb.getString("REFRESH_PAGE") %>">&nbsp;</a>
 </div>
     <%
 } 
