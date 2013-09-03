@@ -57,6 +57,8 @@
         </header>        
     
         <section class="container">
+            <p:region regionName='notifications' regionID='notifications' />
+        
             <div id="multi-columns">
                 <div id="tbox2">
                     <p:region regionName='maximized' regionID='regionMaximized'/>

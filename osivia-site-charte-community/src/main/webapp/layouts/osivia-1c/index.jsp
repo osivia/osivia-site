@@ -52,6 +52,8 @@
         </header>        
     
         <section class="container">
+            <p:region regionName='notifications' regionID='notifications' />
+        
             <div id="one-column">
                 <div id="tbox1">
                     <p:region regionName='col1' regionID='center'/>                            
