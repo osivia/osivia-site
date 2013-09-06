@@ -81,7 +81,7 @@ a:hover {
 }
 
 #toolbar a:HOVER {
-    background: #5D781D;
+    background-color: #5D781D;
     color: #FFFFFF;
 }
 
@@ -97,7 +97,7 @@ a:hover {
 }
 
 #toolbar ul a:HOVER {
-    background: #5D781D;
+    background-color: #5D781D;
     color: #FFFFFF;
 }
 
