@@ -7,31 +7,31 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
-import org.nuxeo.ecm.automation.client.jaxrs.model.Document;
+import org.nuxeo.ecm.automation.client.model.Document;
 
 /**
  * @author david
  *
  */
 public class MetaDataUtils {
-	
+
 	/**
 	 * Méta-donnée source d'un contenu Nuxeo.
 	 */
 	public static String SOURCE_META_DATA = "dc:source";
-	
+
 	/**
 	 * Constructeur privé car seul accès statique permis.
 	 */
-	private MetaDataUtils(){ 
-		
+	private MetaDataUtils(){
+
 	}
-	
+
 	/**
 	 * Des informations sont portées par les méta-données.
 	 * Cette méthode récupère le nom d'un lien renseigné dans une méta-donnée
 	 * sous la forme: nom_lien:"<nom_du_lien>"
-	 * 
+	 *
 	 * @param document Contenu Nuxeo
 	 * @param metaData Méta-donnée du contenu Nuxeo
 	 * @return le nom du lien renseigné dans la méta-donnée du contenu
@@ -49,12 +49,12 @@ public class MetaDataUtils {
 		}
 		return link;
 	}
-	
+
 	/**
 	 * Des informations sont portées par les méta-données.
 	 * Cette méthode récupère la cible d'un lien renseigné dans une méta-donnée
 	 * sous la forme: cible_lien:"<nom_d__lien>"
-	 * 
+	 *
 	 * @param document Contenu Nuxeo
 	 * @param metaData Méta-donnée du contenu Nuxeo
 	 * @return la cible du lien renseigné dans la méta-donnée du contenu
@@ -72,12 +72,12 @@ public class MetaDataUtils {
 		}
 		return targetLink;
 	}
-	
+
 	/**
 	 * Des informations sont portées par les méta-données.
 	 * Cette méthode récupère le nom de styles css renseignés dans une méta-donnée
 	 * sous la forme: styles:"<noms des classes css>"
-	 * 
+	 *
 	 * @param document Contenu Nuxeo
 	 * @param metaData Méta-donnée du contenu Nuxeo
 	 * @return le nom des classes css renseignées dans la méta-donnée du contenu
@@ -95,5 +95,5 @@ public class MetaDataUtils {
 		}
 		return styles;
 	}
-	
+
 }

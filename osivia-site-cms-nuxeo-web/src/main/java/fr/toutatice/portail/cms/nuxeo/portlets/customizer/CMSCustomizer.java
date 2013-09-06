@@ -6,8 +6,8 @@ import java.util.Map;
 
 import javax.portlet.PortletContext;
 
-import org.nuxeo.ecm.automation.client.jaxrs.model.Document;
-import org.nuxeo.ecm.automation.client.jaxrs.model.Documents;
+import org.nuxeo.ecm.automation.client.model.Document;
+import org.nuxeo.ecm.automation.client.model.Documents;
 import org.osivia.portal.core.cms.CMSException;
 import org.osivia.portal.core.cms.CMSHandlerProperties;
 import org.osivia.portal.core.cms.CMSServiceCtx;

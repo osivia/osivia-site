@@ -13,12 +13,12 @@
 
 
 
-<%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.Blob"%>
+<%@page import="org.nuxeo.ecm.automation.client.model.Blob"%>
 
 
 <%@page import="javax.portlet.ResourceURL"%>
-<%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.Document"%>
-<%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.PropertyList"%>
+<%@page import="org.nuxeo.ecm.automation.client.model.Document"%>
+<%@page import="org.nuxeo.ecm.automation.client.model.PropertyList"%>
 
 <%@page import="org.osivia.portal.api.urls.Link"%>
 
@@ -27,7 +27,7 @@
 
 <%@page import="fr.toutatice.portail.cms.nuxeo.portlets.utils.MetaDataUtils"%>
 
-<%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.PropertyMap"%>
+<%@page import="org.nuxeo.ecm.automation.client.model.PropertyMap"%>
 
 <%@page import="org.apache.commons.lang.StringUtils"%>
 
