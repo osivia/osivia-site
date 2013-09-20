@@ -1,41 +1,33 @@
-<%@page import="org.apache.commons.lang.BooleanUtils"%>
-<%@page import="org.apache.commons.lang.StringUtils"%>
-<%@page import="org.osivia.portal.api.Constants" %>
-<%@page import="java.util.ResourceBundle" %>
-<%@page import="java.security.Principal" %>
+<%@ page import="java.util.ResourceBundle" %>
 
-<%@page contentType="text/html"%>
-<%@page pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <%
 ResourceBundle rb = ResourceBundle.getBundle("Resource", request.getLocale());
-Principal principal = (Principal) request.getAttribute(Constants.ATTR_TOOLBAR_PRINCIPAL);
-
-String loginUrl = (String) request.getAttribute(Constants.ATTR_TOOLBAR_LOGIN_URL);
-String signOutUrl = (String) request.getAttribute(Constants.ATTR_TOOLBAR_SIGN_OUT_URL);
-String refreshPageUrl = (String) request.getAttribute(Constants.ATTR_TOOLBAR_REFRESH_PAGE_URL);
-
-String administrationHtmlContent = (String) request.getAttribute(Constants.ATTR_TOOLBAR_ADMINISTRATION_CONTENT);
 %>
 
-
-<%
-if (principal == null) {
-    %>
+<c:choose>
+    <c:when test="${empty requestScope['osivia.toolbar.principal']}">
+        <div class="toolbar-content offline">
+            <!-- Login -->
+            <a href="${requestScope['osivia.toolbar.loginURL']}">
+                <%=rb.getString("LOGIN") %>
+            </a>
+        </div>
+    </c:when>
         
-<!-- Connexion -->
-<a href="<%=loginUrl %>"><%=rb.getString("LOGIN") %></a>
-    
-    <%
-} else {       
-    %>
-    <%=administrationHtmlContent %>
-
-    <!-- Utilisateur et déconnexion -->
-    <a href="<%=signOutUrl%>"><%=principal.getName() %> - <%=rb.getString("LOGOUT") %></a>    
-
-    <!-- Actualisation de la page -->
-    <a id="refresh-page" href="<%=refreshPageUrl %>" title="<%=rb.getString("REFRESH_PAGE") %>">&nbsp;</a>
-    <%
-}
-%>
+    <c:otherwise>
+        <div class="toolbar-content">
+            <!-- Administration -->
+            <c:out value="${requestScope['osivia.toolbar.administrationContent']}" escapeXml="false" />
+            
+            <!-- Logout -->
+            <a href="${requestScope['osivia.toolbar.signOutURL']}">
+                ${requestScope['osivia.toolbar.principal'].name} - <%=rb.getString("LOGOUT") %>
+            </a>
+            
+            <!-- Refresh page -->
+            <a id="refresh-page" href="${requestScope['osivia.toolbar.refreshPageURL']}" title="<%=rb.getString("REFRESH_PAGE") %>">&nbsp;</a>
+        </div>
+    </c:otherwise>
+</c:choose>

@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.portlet.PortletContext;
 
-import org.nuxeo.ecm.automation.client.jaxrs.model.Document;
+import org.nuxeo.ecm.automation.client.model.Document;
 import org.osivia.portal.api.menubar.MenubarItem;
 
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.MenuBarFormater;
@@ -12,9 +12,9 @@ import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.MenuBarFormate
 /**
  * Customization de la barre de menu des portlets Pour démonstration, on renomme
  * l'item permalink
- * 
+ *
  * @author jeanseb
- * 
+ *
  */
 public class DemoMenuBarFormater extends MenuBarFormater {
 

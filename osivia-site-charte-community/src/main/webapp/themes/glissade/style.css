@@ -66,13 +66,12 @@ a:hover {
 
 
 /* Toolbar */
-#toolbar-wrapper {
-    visibility: hidden;
+#toolbar .toolbar-content {
+    padding: 0 5%;
 }
 
-#toolbar {
-    padding: 0 5%;
-    visibility: visible;
+#toolbar .toolbar-content.offline {
+    display: block;
 }
 
 #toolbar a, #toolbar p {
@@ -108,57 +107,6 @@ a:hover {
     height: 24px;
     width: 24px;
     padding: 0 3px;
-}
-
-
-/* Wizard menu */
-#page-settings-wrapper {
-    position: absolute;
-    height: 24px;
-    width: 100%;
-    margin-top: 2px;
-}
-
-.wizzardMenu {
-    text-align: right;
-    background: #3C342E;
-}
-
-.wizzardMenu .clickable-element {
-    display: inline-block;
-}
-
-.wizzardMenu .clickable-element:HOVER {
-    background: #5D781D;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-div#pageSettings .wizzardMenu .wizzardSettings  {
-    font-size: 11px;
-    font-weight: 300;
-    margin: 0;
-    padding: 0 15px;
-    line-height: 24px;
-}
-
-div#pageSettings .wizzardMenu .wizzardNav {
-    font-size: 11px;
-    font-weight: 300;
-    margin: 0;
-    padding: 0 15px;
-    line-height: 24px;
-}
-
-div#pageSettings .wizzardMenu .wizzardCacheInit {
-    margin: 0;
-    padding: 0 15px;
-}
-
-div#pageSettings .wizzardMenu .wizzardCacheInit a {
-    font-size: 11px;
-    font-weight: 300;
-    line-height: 24px;
 }
 
 

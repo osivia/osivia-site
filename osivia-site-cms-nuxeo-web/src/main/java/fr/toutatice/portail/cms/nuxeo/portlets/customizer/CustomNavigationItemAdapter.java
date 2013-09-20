@@ -2,7 +2,7 @@ package fr.toutatice.portail.cms.nuxeo.portlets.customizer;
 
 import javax.portlet.PortletContext;
 
-import org.nuxeo.ecm.automation.client.jaxrs.model.Document;
+import org.nuxeo.ecm.automation.client.model.Document;
 
 import fr.toutatice.portail.cms.nuxeo.portlets.customizer.helpers.NavigationItemAdapter;
 import fr.toutatice.portail.cms.nuxeo.portlets.service.CMSService;
@@ -16,7 +16,7 @@ public class CustomNavigationItemAdapter extends NavigationItemAdapter {
 
     /**
      * Définition d'un template par défaut (uniquement pour les publishSite)
-     * 
+     *
      * @param doc
      * @return
      */
@@ -31,7 +31,7 @@ public class CustomNavigationItemAdapter extends NavigationItemAdapter {
 
     /**
      * Cet element doit-il être géré dans la navigation
-     * 
+     *
      * @param doc
      * @return
      */
@@ -50,7 +50,7 @@ public class CustomNavigationItemAdapter extends NavigationItemAdapter {
 
     /**
      * Cet element doit-il être affiché dans une page (ou par défaut via un player spécifique)
-     * 
+     *
      * @param doc
      * @return
      */

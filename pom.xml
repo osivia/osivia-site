@@ -12,8 +12,8 @@
     <properties>
         <osivia-portal.version>3.0-SNAPSHOT</osivia-portal.version>
         <osivia-services-wiki.version>1.1-SNAPSHOT</osivia-services-wiki.version>
-        <toutatice-cms.version>2.1-SNAPSHOT</toutatice-cms.version>
-        <nuxeo-automation-client.version>5.4.2</nuxeo-automation-client.version>
+        <toutatice-cms.version>3.0-SNAPSHOT</toutatice-cms.version>
+        <nuxeo-automation-client.version>5.6.0-HF17</nuxeo-automation-client.version>
     </properties>
 
 
@@ -24,7 +24,9 @@
         <module>osivia-site-cms-nuxeo-web</module>
         <module>osivia-site-portlet-solutions</module>
         <module>osivia-site-internationalization-customizer</module>
-        <module>osivia-site-distribution</module>        
+        <module>osivia-site-attributes-bundles-customizer</module>
+        <module>osivia-site-regions-customizer</module>
+        <module>osivia-site-distribution</module>     
     </modules>
 
 

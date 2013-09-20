@@ -1,13 +1,13 @@
 
-<%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.Document"%>
+<%@page import="org.nuxeo.ecm.automation.client.model.Document"%>
 <%@page import="fr.toutatice.portail.cms.nuxeo.api.NuxeoController"%>
-<%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.Documents"%>
+<%@page import="org.nuxeo.ecm.automation.client.model.Documents"%>
 <%@page import="javax.portlet.filter.ResourceResponseWrapper"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.Enumeration"%>
 <%@page import="javax.portlet.PortletURL"%> 
-<%@page import="org.nuxeo.ecm.automation.client.jaxrs.model.PropertyMap"%>
+<%@page import="org.nuxeo.ecm.automation.client.model.PropertyMap"%>
 <%@page import="com.osivia.portail.site.portlets.solutions.ISolutionsConstantes" %>
 <%@page import="com.osivia.portail.site.portlets.utils.StringHelper" %>
 <%@ page contentType="text/plain; charset=UTF-8"%>
