@@ -63,14 +63,14 @@
         
             <div id="multi-columns">
                 <div id="tbox1">
-                    <p:region regionName='col1' regionID='regionCol1' />
+                    <p:region regionName='col1' regionID='regionCol1' regionCms="false" />
                 </div>
                 <div id="tbox3">
-                    <p:region regionName='col3' regionID='regionCol3' />
+                    <p:region regionName='col3' regionID='regionCol3' regionCms="true" />
                 </div>
                 <!-- La colonne principale doit être déclarée après les colonnes flottantes -->
                 <div id="tbox2">
-                    <p:region regionName='col2' regionID='regionCol2' />
+                    <p:region regionName='col2' regionID='regionCol2' regionCms="true" />
                 </div>
             </div>
         </section>

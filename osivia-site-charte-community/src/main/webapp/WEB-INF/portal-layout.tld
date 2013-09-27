@@ -22,6 +22,12 @@
             <required>false</required>
             <description>HTML identifier for CSS style</description>
         </attribute>
+        <attribute>
+            <name>regionCms</name>
+            <required>false</required>
+            <description>Region CMS indicator.</description>
+            <type>java.lang.Boolean</type>
+        </attribute>
     </tag>
     
     <tag>
