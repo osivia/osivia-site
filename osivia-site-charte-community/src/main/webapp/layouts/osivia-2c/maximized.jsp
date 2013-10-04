@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@taglib prefix="p" uri="/WEB-INF/portal-layout.tld"%>
+<%@ taglib prefix="p" uri="portal-layout" %>
 
 <html>
 
@@ -19,22 +19,22 @@
 </head>
 
 <body>
-    <p:region regionName="AJAXScripts" regionID="AJAXScripts" />
+    <p:region regionName="AJAXScripts" />
 
     <div id="wrapper">
         <header>
             <!-- Barre d'outils -->
             <div id="toolbar-wrapper">
-                <p:region regionName="toolbar" regionID="toolbar" />
+                <p:region regionName="toolbar" />
             </div>
             
             <!-- Mode édition -->
             <div id="page-settings-wrapper">
-                <p:region regionName="pageSettings" regionID="pageSettings" />
+                <p:region regionName="pageSettings" />
             </div>
             
             <!-- Recherche -->
-            <p:region regionName="search" regionID="search" />
+            <p:region regionName="search" />
             
             <!-- Bannière et logo -->
             <div id="logo" class="container">
@@ -46,30 +46,30 @@
             <!-- Onglets -->
             <div id="menu-wrapper">
                 <nav id="menu">
-                    <p:region regionName='tabs' regionID='tabs' />
+                    <p:region regionName='tabs' />
                 </nav>
             </div>
             
             <!-- Breadcrumb -->
             <div class="container">
-                <p:region regionName='breadcrumb' regionID='breadcrumb' />
+                <p:region regionName='breadcrumb' />
             </div>
         </header>        
     
         <section class="container">
-            <p:region regionName='notifications' regionID='notifications' />
+            <p:region regionName='notifications' />
         
             <div id="multi-columns">
                 <div id="tbox2">
-                    <p:region regionName='maximized' regionID='regionMaximized'/>
+                    <p:region regionName='maximized' />
                 </div>
             </div>
         </section>
     </div>
 
-    <p:region regionName='footer' regionID='footer' />
+    <p:region regionName='footer' />
     
-    <p:region regionName='AJAXFooter' regionID='AJAXFooter' />
+    <p:region regionName='AJAXFooter' />
 </body>
 
 </html>
