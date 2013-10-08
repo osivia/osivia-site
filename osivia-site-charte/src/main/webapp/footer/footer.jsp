@@ -97,13 +97,13 @@ UserPortal siteMap = (UserPortal) request.getAttribute(Constants.ATTR_SITE_MAP);
                         <div class="offset1 span7">
                             <ul>
                                 <li>
-                                    <a href="/portal/commands?cmsPath=%252Fdefault-domain%252Fespace-osivia%252Fosivia%252Fsites%252Fmentions-legales.1351064807797&permLinkType=cms&action=permLink">Mentions Légales</a>
+                                    <a href="/portal/cms/default-domain/espace-osivia/osivia/sites/mentions-legales">Mentions Légales</a>
                                 </li>
                                 <li>
-                                    <a href="/portal/commands?cmsPath=%252Fdefault-domain%252Fespace-osivia%252Fosivia%252Fsites%252Fcredit.1351065175907&permLinkType=cms&action=permLink">Crédit</a>
+                                    <a href="/portal/cms/default-domain/espace-osivia/osivia/sites/credit">Crédit</a>
                                 </li>
                                 <li>
-                                    <a href="/portal/commands?cmsPath=%252Fdefault-domain%252Fespace-osivia%252Fcontact&permLinkType=cms&action=permLink">Nous contacter</a>
+                                    <a href="/portal/cms/default-domain/espace-osivia/osivia/contact">Nous contacter</a>
                                 </li>
                             </ul>
                         </div>

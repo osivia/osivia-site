@@ -460,6 +460,19 @@ width: 100%;
 	
 }
 
+
+#footer .derniere-ligne .row {
+	text-align: center;
+}
+
+
+#footer .derniere-ligne .row .offset1.span7 {
+	margin-left: auto;
+	width: 100%;	
+}
+
+
+
 /* Footer > Legal */
 
 #portal-copyright {

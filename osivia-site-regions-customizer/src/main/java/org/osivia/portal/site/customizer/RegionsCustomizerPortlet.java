@@ -51,7 +51,7 @@ public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomi
      *
      * @return metadatas
      */
-    private final CustomizationModuleMetadatas generateMetadatas() {
+    private CustomizationModuleMetadatas generateMetadatas() {
         CustomizationModuleMetadatas metadatas = new CustomizationModuleMetadatas();
         metadatas.setName(CUSTOMIZER_NAME);
         metadatas.setModule(this);
