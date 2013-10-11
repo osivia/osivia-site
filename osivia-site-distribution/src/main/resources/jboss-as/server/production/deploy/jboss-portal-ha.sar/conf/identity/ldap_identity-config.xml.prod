@@ -114,7 +114,7 @@
         </option>
         <option>
            <name>roleCtxDN</name>
-           <value>ou=profils,ou=groupes,dc=osivia,dc=org</value>
+           <value>ou=groupes,dc=osivia,dc=org</value>
         </option>
      </option-group>
 

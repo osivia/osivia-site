@@ -111,7 +111,7 @@
             </option>
             <option>
                 <name>roleCtxDN</name>
-                <value>ou=profils,ou=groupes,dc=ent-bretagne,dc=fr</value>
+                <value>ou=groupes,dc=ent-bretagne,dc=fr</value>
             </option>
         </option-group>
     </options>
