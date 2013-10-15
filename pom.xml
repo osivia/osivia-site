@@ -26,7 +26,7 @@
         <module>osivia-site-internationalization-customizer</module>
         <module>osivia-site-attributes-bundles-customizer</module>
         <module>osivia-site-regions-customizer</module>
-        <module>osivia-site-nuxeo-dependencies</module>
+        <!-- <module>osivia-site-nuxeo-dependencies</module> -->
         <module>osivia-site-distribution</module>     
     </modules>
 
