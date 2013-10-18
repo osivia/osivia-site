@@ -5,7 +5,7 @@
 	<parent>
   		<groupId>org.osivia.site</groupId>
 		<artifactId>osivia-site-parent</artifactId>
-		<version>1.1-SNAPSHOT</version>
+		<version>1.1-RC2</version>
  	</parent>
 
 	<artifactId>osivia-site-charte-community</artifactId>
