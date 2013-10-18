@@ -98,6 +98,8 @@ public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomi
                 renderedRegion.removeRenderedRegion("breadcrumb");
                 // Replace default tabs
                 renderedRegion.defineRenderedRegion("tabs", "/header/tabs.jsp");
+                // Replace default search
+                renderedRegion.defineRenderedRegion("search", "/header/search.jsp");
                 // Replace default footer
                 renderedRegion.defineRenderedRegion("footer", "/footer/footer.jsp");
             }

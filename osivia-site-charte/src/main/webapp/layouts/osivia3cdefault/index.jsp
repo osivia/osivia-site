@@ -44,7 +44,7 @@
 				             			<jsp:include page="../../language/language.jsp" />            
 								
 								        <!-- navigation tabs and such -->
-								        <p:region regionName='tabs' regionID='tabs'/>
+								        <p:region regionName='tabs' regionID='tabs-atomo'/>
 
 								        <p:region regionName='search' regionID='search'/>
 				                  

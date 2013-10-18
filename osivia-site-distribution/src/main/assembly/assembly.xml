@@ -16,11 +16,12 @@
             <unpack>false</unpack>
             <scope>runtime</scope>
             <includes>
-                <include>org.osivia.site:osivia-site-charte:war:${project.version}</include>
-                <include>org.osivia.site:osivia-site-charte-community:war:${project.version}</include>
-                <include>org.osivia.site:osivia-site-cms-nuxeo-web:war:${project.version}</include>
-                <include>org.osivia.site:osivia-site-portlet-solutions:war:${project.version}</include>
-                <include>org.osivia.site:osivia-site-internationalization-customizer:war:${project.version}</include>
+                <include>${project.groupId}:osivia-site-charte:war:${project.version}</include>
+                <include>${project.groupId}:osivia-site-charte-community:war:${project.version}</include>
+                <include>${project.groupId}:osivia-site-regions-customizer:war:${project.version}</include>
+                <include>${project.groupId}:osivia-site-cms-nuxeo-web:war:${project.version}</include>
+                <include>${project.groupId}:osivia-site-portlet-solutions:war:${project.version}</include>
+                <include>${project.groupId}:osivia-site-internationalization-customizer:war:${project.version}</include>
                 <include>org.osivia.services:osivia-services-wiki:war:${osivia-services-wiki.version}</include>
             </includes>
         </dependencySet>
