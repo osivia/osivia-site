@@ -76,6 +76,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.osivia.nuxeo</groupId>
+            <artifactId>osivia-nuxeo-fragment-extension</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.nuxeo.ecm.platform</groupId>
             <artifactId>nuxeo-platform-login-portal-sso</artifactId>
             <version>5.4.2-HF01</version>
