@@ -60,8 +60,11 @@
             <p:region regionName='notifications' />
         
             <div id="multi-columns">
+                <div id="tbox1">
+                    <p:region regionName='col1' />
+                </div>
                 <div id="tbox2">
-                    <p:region regionName='maximized' />
+                    <p:region regionName='maximized' regionID="col2" />
                 </div>
             </div>
         </section>
