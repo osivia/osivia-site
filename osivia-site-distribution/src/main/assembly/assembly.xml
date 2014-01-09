@@ -23,9 +23,24 @@
                 <include>${project.groupId}:osivia-site-portlet-solutions:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-internationalization-customizer:war:${project.version}</include>
                 <include>org.osivia.services:osivia-services-wiki:war:${osivia-services-wiki.version}</include>
+
+                <include>org.osivia.services:osivia-contact-portlet:war:${osivia-services-contact.version}</include>
+                <include>toutatice-services.identite:toutatice-identite-fichepersonne-portail:war:${fichepersonne.version}</include>
+                                                
             </includes>
         </dependencySet>
+        
+        <dependencySet>
+            <outputDirectory>/${artifactId}-${dest-env}-${project.version}/jboss-as/server/production/lib</outputDirectory>
+            <unpack>false</unpack>
+            <scope>runtime</scope>
+            <includes>
+                <include>org.osivia.services:osivia-services-java-melody-integration:jar:${osivia-services-java-melody-integration.version}</include>
+            </includes>
+        </dependencySet>        
     </dependencySets>
+
+
 
 
     <fileSets>

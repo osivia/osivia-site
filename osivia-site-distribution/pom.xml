@@ -75,7 +75,26 @@
             <version>${toutatice-cms.version}</version>
             <type>zip</type>
         </dependency>
+        
+        <dependency>
+            <groupId>org.osivia.services</groupId>
+            <artifactId>osivia-services-java-melody-integration</artifactId>
+            <version>${osivia-services-java-melody-integration.version}</version>
+            <type>jar</type>
+        </dependency>        
 
+        <dependency>
+            <groupId>org.osivia.services</groupId>
+            <artifactId>osivia-contact-portlet</artifactId>
+            <version>${osivia-services-contact.version}</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>toutatice-services.identite</groupId>
+            <artifactId>toutatice-identite-fichepersonne-portail</artifactId>
+            <version>${fichepersonne.version}</version>
+            <type>war</type>
+        </dependency>
     </dependencies>
 
 

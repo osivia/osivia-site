@@ -97,16 +97,16 @@ public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomi
                 // Remove default breadcrumb
                 renderedRegion.removeRenderedRegion("breadcrumb");
                 // Replace default tabs
-                renderedRegion.defineRenderedRegion("tabs", "/header/tabs.jsp");
+                renderedRegion.customizeRenderedRegion("tabs", "/header/tabs.jsp");
                 // Replace default search
-                renderedRegion.defineRenderedRegion("search", "/header/search.jsp");
+                renderedRegion.customizeRenderedRegion("search", "/header/search.jsp");
                 // Replace default footer
-                renderedRegion.defineRenderedRegion("footer", "/footer/footer.jsp");
+                renderedRegion.customizeRenderedRegion("footer", "/footer/footer.jsp");
             }
 
             if (StringUtils.equals(contextPath, charteCommunityContextPath)) {
                 // Replace default toolbar
-                renderedRegion.defineRenderedRegion("toolbar", "/header/toolbar.jsp");
+                renderedRegion.customizeRenderedRegion("toolbar", "/header/toolbar.jsp");
             }
         }
     }
