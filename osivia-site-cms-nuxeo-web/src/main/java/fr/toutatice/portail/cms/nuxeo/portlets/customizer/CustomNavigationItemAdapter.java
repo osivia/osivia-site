@@ -15,21 +15,6 @@ public class CustomNavigationItemAdapter extends NavigationItemAdapter {
 
 
     /**
-     * Définition d'un template par défaut (uniquement pour les publishSite)
-     *
-     * @param doc
-     * @return
-     */
-
-    @Override
-    protected String getDefaultPageTemplate(Document doc) {
-
-        return "/default/templates/BLOG_TMPL1";
-
-    }
-
-
-    /**
      * Cet element doit-il être géré dans la navigation
      *
      * @param doc
@@ -57,7 +42,7 @@ public class CustomNavigationItemAdapter extends NavigationItemAdapter {
     @Override
     protected boolean isDisplayedAsAPage(Document doc) {
 
-        if (doc.getType().equals("SimplePage") || (doc.getType().equals("WikiBook")) || (doc.getType().equals("WikiSection"))) {
+        if (doc.getType().equals("SimplePage")) {
             return true;
         }
 

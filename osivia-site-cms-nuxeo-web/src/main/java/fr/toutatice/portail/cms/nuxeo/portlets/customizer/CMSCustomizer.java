@@ -92,41 +92,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     }
 
-    public CMSHandlerProperties getCMSFaqPlayer(CMSServiceCtx ctx) throws Exception {
-
-        Document doc = (Document) ctx.getDoc();
-
-        Map<String, String> windowProperties = new HashMap<String, String>();
-
-        windowProperties.put("osivia.cms.scope", ctx.getScope());
-        windowProperties.put("osivia.cms.uri", doc.getPath());
-        windowProperties.put("osivia.hideDecorators", "1");
-        windowProperties.put("theme.dyna.partial_refresh_enabled", "false");
-
-        CMSHandlerProperties linkProps = new CMSHandlerProperties();
-        linkProps.setWindowProperties(windowProperties);
-        linkProps.setPortletInstance("toutatice-faq-portletInstance");
-
-        return linkProps;
-
-    }
-
-    /*
-     * On détermine le player associé à chaque item
-     */
-
-    @Override
-    public CMSHandlerProperties getCMSPlayer(CMSServiceCtx ctx) throws Exception {
-
-        Document doc = (Document) ctx.getDoc();
-
-        if ("FaqFolder".equals(doc.getType()) || "Question".equals(doc.getType())) {
-            return this.getCMSFaqPlayer(ctx);
-        }
-
-        return super.getCMSPlayer(ctx);
-
-    }
 
     @Override
     public String getNuxeoNativeViewerUrl(CMSServiceCtx ctx) {
@@ -209,6 +174,38 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         }
 
         return cmsCommandProperties;
+    }
+
+
+    @Override
+    public CMSHandlerProperties getCMSPlayer(CMSServiceCtx ctx) throws Exception {
+
+        Document doc = (Document) ctx.getDoc();
+
+        if ("WikiBook".equals(doc.getType()) || "WikiSection".equals(doc.getType())) {
+            return this.getWikiPlayer(ctx);
+        }
+
+
+        return super.getCMSPlayer(ctx);
+
+    }
+
+
+    public CMSHandlerProperties getWikiPlayer(CMSServiceCtx ctx) throws Exception {
+        Document doc = (Document) ctx.getDoc();
+
+        Map<String, String> windowProperties = new HashMap<String, String>();
+        windowProperties.put("osivia.cms.uri", doc.getPath());
+        windowProperties.put("osivia.hideDecorators", "1");
+        windowProperties.put("osivia.ajaxLink", "1");
+
+        CMSHandlerProperties linkProps = new CMSHandlerProperties();
+        linkProps.setWindowProperties(windowProperties);
+        linkProps.setPortletInstance("osivia-services-wiki-wikiPortletInstance");
+
+        return linkProps;
+
     }
 
 }
