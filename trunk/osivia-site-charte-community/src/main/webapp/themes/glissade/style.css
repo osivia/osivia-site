@@ -1,0 +1,605 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E5E6DD;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 13px;
+    color: #6E6D69;
+}
+
+h1,h2,h3,.portlet-titlebar-title {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #7D7764;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 2.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+p,ul,ol {
+    margin: 0;
+    line-height: 180%;
+}
+
+ul,ol {
+    
+}
+
+a {
+    text-decoration: none;
+    color: #5BA689;
+}
+
+a:hover {
+    
+}
+
+#wrapper {
+    overflow: hidden;
+    background-color: #F8F9F0;
+}
+
+.container {
+    width: 90%;
+    margin: 0px auto;
+}
+
+
+/* Header */
+#header {
+    width: 960px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+
+/* Toolbar */
+#toolbar .toolbar-content {
+    padding: 0 5%;
+}
+
+#toolbar .toolbar-content.offline {
+    display: block;
+}
+
+#toolbar a, #toolbar p {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#toolbar a:HOVER {
+    background-color: #5D781D;
+    color: #FFFFFF;
+}
+
+#toolbar a.toolbar-menu-title {
+    padding-right: 30px;
+    background-image: url('images/fleche-menu.png');
+    background-repeat: no-repeat;
+    background-position: right -4px;
+}
+
+#toolbar ul {
+    z-index: 3;
+}
+
+#toolbar ul a:HOVER {
+    background-color: #5D781D;
+    color: #FFFFFF;
+}
+
+#toolbar a#refresh-page {
+    background-image: url('images/refresh.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+    padding: 0 3px;
+}
+
+
+/* Logo */
+#logo {
+    overflow: hidden;
+    height: 100px;
+}
+
+#logo a {
+    color: #6B7A52;
+    text-decoration: none;
+}
+
+#logo a#banner {
+    position: absolute;
+    margin-top: 25px;
+    border: none;
+    background-image: url(images/logo-osivia.png);
+    background-repeat: no-repeat;
+    width: 202px;
+    height: 53px;
+    z-index: 1;
+}
+
+#logo a#banner span {
+    display: none;
+}
+
+#logo h1,#logo p {
+    text-align: center;
+}
+
+#logo h1 {
+    position: absolute;
+    margin-top: 24px;
+    margin-left: 202px;
+    padding: 0;
+    text-transform: lowercase;
+    font-size: 26px;
+    z-index: 1;
+}
+
+#logo p {
+    position: absolute;
+    margin-top: 51px;
+    margin-left: 208px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #696969;
+    z-index: 2;
+}
+
+
+/* Search */
+#search {
+    position: absolute;
+    right: 5%;
+    margin-top: 60px;
+    padding: 0;
+    z-index: 2;
+}
+
+#search form {
+    margin: 0;
+    padding: 10px 0 0 20px;
+}
+
+#search fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#search-text {
+    width: 170px;
+    padding: 6px 5px 2px 5px;
+    border: 1px solid #DEDEDE;
+    background: #FFFFFF;
+    font: normal 11px Arial, Helvetica, sans-serif;
+}
+
+
+/* Menu */
+#menu-wrapper {
+	margin-bottom: 2em;
+}
+
+#tabs {
+    overflow: hidden;
+    height: 52px;
+    background-color: #3C342E;
+}
+
+#tabs ul.nav {
+    margin: 0;
+    margin-left: 5%;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+    line-height: normal;
+    text-align: left;
+}
+
+#tabs ul.nav li {
+    display: inline-block;
+}
+
+#tabs a {
+    display: block;
+    padding: 0px 30px;
+    line-height: 52px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+#tabs .current a, #tabs a:HOVER, #tabs ul.sub-menu a:HOVER {
+    background-color: #5D781D;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#tabs ul.sub-menu {
+    position: absolute;
+    padding: 0;
+    visibility: hidden;
+}
+
+#tabs li:HOVER ul.sub-menu, #tabs a:HOVER ul.sub-menu {
+    visibility: visible;
+}
+
+#tabs ul.sub-menu li {
+    display: block;
+}
+
+#tabs ul.sub-menu a {
+    font-size: 12px;
+    line-height: 32px;
+    background: #3C342E;
+}
+
+
+/* Breadcrum */
+#breadcrumb {
+
+}
+
+#breadcrumb ul {
+    padding-left: 0;
+}
+
+#breadcrumb li {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 13px;
+    background-image: url("images/arrow-path.png");
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    white-space: nowrap;
+}
+
+#breadcrumb li:BEFORE {
+    content: none;
+}
+
+#breadcrumb a {
+    color: #3C342E;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#breadcrumb a:HOVER {
+    color: #5D781D;
+    text-decoration: underline;
+}
+
+
+/* Portlets */
+section {
+    overflow: hidden;
+    padding: 20px 20px 40px 20px;
+}
+
+#one-column, #multi-columns {
+    padding: 0;
+}
+
+.dyna-window-content {
+    margin-bottom: 20px;
+}
+
+.pia-window-settings-border {
+    display: inline-block;
+    width: auto;
+}
+
+.pia-window-settings {
+    padding: 0px;
+}
+
+.portlet-container table {
+    width: auto;
+}
+
+.portlet-mode-container {
+   float: right;
+   padding-top: 4px;
+   margin-left: 15px;
+   white-space: nowrap;
+}
+
+.portlet-mode-container .mode-button {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.portlet-mode-edit {
+    display: block;
+    background-image : url(images/edit.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 26px;
+    height: 23px;
+    text-decoration: none;
+}
+
+.portlet-mode-view {
+    display: block;
+    background-image : url(images/view.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 26px;
+    height: 23px;
+    text-decoration: none;
+}
+
+.portlet-mode-maximized {
+    display: block;
+    background-image : url(images/maximiser.png);
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+}
+
+.portlet-mode-normal {
+    display: block;
+    background-image : url(images/minimiser.png);
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 23px;
+    text-decoration: none;
+}
+
+.portlet-body {
+    padding-top: 10px;
+}
+
+/* Titres de la colonne principale. */
+#one-column #tbox1 .portlet-titlebar-center,#tbox2 .portlet-titlebar-center {
+    width: 9999px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #E0E1D6;
+}
+
+#one-column #tbox1 .portlet-header,#tbox2 .portlet-header {
+	margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #E0E1D6;
+}
+
+#one-column #tbox1 .portlet-titlebar-title,#tbox2 .portlet-titlebar-title {
+    color: #373737;
+    font-size: 26px;
+    text-shadow: 1px 1px 0 #FFFFFF;
+}
+
+/* Contenu à gauche */
+#multi-columns #tbox1 {
+    float: left;
+    width: auto;
+    max-width: 320px;
+    margin-right: 40px;
+}
+
+#multi-columns #tbox1 .dyna-window-content {
+    background: #3C342E;
+    border-bottom: 5px solid #A2B837;
+    
+}
+
+#multi-columns #tbox1 .portlet-container {
+    overflow: hidden;
+    padding: 20px 30px;
+}
+
+#multi-columns #tbox1 .portlet-titlebar-title {
+    padding: 10px 0px;
+    letter-spacing: -1px;
+    font-size: 22px;
+    color: #FFFFFF;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/** Contenu central */
+#tbox2 {
+	overflow: hidden;
+}
+
+/** Contenu à droite */
+#tbox3 {
+    float: right;
+    width: auto;
+    max-width: 500px;
+    margin-left: 40px;
+    color: #787878;
+}
+
+#tbox3 .portlet-titlebar-center {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #E0E1D6;
+}
+
+#tbox3 .portlet-titlebar-title {
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 0px #FFFFFF;
+    font-size: 26px;
+    color: #373737;
+}
+
+
+/* Three Column Footer Content */
+#footer-bg {
+    overflow: hidden;
+    padding: 70px 0px;
+    background: #3C342E;
+    border-top: 10px solid #E5E6DD;
+}
+
+#footer-content {
+    
+}
+
+#footer-content h2 {
+    margin: 0px 0px 20px 0px;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 2px solid #DE5635;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+#column1 {
+    float: left;
+    width: 384px;
+    margin-right: 20px;
+}
+
+#column2 {
+    float: left;
+    width: 384px;
+}
+
+#column3 {
+    float: right;
+    width: 384px;
+}
+
+
+/* Footer */
+#footer {
+    height: 100px;
+    margin: 0 auto;
+    padding: 50px 0px 0px 0px;
+}
+
+#footer p {
+    margin: 0;
+    padding-top: 10px;
+    line-height: normal;
+    text-align: center;
+    text-shadow: 1px 1px 0px #FFFFFF;
+    color: #909090;
+}
+
+#footer a {
+    text-decoration: underline;
+    color: #909090;
+}
+
+#footer a:hover {
+    text-decoration: none;
+    color: #383838;
+}
+
+.box1 {
+    overflow: hidden;
+    height: 300px;
+    background: url(images/img04.jpg) no-repeat center bottom;
+}
+
+.list-style1 {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.list-style1 li {
+    padding: 7px 0px 7px 0px;
+    border-top: 1px dashed #E7E2DC;
+}
+
+.list-style1 .first {
+    padding-top: 0px;
+    border-top: none;
+}
+
+.list-style2 {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.list-style2 li {
+    padding: 7px 0px 7px 0px;
+}
+
+.list-style2 a {
+    color: #8A8985;
+}
+
+.list-style2 a:hover {
+    text-decoration: underline;
+}
+
+.list-style2 .first {
+    padding-top: 0px;
+    border-top: none;
+    background: none;
+}
+
+
+/* Menu Wiki */
+.menu-wiki ul.level_0 {
+	margin: 10px -10px 0;
+    padding: 0;
+}
+
+.menu-wiki ul li {
+    display: block;
+}
+
+.menu-wiki ul a {
+    display: block;
+    font-size: 12px;
+    line-height: 22px;
+    color: #F8F9F0;
+    padding: 1px 10px;
+    text-align: left;
+}
+
+.menu-wiki ul a:HOVER {
+    background: #5D781D;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Portlet fichepersonne */
+.ligneFichePersonne {
+    height: 3em;
+}
+
+.ligneFichePersonne .nomAttr {
+    font-weight: bold;
+    float:left;
+    width: 15em;
+}
+.ligneFichePersonne .contenu {
+    display: inline-block;
+    padding-left: 1em;
+}
+
+.boutonFichePersonne {
+    display:inline;
+}

@@ -1,0 +1,56 @@
+#page d'erreur par défaut
+error.defaultPageUri=/osivia-site-charte/error/errorPage.jsp
+
+
+#schemas additionnels de navigation (separés par une virgule)
+nuxeo.navigationSchemas=wcm_navigation
+
+#temps maxi d'exécution par portlet, au dela de ce temps, le traitement
+#est interrompu (en secondes)
+portlets.maxExecutionDelay=5
+portlets.maxExecution.excludedPortlets=toutatice-portail-administration-portletInstance
+
+#timeout des caches en secondes
+nuxeo.cacheTimeout=60
+
+#permet de générer les traces des appels Nuxeo(en level DEBUG)
+#nuxeo.debugMode=1
+
+#affichage des infos de debug dans les portlets
+#nuxeo.debugHtml=1
+
+#active les gestionnaire de statut
+status.active=true
+
+
+#Delai en secondes au dela duquel les webservices (Nuxeo, RSS, ...) tombent en timeout
+ws.webServiceTimeOut=30
+
+# Rendu des portlets en "div"
+portlets.rendering=div
+
+
+ldap.timeout=10000
+ldap.base=dc=osivia,dc=org
+### ===== Porlets de gestion des personnes
+
+#supprime la surcharge lors de la modification du mot de passe
+fichePersonne.deleteSurchageWhenUpdatePwd=false
+
+# Roles applicatifs du portlet fichePersonne
+fichePersonne.roleAdministrateur=fichePersonne_ADM
+fichePersonne.roleRazMdp=fichePersonne_RAZMDP
+
+ficheEtablissement.roleAdministrateur=ficheEtablissement_ADM
+
+gestionapplications.roleAdministrateur=gestionAppli_ADM
+gestiongroupes.roleAdministrateur=gestionGroupe_ADM
+gestionorganisations.roleAdministrateur=gestionOrganisation_ADM
+gestionpersonnes.roleAdministrateur=gestionPersonne_ADM
+
+#rechercheapplication.roleAdministrateur=rechercheAppli_ADM
+#rechercheprofil.roleAdministrateur=rechercheProfil_ADM
+
+activationcompte.job=/home/portal/ldapOmatic/jobs.xml
+actiationcompte.variables=/home/portal/ldapOmatic/variables.xml
+
