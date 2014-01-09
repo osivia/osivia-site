@@ -584,3 +584,22 @@ section {
     text-decoration: none;
     color: #FFFFFF;
 }
+
+/* Portlet fichepersonne */
+.ligneFichePersonne {
+    height: 3em;
+}
+
+.ligneFichePersonne .nomAttr {
+    font-weight: bold;
+    float:left;
+    width: 15em;
+}
+.ligneFichePersonne .contenu {
+    display: inline-block;
+    padding-left: 1em;
+}
+
+.boutonFichePersonne {
+    display:inline;
+}
