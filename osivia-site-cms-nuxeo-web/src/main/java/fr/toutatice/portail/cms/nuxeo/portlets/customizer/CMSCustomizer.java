@@ -52,8 +52,9 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     public static String TEMPLATE_DOWNLOAD = "download";
 
+    /** Permalink URL identifier. */
+    public static final String IDENT_PERMALINK_URL = "/purl/";
 
-    public static final String IDENT_WIKI_URL = "/_WIKI_";
 
     public CMSCustomizer(PortletContext ctx) {
         super(ctx);
@@ -154,8 +155,8 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     public Map<String, String> parseCMSURL(CMSServiceCtx cmsCtx, String requestPath, Map<String, String> requestParameters) throws Exception {
         Map<String, String> cmsCommandProperties = new HashMap<String, String>();
 
-        if (requestPath.startsWith(IDENT_WIKI_URL)) {
-            // URL de la forme: /_WIKI_/url
+        if (requestPath.startsWith(IDENT_PERMALINK_URL)) {
+            // URL de la forme: /purl/url
             String[] ident = requestPath.split("/");
 
             String clause = " ecm:primaryType = 'WikiSection' and webc:url = '" + ident[2] + "'";
