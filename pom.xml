@@ -10,15 +10,13 @@
 
 
     <properties>
-        <osivia-portal.version>3.1.0-RC2</osivia-portal.version>
-        <osivia-services-wiki.version>1.1-RC4</osivia-services-wiki.version>
-        <toutatice-cms.version>3.1.0-RC2</toutatice-cms.version>
+        <osivia-portal.version>3.1.0-SNAPSHOT</osivia-portal.version>
+        <toutatice-cms.version>3.1.0-SNAPSHOT</toutatice-cms.version>
         <nuxeo-automation-client.version>5.6.0-HF20</nuxeo-automation-client.version>
-        
+        <osivia-services-wiki.version>1.1-SNAPSHOT</osivia-services-wiki.version>
         <osivia-services-java-melody-integration.version>1.0-RC1</osivia-services-java-melody-integration.version>
-        
         <osivia-services-contact.version>1.0.0-RC1</osivia-services-contact.version>
-        <fichepersonne.version>2.0.2.osivia-RC1</fichepersonne.version>        
+        <fichepersonne.version>2.0.2.osivia-RC1</fichepersonne.version>
     </properties>
 
 
@@ -31,7 +29,6 @@
         <module>osivia-site-internationalization-customizer</module>
         <module>osivia-site-attributes-bundles-customizer</module>
         <module>osivia-site-regions-customizer</module>
-        <!-- <module>osivia-site-nuxeo-dependencies</module> -->
         <module>osivia-site-distribution</module>     
     </modules>
 
@@ -189,5 +186,17 @@
             <url>http://www.osivia.org/nexus/content/repositories/osivia-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
+
+
+    <profiles>
+        <profile>
+            <id>jenkins</id>
+            <properties>
+                <osivia-portal.version>3.1.0-RC2</osivia-portal.version>
+                <toutatice-cms.version>3.1.0-RC2</toutatice-cms.version>
+                <osivia-services-wiki.version>1.1-RC4</osivia-services-wiki.version>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
