@@ -162,14 +162,19 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
             String clause = " ecm:primaryType = 'WikiSection' and webc:url = '" + ident[2] + "'";
             String filteredClause = NuxeoQueryFilter.addPublicationFilter(clause, false);
 
-            Documents documents = (Documents) this.getCMSService().executeNuxeoCommand(cmsCtx, new DocumentQueryCommand(filteredClause));
+            String savedScope = cmsCtx.getScope();
+            cmsCtx.setScope("superuser_context");
+            try {
+                Documents documents = (Documents) this.getCMSService().executeNuxeoCommand(cmsCtx, new DocumentQueryCommand(filteredClause));
 
-            if (documents.size() != 1) {
-                throw new CMSException(CMSException.ERROR_NOTFOUND);
-            } else {
-                cmsCommandProperties.put("cmsPath", documents.get(0).getPath());
+                if (documents.size() != 1) {
+                    throw new CMSException(CMSException.ERROR_NOTFOUND);
+                } else {
+                    cmsCommandProperties.put("cmsPath", documents.get(0).getPath());
+                }
+            } finally {
+                cmsCtx.setScope(savedScope);
             }
-
         } else {
             cmsCommandProperties = super.parseCMSURL(cmsCtx, requestPath, requestParameters);
         }
