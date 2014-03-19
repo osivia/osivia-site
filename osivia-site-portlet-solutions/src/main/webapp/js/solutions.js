@@ -21,5 +21,21 @@ function activeSlider(  container, url )	{
 	}
 }
 
-
+function changeStatusPlayer(webapp, definitiveStop){
+	var player = document.getElementById("player");
+	
+	if(definitiveStop){
+		player.setAttribute("src", webapp + "/img/play.jpeg");
+		clearTimeout( timer);
+	}else{	
+		var playerStatus = player.getAttribute("src");
+		if(playerStatus.indexOf("play") != -1){
+			player.setAttribute("src", webapp + "/img/pause.jpeg");
+			timer = setTimeout("sliderTimeOut()", 5000);
+		}else if(playerStatus.indexOf("pause") != -1){
+			player.setAttribute("src", webapp + "/img/play.jpeg");
+			clearTimeout( timer);
+		}
+	}
+}
 
