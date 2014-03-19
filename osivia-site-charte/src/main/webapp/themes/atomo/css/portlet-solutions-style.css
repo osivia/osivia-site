@@ -72,5 +72,16 @@
 	margin-top: 8px;
 }
 
+.player {
+	margin-left: -98px;
+	float: left;
+}
 
+.player:hover {
+	cursor:pointer;
+}
+
+.titre-slide a h3 {
+	font-weight:100;
+}
 
