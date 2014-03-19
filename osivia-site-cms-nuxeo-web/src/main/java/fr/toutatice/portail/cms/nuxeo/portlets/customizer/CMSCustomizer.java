@@ -6,8 +6,10 @@ import java.util.Map;
 
 import javax.portlet.PortletContext;
 
+import org.apache.commons.lang.StringUtils;
 import org.nuxeo.ecm.automation.client.model.Document;
 import org.nuxeo.ecm.automation.client.model.Documents;
+import org.nuxeo.ecm.automation.client.model.PropertyList;
 import org.osivia.portal.core.cms.CMSException;
 import org.osivia.portal.core.cms.CMSHandlerProperties;
 import org.osivia.portal.core.cms.CMSServiceCtx;
@@ -21,19 +23,19 @@ import fr.toutatice.portail.cms.nuxeo.portlets.list.DocumentQueryCommand;
 
 /**
  * Ce customizer permet de définir :
- *
+ * 
  * de nouveaux templates de listes le schéma du moteur de recherche la
  * visualisation des contenus via les 3 méthodes suivantes
  * getPortletDelegatedLink (appelé depuis la couche portlet quand la
  * visualisation est à traiter par une ressource du portlet) getCmsPlayer
  * (appelé depuis la couche CMS dans les autres cas) getExternalViewer (appelée
  * à partir des 2 précédentes)
- *
- *
+ * 
+ * 
  * Le template d'affichage est WEB-INF/jsp/liste/view-[nom-du-template].jsp
- *
+ * 
  * @author jeanseb
- *
+ * 
  */
 public class CMSCustomizer extends DefaultCMSCustomizer {
 
@@ -62,8 +64,8 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     }
 
     @Override
-    public NavigationItemAdapter getNavigationItemAdapter()	{
-        if( this.navigationItemAdapter == null){
+    public NavigationItemAdapter getNavigationItemAdapter() {
+        if (this.navigationItemAdapter == null) {
             this.navigationItemAdapter = new CustomNavigationItemAdapter(this.portletCtx, this, this.getCMSService());
         }
 
@@ -103,8 +105,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
         if ("PictureBook".equals(doc.getType())) {
             this.getNuxeoConnectionProps();
-            url = NuxeoConnectionProperties.getPublicBaseUri().toString() + "/nxdoc/default/" + doc.getId()
-                    + "/view_documents?tabId=tab_slideshow";
+            url = NuxeoConnectionProperties.getPublicBaseUri().toString() + "/nxdoc/default/" + doc.getId() + "/view_documents?tabId=tab_slideshow";
 
         }
 
@@ -191,7 +192,15 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         if ("WikiBook".equals(doc.getType()) || "WikiSection".equals(doc.getType())) {
             return this.getWikiPlayer(ctx);
         }
-
+        
+        /* DCH: correctif temporaire pour osivia-com */
+        PropertyList subjMetatdata = doc.getProperties().getList("dc:subjects");
+        if (subjMetatdata != null && !subjMetatdata.isEmpty()) {
+            List tags = subjMetatdata.list();
+            if (tags.contains("actualite")) {
+                return this.getCMSDefaultPlayer(ctx);
+            }
+        }
 
         return super.getCMSPlayer(ctx);
 
