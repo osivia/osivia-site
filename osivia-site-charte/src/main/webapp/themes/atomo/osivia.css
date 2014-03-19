@@ -363,7 +363,7 @@ input:-moz-placeholder, textarea:-moz-placeholder
 {
     padding: 0 635px 0 0;
     margin-left: 98px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     font-size: 14px;
     height: 291px;
 }
@@ -426,7 +426,11 @@ input:-moz-placeholder, textarea:-moz-placeholder
 
 .titre-slide .slide-bleu
 {
-    background: #8deafb repeat-x;
+    /*background: #8deafb repeat-x;*/
+    background-image: url("images/green-square.jpg");
+    background-position: 0.5% center;
+    background-repeat: no-repeat;
+    background-color: #8deafb;
 }
 
 .img-solution-container {
