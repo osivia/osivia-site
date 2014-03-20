@@ -380,17 +380,25 @@ input:-moz-placeholder, textarea:-moz-placeholder
     background: #f1f1f1 repeat-x;
     color: #606940;
     padding-left: 98px;
+    background-image: url("images/white-square.jpg");
+    background-position: 0.75% center;
+    background-repeat: no-repeat;
+    background-color: #f1f1f1;
 }
 
 .titre-slide h3 
 {
     text-transform: uppercase;
     font-size: 48px;
+    font-family: 'Arial',sans-serif;
     font-weight: normal;
     color: #606940;
-    background: #f1f1f1 repeat-x;
     padding-left: 98px;
     line-height: 38px;
+    background-image: url("images/white-square.jpg");
+    background-position: 0.75% center;
+    background-repeat: no-repeat;
+    background-color: #f1f1f1;
 }
 
 .titre-slide a
@@ -417,18 +425,23 @@ input:-moz-placeholder, textarea:-moz-placeholder
 }
 
 .titre-slide h3:hover {
-	background-color: #8DEAFB;
+	background-image: url("images/green-square.jpg");
+    background-position: 0.75% center;
+    background-repeat: no-repeat;
+    background-color: #8deafb;
 }
 
 .titre-slide h2:hover {
-	background-color: #8DEAFB;
+	background-image: url("images/green-square.jpg");
+    background-position: 0.75% center;
+    background-repeat: no-repeat;
+    background-color: #8deafb;
 }
 
 .titre-slide .slide-bleu
 {
-    /*background: #8deafb repeat-x;*/
     background-image: url("images/green-square.jpg");
-    background-position: 0.5% center;
+    background-position: 0.75% center;
     background-repeat: no-repeat;
     background-color: #8deafb;
 }
