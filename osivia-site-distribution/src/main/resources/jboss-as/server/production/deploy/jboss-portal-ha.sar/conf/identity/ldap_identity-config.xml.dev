@@ -107,11 +107,23 @@
             <group-name>common</group-name>
             <option>
                 <name>userCtxDN</name>
-                <value>ou=personnes,dc=ent-bretagne,dc=fr</value>
+                <value>ou=users,dc=osivia,dc=org</value>
             </option>
             <option>
                 <name>roleCtxDN</name>
-                <value>ou=groupes,dc=ent-bretagne,dc=fr</value>
+                <value>ou=groups,dc=osivia,dc=org</value>
+            </option>
+            <option>
+                <name>membershipAttributeID</name>
+                <value>uniqueMember</value>
+            </option>
+        </option-group>
+        <option-group>
+            <group-name>roleCreateAttibutes</group-name>
+            <option>
+                <name>objectClass</name>
+                <value>top</value>
+                <value>groupOfUniqueNames</value>
             </option>
         </option-group>
     </options>
