@@ -1,49 +1,37 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<%@page import="fr.toutatice.portail.cms.nuxeo.api.NuxeoController"%>
-<%@ page contentType="text/plain; charset=UTF-8"%>
-
-
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
-
-<%@page import="java.util.List"%>
-<%@page import="java.util.Iterator"%>
-<%@page import="javax.portlet.PortletURL"%>
+<%@ page isELIgnored="false" %>
 
 
-<%@page import="javax.portlet.WindowState"%>
+<c:set var="type" value="${fn:toLowerCase(doc.type)}" />
 
-
-
-<%@page import="org.nuxeo.ecm.automation.client.model.Blob"%>
-
-
-<%@page import="javax.portlet.ResourceURL"%>
-<%@page import="org.nuxeo.ecm.automation.client.model.Document"%>
-<%@page import="org.nuxeo.ecm.automation.client.model.PropertyList"%>
-
-
-<%@page import="fr.toutatice.portail.cms.nuxeo.portlets.bridge.StringHelper"%>
-<%@page import="fr.toutatice.portail.cms.nuxeo.portlets.bridge.Formater"%>
-
-<%@page import="org.nuxeo.ecm.automation.client.model.PropertyMap"%><portlet:defineObjects />
-
-<%
-Document doc = (Document) renderRequest.getAttribute("doc");
-
-NuxeoController ctx = (NuxeoController) renderRequest.getAttribute("ctx")	;
-
-%>
-
-<% 	
-	if("annonce".equals(doc.getType().toLowerCase()) || ( "note".equals(doc.getType().toLowerCase()) ) || ( "contextuallink".equals(doc.getType().toLowerCase()) )
-			|| ("file".equals(doc.getType().toLowerCase())) || ("simplearticle".equals(doc.getType().toLowerCase())))	{
-	String jspName = "view-"+ doc.getType().toLowerCase() + ".jsp";
-%>
-		<jsp:include page="<%= jspName %>"></jsp:include>
-
-<% } else { %>	
-			
-		<jsp:include page="view-default.jsp"></jsp:include>
-		
-<% } %> 
-
+<c:choose>
+    <c:when test='${"annonce" == type}'>
+        <jsp:include page="view-annonce.jsp" />
+    </c:when>
+    
+    <c:when test='${"contextuallink" == type}'>
+        <jsp:include page="view-contextuallink.jsp" />
+    </c:when>
+    
+    <c:when test='${"file" == type}'>
+        <jsp:include page="view-file.jsp" />
+    </c:when>
+    
+    <c:when test='${"note" == type}'>
+        <jsp:include page="view-note.jsp" />
+    </c:when>
+    
+    <c:when test='${"simplearticle" == type}'>
+        <jsp:include page="view-simplearticle.jsp" />
+    </c:when>
+    
+    <c:when test='${"blogpost" == type}'>
+        <jsp:include page="view-blog-post.jsp" />
+    </c:when>
+        
+    <c:otherwise>
+        <jsp:include page="view-default.jsp" />
+    </c:otherwise>
+</c:choose>
