@@ -1170,15 +1170,8 @@ p.sous-titre-blue
     float: left;
     margin-bottom: 2px;
     overflow: visible;
-    border:2px solid #CCC;
+    border:1px solid #CCC;
     height: 500px;    
-}
-
-.section-references ul
-{
-    margin-left: 10px;
-    margin-top: 0;
-    overflow: visible;
 }
 
 .section-damiers h2
@@ -1190,6 +1183,9 @@ p.sous-titre-blue
     text-transform: uppercase;
 }
 
+
+
+
 /* Non applicable dans notre layout */
 .section-damiers ul
 {
@@ -1197,7 +1193,12 @@ p.sous-titre-blue
     margin-top: 0;
     overflow: hidden;
 }
-
+.section-references ul
+{
+    margin-left: 10px;
+    margin-top: 0;
+    overflow: visible;
+}
 .section-damiers h3
 {
     font-size: 18px;
