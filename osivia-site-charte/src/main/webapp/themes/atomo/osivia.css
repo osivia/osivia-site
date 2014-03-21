@@ -635,6 +635,16 @@ input:-moz-placeholder, textarea:-moz-placeholder
     float: left;
 }
 
+.article_ref {
+    border:solid 2px #ccc;
+    /*height: 196px;*/
+    padding-left: 10px;
+    position: relative;
+    width: 31%;
+    float: left;
+}
+
+
 .article.noborder 
 {
    border-right: none;
@@ -1122,6 +1132,14 @@ p.sous-titre-blue
     margin-bottom: 2px;
     overflow: hidden;
 }
+
+.section-references
+{
+    display: block;
+    float: left;
+    margin-bottom: 2px;
+}
+
 
 .section-damiers h2
 {
