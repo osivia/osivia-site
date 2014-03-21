@@ -57,6 +57,9 @@ String currentPath = renderRequest.getParameter(ISolutionsConstantes.PARAM_CURR_
 
 		Document doc = iDoc.next();
 		String title = doc.getTitle();
+		if(indexDoc == 0){
+		    title = "<span>" + title + "</span>";
+		}
 		
 		String currentClass = "";
 
