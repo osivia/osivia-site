@@ -1147,9 +1147,16 @@ p.sous-titre-blue
     float: left;
     margin-bottom: 2px;
     overflow: visible;
-    border:0px;
+    border:2px solid #CCC;
+    height: 500px;
 }
 
+.section-references ul
+{
+    margin-left: 10px;
+    margin-top: 0;
+    overflow: visible;
+}
 
 .section-damiers h2
 {
@@ -1167,6 +1174,8 @@ p.sous-titre-blue
     margin-top: 0;
     overflow: hidden;
 }
+
+
 
 .section-damiers h3
 {
