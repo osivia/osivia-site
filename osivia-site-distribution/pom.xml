@@ -166,15 +166,15 @@
                         <artifactId>maven-assembly-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>zip-demo</id>
+                                <id>zip</id>
                                 <phase>process-resources</phase>
                                 <configuration>
                                     <descriptors>
                                         <descriptor>src/main/assembly/assembly.xml</descriptor>
                                     </descriptors>
-                                    <finalName>osivia-site-distribution</finalName>
+                                    <finalName>${project.artifactId}</finalName>
                                     <appendAssemblyId>false</appendAssemblyId>
-                                    <attach>false</attach>
+                                    <attach>true</attach>
                                 </configuration>
                                 <goals>
                                     <goal>single</goal>

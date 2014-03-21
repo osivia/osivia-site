@@ -1,5 +1,7 @@
 package org.osivia.portal.site.customizer;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -9,21 +11,27 @@ import org.jboss.portal.core.model.portal.command.render.RenderPageCommand;
 import org.jboss.portal.core.theme.PageRendition;
 import org.osivia.portal.api.theming.IAttributesBundle;
 
+import fr.toutatice.portail.cms.nuxeo.api.services.NuxeoConnectionProperties;
+
 /**
- * Test attributes bundle.
- *
- * @author Cédric Krommenhoek
+ * Bundle to set a list of apps to log out when portal sign out is called
+ * 
+ * @author LB
  * @see IAttributesBundle
  */
-public class TestAttributesBundle implements IAttributesBundle {
+public class ApplicationsAttributesBundle implements IAttributesBundle {
 
-    /** Test attribute name. */
-    private static final String TEST_ATTRIBUTE_NAME = "osivia.site.customizer.test";
+    private static final String APP_ATTRIBUTE_NAME = "osivia.site.customizer.applications";
+
+    private static final String NUXEO_LOGOUT = NuxeoConnectionProperties.getPublicBaseUri().toString().concat("/logout");
+
+    private static final String CAS_LOGOUT = System.getProperty("cas.logout");
+
     /** Test attribute value. */
-    private static final String TEST_ATTRIBUTE_VALUE = "[Test value]";
+    private List<String> applications = new ArrayList<String>();
 
     /** Singleton instance. */
-    private static TestAttributesBundle instance;
+    private static ApplicationsAttributesBundle instance;
 
     /** Attribute names. */
     private final Set<String> names;
@@ -32,11 +40,14 @@ public class TestAttributesBundle implements IAttributesBundle {
     /**
      * Private constructor.
      */
-    private TestAttributesBundle() {
+    private ApplicationsAttributesBundle() {
         super();
 
+        applications.add(NUXEO_LOGOUT);
+        applications.add(CAS_LOGOUT);
+
         this.names = new TreeSet<String>();
-        this.names.add(TEST_ATTRIBUTE_NAME);
+        this.names.add(APP_ATTRIBUTE_NAME);
     }
 
 
@@ -45,9 +56,9 @@ public class TestAttributesBundle implements IAttributesBundle {
      *
      * @return singleton instance
      */
-    public static TestAttributesBundle getInstance() {
+    public static ApplicationsAttributesBundle getInstance() {
         if (instance == null) {
-            instance = new TestAttributesBundle();
+            instance = new ApplicationsAttributesBundle();
         }
         return instance;
     }
@@ -57,7 +68,7 @@ public class TestAttributesBundle implements IAttributesBundle {
      * {@inheritDoc}
      */
     public void fill(RenderPageCommand renderPageCommand, PageRendition pageRendition, Map<String, Object> attributes) throws ControllerException {
-        attributes.put(TEST_ATTRIBUTE_NAME, TEST_ATTRIBUTE_VALUE);
+        attributes.put(APP_ATTRIBUTE_NAME, applications);
     }
 
 
