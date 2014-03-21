@@ -101,6 +101,20 @@
             <version>${fichepersonne.version}</version>
             <type>war</type>
         </dependency>
+        
+        <dependency>
+            <groupId>org.osivia.services</groupId>
+            <artifactId>osivia-services-forum</artifactId>
+            <version>${osivia-services-forum.version}</version>
+            <type>war</type>
+        </dependency>
+        
+        <dependency>
+            <groupId>toutatice-services.faq</groupId>
+            <artifactId>toutatice-faq-portail</artifactId>
+            <version>${toutatice-faq.version}</version>
+            <type>war</type>
+        </dependency>
     </dependencies>
 
 

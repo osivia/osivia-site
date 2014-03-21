@@ -23,7 +23,8 @@
                 <include>org.osivia.services:osivia-services-wiki:war:${osivia-services-wiki.version}</include>
                 <include>org.osivia.services:osivia-contact-portlet:war:${osivia-services-contact.version}</include>
                 <include>toutatice-services.identite:toutatice-identite-fichepersonne-portail:war:${fichepersonne.version}</include>
-
+                <include>org.osivia.services:osivia-services-forum:war:${osivia-services-forum.version}</include>
+                <include>toutatice-services.faq:toutatice-faq-portail:war:${toutatice-faq.version}</include>
             </includes>
         </dependencySet>
 
