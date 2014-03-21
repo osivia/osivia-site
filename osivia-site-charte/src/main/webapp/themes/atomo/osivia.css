@@ -644,9 +644,9 @@ input:-moz-placeholder, textarea:-moz-placeholder
 }
 
 .article_ref {
-    border:solid 2px #ccc;
-    /*height: 196px;*/
+    
     padding-left: 10px;
+    margin-left: 10px;
     position: relative;
     width: 31%;
     float: left;
@@ -1146,6 +1146,8 @@ p.sous-titre-blue
     display: block;
     float: left;
     margin-bottom: 2px;
+    overflow: visible;
+    border:0px;
 }
 
 
