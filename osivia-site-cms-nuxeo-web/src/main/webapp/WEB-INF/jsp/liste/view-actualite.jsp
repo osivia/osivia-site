@@ -43,7 +43,10 @@ String url = link.getUrl();
 		
 String titre = doc.getString("dc:title", "");
 
-String date = Formater.formatDate(doc);
+/* Modification temporaire pour "changer les dates de modifcation */
+/*String date = Formater.formatDate(doc);*/
+String date = doc.getString("dc:source");
+/* */
 
 String description = Formater.formatDescription(doc);
 

@@ -382,6 +382,13 @@ input:-moz-placeholder, textarea:-moz-placeholder
     padding-left: 98px;
 }
 
+.titre-slide h2 span {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding-left: 4px;
+    padding-right: 549px;
+    line-height: 37px;
+}
+
 .titre-slide h3 
 {
     text-transform: uppercase;
@@ -437,12 +444,13 @@ input:-moz-placeholder, textarea:-moz-placeholder
     text-align: center;
     top: 50px;
     width: 503px;
+    margin-top: -3px;
 }
 
-.img-solution img {
+/*.img-solution img {
 	max-height: 90%;
 	max-width: 90%;
-}
+}*/
 
 
 
