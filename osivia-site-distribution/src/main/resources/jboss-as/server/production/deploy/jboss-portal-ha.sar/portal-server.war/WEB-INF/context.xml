@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Context>
-
+<!-- 
     <Valve
         className="org.osivia.portal.identity.sso.cas.CASAuthenticationValve"
         casLogin="${cas.login}"
@@ -8,5 +8,5 @@
         casValidate="${cas.validate}"
         casServerName="${cas.servername}"
         authType="FORM" />
-
+ -->
 </Context>
