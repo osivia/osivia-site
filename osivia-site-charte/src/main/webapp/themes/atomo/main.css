@@ -1057,24 +1057,3 @@ div.nuxeo-docview-metadata {
     width: 30%;
 }
 
-
-/* Liens du bandeau */
-
-.navbar-links {
-    position: absolute;
-    right: 20px;
-    background-color: #4F6677;
-    border-radius: 0 0 20px 20px;
-    padding: 10px;
-}
-
-.navbar-links a {
-    color: #FFFFFF;
-    margin: 0 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-}
-
-.navbar-links a:HOVER {
-    color: #FFFFFF;
-}

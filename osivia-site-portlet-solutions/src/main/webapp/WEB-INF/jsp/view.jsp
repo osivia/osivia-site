@@ -19,9 +19,8 @@
 <%@page import="javax.portlet.WindowState"%>
 <%@page import="org.osivia.portal.api.menubar.MenubarItem"%>
 
-<%@ page isELIgnored="false"%>
-
 <portlet:defineObjects />
+
 
 <div id="slider">
 
@@ -48,18 +47,12 @@ Document selectedDoc = null;
 int indexDoc = 0;
 int indexSelectedDoc = 0;
 
-String nextUrl = "NO_REFRESH";
-String reStartFromUrl = renderRequest.getParameter(ISolutionsConstantes.PARAM_RESTART_URL_FROM);
-
 String currentPath = renderRequest.getParameter(ISolutionsConstantes.PARAM_CURR_ITEM_PATH);
 
 	for(Iterator<Document> iDoc = docs.iterator(); iDoc.hasNext();){
 
 		Document doc = iDoc.next();
 		String title = doc.getTitle();
-		if(indexDoc == 0){
-		    title = "<span>" + title + "</span>";
-		}
 		
 		String currentClass = "";
 
@@ -89,30 +82,10 @@ String currentPath = renderRequest.getParameter(ISolutionsConstantes.PARAM_CURR_
 		
 		PortletURL itemUrl = renderResponse.createRenderURL();
 		itemUrl.setParameter(ISolutionsConstantes.PARAM_CURR_ITEM_PATH, doc.getPath());
-
-
-		Document nextSliderDoc = null;
-		nextSliderDoc = docs.get(( indexSelectedDoc + 1 ) % docs.size());
-
-
-		PortletURL jsPortletUrl = renderResponse.createRenderURL();
-		jsPortletUrl.setParameter(ISolutionsConstantes.PARAM_CURR_ITEM_PATH, nextSliderDoc.getPath());
-		jsPortletUrl.setParameter(ISolutionsConstantes.PARAM_AJAX_MODE, "1");
-		if( currentPath == null || ("1".equals(renderRequest.getParameter(ISolutionsConstantes.PARAM_AJAX_MODE))))	{
-		 	nextUrl = jsPortletUrl.toString();
-		}
-		 	
-		 reStartFromUrl = jsPortletUrl.toString();
-		 itemUrl.setParameter(ISolutionsConstantes.PARAM_RESTART_URL_FROM, reStartFromUrl);
-		 	
 				
 		%>
 			<div class="titre-slide">
-				<a href="<%= itemUrl.toString() %>" onclick="changeStatusPlayer('${pageContext.request.contextPath}', '<%= reStartFromUrl %>', true);">
-					<h<%= hSize %> class="<%= currentClass %>">
-					    <%= title %>
-					</h<%= hSize %>>
-				</a>		
+				<h<%= hSize %> class="<%= currentClass %>"><a href="<%= itemUrl.toString() %>"><%= title %></a></h<%= hSize %>>		
 		<%
 		indexDoc++;
 	} 
@@ -141,9 +114,7 @@ String currentPath = renderRequest.getParameter(ISolutionsConstantes.PARAM_CURR_
 
 
 <% if(resumeFormat != null){ %>
-	<div class="text-slide">
-		<img id="player" class="player" src="" onclick="changeStatusPlayer('${pageContext.request.contextPath}', '<%= reStartFromUrl %>', false);"/>
-		<h4><%= resumeFormat %></h4>
+	<div class="text-slide"><h4><%= resumeFormat %></h4>
 <% } %>
 <% if(contenuFormat != null){ %>
 <%= contenuFormat %>
@@ -165,12 +136,34 @@ String currentPath = renderRequest.getParameter(ISolutionsConstantes.PARAM_CURR_
 	</div>
 </div>
 
-</div>				
+</div>
+
+
+<%
+
+String nextUrl = "NO_REFRESH";
+
+if( currentPath == null || ("1".equals(renderRequest.getParameter(ISolutionsConstantes.PARAM_AJAX_MODE))))	{
+
+	Document nextSliderDoc = null;
+	nextSliderDoc = docs.get(( indexSelectedDoc + 1 ) % docs.size());
+
+
+	PortletURL jsPortletUrl = renderResponse.createRenderURL();
+	jsPortletUrl.setParameter(ISolutionsConstantes.PARAM_CURR_ITEM_PATH, nextSliderDoc.getPath());
+	jsPortletUrl.setParameter(ISolutionsConstantes.PARAM_AJAX_MODE, "1");
+ 	nextUrl = jsPortletUrl.toString();
+
+ 	
+}
+
+
+
+%>					
 
 
 <script type="text/javascript" language="Javascript">
-	initPlayer('${pageContext.request.contextPath}');
-   	activeSlider( $('slider'), '<%= nextUrl %>');
+   activeSlider( $('slider'), '<%= nextUrl %>');
 </script>
 
 

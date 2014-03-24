@@ -44,7 +44,7 @@ public class AttributesBundlesCustomizerPortlet extends GenericPortlet implement
         this.metadatas = this.generateMetadatas();
 
         this.bundles = new ArrayList<IAttributesBundle>();
-        this.bundles.add(ApplicationsAttributesBundle.getInstance());
+        this.bundles.add(TestAttributesBundle.getInstance()); // FIXME
     }
 
 

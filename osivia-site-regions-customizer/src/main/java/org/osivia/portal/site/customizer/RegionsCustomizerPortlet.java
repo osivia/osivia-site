@@ -107,8 +107,6 @@ public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomi
             if (StringUtils.equals(contextPath, charteCommunityContextPath)) {
                 // Replace default toolbar
                 renderedRegion.customizeRenderedRegion("toolbar", "/header/toolbar.jsp");
-                // Replace default footer
-                renderedRegion.customizeRenderedRegion("footer", "/footer/footer.jsp");
             }
         }
     }
