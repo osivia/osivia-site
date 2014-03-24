@@ -140,9 +140,9 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
             url = NuxeoConnectionProperties.getPublicBaseUri().toString() + "/nxdoc/default/" + doc.getId() + "/view_documents?tabId=tab_slideshow";
         }
 
-        if ("Forum".equals(doc.getType())) {
-            url = this.getDefaultExternalViewer(ctx);
-        }
+        // if ("Forum".equals(doc.getType())) {
+        // url = this.getDefaultExternalViewer(ctx);
+        // }
 
         return url;
     }
