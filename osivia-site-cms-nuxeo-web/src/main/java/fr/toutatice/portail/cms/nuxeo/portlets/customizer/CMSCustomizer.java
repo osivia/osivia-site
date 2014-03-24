@@ -41,6 +41,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     public static final String ENCADRE = "encadre";
 
     public static final String ENCADRE_NIVEAU2 = "encadre_niveau2";
+    public static final String ENCADRE_REFERENCE = "encadre_reference";
     public static final String VISUEL_NIVEAU2 = "visuel_niveau2";
     public static final String UNE_NIVEAU2 = "une_niveau2";
     public static final String UNE_TITRE_NIVEAU3_1C = "une_titre_niveau3_1c";
@@ -54,6 +55,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /** Permalink URL identifier. */
     public static final String IDENT_PERMALINK_URL = "/purl/";
+
 
 
     public CMSCustomizer(PortletContext ctx) {
@@ -77,6 +79,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         templates.add(new ListTemplate(ACTUALITE, "Actualité", ANNONCE_SCHEMAS));
         templates.add(new ListTemplate(ENCADRE, "Encadré", ANNONCE_SCHEMAS));
         templates.add(new ListTemplate(ENCADRE_NIVEAU2, "Encadré niveau 2", DEFAULT_SCHEMAS));
+        templates.add(new ListTemplate(ENCADRE_REFERENCE, "Encadré références", ANNONCE_SCHEMAS));
         templates.add(new ListTemplate(VISUEL_NIVEAU2, "Visuel niveau 2", DEFAULT_SCHEMAS));
         templates.add(new ListTemplate(UNE_NIVEAU2, "Une niveau 2", BLOG_SCHEMAS));
         templates.add(new ListTemplate(UNE_NIVEAU3_1C, "Une niveau 3 - 1 colonne", BLOG_SCHEMAS));

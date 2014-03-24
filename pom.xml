@@ -4,7 +4,7 @@
 
     <groupId>org.osivia.site</groupId>
     <artifactId>osivia-site-parent</artifactId>
-    <version>1.1-RC6</version>
+    <version>1.1-RC7</version>
     <packaging>pom</packaging>
     <name>Site OSIVIA - Parent</name>
 
@@ -172,7 +172,7 @@
 
 
     <scm>
-        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/tags/1.1-RC6</developerConnection>
+        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/tags/1.1-RC7</developerConnection>
     </scm>
 
 
@@ -192,9 +192,9 @@
         <profile>
             <id>jenkins</id>
             <properties>
-                <osivia-portal.version>3.1.0-RC2</osivia-portal.version>
-                <toutatice-cms.version>3.1.0-RC2</toutatice-cms.version>
-                <osivia-services-wiki.version>1.1-RC4</osivia-services-wiki.version>
+                <osivia-portal.version>3.1.0-RC3</osivia-portal.version>
+                <toutatice-cms.version>3.1.0-RC3</toutatice-cms.version>
+                <osivia-services-wiki.version>1.1-RC5</osivia-services-wiki.version>
             </properties>
         </profile>
     </profiles>

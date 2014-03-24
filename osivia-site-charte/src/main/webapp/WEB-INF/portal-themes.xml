@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="/themes/atomo/non-responsive-bootstrap.css" type="text/css" title="" media="screen" />
 		<link rel="stylesheet" href="/themes/atomo/osivia.css" type="text/css" title="" media="screen"/>
 		<link rel="stylesheet" href="/themes/atomo/osivia-ie7.css" type="text/css" title="" media="screen"/>
+		<link rel="stylesheet" href="/themes/atomo/css/tiny-mce-content.css" type="text/css" title="" media="screen"/>
 		<script type="text/javascript" src="/themes/atomo/js/headerTabs.js"></script>
 	</theme>
 </themes>
