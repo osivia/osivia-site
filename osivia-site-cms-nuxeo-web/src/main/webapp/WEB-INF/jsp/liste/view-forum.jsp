@@ -1,6 +1,6 @@
 <%@ page import="fr.toutatice.portail.cms.nuxeo.api.NuxeoController"%>
 <%@ page import="org.nuxeo.ecm.automation.client.model.Document"%>
-<%@ page import="org.osivia.portal.demo.customizer.Formatter"%>
+<%@ page import="org.osivia.portal.site.customizer.Formatter"%>
 
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
