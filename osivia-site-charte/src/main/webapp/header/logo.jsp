@@ -27,6 +27,12 @@ String urlAccueil = url.toString();
 </script>
 
 <div class="navbar">
+    <div class="navbar-links">
+        <a href="http://www.osivia.org/portal/cms/default-domain/community-ws/documentation" target="_blank">Doc.</a>
+        <a href="http://demo.osivia.org" target="_blank">Démo</a>
+        <a href="http://www.osivia.org/portal/cms/default-domain/community-ws/telechargements" target="_blank">Téléchargements</a>
+    </div>
+
 	<div class="navbar-inner">
 	    <h1><a class="brand" href="<%= urlAccueil %>"><img src="/osivia-site-charte/themes/atomo/images/logo-osivia.jpg" id="logo-entete" alt="Logo Osivia" title="Logo Osivia"/></a></h1>
 	</div>
