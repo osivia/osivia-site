@@ -78,6 +78,10 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     public static final String SCHEMAS_FORUM = "dublincore, common, toutatice";
     /** "forum" list template. */
     public static final String STYLE_FORUM = "forum";
+    /** "tuile" schemas. */
+    public static final String SCHEMAS_TUILE = "dublincore, toutatice, zoom";
+    /** "tuile" list template. */
+    public static final String STYLE_TUILE = "tuile";
 
     /** Permalink URL identifier. */
     public static final String IDENT_PERMALINK_URL = "/purl/";
@@ -112,6 +116,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         templates.add(new ListTemplate(STYLE_BLOG, "Blog", SCHEMAS_BLOG));
         templates.add(new ListTemplate(STYLE_FORUM, "Forum", SCHEMAS_FORUM));
         templates.add(new ListTemplate(STYLE_SLIDER, "Carrousel", SCHEMAS_SLIDER));
+        templates.add(new ListTemplate(STYLE_TUILE, "Tuile [visuel, description]", SCHEMAS_TUILE));
 
         return templates;
     }
