@@ -5,11 +5,11 @@
     <parent>
         <groupId>org.osivia.site</groupId>
         <artifactId>osivia-site-parent</artifactId>
-        <version>1.1-SNAPSHOT</version>
+        <version>1.1-RC7</version>
     </parent>
 
     <artifactId>osivia-site-attributes-bundles-customizer</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1-RC7</version>
     <packaging>war</packaging>
     <name>Site OSIVIA - Attributes bundles customizer</name>
     <description>Portlet technique de personnalisation des packs d'attributs</description>
