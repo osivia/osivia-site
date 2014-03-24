@@ -5,11 +5,11 @@
     <parent>
         <groupId>org.osivia.site</groupId>
         <artifactId>osivia-site-parent</artifactId>
-        <version>1.1-RC7</version>
+        <version>1.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>osivia-site-distribution</artifactId>
-  <version>1.1-RC6</version>
+  <version>1.1-SNAPSHOT</version>
     <name>Site OSIVIA - Distribution</name>
 
 
