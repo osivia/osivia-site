@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>osivia-site-portlet-solutions</artifactId>
-  <version>1.1-RC6</version>
+  <version>1.1-RC7</version>
     <packaging>war</packaging>
     <name>Site OSIVIA - Portlet solutions</name>
     <description>Portlet Solutions site osivia</description>

@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>osivia-site-portlets-utils</artifactId>
-  <version>1.1-RC6</version>
+  <version>1.1-RC7</version>
     <packaging>jar</packaging>
     <name>Site OSIVIA - Portlets utils</name>
     <description>Classes utilitaires pour les portlets</description>

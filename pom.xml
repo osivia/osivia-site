@@ -14,7 +14,7 @@
         <toutatice-cms.version>3.1.0-RC3</toutatice-cms.version>
         <nuxeo-automation-client.version>5.6.0-HF20</nuxeo-automation-client.version>
         <osivia-services-wiki.version>1.1-RC5</osivia-services-wiki.version>
-        <osivia-services-java-melody-integration.version>1.0-RC1</osivia-services-java-melody-integration.version>
+        <osivia-services-java-melody-integration.version>1.0-RC2</osivia-services-java-melody-integration.version>
         <osivia-services-contact.version>1.0.0-RC1</osivia-services-contact.version>
         <fichepersonne.version>2.0.2.osivia-RC1</fichepersonne.version>
     </properties>

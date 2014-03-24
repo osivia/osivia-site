@@ -9,7 +9,7 @@
  	</parent>
 
 	<artifactId>osivia-site-charte</artifactId>
-  <version>1.1-RC6</version>
+  <version>1.1-RC7</version>
 	<packaging>war</packaging>
 	<name>Site OSIVIA - Charte</name>
 	<description>Charte du site web OSIVIA</description>

@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>osivia-site-distribution</artifactId>
-  <version>1.1-RC6</version>
+  <version>1.1-RC7</version>
     <name>Site OSIVIA - Distribution</name>
 
 
@@ -169,7 +169,7 @@
                                     </descriptors>
                                     <finalName>osivia-site-distribution</finalName>
                                     <appendAssemblyId>false</appendAssemblyId>
-                                    <attach>false</attach>
+                                    <attach>true</attach>
                                 </configuration>
                                 <goals>
                                     <goal>single</goal>
