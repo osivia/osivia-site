@@ -172,7 +172,7 @@
 
 
     <scm>
-        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/tags/1.1-RC6</developerConnection>
+        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/branches/1.1-RC6</developerConnection>
     </scm>
 
 
