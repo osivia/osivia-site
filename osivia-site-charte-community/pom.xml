@@ -5,11 +5,10 @@
 	<parent>
   		<groupId>org.osivia.site</groupId>
 		<artifactId>osivia-site-parent</artifactId>
-		<version>1.1-SNAPSHOT</version>
+		<version>1.1-RC6</version>
  	</parent>
 
 	<artifactId>osivia-site-charte-community</artifactId>
-  <version>1.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Site OSIVIA - Charte communautaire</name>
 	<description>Charte du site communautaire OSIVIA</description>
