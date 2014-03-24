@@ -169,7 +169,7 @@
                                     </descriptors>
                                     <finalName>osivia-site-distribution</finalName>
                                     <appendAssemblyId>false</appendAssemblyId>
-                                    <attach>false</attach>
+                                    <attach>true</attach>
                                 </configuration>
                                 <goals>
                                     <goal>single</goal>
