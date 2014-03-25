@@ -1,0 +1,159 @@
+/* Tuiles */
+
+.nuxeo-list-tuile ul, #menu .nuxeo-list-tuile ul {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+
+.nuxeo-list-tuile li {
+	display: inline-block;
+	overflow: hidden;
+	margin: 0;
+    padding: 0;
+    font-size: 16px;
+    -webkit-transition: 0.1s all;
+    -moz-transition: 0.1s all;
+    -ms-transition: 0.1s all;
+    transition: 0.1s all;
+}
+
+.nuxeo-list-tuile li:HOVER {
+	cursor: pointer;
+    -webkit-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+    -moz-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+    -ms-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+    transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+}
+
+.nuxeo-list-tuile .tuile {
+	display: table;
+	border-collapse: separate;
+	border-spacing: 5px;
+	margin: 1px;
+	height: 90px;
+	width: 100%;
+	background-color: #4DA0AB;
+	color: #FFFFFF;
+}
+
+.nuxeo-list-tuile .tuile .contenu-tuile {
+    display: table-row;
+}
+
+.nuxeo-list-tuile .tuile .contenu-tuile > div {
+	display: table-cell;
+}
+
+.nuxeo-list-tuile .tuile .contenu-tuile > div > div {
+    max-height: 80px;
+}
+
+.nuxeo-list-tuile .tuile img {
+	max-height: 80px;
+}
+
+.nuxeo-list-tuile .tuile p {
+    padding: 0 5px;
+}
+
+
+.nuxeo-list-tuile .tuile .normal {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nuxeo-list-tuile .tuile .thumbnail {
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30%;
+}
+
+.nuxeo-list-tuile .tuile .description {
+	width: 100%;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.nuxeo-list-tuile .tuile .background {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.nuxeo-list-tuile .tuile .background p {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nuxeo-list-tuile .tuile .banner {
+	background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.nuxeo-list-tuile .tuile .banner p {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.tuile.gris {
+	background-color: #8F908B;
+}
+
+.tuile.noir {
+    background-color: #333333;
+}
+
+.tuile.vert {
+    background-color: #6EAB53;
+}
+
+.tuile.olive {
+    background-color: #6B7A52;
+}
+
+.tuile.rose {
+    background-color: #EE2365;
+}
+
+
+.tuiles-1 .nuxeo-list-tuile li {    
+    width: 100%;
+    font-size: 14px;
+}
+
+.tuiles-1 .nuxeo-list-tuile .tuile {    
+    height: 50px;
+}
+
+.tuiles-1 .nuxeo-list-tuile .tuile .contenu-tuile > div > div {
+    height: 40px;
+}
+
+
+.tuiles-2 .nuxeo-list-tuile li {	
+	width: 50%;
+}
+
+.tuiles-2 .nuxeo-list-tuile .tuile {    
+    height: 120px;
+}
+
+.tuiles-2 .nuxeo-list-tuile .tuile .contenu-tuile > div > div {
+    max-height: 110px;
+}
+
+
+.tuiles-3 .nuxeo-list-tuile li {
+    width: 33.33%;
+    min-width: 100px;
+}
+
+
+.tuiles-4 .nuxeo-list-tuile li {
+    width: 25%;
+}
