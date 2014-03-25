@@ -394,6 +394,11 @@ section {
 }
 
 /* Contenu à gauche */
+#teqbox1 {
+	width:50%;
+	display: inline-block;
+}
+
 #multi-columns #tbox1 {
     float: left;
     width: auto;
@@ -423,6 +428,11 @@ section {
 }
 
 /** Contenu central */
+#teqbox2 {
+	width:50%;
+	float: right;
+}
+
 #tbox2 {
 	overflow: hidden;
 }
