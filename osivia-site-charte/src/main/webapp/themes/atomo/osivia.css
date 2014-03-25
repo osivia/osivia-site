@@ -388,7 +388,7 @@ input:-moz-placeholder, textarea:-moz-placeholder
 .titre-slide h2 span {
     background: none repeat scroll 0 0 #FFFFFF;
     padding-left: 4px;
-    padding-right: 465px;
+    padding-right: 549px;
     line-height: 37px;
 }
 
@@ -460,7 +460,7 @@ input:-moz-placeholder, textarea:-moz-placeholder
     text-align: center;
     top: 50px;
     width: 503px;
-    margin-top: -12px;
+    margin-top: -3px;
 }
 
 /*.img-solution img {
