@@ -14,6 +14,7 @@
             <unpack>false</unpack>
             <scope>runtime</scope>
             <includes>
+                <include>${project.groupId}:osivia-site-attributes-bundles-customizer:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-charte:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-charte-community:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-regions-customizer:war:${project.version}</include>

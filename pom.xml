@@ -4,7 +4,7 @@
 
     <groupId>org.osivia.site</groupId>
     <artifactId>osivia-site-parent</artifactId>
-    <version>1.2-RC2</version>
+    <version>1.2-RC3</version>
     <packaging>pom</packaging>
     <name>Site OSIVIA - Parent</name>
 
@@ -174,7 +174,7 @@
 
 
     <scm>
-        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/tags/1.2-RC2</developerConnection>
+        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/tags/1.2-RC3</developerConnection>
     </scm>
 
 

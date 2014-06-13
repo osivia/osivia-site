@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.osivia.site</groupId>
         <artifactId>osivia-site-parent</artifactId>
-        <version>1.2-RC2</version>
+        <version>1.2-RC3</version>
     </parent>
 
     <artifactId>osivia-site-distribution</artifactId>
@@ -19,6 +19,14 @@
 
 
     <dependencies>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>osivia-site-attributes-bundles-customizer</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+
 
         <dependency>
             <groupId>${project.groupId}</groupId>
