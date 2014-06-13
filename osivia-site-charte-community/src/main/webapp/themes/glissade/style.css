@@ -109,6 +109,10 @@ a:hover {
     padding: 0 3px;
 }
 
+#deco {
+	display: none;
+}
+
 #msglogout {
    	position: absolute;
     background-color: #EFF0EB;
@@ -123,6 +127,9 @@ a:hover {
    	border: 2px solid rgb(47, 68, 86); 
 }
 
+.logout {
+	vertical-align: top;
+}
 
 /* Logo */
 #logo {
