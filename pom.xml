@@ -174,7 +174,7 @@
 
 
     <scm>
-        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/tags/1.2-RC2</developerConnection>
+        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/branches/1.2</developerConnection>
     </scm>
 
 
