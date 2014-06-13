@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+    <theme>
+        <name>osivia-community</name>
+        <link rel="shortcut icon" type="image/x-icon" href="/themes/glissade/images/favicon/favicon.ico" />
+        <!-- CSS -->
+        <link rel="stylesheet" id="main_css" href="/themes/glissade/style.css" type="text/css" />
+        <link rel="stylesheet" id="main_css" href="/themes/tuiles/style.css" type="text/css" />
+    </theme>
+</themes>

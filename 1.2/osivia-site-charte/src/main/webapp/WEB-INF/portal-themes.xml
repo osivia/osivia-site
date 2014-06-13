@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+	<theme>
+		<name>osivia-site</name>
+		<link rel="shortcut icon" type="image/x-icon" href="/themes/atomo/images/favicon/favicon.ico" />
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'/> 
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'/> 
+		<!-- CSS style sheets -->
+		<link rel="stylesheet" id="main_css" href="/themes/atomo/main.css" type="text/css"/>
+		<link rel="stylesheet" href="/themes/atomo/css/portlet-solutions-style.css" type="text/css" title="" media="screen"/>
+		<link rel="stylesheet" href="/themes/atomo/bootstrap.css" type="text/css" title="" media="screen"/>
+		<link rel="stylesheet" href="/themes/atomo/non-responsive-bootstrap.css" type="text/css" title="" media="screen" />
+		<link rel="stylesheet" href="/themes/atomo/osivia.css" type="text/css" title="" media="screen"/>
+		<link rel="stylesheet" href="/themes/atomo/osivia-ie7.css" type="text/css" title="" media="screen"/>
+		<script type="text/javascript" src="/themes/atomo/js/headerTabs.js"></script>
+	</theme>
+</themes>

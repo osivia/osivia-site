@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layouts>
+    <layout>
+        <name>layout-vide</name>
+        <uri>/layouts/vide/index.jsp</uri>
+        <uri state="maximized">/layouts/vide/maximized.jsp</uri>
+        <regions>
+            <region name="virtual" />
+            <region name="col1" />
+        </regions>
+    </layout>
+</layouts>
