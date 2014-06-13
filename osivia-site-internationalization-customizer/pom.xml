@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.osivia.site</groupId>
         <artifactId>osivia-site-parent</artifactId>
-        <version>1.2-RC4</version>
+        <version>1.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>osivia-site-internationalization-customizer</artifactId>
