@@ -175,7 +175,7 @@
 
 
     <scm>
-        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/trunk/</developerConnection>
+        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/branches/1.2/</developerConnection>
     </scm>
 
 
