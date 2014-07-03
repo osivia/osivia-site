@@ -66,12 +66,8 @@ a:hover {
 
 
 /* Toolbar */
-#toolbar .toolbar-content {
+#toolbar .toolbar-fixed-content {
     padding: 0 5%;
-}
-
-#toolbar .toolbar-content.offline {
-    display: block;
 }
 
 #toolbar a, #toolbar p {
@@ -107,29 +103,9 @@ a:hover {
     height: 24px;
     width: 24px;
     padding: 0 3px;
+    vertical-align: top;
 }
 
-#deco {
-	display: none;
-}
-
-#msglogout {
-   	position: absolute;
-    background-color: #EFF0EB;
-   	visibility: visible;
-   	display: none;
-   	top: 10%;
-   	left: 44%;
-   	padding: 1%;
-   	z-index: 201; 
-   	text-align: center; 
-   	color: rgb(47, 68, 86); 
-   	border: 2px solid rgb(47, 68, 86); 
-}
-
-.logout {
-	vertical-align: top;
-}
 
 /* Logo */
 #logo {
@@ -416,7 +392,7 @@ section {
 
 /* Contenu à gauche */
 #teqbox1 {
-	width:50%;
+	width:47%;
 	display: inline-block;
 }
 
@@ -633,13 +609,4 @@ section {
 
 .boutonFichePersonne {
     display:inline;
-}
-
-
-.miniAvatar {
-	width: 32px;
-	
-}
-.list-date {
-	text-align: right:
 }

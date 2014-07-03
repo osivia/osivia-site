@@ -5,7 +5,7 @@
 
     <groupId>org.osivia.site</groupId>
     <artifactId>osivia-site-nuxeo-dependencies</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Site OSIVIA - Plugins Nuxeo</name>
 
