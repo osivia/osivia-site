@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.osivia.site</groupId>
         <artifactId>osivia-site-parent</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.2-RC3</version>
     </parent>
 
     <artifactId>osivia-site-distribution</artifactId>
@@ -19,6 +19,14 @@
 
 
     <dependencies>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>osivia-site-attributes-bundles-customizer</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+
 
         <dependency>
             <groupId>${project.groupId}</groupId>
@@ -76,8 +84,15 @@
         </dependency>
 
         <dependency>
-            <groupId>toutatice-portail.cms</groupId>
-            <artifactId>toutatice-portail-cms-nuxeo-distribution</artifactId>
+            <groupId>org.osivia.services</groupId>
+            <artifactId>osivia-services-downloads-tracker</artifactId>
+            <version>${osivia-services-download-tracker.version}</version>
+            <type>war</type>
+        </dependency>
+
+        <dependency>
+            <groupId>toutatice-portail.distribution</groupId>
+            <artifactId>toutatice-portail-distribution</artifactId>
             <version>${toutatice-cms.version}</version>
             <type>zip</type>
         </dependency>
@@ -154,9 +169,9 @@
                                 <configuration>
                                     <artifactItems>
                                         <artifactItem>
-                                            <groupId>toutatice-portail.cms</groupId>
-                                            <artifactId>toutatice-portail-cms-nuxeo-distribution</artifactId>
-                                            <version>${toutatice-cms.version}</version>
+                                            <groupId>toutatice-portail.distribution</groupId>
+                                            <artifactId>toutatice-portail-distribution</artifactId>
+                                            <version>${toutatice.cms.distribution.version}</version>
                                             <type>zip</type>
                                             <overWrite>true</overWrite>
                                             <outputDirectory>${project.build.directory}/toutatice-distribution</outputDirectory>

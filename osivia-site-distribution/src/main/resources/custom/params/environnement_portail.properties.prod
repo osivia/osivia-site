@@ -1,5 +1,5 @@
 #page d'erreur par défaut
-error.defaultPageUri=/osivia-site-charte-community/error/errorPage.jsp
+error.defaultPageUri=/osivia-site-charte/error/errorPage.jsp
 
 
 #schemas additionnels de navigation (separés par une virgule)

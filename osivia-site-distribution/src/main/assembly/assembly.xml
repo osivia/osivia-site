@@ -14,6 +14,7 @@
             <unpack>false</unpack>
             <scope>runtime</scope>
             <includes>
+                <include>${project.groupId}:osivia-site-attributes-bundles-customizer:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-charte:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-charte-community:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-regions-customizer:war:${project.version}</include>
@@ -21,6 +22,7 @@
                 <include>${project.groupId}:osivia-site-portlet-solutions:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-internationalization-customizer:war:${project.version}</include>
                 <include>org.osivia.services:osivia-services-wiki:war:${osivia-services-wiki.version}</include>
+                <include>org.osivia.services:osivia-services-downloads-tracker:war:${osivia-services-download-tracker.version}</include>
                 <include>org.osivia.services:osivia-contact-portlet:war:${osivia-services-contact.version}</include>
                 <include>toutatice-services.identite:toutatice-identite-fichepersonne-portail:war:${fichepersonne.version}</include>
                 <include>org.osivia.services:osivia-services-forum:war:${osivia-services-forum.version}</include>

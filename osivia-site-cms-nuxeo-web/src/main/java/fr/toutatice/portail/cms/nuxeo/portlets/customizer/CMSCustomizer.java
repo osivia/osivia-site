@@ -87,11 +87,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     public static final String IDENT_PERMALINK_URL = "/purl/";
 
 
-    private static final String STYLE_ROADMAP = "roadmap";
-    private static final String STYLE_DISTRIB = "distrib";
-    private static final String SCHEMAS_DISTRIB = "dublincore, toutatice, roadmapdistrib";
-
-
     /**
      * Constructor.
      * 
@@ -122,10 +117,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         templates.add(new ListTemplate(STYLE_FORUM, "Forum", SCHEMAS_FORUM));
         templates.add(new ListTemplate(STYLE_SLIDER, "Carrousel", SCHEMAS_SLIDER));
         templates.add(new ListTemplate(STYLE_TUILE, "Tuile [visuel, description]", SCHEMAS_TUILE));
-
-        // =========== roadmap =============
-        templates.add(new ListTemplate(STYLE_ROADMAP, "Roadmap", SCHEMAS_DISTRIB));
-        templates.add(new ListTemplate(STYLE_DISTRIB, "Distribution de la roadmap", SCHEMAS_DISTRIB));
 
         return templates;
     }
@@ -173,7 +164,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         windowProperties.put("osivia.cms.scope", ctx.getScope());
         windowProperties.put("osivia.hideTitle", "1");
         windowProperties.put("osivia.cms.displayLiveVersion", ctx.getDisplayLiveVersion());
-        windowProperties.put("osivia.cms.hideMetaDatas", ctx.getHideMetaDatas());
+        windowProperties.put("osivia.cms.hideMetaDatas", "0");
         windowProperties.put("osivia.cms.uri", doc.getPath());
         windowProperties.put("osivia.cms.publishPathAlreadyConverted", "1");
         windowProperties.put("osivia.hideDecorators", "1");
@@ -247,14 +238,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
         if ("Thread".equals(doc.getType())) {
             return this.getForumThreadPlayer(ctx);
-        }
-
-        // =========== roadmap =============
-        if ("Product".equals(doc.getType())) {
-            return this.getRoadmapPlayer(ctx);
-        }
-        if ("Distribution".equals(doc.getType())) {
-            return this.getDistributionPlayer(ctx);
         }
 
         /* DCH: correctif temporaire pour osivia-com */
@@ -409,105 +392,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
 
     /**
-     * Get roadmap player.
-     * 
-     * @param ctx CMS context
-     * @return CMS forum player
-     * @throws CMSException
-     */
-    private CMSHandlerProperties getRoadmapPlayer(CMSServiceCtx ctx) throws CMSException {
-        Map<String, String> windowProperties = new HashMap<String, String>();
-        windowProperties.put("osivia.nuxeoRequest", this.createRoadmapPlayerRequest(ctx));
-        // windowProperties.put("osivia.displayNuxeoRequest", "1");
-        // windowProperties.put("osivia.hideTitle", "1");
-        windowProperties.put("osivia.title", "Roadmap");
-        windowProperties.put("osivia.cms.style", CMSCustomizer.STYLE_ROADMAP);
-        windowProperties.put("osivia.hideDecorators", "1");
-        windowProperties.put("theme.dyna.partial_refresh_enabled", "false");
-        windowProperties.put(Constants.WINDOW_PROP_SCOPE, ctx.getScope());
-        windowProperties.put("osivia.ajaxLink", "1");
-        windowProperties.put(Constants.WINDOW_PROP_VERSION, ctx.getDisplayLiveVersion());
-
-        CMSHandlerProperties linkProps = new CMSHandlerProperties();
-        linkProps.setWindowProperties(windowProperties);
-        linkProps.setPortletInstance("toutatice-portail-cms-nuxeo-viewListPortletInstance");
-
-        return linkProps;
-    }
-
-    /**
-     * Utility method used to create roadmap player request.
-     * 
-     * @param cmsContext CMS context
-     * @return request
-     * @throws CMSException
-     */
-    private String createRoadmapPlayerRequest(CMSServiceCtx cmsContext) throws CMSException {
-        // Document
-        Document document = (Document) cmsContext.getDoc();
-        // Publication infos
-        CMSPublicationInfos pubInfos = this.getCmsService().getPublicationInfos(cmsContext, document.getPath());
-
-        StringBuilder request = new StringBuilder();
-        // request.append("ecm:uuid = '").append(document.getId()).append("' ");
-        request.append("ecm:parentId = '").append(pubInfos.getLiveId()).append("' ");
-        // request.append("AND ecm:primaryType = 'Thread' ");
-        request.append("ORDER BY rmpd:releaseDate DESC ");
-        return request.toString();
-    }
-
-    /**
-     * Get distribution player.
-     * 
-     * @param ctx CMS context
-     * @return CMS forum player
-     * @throws CMSException
-     */
-    private CMSHandlerProperties getDistributionPlayer(CMSServiceCtx ctx) throws CMSException {
-        Document document = (Document) ctx.getDoc();
-
-        Map<String, String> windowProperties = new HashMap<String, String>();
-        windowProperties.put("osivia.nuxeoRequest", this.createDistributionPlayerRequest(ctx));
-        // windowProperties.put("osivia.displayNuxeoRequest", "1");
-        windowProperties.put("osivia.hideTitle", "1");
-        windowProperties.put("osivia.title", document.getTitle());
-        windowProperties.put("osivia.cms.style", CMSCustomizer.STYLE_DISTRIB);
-        windowProperties.put("osivia.hideDecorators", "1");
-        windowProperties.put("theme.dyna.partial_refresh_enabled", "false");
-        windowProperties.put(Constants.WINDOW_PROP_SCOPE, ctx.getScope());
-        windowProperties.put("osivia.ajaxLink", "1");
-        windowProperties.put(Constants.WINDOW_PROP_VERSION, ctx.getDisplayLiveVersion());
-
-        CMSHandlerProperties linkProps = new CMSHandlerProperties();
-        linkProps.setWindowProperties(windowProperties);
-        linkProps.setPortletInstance("toutatice-portail-cms-nuxeo-viewListPortletInstance");
-
-        return linkProps;
-    }
-
-    /**
-     * Utility method used to create roadmap player request.
-     * 
-     * @param cmsContext CMS context
-     * @return request
-     * @throws CMSException
-     */
-    private String createDistributionPlayerRequest(CMSServiceCtx cmsContext) throws CMSException {
-        // Document
-        Document document = (Document) cmsContext.getDoc();
-
-        // Publication infos
-        CMSPublicationInfos pubInfos = this.getCmsService().getPublicationInfos(cmsContext, document.getPath());
-
-        StringBuilder request = new StringBuilder();
-        request.append("ecm:uuid = '").append(document.getId()).append("' ");
-        // request.append("ecm:parentId = '").append(pubInfos.getLiveId()).append("' ");
-        // request.append("AND ecm:primaryType = 'Thread' ");
-        request.append("ORDER BY rmpd:releaseDate DESC ");
-        return request.toString();
-    }
-
-    /**
      * {@inheritDoc}
      */
     @Override
@@ -548,13 +432,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         // Forum thread
         customizedTypes.add(new CMSItemType("Thread", false, false, false, true, true, new ArrayList<String>(0), null));
 
-        // =========== roadmap =============
-        // Project
-        customizedTypes.add(new CMSItemType("Product", true, true, true, true, true, Arrays.asList("Distribution"), null));
-        // Distribution
-        customizedTypes.add(new CMSItemType("Distribution", false, true, true, true, true, new ArrayList<String>(0), null));
-        
-        
         return customizedTypes;
     }
 

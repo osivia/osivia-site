@@ -46,11 +46,16 @@ img {
 
 
 /* Toolbar */
+#toolbar {
+    visibility: hidden;
+    padding: 0;
+}
 
-#toolbar .toolbar-fixed-content {
-	left: inherit;
-	right: inherit;
-    width: 1230px;
+#toolbar-display {
+    visibility: visible;
+    background-color: #DCDDDC;
+    box-shadow: 0 2px #C5C7C6;
+    padding: 0 10px 0 0;
 }
 
 #toolbar a, #toolbar p {
