@@ -173,7 +173,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         windowProperties.put("osivia.cms.scope", ctx.getScope());
         windowProperties.put("osivia.hideTitle", "1");
         windowProperties.put("osivia.cms.displayLiveVersion", ctx.getDisplayLiveVersion());
-        windowProperties.put("osivia.cms.hideMetaDatas", ctx.getHideMetaDatas());
+        windowProperties.put("osivia.cms.hideMetaDatas", "0");
         windowProperties.put("osivia.cms.uri", doc.getPath());
         windowProperties.put("osivia.cms.publishPathAlreadyConverted", "1");
         windowProperties.put("osivia.hideDecorators", "1");
