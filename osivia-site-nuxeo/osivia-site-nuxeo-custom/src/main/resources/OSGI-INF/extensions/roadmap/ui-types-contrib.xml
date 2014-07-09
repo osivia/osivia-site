@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<component name="org.osivia.nuxeo.roadmap.ui.types">
+
+	<require>org.nuxeo.ecm.platform.types.TypeService</require>
+
+
+	<extension target="org.nuxeo.ecm.platform.types.TypeService"
+		point="types">
+
+		<type id="PortalSite">
+			<subtypes>
+				<type>Product</type>
+			</subtypes>
+		</type>
+
+		<type id="Product">
+			<subtypes>
+				<type>Distribution</type>
+			</subtypes>
+            
+            <label>Produit</label>
+            <category>Collaborative</category>
+            <icon>/img/logo-osivia.png</icon>
+            <bigIcon>/img/logo-osivia.png</bigIcon>
+            <description>Produit de l'offre OSIVIA
+            </description>
+            <default-view>view_documents</default-view>
+
+            <layouts mode="create">
+                <layout>heading</layout>
+            </layouts>
+            <layouts mode="edit">
+                <layout>heading</layout>
+            </layouts>
+            <layouts mode="view"/>
+            <contentViews category="content">
+                <contentView showInExportView="false">cv_ContentOrderedReadNWrite
+                </contentView>
+            </contentViews>
+            <contentViews category="trash_content">
+                <contentView showInExportView="false">document_trash_content
+                </contentView>
+            </contentViews>            
+		</type>
+
+		<type id="Distribution">
+
+            <label>Distribution</label>
+            <category>Collaborative</category>
+            <icon>/img/product-icon.gif</icon>
+            <bigIcon>/img/product-icon.gif</bigIcon>
+            <description>Distribution versionnée du produit
+            </description>
+            <default-view>view_documents</default-view>
+
+            <layouts mode="create">
+                <layout>layout@PDistribution</layout>
+            </layouts>
+            <layouts mode="edit">
+                <layout>layout@PDistribution</layout>
+            </layouts>
+            <layouts mode="view"/>
+            <contentViews category="content">
+                <contentView showInExportView="false">cv_ContentOrderedReadNWrite
+                </contentView>
+            </contentViews>
+            <contentViews category="trash_content">
+                <contentView showInExportView="false">document_trash_content
+                </contentView>
+            </contentViews>     
+		</type>
+
+
+
+	</extension>
+
+</component>

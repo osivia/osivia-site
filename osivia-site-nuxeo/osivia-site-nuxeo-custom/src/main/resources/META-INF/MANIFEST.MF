@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 1
+Bundle-Name: Osivia specifics documents 
+Bundle-SymbolicName: org.osivia.nuxeo.custom;singleton:=true
+Bundle-Localization: plugin
+Bundle-Category: stateful
+Nuxeo-Component: OSGI-INF/extensions/osivia-filters-contrib.xml,
+ OSGI-INF/extensions/osivia-layouts-contrib.xml,
+ OSGI-INF/extensions/osivia-types-contrib.xml,
+ OSGI-INF/extensions/osivia-ui-types-contrib.xml,
+ OSGI-INF/extensions/osivia-lifecycle-contrib.xml,
+ OSGI-INF/extensions/roadmap/core-types-contrib.xml,
+ OSGI-INF/extensions/roadmap/layouts-contrib.xml,
+ OSGI-INF/extensions/roadmap/ui-types-contrib.xml,
+ OSGI-INF/extensions/roadmap/vocabularies-contrib.xml,
+ OSGI-INF/extensions/roadmap/widgets-contrib.xml,
+ OSGI-INF/extensions/roadmap/lifecycle-contrib.xml,
+ OSGI-INF/extensions/roadmap/filters-contrib.xml 
+ 

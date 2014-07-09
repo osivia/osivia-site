@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<component name="org.osivia.nuxeo.roadmap.widgets">
+
+	<require>org.nuxeo.ecm.platform.forms.layout.WebLayoutManager</require>
+
+	<extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+		point="widgets">
+
+
+        <widget name="distrib_versionName" type="text">
+            <labels>
+                <label mode="any">osivia.roadmap.versionName</label>
+            </labels>
+            <helpLabels>
+                <label mode="any">osivia.roadmap.versionName.help</label>
+            </helpLabels>
+            <translated>true</translated>
+            <fields>
+                <field>dc:title</field>
+            </fields>
+            <properties widgetMode="edit">
+                <property name="styleClass">dataInputText</property>
+                <property name="required">true</property>
+            </properties>
+        </widget>
+        
+        <widget name="distrib_releaseNotes" type="htmltext">
+            <labels>
+                <label mode="any">osivia.roadmap.releaseNotes</label>
+            </labels>
+            <helpLabels>
+                <label mode="any">osivia.roadmap.releaseNotes.help</label>
+            </helpLabels>
+            <translated>true</translated>
+            <fields>
+                <field>rmpd:releaseNotes</field>
+            </fields>
+            <properties widgetMode="edit">
+                <property name="styleClass">dataInputText</property>
+            </properties>
+        </widget>        
+
+		<widget name="distrib_releaseState" type="selectOneDirectory">
+			<labels>
+				<label mode="any">osivia.roadmap.releaseState</label>
+			</labels>
+			<helpLabels>
+				<label mode="any">osivia.roadmap.releaseState.help</label>
+			</helpLabels>
+			<translated>true</translated>
+			<fields>
+				<field>rmpd:releaseState</field>
+			</fields>
+			<properties widgetMode="edit">
+                <property name="directoryName">releaseState</property>
+				<property name="styleClass">dataInputText</property>
+				<property name="required">true</property>
+			</properties>
+		</widget>
+        
+        <widget name="distrib_releaseDate" type="datetime">
+            <labels>
+                <label mode="any">osivia.roadmap.releaseDate</label>
+            </labels>
+            <helpLabels>
+                <label mode="any">osivia.roadmap.releaseDate.help</label>
+            </helpLabels>
+            <translated>true</translated>
+            <fields>
+                <field>rmpd:releaseDate</field>
+            </fields>
+            <properties widgetMode="edit">
+                <property name="styleClass">dataInputText</property>
+            </properties>
+        </widget>
+        
+        <widget name="distrib_packageContent" type="list">
+            <labels>
+                <label mode="any">osivia.roadmap.packageContent</label>
+            </labels>
+            <helpLabels>
+                <label mode="any">osivia.roadmap.packageContent.help</label>
+            </helpLabels>
+            <translated>true</translated>
+            <fields>
+                <field>rmpd:packageContent</field>
+            </fields>
+          <subWidgets>
+            <widget name="distrib_packageContent_package" type="text">
+                <fields>
+                    <field>packageName</field>
+                </fields>
+                <labels>
+                    <label mode="any"></label>
+                    <translated>false</translated>
+                </labels>
+            </widget>
+          </subWidgets>
+        </widget>
+
+
+        <widget name="distrib_documentationUrl" type="text">
+            <labels>
+                <label mode="any">osivia.roadmap.documentationUrl</label>
+            </labels>
+            <helpLabels>
+                <label mode="any">osivia.roadmap.documentationUrl.help</label>
+            </helpLabels>
+            <translated>true</translated>
+            <fields>
+                <field>rmpd:documentationUrl</field>
+            </fields>
+            <properties widgetMode="edit">
+                <property name="styleClass">dataInputText</property>
+            </properties>
+        </widget>
+
+
+        <widget name="distrib_dependencyList" type="list">
+          <labels>
+            <label mode="any">osivia.roadmap.dependencyList</label>
+          </labels>
+          <helpLabels>
+            <label mode="any">osivia.roadmap.dependencyList.help</label>
+          </helpLabels>
+          <translated>true</translated>
+          <fields>
+            <field>rmpd:dependencyList</field>
+          </fields>
+          <subWidgets>
+            <widget name="distrib_dependencyList_dependency" type="text">
+                <fields>
+                    <field>refWebId</field>
+                </fields>
+                <labels>
+                    <label mode="any"></label>
+                    <translated>false</translated>
+                </labels>
+            </widget>
+          </subWidgets>
+
+        </widget>
+
+
+        <widget name="distrib_relatedDistribList" type="list">
+          <labels>
+            <label mode="any">osivia.roadmap.relatedDistribList</label>
+          </labels>
+          <helpLabels>
+            <label mode="any">osivia.roadmap.relatedDistribList.help</label>
+          </helpLabels>
+          <translated>true</translated>
+          <fields>
+            <field>rmpd:relatedDistribList</field>
+          </fields>
+          <subWidgets>
+            <widget name="distrib_relatedDistribList_relatedDistrib" type="text">
+                <fields>
+                    <field>refWebId</field>
+                </fields>
+                <labels>
+                    <label mode="any"></label>
+                    <translated>false</translated>
+                </labels>
+            </widget>
+          </subWidgets>
+        </widget>                
+	</extension>
+
+</component>

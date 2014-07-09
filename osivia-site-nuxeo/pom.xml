@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.osivia.site</groupId>
+        <artifactId>osivia-site-parent</artifactId>
+        <version>1.2-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>osivia-site-nuxeo-parent</artifactId>
+    <packaging>pom</packaging>
+    <name>Site OSIVIA - Nuxeo Parent</name>
+
+
+    <modules>
+        <module>osivia-site-nuxeo-custom</module>
+        <!-- <module>osivia-site-nuxeo-dependencies</module> -->
+    </modules>
+
+
+    <properties>
+        <openttc.version>1.2.1-SNAPSHOT</openttc.version>
+        <openttc.addons.collab.tools.version>1.1.0-SNAPSHOT</openttc.addons.collab.tools.version>
+        <openttc.addons.generic.ui.version>1.0.1-SNAPSHOT</openttc.addons.generic.ui.version>
+        <wiki.version>1.1.1-SNAPSHOT</wiki.version>
+
+        <!-- <openttc.addons.responsive.pv.version>1.0-SNAPSHOT</openttc.addons.responsive.pv.version> <profile.version>3.0-osivia-SNAPSHOT</profile.version> -->
+    </properties>
+
+    <dependencies>
+        <!-- CAS -->
+        <dependency>
+            <groupId>org.nuxeo.ecm.platform</groupId>
+            <artifactId>nuxeo-platform-login-cas2</artifactId>
+            <version>${nuxeo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.nuxeo.ecm.platform</groupId>
+            <artifactId>nuxeo-platform-login-portal-sso</artifactId>
+            <version>${nuxeo.version}</version>
+        </dependency>
+        <!-- Agenda <dependency> <groupId>org.nuxeo.ecm.platform</groupId> <artifactId>nuxeo-agenda</artifactId> <version>${nuxeo.version}</version> </dependency> -->
+
+        <!-- openToutatice -->
+        <dependency>
+            <groupId>opentoutatice-ecm.platform</groupId>
+            <artifactId>opentoutatice-ecm-platform-automation</artifactId>
+            <version>${openttc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>opentoutatice-ecm.platform</groupId>
+            <artifactId>opentoutatice-ecm-platform-core</artifactId>
+            <version>${openttc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>opentoutatice-ecm.platform</groupId>
+            <artifactId>opentoutatice-ecm-platform-services</artifactId>
+            <version>${openttc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>opentoutatice-ecm.platform</groupId>
+            <artifactId>opentoutatice-ecm-platform-web</artifactId>
+            <version>${openttc.version}</version>
+        </dependency>
+
+        <!-- wiki -->
+        <dependency>
+            <groupId>org.osivia.ecm.nuxeo</groupId>
+            <artifactId>osivia-nuxeo-wiki</artifactId>
+            <version>${wiki.version}</version>
+        </dependency>
+
+        <!-- Profile <dependency> <groupId>toutatice-services.identite</groupId> <artifactId>toutatice-fichepersonne-ecm</artifactId> <version>${profile.version}</version> 
+            </dependency> -->
+
+        <!-- Addons -->
+        <dependency>
+            <groupId>opentoutatice-ecm.collab-tools</groupId>
+            <artifactId>opentoutatice-collab-tools-ecm</artifactId>
+            <version>${openttc.addons.collab.tools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>opentoutatice-ecm.generic-ui-service</groupId>
+            <artifactId>opentoutatice-generic-ui-service-ecm</artifactId>
+            <version>${openttc.addons.generic.ui.version}</version>
+        </dependency>
+        <!-- <dependency> <groupId>opentoutatice-ecm.responsive</groupId> <artifactId>opentoutatice-responsive-portal-views-ecm</artifactId> <version>${openttc.addons.responsive.pv.version}</version> 
+            </dependency> -->
+
+        <!-- Custom site 
+        <dependency>
+            <groupId>org.osivia.site</groupId>
+            <artifactId>osivia-site-nuxeo-custom</artifactId>
+            <version>${project.version}</version>
+        </dependency>-->
+    </dependencies>
+</project>

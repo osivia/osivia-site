@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<component name="org.osivia.nuxeo.types">
+
+	<require>org.nuxeo.ecm.core.schema.TypeService</require>
+	<require>fr.toutatice.ecm.platform.core.doctypes</require>
+
+
+	<extension target="org.nuxeo.ecm.core.schema.TypeService"
+		point="schema">
+
+		<schema name="zoom" prefix="zoom" src="schemas/zoom.xsd" />
+
+	</extension>
+
+	<extension target="org.nuxeo.ecm.core.schema.TypeService"
+		point="doctype">
+
+		<doctype name="Zoom" extends="Document">
+			<!-- Ajouter schémas ou facets ici -->
+			<schema name="zoom" />
+			<schema name="dublincore" />
+			<facet name="SpaceContent" />
+		</doctype>
+
+		<!-- Ajout images jointes aux notes -->
+		<doctype name="Note" extends="Document">
+			<schema name="common" />
+			<schema name="dublincore" />
+			<schema name="note" />
+			<schema name="files" />
+			<schema name="relatedtext" />
+			<facet name="TTCAttachableImages" />
+			<facet name="SpaceContent" />
+			<facet name="Commentable" />
+			<facet name="Publishable" />
+			<facet name="HasRelatedText" />
+		</doctype>
+
+		<doctype name="PortalSiteContainer" extends="Document">
+			<!-- Ajouter schémas, facets ou sous-types ici -->
+			<schema name="common" />
+			<schema name="dublincore" />
+			<facet name="Folderish" />
+			<facet name="Orderable" />
+		</doctype>
+
+		<doctype name="DocumentUrlContainer" extends="OrderedFolder">
+			<facet name="SpaceContent" />
+		</doctype>
+		
+		<doctype name="Agenda" extends="OrderedFolder">
+			<facet name="SpaceContent" />
+		</doctype>
+
+	</extension>
+
+	<extension target="org.nuxeo.ecm.platform.types.TypeService"
+		point="types">
+
+		<type id="Domain">
+			<subtypes>
+				<type>PortalSiteContainer</type>
+			</subtypes>
+		</type>
+
+		<type id="PortalSite">
+			<subtypes>
+				<type>Zoom</type>
+			</subtypes>
+		</type>
+
+		<type id="PortalPage">
+			<subtypes>
+				<type>Zoom</type>
+			</subtypes>
+		</type>
+
+		<type id="Folder">
+			<subtypes>
+				<type>DocumentUrlContainer</type>
+			</subtypes>
+		</type>
+
+		<type id="OrderedFolder">
+			<subtypes>
+				<type>DocumentUrlContainer</type>
+			</subtypes>
+		</type>
+
+		<type id="Workspace">
+			<subtypes>
+				<type>DocumentUrlContainer</type>
+				<type>Agenda</type>
+			</subtypes>
+		</type>
+		
+		<type id="Agenda">
+			<subtypes>
+				<type>VEVENT</type>
+			</subtypes>
+		</type>
+
+		<type id="DocumentUrlContainer">
+			<subtypes>
+				<type>ContextualLink</type>
+			</subtypes>
+		</type>
+
+	</extension>
+
+</component>
