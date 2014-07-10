@@ -93,7 +93,7 @@
         <dependency>
             <groupId>toutatice-portail.cms</groupId>
             <artifactId>toutatice-portail-cms-nuxeo-distribution</artifactId>
-            <version>${toutatice-cms.version}</version>
+            <version>${toutatice.version}</version>
             <type>zip</type>
         </dependency>
         
@@ -171,7 +171,7 @@
                                         <artifactItem>
                                             <groupId>toutatice-portail.cms</groupId>
                                             <artifactId>toutatice-portail-cms-nuxeo-distribution</artifactId>
-                                            <version>${toutatice-cms.version}</version>
+                                            <version>${toutatice.version}</version>
                                             <type>zip</type>
                                             <overWrite>true</overWrite>
                                             <outputDirectory>${project.build.directory}/toutatice-distribution</outputDirectory>

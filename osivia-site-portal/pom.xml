@@ -2,28 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.osivia.site</groupId>
-        <artifactId>osivia-site-parent</artifactId>
-        <version>1.2-SNAPSHOT</version>
-    </parent>
-
+    <groupId>org.osivia.site</groupId>
     <artifactId>osivia-site-portal-parent</artifactId>
+    <version>1.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Site OSIVIA - Portal parent</name>
 
 
     <properties>
-        <osivia-portal.version>3.2.8</osivia-portal.version>
-        <toutatice-cms.version>3.2.8</toutatice-cms.version>
-        <nuxeo-automation-client.version>5.6.0-HF20</nuxeo-automation-client.version>
+        <!-- Toutatice -->
+        <toutatice.version>3.2.9</toutatice.version>
+
+        <!-- Collab tools -->
         <toutatice-faq.version>3.1-RC4</toutatice-faq.version>
         <osivia-services-wiki.version>1.1-RC12</osivia-services-wiki.version>
         <osivia-services-forum.version>1.0-RC3</osivia-services-forum.version>
-        <osivia-services-java-melody-integration.version>1.0-RC2</osivia-services-java-melody-integration.version>
         <osivia-services-contact.version>1.0-RC4</osivia-services-contact.version>
         <fichepersonne.version>2.0.2.osivia-RC3</fichepersonne.version>
         <osivia-services-download-tracker.version>1.0</osivia-services-download-tracker.version>
+        
+        <!-- Admin tools -->
+        <osivia-services-java-melody-integration.version>1.0-RC2</osivia-services-java-melody-integration.version>
     </properties>
 
 
@@ -48,70 +47,31 @@
     <dependencyManagement>
         <dependencies>
 
-            <!-- OSIVIA portal -->
-
+            <!-- Toutatice -->
             <dependency>
-                <groupId>org.osivia.portal</groupId>
-                <artifactId>osivia-portal-dependencies</artifactId>
-                <version>${osivia-portal.version}</version>
+                <groupId>toutatice-portail.cms</groupId>
+                <artifactId>toutatice-portail-cms-nuxeo-dependencies</artifactId>
+                <version>${toutatice.version}</version>
                 <scope>provided</scope>
             </dependency>
-
             <dependency>
-                <groupId>org.osivia.portal</groupId>
-                <artifactId>osivia-portal-dependencies-test</artifactId>
-                <version>${osivia-portal.version}</version>
+                <groupId>toutatice-portail.cms</groupId>
+                <artifactId>toutatice-portail-cms-nuxeo-dependencies-test</artifactId>
+                <version>${toutatice.version}</version>
                 <scope>test</scope>
             </dependency>
-
-            <dependency>
-                <groupId>org.osivia.portal.core</groupId>
-                <artifactId>osivia-portal-custom-lib-utils</artifactId>
-                <version>${osivia-portal.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
-
-            <!-- Toutatice CMS -->
-
-            <dependency>
-                <groupId>toutatice-portail.cms</groupId>
-                <artifactId>toutatice-portail-cms-nuxeo-api</artifactId>
-                <version>${toutatice-cms.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>toutatice-portail.cms</groupId>
-                <artifactId>toutatice-portail-cms-nuxeo-shared-lib</artifactId>
-                <version>${toutatice-cms.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
             <dependency>
                 <groupId>toutatice-portail.cms</groupId>
                 <artifactId>toutatice-portail-cms-nuxeo-web</artifactId>
-                <version>${toutatice-cms.version}</version>
+                <version>${toutatice.version}</version>
                 <type>war</type>
                 <scope>compile</scope>
             </dependency>
-
             <dependency>
                 <groupId>toutatice-portail.cms</groupId>
                 <artifactId>toutatice-portail-cms-nuxeo-web</artifactId>
-                <version>${toutatice-cms.version}</version>
-                <type>warpath</type>
-                <scope>compile</scope>
-            </dependency>
-
-
-            <!-- Nuxeo -->
-
-            <dependency>
-                <groupId>org.nuxeo.ecm.automation</groupId>
-                <artifactId>nuxeo-automation-client</artifactId>
-                <version>${nuxeo-automation-client.version}</version>
-                <scope>provided</scope>
+                <classifier>classes</classifier>
+                <version>${toutatice.version}</version>
             </dependency>
 
         </dependencies>
@@ -120,16 +80,14 @@
 
     <dependencies>
 
-        <!-- OSIVIA portal -->
-
         <dependency>
-            <groupId>org.osivia.portal</groupId>
-            <artifactId>osivia-portal-dependencies</artifactId>
+            <groupId>toutatice-portail.cms</groupId>
+            <artifactId>toutatice-portail-cms-nuxeo-dependencies</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.osivia.portal</groupId>
-            <artifactId>osivia-portal-dependencies-test</artifactId>
+            <groupId>toutatice-portail.cms</groupId>
+            <artifactId>toutatice-portail-cms-nuxeo-dependencies-test</artifactId>
         </dependency>
 
     </dependencies>
