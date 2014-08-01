@@ -19,6 +19,7 @@ import org.osivia.portal.core.cms.CMSPublicationInfos;
 import org.osivia.portal.core.cms.CMSServiceCtx;
 
 import fr.toutatice.portail.cms.nuxeo.api.NuxeoQueryFilter;
+import fr.toutatice.portail.cms.nuxeo.api.NuxeoQueryFilterContext;
 import fr.toutatice.portail.cms.nuxeo.api.services.NuxeoConnectionProperties;
 import fr.toutatice.portail.cms.nuxeo.portlets.list.DocumentQueryCommand;
 
@@ -199,7 +200,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
             String[] ident = requestPath.split("/");
 
             String clause = " (ecm:primaryType = 'WikiBook' or ecm:primaryType = 'WikiSection') and webc:url = '" + ident[2] + "'";
-            String filteredClause = NuxeoQueryFilter.addPublicationFilter(clause, false);
+            String filteredClause = NuxeoQueryFilter.addPublicationFilter(NuxeoQueryFilterContext.CONTEXT_DEFAULT, clause);
 
             String savedScope = cmsCtx.getScope();
             cmsCtx.setScope("superuser_context");

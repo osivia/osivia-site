@@ -7,6 +7,7 @@ import org.nuxeo.ecm.automation.client.model.Documents;
 
 import fr.toutatice.portail.cms.nuxeo.api.INuxeoCommand;
 import fr.toutatice.portail.cms.nuxeo.api.NuxeoQueryFilter;
+import fr.toutatice.portail.cms.nuxeo.api.NuxeoQueryFilterContext;
 
 public class ListeSolutionsCommand implements INuxeoCommand {
 
@@ -28,8 +29,7 @@ public class ListeSolutionsCommand implements INuxeoCommand {
 		+ "' ORDER BY ecm:pos ";
 
 		// Insertion du filtre sur les élements publiés
-		String filteredRequest = NuxeoQueryFilter.addPublicationFilter(
-				nuxeoRequest, false);
+        String filteredRequest = NuxeoQueryFilter.addPublicationFilter(NuxeoQueryFilterContext.CONTEXT_DEFAULT, nuxeoRequest);
 
 		request.set("query", "SELECT * FROM Document WHERE " + filteredRequest);
 
