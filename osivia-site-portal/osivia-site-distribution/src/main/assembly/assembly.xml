@@ -21,12 +21,19 @@
                 <include>${project.groupId}:osivia-site-cms-nuxeo-web:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-portlet-solutions:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-internationalization-customizer:war:${project.version}</include>
+                <include>${project.groupId}:osivia-site-ldap-connector:war:${project.version}</include>
+                <!-- collab tools -->
                 <include>org.osivia.services:osivia-services-wiki:war:${osivia-services-wiki.version}</include>
                 <include>org.osivia.services:osivia-services-downloads-tracker:war:${osivia-services-download-tracker.version}</include>
-                <include>org.osivia.services:osivia-contact-portlet:war:${osivia-services-contact.version}</include>
-                <include>toutatice-services.identite:toutatice-identite-fichepersonne-portail:war:${fichepersonne.version}</include>
                 <include>org.osivia.services:osivia-services-forum:war:${osivia-services-forum.version}</include>
                 <include>toutatice-services.faq:toutatice-faq-portail:war:${toutatice-faq.version}</include>
+                <!-- identity -->
+                <include>toutatice-services.identite:toutatice-identite-fichepersonne-portail:war:${fichepersonne.version}</include>
+                <include>toutatice-services.identite:toutatice-identite-gestiongroupes-portail:war:${gestiongroupe.version}</include>
+                <include>toutatice-services.identite:toutatice-identite-ficheprofil-portail:war:${ficheprofil.version}</include>
+                <include>toutatice-services.nuxeo:toutatice-nuxeo-gestionworkspace-portail:war:${gestionworkspace.version}</include>
+                <include>toutatice-services.nuxeo:toutatice-nuxeo-participantsworkspace-portail:war:${participantswks.version}</include>
+                <include>org.osivia.services:osivia-contact-portlet:war:${osivia-services-contact.version}</include>
             </includes>
         </dependencySet>
 
@@ -36,6 +43,7 @@
             <scope>runtime</scope>
             <includes>
                 <include>org.osivia.portal.identity:osivia-portal-identity-sso-lib:jar:3.0.4</include>
+                <include>outils.ldap:toutatice-annuaire:jar:${toutatice.annuaire.version}</include>
                 <include>org.osivia.services:osivia-services-java-melody-integration:jar:${osivia-services-java-melody-integration.version}</include>
             </includes>
         </dependencySet>

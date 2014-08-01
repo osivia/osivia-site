@@ -2,23 +2,35 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.osivia.site</groupId>
+    <parent>
+        <groupId>org.osivia.site</groupId>
+        <artifactId>osivia-site-parent</artifactId>
+        <version>1.2-SNAPSHOT</version>
+    </parent>
+
     <artifactId>osivia-site-portal-parent</artifactId>
-    <version>1.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Site OSIVIA - Portal parent</name>
 
 
     <properties>
         <!-- Toutatice -->
-        <toutatice.version>3.2.9</toutatice.version>
-
-        <!-- Collab tools -->
+        <toutatice.version>3.3.0-SNAPSHOT</toutatice.version>
+        
+        <!-- identity -->
+        <toutatice.annuaire.version>2.3.5-osivia-SNAPSHOT</toutatice.annuaire.version>
+        <osivia-services-directory.version>1.0.0-SNAPSHOT</osivia-services-directory.version>
+        <fichepersonne.version>3.0-osivia-SNAPSHOT</fichepersonne.version>
+        <ficheprofil.version>3.0-osivia-SNAPSHOT</ficheprofil.version>
+        <gestiongroupe.version>3.0-osivia-SNAPSHOT</gestiongroupe.version>
+        <gestionworkspace.version>3.0-osivia-SNAPSHOT</gestionworkspace.version>
+        <participantswks.version>3.0-osivia-SNAPSHOT</participantswks.version>
+        <identity-sso.version>3.0.4</identity-sso.version>
+        
         <toutatice-faq.version>3.1-RC4</toutatice-faq.version>
-        <osivia-services-wiki.version>1.1-RC12</osivia-services-wiki.version>
+        <osivia-services-wiki.version>1.2-SNAPSHOT</osivia-services-wiki.version>
         <osivia-services-forum.version>1.0-RC3</osivia-services-forum.version>
         <osivia-services-contact.version>1.0-RC4</osivia-services-contact.version>
-        <fichepersonne.version>2.0.2.osivia-RC3</fichepersonne.version>
         <osivia-services-download-tracker.version>1.0</osivia-services-download-tracker.version>
         
         <!-- Admin tools -->
@@ -35,7 +47,8 @@
         <module>osivia-site-internationalization-customizer</module>
         <module>osivia-site-attributes-bundles-customizer</module>
         <module>osivia-site-regions-customizer</module>
-        <module>osivia-site-distribution</module>     
+        <module>osivia-site-ldap-connector</module>
+        <module>osivia-site-distribution</module>
     </modules>
 
 

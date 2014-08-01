@@ -24,10 +24,11 @@
 
     <properties>
         <openttc.version>1.2.1-SNAPSHOT</openttc.version>
-        <openttc.addons.collab.tools.version>1.1.0-SNAPSHOT</openttc.addons.collab.tools.version>
+        <openttc.addons.collab.tools.version>1.1.3-SNAPSHOT</openttc.addons.collab.tools.version>
         <openttc.addons.generic.ui.version>1.0.1-SNAPSHOT</openttc.addons.generic.ui.version>
         <wiki.version>1.1.1-SNAPSHOT</wiki.version>
-
+        <migration.version>1.0.0-SNAPSHOT</migration.version>
+        <profile.version>3.0-osivia-SNAPSHOT</profile.version>
         <!-- <openttc.addons.responsive.pv.version>1.0-SNAPSHOT</openttc.addons.responsive.pv.version> <profile.version>3.0-osivia-SNAPSHOT</profile.version> -->
     </properties>
 
@@ -94,11 +95,19 @@
         <!-- <dependency> <groupId>opentoutatice-ecm.responsive</groupId> <artifactId>opentoutatice-responsive-portal-views-ecm</artifactId> <version>${openttc.addons.responsive.pv.version}</version> 
             </dependency> -->
 
-        <!-- Custom site 
+
+        <!-- module migration webid -->
         <dependency>
-            <groupId>org.osivia.site</groupId>
-            <artifactId>osivia-site-nuxeo-custom</artifactId>
-            <version>${project.version}</version>
-        </dependency>-->
+            <groupId>org.osivia.ecm.nuxeo</groupId>
+            <artifactId>osivia-nuxeo-migration-webid</artifactId>
+            <version>${migration.version}</version>
+        </dependency>        
+        
+        <!-- Profile -->
+        <dependency>
+            <groupId>toutatice-services.identite</groupId>
+            <artifactId>toutatice-fichepersonne-ecm</artifactId>
+            <version>${profile.version}</version>
+        </dependency>        
     </dependencies>
 </project>

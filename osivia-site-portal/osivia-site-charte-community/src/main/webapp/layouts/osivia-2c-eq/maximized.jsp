@@ -4,75 +4,81 @@
 <html>
 
 <head>
-<title>OSIVIA.org - Site communautaire du portail OSIVIA</title>
-
-<meta charset="UTF-8">
-<meta content="text">
-<meta http-equiv="default-style" content="main_css">
-
-<meta name="author" content="OSIVIA">
-<meta name="description" content="OSIVIA Portal est une plateforme globale de portail robuste, performante et flexible.">
-<meta name="keywords" content="JSR286, JBoss, Nuxeo, Portal, Portail, GED, CMS, ECM, publish, e-commerce, content management, development framework">
-
-<p:headerContent />
-<p:theme themeName="osivia-community" />
+	<title>OSIVIA.org - Site communautaire du portail OSIVIA</title>
+	
+	<meta charset="UTF-8">
+	<meta content="text">
+	<meta http-equiv="default-style" content="main_css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">	
+	
+	<meta name="author" content="OSIVIA">
+	<meta name="description" content="OSIVIA Portal est une plateforme globale de portail robuste, performante et flexible.">
+	<meta name="keywords" content="JSR286, JBoss, Nuxeo, Portal, Portail, GED, CMS, ECM, publish, e-commerce, content management, development framework">
+	
+	<p:headerContent />
+	<p:theme themeName="osivia-community" />
 </head>
 
-<body>
-    <p:region regionName="AJAXScripts" />
+<body class="with-drawer">
+    <!-- Barre d'outils -->
+    <p:region regionName="toolbar" />
 
-    <div id="wrapper">
-        <header>
-            <!-- Barre d'outils -->
-            <div id="toolbar-wrapper">
-                <p:region regionName="toolbar" />
-            </div>
-            
-            <!-- Mode édition -->
-            <div id="page-settings-wrapper">
-                <p:region regionName="pageSettings" />
-            </div>
-            
-            <!-- Recherche -->
-            <p:region regionName="search" />
-            
-            <!-- Bannière et logo -->
-            <div id="logo" class="container">
-                <a id="banner" href="/portal"><span>OSIVIA Community</span></a>
-                <h1><a href="/portal">.org</a></h1>
-                <p>Site communautaire du portail OSIVIA</p>
-            </div>
-            
-            <!-- Onglets -->
-            <div id="menu-wrapper">
-                <nav id="menu">
-                    <p:region regionName='tabs' />
-                </nav>
-            </div>
-            
-            <!-- Breadcrumb -->
-            <div class="container">
-                <p:region regionName='breadcrumb' />
-            </div>
-        </header>        
-    
-        <section class="container">
-            <p:region regionName='notifications' />
-        
-            <div id="multi-columns">
-                <div id="tbox1">
-                    <p:region regionName='col1' />
-                </div>
-                <div id="tbox2">
-                    <p:region regionName='maximized' regionID="col2" />
-                </div>
-            </div>
-        </section>
+	<div id="wrapper">
+	    <header class="container-fluid">
+	        <!-- Bannière -->
+	        <div class="clearfix">
+	            <!-- Logo -->
+	            <p:region regionName="logo" />
+	
+	            <!-- Recherche -->
+	            <p:region regionName="search" />
+	        </div>
+	
+	        <!-- Onglets -->
+	        <p:region regionName="tabs" />
+	    </header>
+	
+	    <div class="wrapper-outer">
+	        <div class="wrapper-inner">
+	            <div class="container-fluid">
+	                <!-- Notifications -->
+	                <p:region regionName="notifications" />
+	        		<!-- Breadcrumb -->
+	                <p:region regionName="breadcrumb" />
+	        
+	                <div class="row">
+	                    <!-- Menu -->
+	                    <div id="drawer">
+	                        <div class="col-sm-4">
+	                            <p:region regionName="col1" regionID="menu" />
+	                        </div>
+	                    </div>
+	                    
+	                    <!-- Content -->
+	                    <div class="col-sm-8">
+	                        
+	                        
+	                        <p:region regionName="maximized" regionId="col2" />
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
     </div>
+    <!-- Footer -->
+    <footer class="container-fluid">
+    	
+    	<p:region regionName='footer' />
+    	
+    </footer>
 
-    <p:region regionName='footer' />
     
-    <p:region regionName='AJAXFooter' />
+    <!-- AJAX scripts -->
+    <p:region regionName="AJAXScripts" />
+    <!-- AJAX footer -->
+    <p:region regionName="AJAXFooter" />    
+    <!-- Page settings -->
+    <p:region regionName="pageSettings" />
 </body>
 
 </html>

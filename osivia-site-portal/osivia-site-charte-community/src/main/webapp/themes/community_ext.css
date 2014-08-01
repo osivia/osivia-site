@@ -1,0 +1,181 @@
+/* main content */
+
+#wrapper {
+    overflow: hidden;
+    background-color: #F8F9F0;
+}
+
+
+/* Logo */
+#logo {
+    overflow: hidden;
+    height: 100px;
+}
+
+#logo a {
+    color: #6B7A52;
+    text-decoration: none;
+}
+
+/* #logo a#banner { */
+/*     position: absolute; */
+/*     margin-top: 25px; */
+/*     border: none; */
+/*     background-image: url(images/logo-osivia.png); */
+/*     background-repeat: no-repeat; */
+/*     width: 202px; */
+/*     height: 53px; */
+/*     z-index: 1; */
+/* } */
+
+/* #logo a#banner span { */
+/*     display: none; */
+/* } */
+
+/* #logo h1,#logo p { */
+/*     text-align: center; */
+/* } */
+
+#logo img {
+	margin-top:20px;
+}
+
+#logo h1 {
+    position: absolute;
+	margin-top: 24px;
+	/*margin-left: 202px;*/
+    padding: 0;
+    text-transform: lowercase;
+    font-size: 26px;
+    z-index: 1;
+}
+
+#logo p {
+    position: absolute;
+    margin-top: 74px;
+    margin-left: 208px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #696969;
+    z-index: 2;
+}
+
+
+/* tabs */
+
+
+#tabs {
+    overflow: hidden;
+    height: 52px;
+    background-color: #3C342E;
+    margin-bottom: 30px;
+}
+
+#tabs ul.nav {
+    margin: 0;
+    margin-left: 5%;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+    line-height: normal;
+    text-align: left;
+}
+
+#tabs ul.nav li {
+    display: inline-block;
+}
+
+#tabs a {
+    display: block;
+    padding: 0px 30px;
+    line-height: 52px;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    /*font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 300;*/
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+#tabs a.btn-primary, #tabs a:HOVER, #tabs ul.sub-menu a:HOVER {
+    background-color: #5D781D;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* logout */
+
+
+#deco {
+	display: none;
+}
+
+#msglogout {
+   	position: absolute;
+    background-color: #EFF0EB;
+   	visibility: visible;
+   	display: none;
+   	top: 10%;
+   	left: 44%;
+   	padding: 1%;
+   	z-index: 201; 
+   	text-align: center; 
+   	color: rgb(47, 68, 86); 
+   	border: 2px solid rgb(47, 68, 86); 
+}
+
+.logout {
+	vertical-align: top;
+}
+
+
+/* Menu Wiki */
+
+
+
+/* .menu-wiki .list-group-item, .menu-wiki .btn-default  { */
+/* 	background-color: #3C342E; */
+/* 	color : #F8F9F0;	 */
+/* 	border: 0px; */
+/* 	} */
+
+/* .menu-wiki .list-group-item:hover, .menu-wiki .btn-default { */
+/* 	background-color: #5D781D; */
+/* 	} */
+
+/* .menu-wiki .btn-default { */
+/* 	border : 0px; */
+/* 	background-color: #3C342E; */
+/* 	color : #F8F9F0; */
+/* } */
+
+/* .menu-wiki { */
+/* 	background-color: #3C342E; */
+/* } */
+
+/* .menu-wiki ul.level_0 { */
+/* 	margin: 10px -10px 0; */
+/*     padding: 0; */
+/* } */
+
+/* .menu-wiki ul li { */
+/*     display: block; */
+/* } */
+
+/* .menu-wiki ul a { */
+/*     display: block; */
+/*     font-size: 12px; */
+/*     line-height: 22px; */
+/*     color: #F8F9F0; */
+/*     padding: 1px 10px; */
+/*     text-align: left; */
+/* } */
+
+/* .menu-wiki ul a:HOVER { */
+/*     background: #5D781D; */
+/*     text-decoration: none; */
+/*     color: #FFFFFF; */
+/* } */

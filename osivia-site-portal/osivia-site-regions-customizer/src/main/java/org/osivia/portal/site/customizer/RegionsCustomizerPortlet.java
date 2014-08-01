@@ -89,7 +89,7 @@ public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomi
         String charteCommunityContextPath = this.getInitParameter(OSIVIA_SITE_CHARTE_COMMUNITY_CONTEXT_PATH_INIT_PARAM);
 
         Map<String, Object> attributes = context.getAttributes();
-        String contextPath = (String) attributes.get(IRenderedRegions.CUSTOMIZER_ATTRIBUTE_CONTEXT_PATH);
+        String contextPath = (String) attributes.get(IRenderedRegions.CUSTOMIZER_ATTRIBUTE_THEME_CONTEXT_PATH);
         if (StringUtils.equals(contextPath, charteContextPath) || StringUtils.equals(contextPath, charteCommunityContextPath)) {
             IRenderedRegions renderedRegion = (IRenderedRegions) attributes.get(IRenderedRegions.CUSTOMIZER_ATTRIBUTE_RENDERED_REGIONS);
 
@@ -109,6 +109,8 @@ public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomi
                 renderedRegion.customizeRenderedRegion("toolbar", "/header/toolbar.jsp");
                 // Replace default footer
                 renderedRegion.customizeRenderedRegion("footer", "/footer/footer.jsp");
+                // Add logo region
+                renderedRegion.customizeRenderedRegion("logo", "/header/logo.jsp", contextPath);
             }
         }
     }
