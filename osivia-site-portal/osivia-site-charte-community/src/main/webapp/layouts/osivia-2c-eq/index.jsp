@@ -49,13 +49,13 @@
                 <div class="row">
                     <!-- Menu -->
                     <div id="drawer">
-                        <div class="col-sm-4">
-                            <p:region regionName="col1" regionID="menu" />
+                        <div class="col-sm-6">
+                            <p:region regionName="col1" />
                         </div>
                     </div>
                     
                     <!-- Content -->
-                    <div class="col-sm-8">
+                    <div class="col-sm-6">
                         <p:region regionName="col2" />
                     </div>
                 </div>
