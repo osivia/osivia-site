@@ -30,7 +30,7 @@
 	opacity: 1;
 }
 
-.thumbnail.tile:hover {
+.thumbnail.tile:HOVER, .thumbnail.tile:FOCUS {
 	opacity: .8;
 	
 	-webkit-transform: scale(.95);

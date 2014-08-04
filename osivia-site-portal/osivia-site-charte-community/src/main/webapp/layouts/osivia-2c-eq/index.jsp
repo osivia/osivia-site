@@ -23,56 +23,52 @@
     <!-- Barre d'outils -->
     <p:region regionName="toolbar" />
 
-	<div id="wrapper">
-	    <header class="container-fluid">
-	        <!-- Bannière -->
-	        <div class="clearfix">
-	            <!-- Logo -->
-	            <p:region regionName="logo" />
-	
-	            <!-- Recherche -->
-	            <p:region regionName="search" />
-	        </div>
-	
-	        <!-- Onglets -->
-	        <p:region regionName="tabs" />
-	    </header>
-	
-	    <div class="wrapper-outer">
-	        <div class="wrapper-inner">
-	            <div class="container-fluid">
-	                <!-- Notifications -->
-	                <p:region regionName="notifications" />
-	        		<!-- Breadcrumb -->
-	                <p:region regionName="breadcrumb" />
-	        
-	                <div class="row">
-	                    <!-- Menu -->
-	                    <div id="drawer">
-	                        <div class="col-sm-4">
-	                            <p:region regionName="col1" regionID="menu" />
-	                        </div>
-	                    </div>
-	                    
-	                    <!-- Content -->
-	                    <div class="col-sm-8">
-	                        
-	                        
-	                        <p:region regionName="col2" />
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
+    <!-- Header -->
+    <header class="container-fluid">
+        <!-- Bannière -->
+        <div class="clearfix">
+            <!-- Logo -->
+            <p:region regionName="logo" />
+
+            <!-- Recherche -->
+            <p:region regionName="search" />
+        </div>
+
+        <!-- Onglets -->
+        <p:region regionName="tabs" />
+    </header>
+
+    <div class="wrapper-outer">
+        <div class="wrapper-inner">
+            <div class="container-fluid">
+                <!-- Notifications -->
+                <p:region regionName="notifications" />
+        		<!-- Breadcrumb -->
+                <p:region regionName="breadcrumb" />
+        
+                <div class="row">
+                    <!-- Menu -->
+                    <div id="drawer">
+                        <div class="col-sm-4">
+                            <p:region regionName="col1" regionID="menu" />
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="col-sm-8">
+                        <p:region regionName="col2" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <!-- Footer -->
     <footer class="container-fluid">
-    	
-    	<p:region regionName='footer' />
-    	
+        <p:region regionName="footer" />
     </footer>
 
-    
+
     <!-- AJAX scripts -->
     <p:region regionName="AJAXScripts" />
     <!-- AJAX footer -->

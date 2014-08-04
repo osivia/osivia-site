@@ -1,0 +1,106 @@
+//
+// OSIVIA Site - Custom properties
+// --------------------------------------------------
+
+
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+
+// Content background
+header, .wrapper-outer {
+    background-color: @content-bg;
+    
+}
+
+
+// Logo
+#logo {
+    & h1 {        
+        & a {
+            color: @brand-primary;
+            text-decoration: none;
+        }
+    }
+}
+
+
+// Search
+#search {
+    margin-top: 20px;
+}
+
+
+// Tabs & navigation menu
+
+.osivia-site-menu() {
+    background-color: @nav-bg;
+}
+
+.osivia-site-menu-item() {
+    background-color: @nav-bg;
+    color: #fff;
+    
+    &.active {
+        background-color: @link-color;
+        font-weight: bold;
+    }
+    
+    &:HOVER, &:FOCUS {
+        background-color: @link-hover-color;
+    }
+}
+
+#tabs {
+    .osivia-site-menu;
+    
+    margin: 10px floor(-(@grid-gutter-width / 2));
+    padding: 0 floor(@grid-gutter-width / 2);
+    
+    & li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        
+        @media screen and (max-width: @screen-xs-max) {
+            float: left;
+            margin-left: 1%;
+            margin-bottom: 5px;
+        }
+        
+        & a {
+            .osivia-site-menu-item;
+            
+            display: block;
+            margin: 0;
+            padding: 0 30px;
+            border-style: none;
+            border-radius: 0;
+            line-height: 52px;
+            font-family: 'Oswald',sans-serif;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            
+            @media screen and (max-width: @screen-xs-max) {
+                padding: 0 15px;
+                line-height: 42px;
+            }
+        }
+    }
+}
+
+.nuxeo-publish-navigation {
+    & li.list-group-item {
+        .osivia-site-menu;
+        
+        border-color: lighten(@nav-bg, 15%);
+        
+        & a.list-group-item {
+            .osivia-site-menu-item;
+        }
+    }
+}
+

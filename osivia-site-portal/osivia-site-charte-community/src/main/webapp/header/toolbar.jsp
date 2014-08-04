@@ -32,7 +32,7 @@ function portalLogout() {
     <div class="container-fluid">
         <div class="navbar-header">
             <!-- Toggle drawer menu button -->
-            <button type="button" class="drawer-toggle-btn btn navbar-btn visible-xs pull-left" data-toggle="drawer">
+            <button type="button" class="drawer-toggle-btn btn navbar-btn pull-left" data-toggle="drawer">
                 <i class="glyphicons show_lines"></i>
                 <span class="text">${requestScope['osivia.currentPageName']}</span>
             </button>
@@ -115,8 +115,8 @@ function portalLogout() {
 
 
 
-<div id="deco"></div>
+<div id="deco" class="hidden"></div>
 
-<div id="msglogout">
+<div id="msglogout" class="hidden">
 	<p><is:getProperty key="LOGOUT_MESSAGE" /></p>
 </div>

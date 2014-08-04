@@ -13,7 +13,7 @@
 @gray-light:             lighten(#000, 46.7%); // #777
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
-@brand-primary:         #5BA689;
+@brand-primary:         #3F835F;  // Default : #428bca
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -25,9 +25,13 @@
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #E5E6DD;
+@body-bg:               #e5e6dd;
+//** Background color for content.
+@content-bg:            #f8f8f8;
+//** Background color for navigation.
+@nav-bg:                #3c342e;
 //** Global text color on `<body>`.
-@text-color:            #6E6D69;
+@text-color:            #444341;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -39,7 +43,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  'Oxygen', Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  'Oxygen', Helvetica, Arial, sans-serif;  // Default : Helvetica, Arial, sans-serif
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -142,7 +146,7 @@
 @btn-font-weight:                normal;
 
 @btn-default-color:              #333;
-@btn-default-bg:                 #F8F9F0;
+@btn-default-bg:                 @content-bg;
 @btn-default-border:             #ccc;
 
 @btn-primary-color:              #fff;
@@ -343,7 +347,7 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             #777;
-@navbar-default-bg:                #DCDDDC;
+@navbar-default-bg:                @body-bg;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
@@ -769,11 +773,11 @@
 //** Breadcrumb background color
 @breadcrumb-bg:                 @body-bg;
 //** Breadcrumb text color
-@breadcrumb-color:              #ccc;
+@breadcrumb-color:              @text-color;
 //** Text color of current page in the breadcrumb
 @breadcrumb-active-color:       @gray-light;
 //** Textual separator for between breadcrumb elements
-@breadcrumb-separator:          "/";
+@breadcrumb-separator:          ">";
 
 
 //== Carousel

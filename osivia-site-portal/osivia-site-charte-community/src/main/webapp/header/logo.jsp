@@ -1,7 +1,10 @@
 <div class="pull-left">
-	<a id="banner" href="${requestScope['osivia.home.url']}">
-		<h1><img src="${pageContext.request.contextPath}/themes/glissade/images/logo-osivia.png" alt="osivia"/><span>.org</span></h1>
-	</a>
-	<p>Site communautaire du portail OSIVIA</p>
-
+    <h1>
+        <a href="${requestScope['osivia.home.url']}">
+            <img src="${pageContext.request.contextPath}/themes/glissade/images/logo-osivia.png" alt="logo OSIVIA">
+            <span>OSIVIA.org</span>
+        </a>
+        
+        <small>Site communautaire du portail OSIVIA</small>
+    </h1>
 </div>
