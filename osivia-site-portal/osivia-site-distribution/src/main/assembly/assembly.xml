@@ -27,6 +27,7 @@
                 <include>org.osivia.services:osivia-services-downloads-tracker:war:${osivia-services-download-tracker.version}</include>
                 <include>org.osivia.services:osivia-services-forum:war:${osivia-services-forum.version}</include>
                 <include>toutatice-services.faq:toutatice-faq-portail:war:${toutatice-faq.version}</include>
+                <include>org.osivia.services:osivia-services-calendar:war:${osivia-services-calendar.version}</include>
                 <!-- identity -->
                 <include>toutatice-services.identite:toutatice-identite-fichepersonne-portail:war:${fichepersonne.version}</include>
                 <include>toutatice-services.identite:toutatice-identite-gestiongroupes-portail:war:${gestiongroupe.version}</include>

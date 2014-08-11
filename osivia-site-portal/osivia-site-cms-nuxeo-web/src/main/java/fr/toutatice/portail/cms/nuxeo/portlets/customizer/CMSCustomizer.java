@@ -26,19 +26,19 @@ import fr.toutatice.portail.cms.nuxeo.portlets.list.DocumentQueryCommand;
 
 /**
  * CMS customizer du site OSIVIA.
- * 
+ *
  * Ce customizer permet de définir :
- * 
+ *
  * de nouveaux templates de listes le schéma du moteur de recherche la
  * visualisation des contenus via les 3 méthodes suivantes
  * getPortletDelegatedLink (appelé depuis la couche portlet quand la
  * visualisation est à traiter par une ressource du portlet) getCmsPlayer
  * (appelé depuis la couche CMS dans les autres cas) getExternalViewer (appelée
  * à partir des 2 précédentes)
- * 
- * 
+ *
+ *
  * Le template d'affichage est WEB-INF/jsp/liste/view-[nom-du-template].jsp
- * 
+ *
  * @author jeanseb
  */
 public class CMSCustomizer extends DefaultCMSCustomizer {
@@ -95,7 +95,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Constructor.
-     * 
+     *
      * @param ctx portlet context
      */
     public CMSCustomizer(PortletContext ctx) {
@@ -105,7 +105,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Get list templates.
-     * 
+     *
      * @return list templates
      */
     public static List<ListTemplate> getListTemplates() {
@@ -134,7 +134,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Get search schemas.
-     * 
+     *
      * @return search schemas
      */
     public static String getSearchSchema() {
@@ -230,33 +230,45 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     public CMSHandlerProperties getCMSPlayer(CMSServiceCtx ctx) throws Exception {
         Document doc = (Document) ctx.getDoc();
 
+        // Wiki
         if ("WikiBook".equals(doc.getType()) || "WikiSection".equals(doc.getType())) {
             return this.getWikiPlayer(ctx);
         }
-        
+
+        // FAQ
         if ("FaqFolder".equals(doc.getType()) || "Question".equals(doc.getType())) {
             return this.getFaqPlayer(ctx);
         }
 
+        // Blog
         if ("BlogPost".equals(doc.getType())) {
             return this.getCMSMinimalPlayer(ctx);
         }
 
+        // Forum
         if ("Forum".equals(doc.getType())) {
             return this.getForumPlayer(ctx);
         }
-
         if ("Thread".equals(doc.getType())) {
             return this.getForumThreadPlayer(ctx);
         }
 
-        // =========== roadmap =============
+        // Roadmap
         if ("Product".equals(doc.getType())) {
             return this.getRoadmapPlayer(ctx);
         }
         if ("Distribution".equals(doc.getType())) {
             return this.getDistributionPlayer(ctx);
         }
+
+        // Calendar
+        if ("Agenda".equals(doc.getType())) {
+            return this.getCalendarPlayer(ctx);
+        }
+        if ("VEVENT".equals(doc.getType())) {
+            return this.getEventPlayer(ctx);
+        }
+
 
         /* DCH: correctif temporaire pour osivia-com */
         PropertyList subjMetatdata = doc.getProperties().getList("dc:subjects");
@@ -274,7 +286,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Get Wiki player.
-     * 
+     *
      * @param ctx CMS service context
      * @return Wiki player
      */
@@ -296,7 +308,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Get FAQ player.
-     * 
+     *
      * @param ctx CMS service context
      * @return FAQ player
      */
@@ -319,7 +331,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Get forum player.
-     * 
+     *
      * @param ctx CMS context
      * @return CMS forum player
      * @throws CMSException
@@ -343,7 +355,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Utility method used to create forum player request.
-     * 
+     *
      * @param cmsContext CMS context
      * @return request
      * @throws CMSException
@@ -364,7 +376,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Get forum thread player.
-     * 
+     *
      * @param cmsContext CMS context
      * @return forum thread player
      */
@@ -385,8 +397,57 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
 
     /**
+     * Get calendar player.
+     *
+     * @param ctx
+     * @return calendar player
+     */
+    private CMSHandlerProperties getCalendarPlayer(CMSServiceCtx ctx) {
+        Document doc = (Document) ctx.getDoc();
+
+        Map<String, String> windowProperties = new HashMap<String, String>();
+        windowProperties.put(Constants.WINDOW_PROP_URI, doc.getPath());
+        windowProperties.put("osivia.title", doc.getTitle());
+        windowProperties.put("osivia.hideTitle", "1");
+        windowProperties.put("osivia.ajaxLink", "0");
+        windowProperties.put("osivia.cms.hideMetaDatas", "1");
+        windowProperties.put("osivia.calendar.cmsPath", "${contentPath}");
+
+        CMSHandlerProperties linkProps = new CMSHandlerProperties();
+        linkProps.setWindowProperties(windowProperties);
+        linkProps.setPortletInstance("osivia-services-calendar-instance");
+
+        return linkProps;
+    }
+
+
+    /**
+     * Get the event player.
+     *
+     * @param ctx
+     * @return Event player
+     */
+    private CMSHandlerProperties getEventPlayer(CMSServiceCtx ctx) {
+        Document doc = (Document) ctx.getDoc();
+
+        Map<String, String> windowProperties = new HashMap<String, String>();
+        windowProperties.put(Constants.WINDOW_PROP_URI, doc.getPath());
+        windowProperties.put("osivia.title", doc.getTitle());
+        windowProperties.put("osivia.hideTitle", "1");
+        windowProperties.put("osivia.ajaxLink", "0");
+        windowProperties.put("osivia.cms.hideMetaDatas", "1");
+
+        CMSHandlerProperties linkProps = new CMSHandlerProperties();
+        linkProps.setWindowProperties(windowProperties);
+        linkProps.setPortletInstance("osivia-services-calendar-event-instance");
+
+        return linkProps;
+    }
+
+
+    /**
      * Get minimal player.
-     * 
+     *
      * @param ctx CMS service context
      * @return minimal player
      */
@@ -411,7 +472,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Get roadmap player.
-     * 
+     *
      * @param ctx CMS context
      * @return CMS forum player
      * @throws CMSException
@@ -438,7 +499,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Utility method used to create roadmap player request.
-     * 
+     *
      * @param cmsContext CMS context
      * @return request
      * @throws CMSException
@@ -459,7 +520,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Get distribution player.
-     * 
+     *
      * @param ctx CMS context
      * @return CMS forum player
      * @throws CMSException
@@ -488,7 +549,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Utility method used to create roadmap player request.
-     * 
+     *
      * @param cmsContext CMS context
      * @return request
      * @throws CMSException
@@ -526,36 +587,48 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /**
      * Get customized CMS item types.
-     * 
+     *
      * @return customized CMS item types
      */
     private List<CMSItemType> getCustomizedCMSItemTypes() {
         List<CMSItemType> customizedTypes = new ArrayList<CMSItemType>();
 
+        // === FAQ === //
         // FAQ folder
         customizedTypes.add(new CMSItemType("FaqFolder", true, false, false, false, true, Arrays.asList("Question"), null));
         // FAQ question
         customizedTypes.add(new CMSItemType("Question", false, false, false, false, true, new ArrayList<String>(0), null));
+
+        // === BLOG === //
         // Blog site
         customizedTypes.add(new CMSItemType("BlogSite", true, false, false, true, true, Arrays.asList("BlogPost"), "/default/templates/blogSite"));
         // Blog post
         customizedTypes.add(new CMSItemType("BlogPost", false, false, false, true, true, new ArrayList<String>(0), null));
+
+        // === WIKI === //
         // Wiki book
         customizedTypes.add(new CMSItemType("WikiBook", true, true, true, true, true, Arrays.asList("WikiSection"), null));
-        // Blog post
+        // Wiki section
         customizedTypes.add(new CMSItemType("WikiSection", true, true, true, true, true, Arrays.asList("WikiSection"), null));
+
+        // === FORUM === //
         // Forum
         customizedTypes.add(new CMSItemType("Forum", true, true, false, true, true, Arrays.asList("Thread"), null));
         // Forum thread
         customizedTypes.add(new CMSItemType("Thread", false, false, false, true, true, new ArrayList<String>(0), null));
 
-        // =========== roadmap =============
+        // === ROADMAP === //
         // Project
         customizedTypes.add(new CMSItemType("Product", true, true, true, true, true, Arrays.asList("Distribution"), null));
         // Distribution
         customizedTypes.add(new CMSItemType("Distribution", false, true, true, true, true, new ArrayList<String>(0), null));
-        
-        
+
+        // === AGENDA === //
+        // Agenda
+        customizedTypes.add(new CMSItemType("Agenda", false, true, false, false, true, Arrays.asList("VEVENT"), null));
+        // Events
+        customizedTypes.add(new CMSItemType("VEVENT", false, false, false, false, true, new ArrayList<String>(0), null));
+
         return customizedTypes;
     }
 

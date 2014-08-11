@@ -32,6 +32,7 @@
         <osivia-services-forum.version>1.0-RC3</osivia-services-forum.version>
         <osivia-services-contact.version>1.0-RC4</osivia-services-contact.version>
         <osivia-services-download-tracker.version>1.0</osivia-services-download-tracker.version>
+        <osivia-services-calendar.version>1.0-SNAPSHOT</osivia-services-calendar.version>
         
         <!-- Admin tools -->
         <osivia-services-java-melody-integration.version>1.0-RC2</osivia-services-java-melody-integration.version>
