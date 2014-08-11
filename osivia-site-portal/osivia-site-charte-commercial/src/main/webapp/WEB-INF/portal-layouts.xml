@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layouts>
+
+    <layout>
+        <name>osivia-site-commercial-2cols</name>
+        <uri>/layouts/layout-2cols/index.jsp</uri>
+        <uri state="maximized">/layouts/layout-2cols/maximized.jsp</uri>
+        <regions>
+            <region name="col1" />
+            <region name="col2" />
+        </regions>
+    </layout>
+
+</layouts>

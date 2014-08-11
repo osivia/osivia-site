@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+    <theme>
+        <name>osivia-site-charte-commercial</name>
+        <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+        
+        <!-- CSS -->
+        <link rel="stylesheet" id="main_css" href="/css/osivia-site.min.css" type="text/css" />
+
+        <!-- Javascript -->        
+        <script type="text/javascript" src="/js/osivia-site.js"></script>
+        
+    </theme>
+</themes>
