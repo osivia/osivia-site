@@ -1,0 +1,133 @@
+//
+// OSIVIA Site - Custom properties
+// --------------------------------------------------
+
+
+// Core variables and mixins
+@import "variables.less";
+@import "mixins.less";
+
+
+
+// Banner
+
+#banner {
+    position: relative;
+    
+    .header-line {
+        position: absolute;
+        top: 66px;
+        left: 0;
+        height: 18px;
+        width: 100%;
+        z-index: -1;
+        
+        background-color: @navigation-active-bg;
+    }
+    
+    nav {
+        margin-top: 3px;
+    }    
+    
+    h1 {
+        margin: 10px 0;
+        padding-right: 5px;
+        background-color: #fff;
+    }
+}
+
+
+
+// Navigation bar
+
+@navigation-bar-height: 60px;
+@navigation-line-height: 20px;
+
+.navigation-bar {
+    .clearfix;
+    
+    margin-bottom: @line-height-computed;
+
+    .navigation-top-menu {
+        float: left;
+        
+        background-color: @navigation-bg;
+    }
+    
+    .navigation-search {
+        float: right;
+        height: @navigation-bar-height;
+        
+        background-color: @brand-primary;
+        
+        & > * {
+            height: @navigation-bar-height - @navigation-line-height;
+            padding: 20px 10px 0; 
+            
+            background-color: @body-bg;
+        }
+        
+        .form-inline .form-group .input-group {
+            width: 180px;
+        }
+    }
+    
+    .navigation-line {
+        .clearfix;
+        
+        margin-top: @navigation-bar-height - @navigation-line-height;
+        
+        background-color: @navigation-bg;
+    }
+    
+    
+    ul {
+        display: table;
+        width: 100%; 
+        margin: 0;
+        
+        li {
+            display: table-cell;
+            width: 1%;
+            padding: 0;
+            overflow: hidden;
+            
+            a {
+                display: block;
+                height: @navigation-bar-height;
+                line-height: 20px;
+                font-size: 18px;
+                padding: 0;
+                
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                white-space: nowrap;
+
+                &.active, &:HOVER {
+                    background-color: @navigation-active-bg;
+                    color: darken(@navigation-active-bg, 40%);
+                }
+                
+                span {
+                    display: block;
+                    padding: 10px 20px;
+                    
+                    background-color: @body-bg;
+                }
+                
+                @media screen and (max-width: @screen-sm-max) {
+                    font-size: 14px;
+                    
+                    span {
+                        padding: 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .portlet-container {
+        margin: 0;
+    }
+}

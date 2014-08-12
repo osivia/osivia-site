@@ -22,8 +22,8 @@ import org.osivia.portal.api.theming.IRenderedRegions;
  */
 public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomizationModule {
 
-    /** "osivia-site-charte" context path init parameter name. */
-    private static final String OSIVIA_SITE_CHARTE_CONTEXT_PATH_INIT_PARAM = "osivia.site.customizer.regions.osivia-site-charte.context";
+    /** "osivia-site-charte-commercial" context path init parameter name. */
+    private static final String OSIVIA_SITE_CHARTE_COMMERCIAL_CONTEXT_PATH_INIT_PARAM = "osivia.site.customizer.regions.osivia-site-charte-commercial.context";
     /** "osivia-site-charte-community" context path init parameter name. */
     private static final String OSIVIA_SITE_CHARTE_COMMUNITY_CONTEXT_PATH_INIT_PARAM = "osivia.site.customizer.regions.osivia-site-charte-community.context";
     /** Customizer name. */
@@ -85,29 +85,25 @@ public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomi
      * {@inheritDoc}
      */
     public void customize(String customizationID, CustomizationContext context) {
-        String charteContextPath = this.getInitParameter(OSIVIA_SITE_CHARTE_CONTEXT_PATH_INIT_PARAM);
+        String charteCommercialContextPath = this.getInitParameter(OSIVIA_SITE_CHARTE_COMMERCIAL_CONTEXT_PATH_INIT_PARAM);
         String charteCommunityContextPath = this.getInitParameter(OSIVIA_SITE_CHARTE_COMMUNITY_CONTEXT_PATH_INIT_PARAM);
 
         Map<String, Object> attributes = context.getAttributes();
         String contextPath = (String) attributes.get(IRenderedRegions.CUSTOMIZER_ATTRIBUTE_THEME_CONTEXT_PATH);
-        if (StringUtils.equals(contextPath, charteContextPath) || StringUtils.equals(contextPath, charteCommunityContextPath)) {
+        if (StringUtils.equals(contextPath, charteCommercialContextPath) || StringUtils.equals(contextPath, charteCommunityContextPath)) {
             IRenderedRegions renderedRegion = (IRenderedRegions) attributes.get(IRenderedRegions.CUSTOMIZER_ATTRIBUTE_RENDERED_REGIONS);
 
-            if (StringUtils.equals(contextPath, charteContextPath)) {
+            if (StringUtils.equals(contextPath, charteCommercialContextPath)) {
                 // Remove default breadcrumb
                 renderedRegion.removeRenderedRegion("breadcrumb");
-                // Replace default tabs
-                renderedRegion.customizeRenderedRegion("tabs", "/header/tabs.jsp");
-                // Replace default search
-                renderedRegion.customizeRenderedRegion("search", "/header/search.jsp");
-                // Replace default footer
-                renderedRegion.customizeRenderedRegion("footer", "/footer/footer.jsp");
+                // Add banner
+                renderedRegion.customizeRenderedRegion("banner", "/header/banner.jsp");
             }
 
             if (StringUtils.equals(contextPath, charteCommunityContextPath)) {
                 // Replace default toolbar
                 renderedRegion.customizeRenderedRegion("toolbar", "/header/toolbar.jsp");
-                // Add logo region
+                // Add logo
                 renderedRegion.customizeRenderedRegion("logo", "/header/logo.jsp");
                 // Replace tabs
                 renderedRegion.customizeRenderedRegion("tabs", "/header/tabs.jsp");
