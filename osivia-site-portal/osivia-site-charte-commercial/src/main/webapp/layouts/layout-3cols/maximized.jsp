@@ -28,7 +28,7 @@
         <div class="navigation-bar">
             <!-- Navigation top menu -->
             <div class="navigation-top-menu">
-                <p:region regionName="top" cms="false" />
+                <p:region regionName="top" />
             </div>
             
             <!-- Recherche -->
@@ -50,13 +50,13 @@
                     <!-- Menu -->
                     <div id="drawer">
                         <div class="col-sm-5 col-md-4 col-lg-3">
-                            <p:region regionName="col1" cms="false" />
+                            <p:region regionName="col1" />
                         </div>
                     </div>
                     
                     <!-- Content -->
                     <div class="col-sm-7 col-md-8 col-lg-9">
-                        <p:region regionName="col2" cms="true" />
+                        <p:region regionName="maximized" />
                     </div>
                 </div>
             </div>

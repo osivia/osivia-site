@@ -34,6 +34,17 @@
         padding-right: 5px;
         background-color: #fff;
     }
+    
+    .accessibility-shortcut {
+        position: absolute;
+        top: -100px;
+        left: 320px;
+        z-index: 1;
+        
+        &:FOCUS {
+            top: inherit;
+        }
+    }
 }
 
 
@@ -106,7 +117,10 @@
 
                 &.active, &:HOVER {
                     background-color: @navigation-active-bg;
-                    color: darken(@navigation-active-bg, 40%);
+                    background-image: url("../img/arrow.png");
+                    background-repeat: no-repeat;
+                    background-position: center bottom;
+                    color: @active-text;
                 }
                 
                 span {
@@ -131,3 +145,44 @@
         margin: 0;
     }
 }
+
+
+
+// Navigation menu
+
+.nuxeo-publish-navigation {    
+    & > a {
+        margin-bottom: @line-height-computed;
+    }
+    
+    ul {
+        padding: 7px 0;
+        
+        background-color: @navigation-bg;
+        
+        li {
+            padding-left: 25px;
+            
+            a {
+                display: block;
+                padding: 10px 5px;
+                
+                border-top: 1px solid @gray;
+                
+                color: @text-color;
+                text-decoration: none;
+                text-transform: uppercase;
+                white-space: nowrap;   
+            }
+            
+            &.active, &:HOVER {
+                background-color: @navigation-active-bg;
+            }
+            
+            &:FIRST-CHILD a {
+                border-top: none;
+            }
+        }
+    }
+} 
+

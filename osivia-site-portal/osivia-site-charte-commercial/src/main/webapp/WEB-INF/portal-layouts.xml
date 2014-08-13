@@ -11,5 +11,29 @@
             <region name="col2" />
         </regions>
     </layout>
+    
+    <layout>
+        <name>osivia-site-commercial-3cols</name>
+        <uri>/layouts/layout-3cols/index.jsp</uri>
+        <uri state="maximized">/layouts/layout-3cols/maximized.jsp</uri>
+        <regions>
+            <region name="top" />
+            <region name="col1" />
+            <region name="col2" />
+            <region name="col3" />
+        </regions>
+    </layout>
+    
+    <layout>
+        <name>osivia-site-commercial-home</name>
+        <uri>/layouts/layout-home/index.jsp</uri>
+        <uri state="maximized">/layouts/layout-home/maximized.jsp</uri>
+        <regions>
+            <region name="top" />
+            <region name="center" />
+            <region name="col1" />
+            <region name="col2" />
+        </regions>
+    </layout>
 
 </layouts>

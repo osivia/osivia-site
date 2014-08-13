@@ -10,9 +10,31 @@
     <div class="header-line"></div>
 
 
+    <!-- Logo -->
+    <h1 class="pull-left">
+        <a href="${requestScope['osivia.home.url']}">
+            <img src="${pageContext.request.contextPath}/img/logo.png" alt="${logoAlt}" />
+        </a>
+    </h1>
+
+
     <!-- Raccourcis -->
     <nav class="pull-right">
-        <h2 class="hidden"><is:getProperty key="SHORTCUTS" /></h2>
+        <h2 class="hidden"><is:getProperty key="SHORTCUTS_TITLE" /></h2>
+
+
+        <!-- Recherche -->
+        <a href="#search-input" class="btn btn-default accessibility-shortcut">
+            <i class="glyphicons halflings search"></i>
+            <span><is:getProperty key="SHORTCUT_SEARCH" /></span>
+        </a>
+        
+        <!-- Contenu -->
+        <a href="#page-content" class="btn btn-default accessibility-shortcut">
+            <i class="glyphicons book_open"></i>
+            <span><is:getProperty key="SHORTCUT_PAGE_CONTENT" /></span>
+        </a>
+
         
         <div class="btn-toolbar" role="toolbar">
             <div class="btn-group">
@@ -36,12 +58,4 @@
             </div>
         </div>
     </nav>
-
-
-    <!-- Logo -->
-    <h1 class="pull-left">
-        <a href="${requestScope['osivia.home.url']}">
-            <img src="${pageContext.request.contextPath}/img/logo.png" alt="${logoAlt}" />
-        </a>
-    </h1>
 </div>

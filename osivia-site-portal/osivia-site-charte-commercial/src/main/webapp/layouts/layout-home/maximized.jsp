@@ -17,7 +17,7 @@
 </head>
 
 
-<body class="with-drawer">
+<body>
     <!-- Barre d'outils -->
     <p:region regionName="toolbar" />
     
@@ -40,30 +40,15 @@
         </div>
     </header>
     
-     <div class="wrapper-outer">
-        <div class="wrapper-inner">
-            <div id="page-content" class="container">
-                <!-- Notifications -->
-                <p:region regionName="notifications" />
-        
-                <div class="row">
-                    <!-- Menu -->
-                    <div id="drawer">
-                        <div class="col-sm-5 col-md-4 col-lg-3">
-                            <p:region regionName="col1" cms="false" />
-                        </div>
-                    </div>
-                    
-                    <!-- Content -->
-                    <div class="col-sm-7 col-md-8 col-lg-9">
-                        <p:region regionName="col2" cms="true" />
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div id="page-content" class="container">
+        <!-- Notifications -->
+        <p:region regionName="notifications" />
+
+        <p:region regionName="maximized" />
     </div>
-
-
+    
+        
     <!-- Footer -->
     <footer class="container"></footer>
     
