@@ -29,9 +29,9 @@
         
         <toutatice-faq.version>3.1-RC4</toutatice-faq.version>
         <osivia-services-wiki.version>1.2-SNAPSHOT</osivia-services-wiki.version>
-        <osivia-services-forum.version>1.0-RC3</osivia-services-forum.version>
+        <osivia-services-forum.version>1.1-SNAPSHOT</osivia-services-forum.version>
         <osivia-services-contact.version>1.0-RC4</osivia-services-contact.version>
-        <osivia-services-download-tracker.version>1.0</osivia-services-download-tracker.version>
+        <osivia-services-download-tracker.version>1.1-SNAPSHOT</osivia-services-download-tracker.version>
         <osivia-services-calendar.version>1.0-SNAPSHOT</osivia-services-calendar.version>
         
         <!-- Admin tools -->
