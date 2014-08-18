@@ -63,7 +63,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     /** Blog schemas. */
     public static final String BLOG_SCHEMAS = "dublincore,common, toutatice, note";
     /** Annonce schemas. */
-    public static final String ANNONCE_SCHEMAS = "dublincore,common, toutatice, note, annonce";
+    public static final String ANNONCE_SCHEMAS = "dublincore,common, toutatice, note, annonce, zoom";
     /** Search schemas. */
     public static final String SEARCH_SCHEMAS = "dublincore,common, toutatice, wcm_navigation, wcm_content";
     /** Template download. */

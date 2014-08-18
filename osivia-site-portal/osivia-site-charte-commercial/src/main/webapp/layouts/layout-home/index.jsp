@@ -47,6 +47,9 @@
 
         <p:region regionName="center" />
 
+        <!-- Layout line separator -->
+        <div class="line-separator"></div>
+
         <div class="row">
             <div class="col-sm-6">
                 <p:region regionName="col1" cms="true" />

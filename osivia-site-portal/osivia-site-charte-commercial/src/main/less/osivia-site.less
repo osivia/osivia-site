@@ -184,7 +184,31 @@
             }
         }
     }
-} 
+}
+
+
+
+// Layout line separator
+
+.line-separator {
+    height: 5px;
+    margin: @line-height-computed 0;
+    
+    background-color: @brand-primary;
+}
+
+
+
+// Styles
+
+.inverted-title {
+    .portlet-header {
+        padding: 0 20px;
+        
+        background-color: @navigation-active-bg;
+    }
+}
+
 
 
 // List template : actualite
@@ -212,7 +236,9 @@
 }
 
 
+
 // List template : encadre
+
 .nuxeo-list-encadre {
     li > * {
         padding: 0;
@@ -229,31 +255,65 @@
         border-style: solid;
         border-width: 2px;
         border-color: #ccc;
+
+        background-color: @body-bg;
         
         h3 {
             padding-left: 10px;
             
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            
             background-color: @navigation-active-bg;
             
-            & > span {
+            a {
                 padding: 0 10px;
             
                 background-color: @body-bg;
+                color: @active-text;
+            
+                &:HOVER, &:FOCUS {
+                    color: darken(@active-text, 15%);
+                }
             }
         }
         
-        img, .description {
+        a, a:HOVER, a:FOCUS {
+            color: inherit;
+        }
+        
+        .description, img {
             padding: 0 10px;
             max-width: 100%;
             max-height: 100px;
             overflow: hidden;
         }
         
-        .abstract {
-            position: absolute;
-            bottom: 0;
-            right: 10px;            
-            z-index: 1;
+        &.inverted {
+            background-color: @navigation-active-bg;
+            
+            h3 {
+                background-color: @body-bg;
+                
+                a {
+                    background-color: @navigation-active-bg;
+                }
+            }
+        }
+        
+        &.green {
+            h3 {
+                background-color: @link-color;
+                
+                a {
+                    color: @link-color;
+                    
+                    &:HOVER, &:FOCUS {
+                        color: @link-hover-color;
+                    }
+                }
+            }
         }
     }
 }
