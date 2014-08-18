@@ -12,6 +12,7 @@ import org.nuxeo.ecm.automation.client.model.Document;
 import org.nuxeo.ecm.automation.client.model.Documents;
 import org.nuxeo.ecm.automation.client.model.PropertyList;
 import org.osivia.portal.api.Constants;
+import org.osivia.portal.api.internationalization.Bundle;
 import org.osivia.portal.core.cms.CMSException;
 import org.osivia.portal.core.cms.CMSHandlerProperties;
 import org.osivia.portal.core.cms.CMSItemType;
@@ -139,6 +140,23 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
      */
     public static String getSearchSchema() {
         return SEARCH_SCHEMAS;
+    }
+
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Map<String, String> getMenuTemplates(CMSServiceCtx cmsContext) {
+        Map<String, String> templates = super.getMenuTemplates(cmsContext);
+
+        // Bundle
+        Bundle bundle = this.getBundleFactory().getBundle(cmsContext.getRequest().getLocale());
+
+        // Template "commercial"
+        templates.put("commercial", bundle.getString("MENU_TEMPLATE_COMMERCIAL"));
+
+        return templates;
     }
 
 
@@ -559,7 +577,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         Document document = (Document) cmsContext.getDoc();
 
         // Publication infos
-        CMSPublicationInfos pubInfos = this.getCmsService().getPublicationInfos(cmsContext, document.getPath());
+        // CMSPublicationInfos pubInfos = this.getCmsService().getPublicationInfos(cmsContext, document.getPath());
 
         StringBuilder request = new StringBuilder();
         request.append("ecm:uuid = '").append(document.getId()).append("' ");
