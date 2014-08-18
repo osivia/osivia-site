@@ -186,3 +186,74 @@
     }
 } 
 
+
+// List template : actualite
+
+.nuxeo-list-actualite {
+    article {
+        margin-bottom: @line-height-computed;
+        
+        .vignette {
+            margin-right: 20px;
+            
+            border-style: solid;
+            border-width: 3px;
+            border-color: @link-color;
+            
+            &:HOVER, &:FOCUS {
+                border-color: @link-hover-color;
+            }
+        }
+        
+        .date {
+            color: @active-text;
+        }
+    }
+}
+
+
+// List template : encadre
+.nuxeo-list-encadre {
+    li > * {
+        padding: 0;
+    }
+    
+    article {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+
+        margin-left: -2px;
+        margin-bottom: -2px;
+
+        border-style: solid;
+        border-width: 2px;
+        border-color: #ccc;
+        
+        h3 {
+            padding-left: 10px;
+            
+            background-color: @navigation-active-bg;
+            
+            & > span {
+                padding: 0 10px;
+            
+                background-color: @body-bg;
+            }
+        }
+        
+        img, .description {
+            padding: 0 10px;
+            max-width: 100%;
+            max-height: 100px;
+            overflow: hidden;
+        }
+        
+        .abstract {
+            position: absolute;
+            bottom: 0;
+            right: 10px;            
+            z-index: 1;
+        }
+    }
+}

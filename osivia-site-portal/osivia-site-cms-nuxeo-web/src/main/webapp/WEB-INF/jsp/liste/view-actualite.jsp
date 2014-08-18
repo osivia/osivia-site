@@ -1,71 +1,54 @@
-<%@ page contentType="text/plain; charset=UTF-8"%>
-
+<%@ page import="fr.toutatice.portail.cms.nuxeo.api.NuxeoController"%>
+<%@ page import="org.nuxeo.ecm.automation.client.model.Document"%>
 
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
-
-<%@page import="java.util.List"%>
-<%@page import="java.util.Iterator"%>
-<%@page import="javax.portlet.PortletURL"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 
-<%@page import="javax.portlet.WindowState"%>
+<%@ page isELIgnored="false" %>
 
-<%@page import="org.osivia.portal.api.urls.Link"%>
-
-<%@page import="org.nuxeo.ecm.automation.client.model.Blob"%>
-
-
-<%@page import="javax.portlet.ResourceURL"%>
-<%@page import="org.nuxeo.ecm.automation.client.model.Document"%>
-<%@page import="org.nuxeo.ecm.automation.client.model.PropertyList"%>
-
-<%@page import="fr.toutatice.portail.cms.nuxeo.api.NuxeoController"%>
-
-<%@page import="fr.toutatice.portail.cms.nuxeo.portlets.bridge.StringHelper"%>
-<%@page import="fr.toutatice.portail.cms.nuxeo.portlets.bridge.Formater"%>
-
-<%@page import="org.nuxeo.ecm.automation.client.model.PropertyMap"%><portlet:defineObjects />
 
 <%
+// Nuxeo controller
+NuxeoController nuxeoController = (NuxeoController) request.getAttribute("ctx");
+// Nuxeo document
+Document document = (Document) request.getAttribute("doc");
 
-
-Document doc = (Document) renderRequest.getAttribute("doc");
-NuxeoController ctx = (NuxeoController) renderRequest.getAttribute("ctx");
-
-String srcImage = "";
-PropertyMap mapImage = doc.getProperties().getMap("ttc:vignette");
-if( mapImage != null && mapImage.getString("data") != null){
-	srcImage = "<img class=\"actualite-image\" src=\""+ ctx.createFileLink(doc,"ttc:vignette") + "\" />";
+// Title
+pageContext.setAttribute("title", document.getTitle());
+// Vignette
+if ((document.getProperties().getMap("ttc:vignette") != null) && (document.getProperties().getMap("ttc:vignette").getString("data") != null)) {
+    pageContext.setAttribute("vignette", nuxeoController.createFileLink(document, "ttc:vignette"));
 }
-
-Link link = ctx.getLink(doc);
-String url = link.getUrl();
-		
-String titre = doc.getString("dc:title", "");
-
-String date = Formater.formatDate(doc);
-
-String description = Formater.formatDescription(doc);
+// Date
+pageContext.setAttribute("date", document.getDate("dc:created"));
+// Description
+pageContext.setAttribute("description", document.getString("dc:description"));
+// Link
+pageContext.setAttribute("link", nuxeoController.getLink(document));
 
 %>
 
-<div class="actus">
-<h3>
-	<a href="<%= url %>"><%= srcImage %></a>
-	<a href="<%= url %>">
-		<%= titre %>
-	</a>
-</h3>
-<p class="date"><%= date %></p>
-<% if(!"".equals(srcImage)){ %>
-<div class="actualite-description">
-	<p><%= description %></p>
-</div>
-<% } else { %>
-	<p><%= description %></p>
-<% } %>
-</div>
 
-
-
-	
+<li>
+    <article class="clearfix">
+        <h4>
+            <!-- Vignette -->
+            <c:if test="${not empty vignette}">
+                <a href="${link.url}" class="vignette pull-left">
+                    <img src="${vignette}" />
+                </a>
+            </c:if>
+            
+            <!-- Title -->
+            <a href="${link.url}" class="title">${title}</a>
+        </h4>
+        
+        <!-- Date -->
+        <p class="date"><fmt:formatDate value="${date}" dateStyle="medium"/></p>
+        
+        <!-- Description -->
+        <p class="description">${description}</p>
+    </article>
+</li>
