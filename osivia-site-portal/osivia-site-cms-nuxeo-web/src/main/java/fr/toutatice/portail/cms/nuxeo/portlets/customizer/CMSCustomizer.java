@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.SortedMap;
 
 import javax.portlet.PortletContext;
 
@@ -147,8 +148,8 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
      * {@inheritDoc}
      */
     @Override
-    public Map<String, String> getMenuTemplates(CMSServiceCtx cmsContext) {
-        Map<String, String> templates = super.getMenuTemplates(cmsContext);
+    public SortedMap<String, String> getMenuTemplates(CMSServiceCtx cmsContext) {
+        SortedMap<String, String> templates = super.getMenuTemplates(cmsContext);
 
         // Bundle
         Bundle bundle = this.getBundleFactory().getBundle(cmsContext.getRequest().getLocale());
