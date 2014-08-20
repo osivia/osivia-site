@@ -45,7 +45,7 @@
         <!-- Notifications -->
         <p:region regionName="notifications" />
 
-        <p:region regionName="center" />
+        <p:region regionName="center" cms="true" />
 
         <!-- Layout line separator -->
         <div class="line-separator"></div>
