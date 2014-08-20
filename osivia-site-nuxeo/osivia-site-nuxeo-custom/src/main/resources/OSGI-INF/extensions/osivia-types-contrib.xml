@@ -78,13 +78,15 @@
 
 		<type id="Folder">
 			<subtypes>
-				<type>DocumentUrlContainer</type>
+				<type>DocumentUrlContainer</type>cc
+                c<type>Zoom</type>
 			</subtypes>
 		</type>
 
 		<type id="OrderedFolder">
 			<subtypes>
 				<type>DocumentUrlContainer</type>
+                <type>Zoom</type>
 			</subtypes>
 		</type>
 
