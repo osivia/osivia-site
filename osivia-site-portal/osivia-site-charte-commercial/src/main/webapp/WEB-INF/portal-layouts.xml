@@ -29,10 +29,12 @@
         <uri>/layouts/layout-home/index.jsp</uri>
         <uri state="maximized">/layouts/layout-home/maximized.jsp</uri>
         <regions>
-            <region name="top" />
+            <region name="top-menu" />
             <region name="center" />
             <region name="col1" />
             <region name="col2" />
+            <region name="footer-navigation" />
+            <region name="footer-links" />
         </regions>
     </layout>
 

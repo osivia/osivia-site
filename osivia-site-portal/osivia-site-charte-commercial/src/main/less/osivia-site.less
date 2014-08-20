@@ -73,7 +73,7 @@
         
         & > * {
             height: @navigation-bar-height - @navigation-line-height;
-            padding: 20px 10px 0; 
+            padding: @navigation-line-height @padding-large-horizontal 0; 
             
             background-color: @body-bg;
         }
@@ -92,7 +92,7 @@
     }
     
     
-    ul {
+    nav ul {
         display: table;
         width: 100%; 
         margin: 0;
@@ -106,8 +106,8 @@
             a {
                 display: block;
                 height: @navigation-bar-height;
-                line-height: 20px;
-                font-size: 18px;
+                line-height: @navigation-line-height;
+                font-size: @font-size-large;
                 padding: 0;
                 
                 text-align: center;
@@ -125,22 +125,75 @@
                 
                 span {
                     display: block;
-                    padding: 10px 20px;
+                    padding: @padding-large-vertical @padding-large-horizontal;
                     
                     background-color: @body-bg;
                 }
                 
                 @media screen and (max-width: @screen-sm-max) {
-                    font-size: 14px;
+                    font-size: @font-size-base;
                     
                     span {
-                        padding: 10px 10px;
+                        padding: @padding-large-vertical @padding-small-horizontal;
                     }
                 }
             }
         }
     }
 
+    .portlet-container {
+        margin: 0;
+    }
+}
+
+
+// Footer
+
+footer {
+    margin: @line-height-computed 0;
+    
+    #footer-navigation {
+        padding-top: @padding-small-vertical;
+
+        background-color: @navigation-bg;
+
+        nav > ul {
+            display: table;
+            width: 100%;
+            margin: 0;
+            padding: @padding-small-vertical @padding-small-horizontal;
+            
+            background-color: @navigation-active-bg;
+            
+            & > li {
+                display: table-cell;
+                width: 1%;
+                padding: @padding-base-vertical @padding-base-horizontal;
+                
+                border-left-style: solid;
+                border-left-width: 1px;
+                border-left-color: @gray-dark;
+                
+                &:FIRST-CHILD {
+                    border: none;
+                }
+            }
+        }
+        
+        a {
+            color: @gray-dark;
+            
+            &:HOVER, &:FOCUS {
+                color: @gray-darker;
+            }
+        }
+    }
+    
+    #footer-links {
+        background-color: @active-text;
+        color: @body-bg;
+    }
+    
     .portlet-container {
         margin: 0;
     }
@@ -203,6 +256,7 @@
 
 .inverted-title {
     .portlet-header {
+        margin-bottom: @line-height-computed;
         padding: 0 20px;
         
         background-color: @navigation-active-bg;
@@ -235,6 +289,12 @@
         .content {
             margin-top: @line-height-computed;
         }
+    }
+    
+    .bx-wrapper .bx-viewport {
+        border: none;
+        
+        .box-shadow(none);
     }
 }
 

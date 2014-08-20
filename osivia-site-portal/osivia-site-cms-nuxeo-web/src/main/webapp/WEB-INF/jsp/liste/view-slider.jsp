@@ -78,7 +78,7 @@ if ((document.getProperties().getMap("annonce:image") != null) && (document.getP
         
         <div class="col-sm-6">
             <!-- Image -->
-            <img src="${image}" alt="" />
+            <img src="${image}" alt="" class="center-block" />
         </div>
     </article>
 </li>
