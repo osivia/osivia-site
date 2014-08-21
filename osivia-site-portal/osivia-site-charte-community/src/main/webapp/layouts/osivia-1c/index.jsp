@@ -4,17 +4,8 @@
 <html>
 
 <head>
-	<title>OSIVIA.org - Site communautaire du portail OSIVIA</title>
-	
-	<meta charset="UTF-8">
-	<meta content="text">
-	<meta http-equiv="default-style" content="main_css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">	
-	
-	<meta name="author" content="OSIVIA">
-	<meta name="description" content="OSIVIA Portal est une plateforme globale de portail robuste, performante et flexible.">
-	<meta name="keywords" content="JSR286, JBoss, Nuxeo, Portal, Portail, GED, CMS, ECM, publish, e-commerce, content management, development framework">
-	
+    <p:region regionName="header-metadata" />
+
 	<p:headerContent />
 	<p:theme themeName="osivia-community" />
 </head>
