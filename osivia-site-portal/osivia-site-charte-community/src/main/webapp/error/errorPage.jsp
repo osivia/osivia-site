@@ -23,61 +23,61 @@
 
 <head>
 <title>Société Osivia</title>
-<meta
-    content="text/html;"
-    http-equiv="Content-Type">
+<meta content="text/html;" http-equiv="Content-Type">
 <!-- to correct the unsightly Flash of Unstyled Content. -->
 <script type="text/javascript"></script>
 
 
+<link type="text/css"
+	href="/osivia-portal-custom-web-assets/css/bootstrap.custom.min.css"
+	id="settings_css" rel="stylesheet">
+<link href="/osivia-site-charte-community/themes/osivia-site.min.css"
+	type="text/css" rel="stylesheet">
+<link href="/osivia-site-charte-community/themes/tiles.csss"
+	type="text/css" rel="stylesheet">
+
 <link
-    type="text/css"
-    href="/osivia-portal-custom-web-assets/common-css/common.css"
-    id="settings_css"
-    rel="stylesheet">
-<link
-    href="/osivia-site-charte-community/themes/glissade/style.css"
-    type="text/css"
-    rel="stylesheet">
-<link
-    href="/osivia-site-charte-community/themes/glissade/images/favicon/favicon.ico"
-    type="image/x-icon"
-    rel="shortcut icon">
+	href="/osivia-site-charte-community/themes/glissade/images/favicon/favicon.ico"
+	type="image/x-icon" rel="shortcut icon">
 
 </head>
 
 <body>
-    <div id="wrapper">
-        <header>
-            <!-- Bannière et logo -->
-            <div
-                id="logo"
-                class="container">
-                <a
-                    id="banner"
-                    href="/portal"><span>OSIVIA Community</span></a>
-                <h1>
-                    <a href="/portal">.org</a>
-                </h1>
-                <p>Site communautaire du portail OSIVIA</p>
-            </div>
+	<div id="wrapper">
+		<header>
+		
+			<!-- Bannière et logo -->
+			<div class="container-fluid">
+				<div class="pull-left">
+					<h1>
+						<a href="/portal"> <img
+							src="/osivia-site-charte-community/themes/glissade/images/logo-osivia.png"
+							alt=""> <span>OSIVIA.org</span>
+						</a> <small>Site communautaire du portail OSIVIA</small>
+					</h1>
+				</div>
 
-            <!-- Onglets -->
-            <div id="menu-wrapper">
-                <nav id="menu">&nbsp;</nav>
-            </div>
-        </header>
+			</div>
 
-        <section class="container">
-            <div id="one-column">
-                <div id="tbox1">
-                    <div id="content-container-error">
-                        <span id="error-container"><%=msg%> <!-- <%=request.getParameter("err")%> --> <!-- <%=httpError%> --></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+			<!-- Onglets -->
+			<div id="menu-wrapper">
+				<nav id="menu">&nbsp;</nav>
+			</div>
+		</header>
+
+
+		<div class="wrapper-outer">
+			<div class="wrapper-inner">
+				<div class="container-fluid">
+					<section class="container">
+
+						<span id="error-container"><%=msg%> <!-- <%=request.getParameter("err")%> -->
+							<!-- <%=httpError%> --></span>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
