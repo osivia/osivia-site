@@ -25,37 +25,55 @@
 
 
 <div class="nuxeo-list-${style}">
-    <!-- Request -->
-    <c:if test="${not empty nuxeoRequest}">
-        <div class="alert alert-info">${nuxeoRequest}</div>
-    </c:if>
-
-
-    <!-- Documents -->
-    <div class="no-ajax-link">
-        <!-- Specific attributes -->
-        <c:set var="length" value="${fn:length(docs)}" scope="request" />
-        <c:if test="${fn:toLowerCase(style) eq 'slider'}">
-            <c:set var="listClass" value="bxslider" />
-        </c:if>
-    
-    
-        <!-- List -->
-        <ul class="list-unstyled clearfix ${listClass}">
-            <c:forEach var="doc" items="${docs}" varStatus="status">
-                <c:set var="doc" value="${doc}" scope="request" />
-                <c:set var="index" value="${status.index}" scope="request" />
-                <c:set var="parite" value="${status.count % 2}" scope="request" />
-                <jsp:include page="view-${fn:toLowerCase(style)}.jsp" />
-            </c:forEach>
-        </ul>
-    </div>
-    
-    
-    <!-- Pagination -->
-    <jsp:include page="pagination.jsp" />
-    
-    
-    <!-- Footer -->
-    <jsp:include page="footer.jsp" />
+    <c:choose>
+        <c:when test="${empty error}">
+            <!-- Request -->
+            <c:if test="${not empty nuxeoRequest}">
+                <div class="alert alert-info">${nuxeoRequest}</div>
+            </c:if>
+        
+        
+            <!-- Documents -->
+            <div class="no-ajax-link">
+                <!-- Specific attributes -->
+                <c:set var="listClass" value="list-unstyled" />
+                <c:if test="${fn:toLowerCase(style) eq 'slider'}">
+                    <c:set var="listClass" value="list-unstyled bxslider hidden-noscript" />
+                </c:if>
+                <c:if test="${fn:toLowerCase(style) eq 'footer-links'}">
+                    <c:set var="listClass" value="list-inline text-center" />
+                </c:if>
+            
+            
+                <!-- List -->
+                <ul class="clearfix ${listClass}">
+                    <c:forEach var="doc" items="${docs}" varStatus="status">
+                        <c:set var="doc" value="${doc}" scope="request" />
+                        <c:set var="index" value="${status.index}" scope="request" />
+                        <c:set var="parite" value="${status.count % 2}" scope="request" />
+                        <jsp:include page="view-${fn:toLowerCase(style)}.jsp" />
+                    </c:forEach>
+                </ul>
+            </div>
+            
+            
+            <!-- Pagination -->
+            <jsp:include page="pagination.jsp" />
+            
+            
+            <!-- Footer -->
+            <jsp:include page="footer.jsp" />
+        </c:when>
+        
+        <c:otherwise>
+            <p class="text-danger">
+                <i class="glyphicons halflings exclamation-sign"></i>
+                <span>${error}</span>
+            </p>
+            
+            <c:if test="${not empty errorMessage}">
+                <p class="text-danger">${errorMessage}</p>
+            </c:if>
+        </c:otherwise>
+    </c:choose>
 </div>

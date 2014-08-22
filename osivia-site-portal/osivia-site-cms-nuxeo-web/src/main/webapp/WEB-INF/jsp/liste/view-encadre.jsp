@@ -19,7 +19,7 @@ pageContext.setAttribute("title", document.getTitle());
 // Link
 String path = document.getString("zoom:path");
 if ((path != null) && (path.startsWith("/"))) {
- pageContext.setAttribute("link", nuxeoController.getCMSLinkByPath(path, null));
+    pageContext.setAttribute("link", nuxeoController.getCMSLinkByPath(path, null));
 }
 // Description
 pageContext.setAttribute("description", document.getString("dc:description"));
