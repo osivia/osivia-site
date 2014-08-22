@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.SortedMap;
 
@@ -19,6 +20,7 @@ import org.osivia.portal.core.cms.CMSHandlerProperties;
 import org.osivia.portal.core.cms.CMSItemType;
 import org.osivia.portal.core.cms.CMSPublicationInfos;
 import org.osivia.portal.core.cms.CMSServiceCtx;
+import org.osivia.portal.core.cms.ListTemplate;
 
 import fr.toutatice.portail.cms.nuxeo.api.NuxeoQueryFilter;
 import fr.toutatice.portail.cms.nuxeo.api.NuxeoQueryFilterContext;
@@ -46,45 +48,30 @@ import fr.toutatice.portail.cms.nuxeo.portlets.list.DocumentQueryCommand;
 public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /** Actualité. */
-    public static final String ACTUALITE = "actualite";
+    private static final String STYLE_ACTUALITES = "actualite";
     /** Encadré. */
-    public static final String ENCADRE = "encadre";
-    /** Encadré niveau 2. */
-    public static final String ENCADRE_NIVEAU2 = "encadre_niveau2";
-    /** Visuel niveau 2. */
-    public static final String VISUEL_NIVEAU2 = "visuel_niveau2";
-    /** Une niveau 2. */
-    public static final String UNE_NIVEAU2 = "une_niveau2";
-    /** Une titre niveau 3 avec une colonne. */
-    public static final String UNE_TITRE_NIVEAU3_1C = "une_titre_niveau3_1c";
-    /** Une niveau 3 avec une colonne. */
-    public static final String UNE_NIVEAU3_1C = "une_niveau3_1c";
-    /** Visuel niveau 3. */
-    public static final String VISUEL_NIVEAU3 = "visuel_niveau3";
-    /** Blog schemas. */
-    public static final String BLOG_SCHEMAS = "dublincore,common, toutatice, note";
-    /** Annonce schemas. */
-    public static final String ANNONCE_SCHEMAS = "dublincore,common, toutatice, note, annonce, zoom";
-    /** Search schemas. */
-    public static final String SEARCH_SCHEMAS = "dublincore,common, toutatice, wcm_navigation, wcm_content";
-    /** Template download. */
-    public static final String TEMPLATE_DOWNLOAD = "download";
-    /** "blog" schemas. */
-    public static final String SCHEMAS_BLOG = "dublincore, common, toutatice, webpage";
+    private static final String STYLE_ENCADRE = "encadre";
     /** "blog" list template. */
-    public static final String STYLE_BLOG = "blog";
-    /** "slider" schemas. */
-    public static final String SCHEMAS_SLIDER = "dublincore, common, toutatice, annonce, note";
+    private static final String STYLE_BLOG = "blog";
     /** "slider" list template. */
-    public static final String STYLE_SLIDER = "slider";
-    /** "forum" schemas. */
-    public static final String SCHEMAS_FORUM = "dublincore, common, toutatice";
+    private static final String STYLE_SLIDER = "slider";
     /** "forum" list template. */
-    public static final String STYLE_FORUM = "forum";
-    /** "tuile" schemas. */
-    public static final String SCHEMAS_TUILE = "dublincore, toutatice, zoom";
+    private static final String STYLE_FORUM = "forum";
     /** "tuile" list template. */
-    public static final String STYLE_TUILE = "tuile";
+    private static final String STYLE_TUILE = "tuile";
+    /** Footer links list template. */
+    private static final String STYLE_FOOTER_LINKS = "footer-links";
+
+    /** Annonce schemas. */
+    private static final String SCHEMAS_ANNONCE = "dublincore,common, toutatice, note, annonce";
+    /** Search schemas. */
+    private static final String SCHEMAS_SEARCH = "dublincore,common, toutatice, wcm_navigation, wcm_content";
+    /** Blog schemas. */
+    private static final String SCHEMAS_BLOG = "dublincore, common, toutatice, webpage";
+    /** Forum schemas. */
+    private static final String SCHEMAS_FORUM = "dublincore, common, toutatice";
+    /** Zoom schemas. */
+    private static final String SCHEMAS_ZOOM = "dublincore, common, toutatice, zoom";
 
     /** Permalink URL identifier. */
     public static final String IDENT_PERMALINK_URL = "/purl/";
@@ -106,29 +93,34 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
 
     /**
-     * Get list templates.
-     *
-     * @return list templates
+     * {@inheritDoc}
      */
-    public static List<ListTemplate> getListTemplates() {
-        List<ListTemplate> templates = DefaultCMSCustomizer.getListTemplates();
+    @Override
+    public List<ListTemplate> getListTemplates(Locale locale) {
+        List<ListTemplate> templates = super.getListTemplates(locale);
 
-        templates.add(new ListTemplate(ACTUALITE, "Actualité", ANNONCE_SCHEMAS));
-        templates.add(new ListTemplate(ENCADRE, "Encadré", ANNONCE_SCHEMAS));
-        templates.add(new ListTemplate(ENCADRE_NIVEAU2, "Encadré niveau 2", DEFAULT_SCHEMAS));
-        templates.add(new ListTemplate(VISUEL_NIVEAU2, "Visuel niveau 2", DEFAULT_SCHEMAS));
-        templates.add(new ListTemplate(UNE_NIVEAU2, "Une niveau 2", BLOG_SCHEMAS));
-        templates.add(new ListTemplate(UNE_NIVEAU3_1C, "Une niveau 3 - 1 colonne", BLOG_SCHEMAS));
-        templates.add(new ListTemplate(UNE_TITRE_NIVEAU3_1C, "Une Titre niveau 3 - 1 colonne", BLOG_SCHEMAS));
-        templates.add(new ListTemplate(VISUEL_NIVEAU3, "Visuel niveau 3", DEFAULT_SCHEMAS));
-        templates.add(new ListTemplate(STYLE_BLOG, "Blog", SCHEMAS_BLOG));
-        templates.add(new ListTemplate(STYLE_FORUM, "Forum", SCHEMAS_FORUM));
-        templates.add(new ListTemplate(STYLE_SLIDER, "Carrousel", SCHEMAS_SLIDER));
-        templates.add(new ListTemplate(STYLE_TUILE, "Tuile [visuel, description]", SCHEMAS_TUILE));
+        // Bundle
+        Bundle bundle = this.getBundleFactory().getBundle(locale);
 
-        // =========== roadmap =============
-        templates.add(new ListTemplate(STYLE_ROADMAP, "Roadmap", SCHEMAS_DISTRIB));
-        templates.add(new ListTemplate(STYLE_DISTRIB, "Distribution de la roadmap", SCHEMAS_DISTRIB));
+        // News
+        templates.add(new ListTemplate(STYLE_ACTUALITES, bundle.getString("LIST_TEMPLATE_NEWS"), SCHEMAS_ANNONCE));
+        // Frame
+        templates.add(new ListTemplate(STYLE_ENCADRE, bundle.getString("LIST_TEMPLATE_FRAME"), SCHEMAS_ZOOM));
+        // Blog
+        templates.add(new ListTemplate(STYLE_BLOG, bundle.getString("LIST_TEMPLATE_BLOG"), SCHEMAS_BLOG));
+        // Forum
+        templates.add(new ListTemplate(STYLE_FORUM, bundle.getString("LIST_TEMPLATE_FORUM"), SCHEMAS_FORUM));
+        // Slider
+        templates.add(new ListTemplate(STYLE_SLIDER, bundle.getString("LIST_TEMPLATE_SLIDER"), SCHEMAS_ANNONCE));
+        // Tiles
+        templates.add(new ListTemplate(STYLE_TUILE, bundle.getString("LIST_TEMPLATE_TILES"), SCHEMAS_ZOOM));
+        // Footer links
+        templates.add(new ListTemplate(STYLE_FOOTER_LINKS, bundle.getString("LIST_TEMPLATE_FOOTER_LINKS"), SCHEMAS_ZOOM));
+
+        // Roadmap
+        templates.add(new ListTemplate(STYLE_ROADMAP, bundle.getString("LIST_TEMPLATE_ROADMAP"), SCHEMAS_DISTRIB));
+        // Roadmap distribution
+        templates.add(new ListTemplate(STYLE_DISTRIB, bundle.getString("LIST_TEMPLATE_ROADMAP_DISTRIBUTION"), SCHEMAS_DISTRIB));
 
         return templates;
     }
@@ -140,7 +132,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
      * @return search schemas
      */
     public static String getSearchSchema() {
-        return SEARCH_SCHEMAS;
+        return SCHEMAS_SEARCH;
     }
 
 
@@ -148,11 +140,11 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
      * {@inheritDoc}
      */
     @Override
-    public SortedMap<String, String> getMenuTemplates(CMSServiceCtx cmsContext) {
-        SortedMap<String, String> templates = super.getMenuTemplates(cmsContext);
+    public SortedMap<String, String> getMenuTemplates(Locale locale) {
+        SortedMap<String, String> templates = super.getMenuTemplates(locale);
 
         // Bundle
-        Bundle bundle = this.getBundleFactory().getBundle(cmsContext.getRequest().getLocale());
+        Bundle bundle = this.getBundleFactory().getBundle(locale);
 
         // Template "commercial"
         templates.put("commercial", bundle.getString("MENU_TEMPLATE_COMMERCIAL"));
