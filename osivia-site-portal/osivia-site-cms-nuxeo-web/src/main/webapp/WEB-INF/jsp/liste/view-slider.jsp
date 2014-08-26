@@ -39,21 +39,24 @@ if ((document.getProperties().getMap("annonce:image") != null) && (document.getP
                 <c:if test="${status.index == index}">
                     <c:set var="rowClass" value="active" />
                 </c:if>
+                
+                <c:set var="titleClass" value="h3" />
+                <c:if test="${status.first}">
+                    <c:set var="titleClass" value="h2" />
+                </c:if>
             
                 <div class="row title ${rowClass}">
                     <div class="col-sm-11 col-sm-offset-1">
                         <!-- Title -->
                         <c:choose>
-                            <c:when test="${status.first}">
-                                <h2>
-                                    <a href="#" onclick="goToSlide(${status.index})">${document.title}</a>
-                                </h2>
+                            <c:when test="${status.index == index}">
+                                <h3 class="${titleClass}">${document.title}</h3>
                             </c:when>
                             
                             <c:otherwise>
-                                <h3>
+                                <p class="${titleClass}">
                                     <a href="#" onclick="goToSlide(${status.index})">${document.title}</a>
-                                </h3>
+                                </p>
                             </c:otherwise>
                         </c:choose>
                     </div>

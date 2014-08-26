@@ -28,7 +28,7 @@
         <div class="navigation-bar">
             <!-- Navigation top menu -->
             <div class="navigation-top-menu">
-                <p:region regionName="top" cms="false" />
+                <p:region regionName="top-menu" regionID="navigation-menu" cms="false" />
             </div>
             
             <!-- Recherche -->
@@ -65,7 +65,10 @@
 
 
     <!-- Footer -->
-    <footer class="container"></footer>
+    <footer class="container">
+        <p:region regionName="footer-navigation" cms="false" />
+    </footer>
+    
     
     <!-- AJAX scripts -->
     <p:region regionName="AJAXScripts" />

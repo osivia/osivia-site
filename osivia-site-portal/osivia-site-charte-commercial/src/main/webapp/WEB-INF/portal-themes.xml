@@ -5,10 +5,6 @@
         <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
         
         <!-- CSS -->
-        <link rel="stylesheet" id="main_css" href="/css/osivia-site.min.css" type="text/css" />
-
-        <!-- Javascript -->        
-<!--         <script type="text/javascript" src="/js/osivia-site.js"></script> -->
-        
+        <link rel="stylesheet" id="main_css" href="/css/osivia-site.min.css" type="text/css" />        
     </theme>
 </themes>

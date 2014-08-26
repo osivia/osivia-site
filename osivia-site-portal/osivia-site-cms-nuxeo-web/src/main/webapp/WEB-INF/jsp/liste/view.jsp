@@ -38,7 +38,7 @@
                 <!-- Specific attributes -->
                 <c:set var="listClass" value="list-unstyled" />
                 <c:if test="${fn:toLowerCase(style) eq 'slider'}">
-                    <c:set var="listClass" value="list-unstyled bxslider hidden-noscript" />
+                    <c:set var="listClass" value="list-unstyled bxslider" />
                 </c:if>
                 <c:if test="${fn:toLowerCase(style) eq 'footer-links'}">
                     <c:set var="listClass" value="list-inline text-center" />

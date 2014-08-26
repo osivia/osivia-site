@@ -91,50 +91,70 @@
         background-color: @navigation-bg;
     }
     
-    
-    nav ul {
-        display: table;
-        width: 100%; 
-        margin: 0;
-        
-        li {
-            display: table-cell;
-            width: 1%;
-            padding: 0;
-            overflow: hidden;
+    #navigation-menu {
+        ul {
+            display: table;
+            width: 100%; 
+            margin: 0;
             
-            a {
-                display: block;
-                height: @navigation-bar-height;
-                line-height: @navigation-line-height;
-                font-size: @font-size-large;
+            li {
+                display: table-cell;
+                width: 1%;
                 padding: 0;
+                overflow: hidden;
                 
-                text-align: center;
-                text-decoration: none;
-                text-transform: uppercase;
-                white-space: nowrap;
-
-                &.active, &:HOVER {
-                    background-color: @navigation-active-bg;
-                    background-image: url("../img/arrow.png");
-                    background-repeat: no-repeat;
-                    background-position: center bottom;
-                    color: @active-text;
-                }
-                
-                span {
+                a {
                     display: block;
-                    padding: @padding-large-vertical @padding-large-horizontal;
+                    height: @navigation-bar-height;
+                    line-height: @navigation-line-height;
+                    font-size: @font-size-large;
+                    padding: 0;
                     
-                    background-color: @body-bg;
+                    text-align: center;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+    
+                    &.active, &:HOVER {
+                        background-color: @navigation-active-bg;
+                        background-image: url("../img/arrow.png");
+                        background-repeat: no-repeat;
+                        background-position: center bottom;
+                        color: @active-text;
+                    }
+                    
+                    & > * {
+                        display: block;
+                        top: 0;
+                        padding: @padding-large-vertical @padding-large-horizontal;
+                        line-height: @navigation-line-height;
+                        
+                        background-color: @body-bg;
+                    }
+                    
+                    @media screen and (max-width: @screen-sm-max) {
+                        font-size: @font-size-base;
+                        
+                        & > * {
+                            padding: @padding-large-vertical @padding-small-horizontal;
+                        }
+                    }
                 }
-                
-                @media screen and (max-width: @screen-sm-max) {
-                    font-size: @font-size-base;
+            }
+            
+            @media screen and (max-width: @screen-xs-max) {
+                display: block;
+                width: auto;
+
+                li {
+                    display: block;
+                    width: 33.3333%;
+                    margin: 0 0 @padding-base-vertical;
                     
-                    span {
-                        padding: @padding-large-vertical @padding-small-horizontal;
+                    background-color: @navigation-bg;
+                    
+                    a {
+                        border-radius: 0; 
                     }
                 }
             }
@@ -157,43 +177,40 @@ footer {
 
         background-color: @navigation-bg;
 
-        nav > ul {
-            display: table;
-            width: 100%;
-            margin: 0;
-            padding: @padding-small-vertical @padding-small-horizontal;
-            
-            background-color: @navigation-active-bg;
-            
-            & > li {
-                display: table-cell;
-                width: 1%;
-                padding: @padding-base-vertical @padding-base-horizontal;
+        nav {
+            & > ul {
+                display: table;
+                width: 100%;
+                margin: 0;
+                padding: @padding-small-vertical @padding-small-horizontal;
                 
-                border-left-style: solid;
-                border-left-width: 1px;
-                border-left-color: @gray-dark;
+                background-color: @navigation-active-bg;
                 
-                &:FIRST-CHILD {
-                    border: none;
+                & > li {
+                    display: table-cell;
+                    width: 1%;
+                    padding: @padding-base-vertical @padding-base-horizontal;
+                    
+                    border-left-style: solid;
+                    border-left-width: 1px;
+                    border-left-color: @gray-dark;
+                    
+                    &:FIRST-CHILD {
+                        border: none;
+                    }
+                }
+            }
+            
+            a {
+                color: @gray-dark;
+                
+                &:HOVER, &:FOCUS {
+                    color: @gray-darker;
                 }
             }
         }
-        
-        a {
-            color: @gray-dark;
-            
-            &:HOVER, &:FOCUS {
-                color: @gray-darker;
-            }
-        }
     }
-    
-    #footer-links {
-        background-color: @active-text;
-        color: @body-bg;
-    }
-    
+
     .portlet-container {
         margin: 0;
     }
@@ -204,7 +221,7 @@ footer {
 // Navigation menu
 
 .nuxeo-publish-navigation {    
-    & > a {
+    nav > a {
         margin-bottom: @line-height-computed;
     }
     
@@ -278,7 +295,7 @@ footer {
                 background-color: @navigation-active-bg;
             }
             
-            h2, h3 {
+            .h2, .h3 {
                 margin: 0;
                 padding: 0 10px;
                 
@@ -408,20 +425,19 @@ footer {
 }
 
 
-// List template : footer-links
-
 .nuxeo-list-footer-links {
+    background-color: @active-text;
+    
     .list-inline > li {
         padding: 0 @padding-large-vertical;
         
         a {
-            color: #fff;
+            color: @gray-lighter;
             text-transform: uppercase;
             
             &:HOVER, &:FOCUS {
-                color: inherit;
+                color: #fff;
             }
         }
     }
 }
-

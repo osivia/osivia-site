@@ -6,9 +6,10 @@
         <uri>/layouts/layout-2cols/index.jsp</uri>
         <uri state="maximized">/layouts/layout-2cols/maximized.jsp</uri>
         <regions>
-            <region name="top" />
+            <region name="top-menu" />
             <region name="col1" />
             <region name="col2" />
+            <region name="footer-navigation" />
         </regions>
     </layout>
     
@@ -17,10 +18,11 @@
         <uri>/layouts/layout-3cols/index.jsp</uri>
         <uri state="maximized">/layouts/layout-3cols/maximized.jsp</uri>
         <regions>
-            <region name="top" />
+            <region name="top-menu" />
             <region name="col1" />
             <region name="col2" />
             <region name="col3" />
+            <region name="footer-navigation" />
         </regions>
     </layout>
     
@@ -34,7 +36,6 @@
             <region name="col1" />
             <region name="col2" />
             <region name="footer-navigation" />
-            <region name="footer-links" />
         </regions>
     </layout>
 
