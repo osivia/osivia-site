@@ -28,7 +28,7 @@
         <div class="navigation-bar">
             <!-- Navigation top menu -->
             <div class="navigation-top-menu">
-                <p:region regionName="top-menu" regionID="navigation-menu" cms="false" />
+                <p:region regionName="top-menu" regionID="navigation-menu" cms="true" />
             </div>
             
             <!-- Recherche -->
@@ -50,7 +50,7 @@
                     <!-- Menu -->
                     <div id="drawer">
                         <div class="col-sm-5 col-md-4 col-lg-3">
-                            <p:region regionName="col1" cms="false" />
+                            <p:region regionName="col1" cms="true" />
                         </div>
                     </div>
                     
@@ -66,7 +66,7 @@
 
     <!-- Footer -->
     <footer class="container">
-        <p:region regionName="footer-navigation" cms="false" />
+        <p:region regionName="footer-navigation" cms="true" />
     </footer>
     
     

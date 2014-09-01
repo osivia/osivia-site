@@ -15,7 +15,7 @@
             <scope>runtime</scope>
             <includes>
                 <include>${project.groupId}:osivia-site-attributes-bundles-customizer:war:${project.version}</include>
-                <include>${project.groupId}:osivia-site-charte:war:${project.version}</include>
+                <include>${project.groupId}:osivia-site-charte-commercial:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-charte-community:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-regions-customizer:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-cms-nuxeo-web:war:${project.version}</include>

@@ -33,7 +33,7 @@
 	id="settings_css" rel="stylesheet">
 <link href="/osivia-site-charte-community/themes/osivia-site.min.css"
 	type="text/css" rel="stylesheet">
-<link href="/osivia-site-charte-community/themes/tiles.csss"
+<link href="/osivia-site-charte-community/themes/tiles.css"
 	type="text/css" rel="stylesheet">
 
 <link
