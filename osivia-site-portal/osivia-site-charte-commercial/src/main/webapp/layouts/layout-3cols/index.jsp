@@ -22,8 +22,13 @@
     <p:region regionName="toolbar" />
     
     <header class="container">
-        <!-- Bannière -->
-        <p:region regionName="banner" />
+        <div class="banner">
+            <!-- Logo -->
+            <p:region regionName="logo" />
+            
+            <!-- Raccourcis -->
+            <p:region regionName="shortcuts" cms="true" />
+        </div>
         
         <div class="navigation-bar">
             <!-- Navigation top menu -->
@@ -56,7 +61,7 @@
                     
                     <!-- Content -->
                     <div class="col-sm-7 col-md-8 col-lg-9">
-                        <p:region regionName="center" cms="false" />
+                        <p:region regionName="center" cms="true" />
                     
                         <div class="row">
                             <div class="col-sm-6">

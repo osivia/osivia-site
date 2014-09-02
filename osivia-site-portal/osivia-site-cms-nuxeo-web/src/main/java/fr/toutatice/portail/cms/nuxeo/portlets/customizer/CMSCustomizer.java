@@ -61,6 +61,8 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     private static final String STYLE_TUILE = "tuile";
     /** Footer links list template. */
     private static final String STYLE_FOOTER_LINKS = "footer-links";
+    /** Shortcuts list template. */
+    private static final String STYLE_SHORTCUTS = "shortcuts";
 
     /** Annonce schemas. */
     private static final String SCHEMAS_ANNONCE = "dublincore,common, toutatice, note, annonce";
@@ -116,6 +118,8 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         templates.add(new ListTemplate(STYLE_TUILE, bundle.getString("LIST_TEMPLATE_TILES"), SCHEMAS_ZOOM));
         // Footer links
         templates.add(new ListTemplate(STYLE_FOOTER_LINKS, bundle.getString("LIST_TEMPLATE_FOOTER_LINKS"), SCHEMAS_ZOOM));
+        // Shortcuts
+        templates.add(new ListTemplate(STYLE_SHORTCUTS, bundle.getString("LIST_TEMPLATE_SHORCUTS"), SCHEMAS_ZOOM));
 
         // Roadmap
         templates.add(new ListTemplate(STYLE_ROADMAP, bundle.getString("LIST_TEMPLATE_ROADMAP"), SCHEMAS_DISTRIB));

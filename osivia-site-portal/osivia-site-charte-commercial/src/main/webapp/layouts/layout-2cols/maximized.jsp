@@ -22,8 +22,13 @@
     <p:region regionName="toolbar" />
     
     <header class="container">
-        <!-- Bannière -->
-        <p:region regionName="banner" />
+        <div class="banner">
+            <!-- Logo -->
+            <p:region regionName="logo" />
+            
+            <!-- Raccourcis -->
+            <p:region regionName="shortcuts" cms="true" />
+        </div>
         
         <div class="navigation-bar">
             <!-- Navigation top menu -->

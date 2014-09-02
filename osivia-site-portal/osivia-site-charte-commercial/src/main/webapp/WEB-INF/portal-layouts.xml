@@ -6,6 +6,7 @@
         <uri>/layouts/layout-2cols/index.jsp</uri>
         <uri state="maximized">/layouts/layout-2cols/maximized.jsp</uri>
         <regions>
+            <region name="shortcuts" />
             <region name="top-menu" />
             <region name="center" />
             <region name="col1" />
@@ -19,6 +20,7 @@
         <uri>/layouts/layout-3cols/index.jsp</uri>
         <uri state="maximized">/layouts/layout-3cols/maximized.jsp</uri>
         <regions>
+            <region name="shortcuts" />
             <region name="top-menu" />
             <region name="center" />
             <region name="col1" />
@@ -33,12 +35,25 @@
         <uri>/layouts/layout-home/index.jsp</uri>
         <uri state="maximized">/layouts/layout-home/maximized.jsp</uri>
         <regions>
-            <region name="logo" />
+            <region name="shortcuts" />
+            <region name="top-menu" />
+            <region name="col1" />
+            <region name="col2" />
+            <region name="footer-navigation" />
+        </regions>
+    </layout>
+    
+    <layout>
+        <name>osivia-site-commercial-workspace</name>
+        <uri>/layouts/layout-workspace/index.jsp</uri>
+        <uri state="maximized">/layouts/layout-workspace/maximized.jsp</uri>
+        <regions>
             <region name="shortcuts" />
             <region name="top-menu" />
             <region name="center" />
             <region name="col1" />
             <region name="col2" />
+            <region name="col3" />
             <region name="footer-navigation" />
         </regions>
     </layout>

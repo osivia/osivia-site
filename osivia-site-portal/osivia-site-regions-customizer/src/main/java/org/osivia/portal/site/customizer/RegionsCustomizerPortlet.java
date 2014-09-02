@@ -97,7 +97,7 @@ public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomi
                 // Remove default breadcrumb
                 renderedRegion.removeRenderedRegion("breadcrumb");
                 // Add banner
-                renderedRegion.customizeRenderedRegion("banner", "/header/banner.jsp");
+                renderedRegion.customizeRenderedRegion("logo", "/header/logo.jsp");
             }
 
             if (StringUtils.equals(contextPath, charteCommunityContextPath)) {

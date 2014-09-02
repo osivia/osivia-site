@@ -45,15 +45,24 @@
                 </c:if>
             
             
-                <!-- List -->
-                <ul class="clearfix ${listClass}">
-                    <c:forEach var="doc" items="${docs}" varStatus="status">
-                        <c:set var="doc" value="${doc}" scope="request" />
-                        <c:set var="index" value="${status.index}" scope="request" />
-                        <c:set var="parite" value="${status.count % 2}" scope="request" />
-                        <jsp:include page="view-${fn:toLowerCase(style)}.jsp" />
-                    </c:forEach>
-                </ul>
+                <c:choose>
+                    <c:when test="${fn:toLowerCase(style) eq 'shortcuts'}">
+                        <!-- Shortcuts -->
+                        <jsp:include page="view-shortcuts.jsp" />
+                    </c:when>
+                    
+                    <c:otherwise>
+                        <!-- List -->
+                        <ul class="clearfix ${listClass}">
+                            <c:forEach var="doc" items="${docs}" varStatus="status">
+                                <c:set var="doc" value="${doc}" scope="request" />
+                                <c:set var="index" value="${status.index}" scope="request" />
+                                <c:set var="parite" value="${status.count % 2}" scope="request" />
+                                <jsp:include page="view-${fn:toLowerCase(style)}.jsp" />
+                            </c:forEach>
+                        </ul>
+                    </c:otherwise>
+                </c:choose>
             </div>
             
             

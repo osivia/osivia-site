@@ -33,7 +33,7 @@ pageContext.setAttribute("link", nuxeoController.getLink(document));
 
 <li>
     <article class="clearfix">
-        <h4>
+        <h3 class="h4">
             <!-- Vignette -->
             <c:if test="${not empty vignette}">
                 <a href="${link.url}" class="vignette pull-left">
@@ -43,7 +43,7 @@ pageContext.setAttribute("link", nuxeoController.getLink(document));
             
             <!-- Title -->
             <a href="${link.url}" class="title">${title}</a>
-        </h4>
+        </h3>
         
         <!-- Date -->
         <p class="date"><fmt:formatDate value="${date}" dateStyle="medium"/></p>
