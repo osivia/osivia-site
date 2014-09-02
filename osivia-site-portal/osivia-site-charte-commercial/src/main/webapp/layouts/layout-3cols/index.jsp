@@ -56,6 +56,8 @@
                     
                     <!-- Content -->
                     <div class="col-sm-7 col-md-8 col-lg-9">
+                        <p:region regionName="center" cms="false" />
+                    
                         <div class="row">
                             <div class="col-sm-6">
                                 <p:region regionName="col2" cms="true" />

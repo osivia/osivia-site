@@ -45,7 +45,7 @@
             <div id="page-content" class="container">
                 <!-- Notifications -->
                 <p:region regionName="notifications" />
-        
+
                 <div class="row">
                     <!-- Menu -->
                     <div id="drawer">
@@ -56,6 +56,8 @@
                     
                     <!-- Content -->
                     <div class="col-sm-7 col-md-8 col-lg-9">
+                        <p:region regionName="center" cms="false" />
+                    
                         <p:region regionName="col2" cms="true" />
                     </div>
                 </div>

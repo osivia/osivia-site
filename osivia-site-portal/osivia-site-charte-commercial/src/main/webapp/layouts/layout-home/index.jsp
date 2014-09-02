@@ -22,9 +22,19 @@
     <p:region regionName="toolbar" />
     
     <header class="container">
-        <!-- Bannière -->
-        <p:region regionName="banner" />
+        <div class="banner">
+            <!-- Ligne d'entête -->
+            <div class="header-line"></div>
         
+            <div class="pull-left">
+                <p:region regionName="logo" cms="true" />
+            </div>
+            
+            <div class="pull-right">
+                <p:region regionName="shortcuts" cms="true" />
+            </div>
+        </div>
+    
         <div class="navigation-bar">
             <!-- Navigation top menu -->
             <div class="navigation-top-menu">

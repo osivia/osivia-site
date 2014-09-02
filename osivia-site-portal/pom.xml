@@ -41,7 +41,7 @@
 
     <modules>
         <module>osivia-site-portlets-utils</module>
-        <module>osivia-site-charte</module>
+        <module>osivia-site-charte-commercial</module>
         <module>osivia-site-charte-community</module>
         <module>osivia-site-cms-nuxeo-web</module>
         <module>osivia-site-portlet-solutions</module>
