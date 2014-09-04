@@ -10,7 +10,7 @@
 	<p:theme themeName="osivia-community" />
 </head>
 
-<body class="with-drawer">
+<body>
     <!-- Barre d'outils -->
     <p:region regionName="toolbar" />
 
@@ -29,24 +29,21 @@
         <p:region regionName="tabs" />
     </header>
 
-    <div class="wrapper-outer">
-        <div class="wrapper-inner">
+
             <div class="container-fluid">
                 <!-- Notifications -->
                 <p:region regionName="notifications" />
-                <!-- Breadcrumb -->
+        		<!-- Breadcrumb -->
                 <p:region regionName="breadcrumb" />
         
                 <div class="row">
-                    <div id="drawer">
+
                         <div class="col-sm-12">
                             <p:region regionName="maximized" />
                         </div>
-                    </div>
+
                 </div>
             </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="container-fluid">
