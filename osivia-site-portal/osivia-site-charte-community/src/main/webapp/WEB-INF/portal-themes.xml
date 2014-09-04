@@ -6,8 +6,6 @@
         
         <!-- CSS -->
         <link rel="stylesheet" id="main_css" href="/themes/osivia-site.min.css" type="text/css" />
-        <link rel="stylesheet" id="main_css" href="/themes/tiles.css" type="text/css" />
-
         <link rel="stylesheet" id="roadmap_css" href="/themes/roadmap/style.css" type="text/css" />
     </theme>
 </themes>
