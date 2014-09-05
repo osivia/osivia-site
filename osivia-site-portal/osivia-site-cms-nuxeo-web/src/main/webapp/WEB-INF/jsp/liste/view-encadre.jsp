@@ -49,7 +49,7 @@ pageContext.setAttribute("color", document.getString("zoom:color"));
             
                 <!-- Image -->
                 <c:if test="${not empty image}">
-                        <img src="${image}" alt="" class="center-block" />
+                    <img src="${image}" alt="" class="center-block" />
                 </c:if>
             </a>
         </article>

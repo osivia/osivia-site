@@ -47,22 +47,28 @@ import fr.toutatice.portail.cms.nuxeo.portlets.list.DocumentQueryCommand;
  */
 public class CMSCustomizer extends DefaultCMSCustomizer {
 
-    /** Actualité. */
-    private static final String STYLE_ACTUALITES = "actualite";
-    /** Encadré. */
-    private static final String STYLE_ENCADRE = "encadre";
-    /** "blog" list template. */
+    /** News list template. */
+    private static final String STYLE_NEWS = "actualite";
+    /** Frame list template. */
+    private static final String STYLE_FRAME = "encadre";
+    /** Reference list template. */
+    private static final String STYLE_REFERENCE = "reference";
+    /** Blog list template. */
     private static final String STYLE_BLOG = "blog";
-    /** "slider" list template. */
+    /** Slider list template. */
     private static final String STYLE_SLIDER = "slider";
-    /** "forum" list template. */
+    /** Forum list template. */
     private static final String STYLE_FORUM = "forum";
-    /** "tuile" list template. */
-    private static final String STYLE_TUILE = "tuile";
+    /** Tile list template. */
+    private static final String STYLE_TILE = "tuile";
     /** Footer links list template. */
     private static final String STYLE_FOOTER_LINKS = "footer-links";
     /** Shortcuts list template. */
     private static final String STYLE_SHORTCUTS = "shortcuts";
+    /** Roadmap list template. */
+    private static final String STYLE_ROADMAP = "roadmap";
+    /** Roadmap distribution list template. */
+    private static final String STYLE_DISTRIB = "distrib";
 
     /** Annonce schemas. */
     private static final String SCHEMAS_ANNONCE = "dublincore,common, toutatice, note, annonce";
@@ -74,14 +80,12 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     private static final String SCHEMAS_FORUM = "dublincore, common, toutatice";
     /** Zoom schemas. */
     private static final String SCHEMAS_ZOOM = "dublincore, common, toutatice, zoom";
+    /** Roadmap schemas. */
+    private static final String SCHEMAS_DISTRIB = "dublincore, toutatice, roadmapdistrib";
+
 
     /** Permalink URL identifier. */
     public static final String IDENT_PERMALINK_URL = "/purl/";
-
-
-    private static final String STYLE_ROADMAP = "roadmap";
-    private static final String STYLE_DISTRIB = "distrib";
-    private static final String SCHEMAS_DISTRIB = "dublincore, toutatice, roadmapdistrib";
 
 
     /**
@@ -105,9 +109,11 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         Bundle bundle = this.getBundleFactory().getBundle(locale);
 
         // News
-        templates.add(new ListTemplate(STYLE_ACTUALITES, bundle.getString("LIST_TEMPLATE_NEWS"), SCHEMAS_ANNONCE));
+        templates.add(new ListTemplate(STYLE_NEWS, bundle.getString("LIST_TEMPLATE_NEWS"), SCHEMAS_ANNONCE));
         // Frame
-        templates.add(new ListTemplate(STYLE_ENCADRE, bundle.getString("LIST_TEMPLATE_FRAME"), SCHEMAS_ZOOM));
+        templates.add(new ListTemplate(STYLE_FRAME, bundle.getString("LIST_TEMPLATE_FRAME"), SCHEMAS_ZOOM));
+        // Reference
+        templates.add(new ListTemplate(STYLE_REFERENCE, bundle.getString("LIST_TEMPLATE_REFERENCE"), SCHEMAS_ANNONCE));
         // Blog
         templates.add(new ListTemplate(STYLE_BLOG, bundle.getString("LIST_TEMPLATE_BLOG"), SCHEMAS_BLOG));
         // Forum
@@ -115,7 +121,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         // Slider
         templates.add(new ListTemplate(STYLE_SLIDER, bundle.getString("LIST_TEMPLATE_SLIDER"), SCHEMAS_ANNONCE));
         // Tiles
-        templates.add(new ListTemplate(STYLE_TUILE, bundle.getString("LIST_TEMPLATE_TILES"), SCHEMAS_ZOOM));
+        templates.add(new ListTemplate(STYLE_TILE, bundle.getString("LIST_TEMPLATE_TILES"), SCHEMAS_ZOOM));
         // Footer links
         templates.add(new ListTemplate(STYLE_FOOTER_LINKS, bundle.getString("LIST_TEMPLATE_FOOTER_LINKS"), SCHEMAS_ZOOM));
         // Shortcuts

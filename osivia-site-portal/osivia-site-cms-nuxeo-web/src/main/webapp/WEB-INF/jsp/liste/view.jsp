@@ -36,7 +36,7 @@
             <!-- Documents -->
             <div class="no-ajax-link">
                 <!-- Specific attributes -->
-                <c:set var="listClass" value="list-unstyled" />
+                <c:set var="listClass" value="list-unstyled list-group" />
                 <c:if test="${fn:toLowerCase(style) eq 'slider'}">
                     <c:set var="listClass" value="list-unstyled bxslider" />
                 </c:if>
