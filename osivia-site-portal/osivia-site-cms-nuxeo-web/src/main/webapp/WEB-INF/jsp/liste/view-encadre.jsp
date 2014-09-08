@@ -40,18 +40,16 @@ pageContext.setAttribute("color", document.getString("zoom:color"));
             <h3 class="h4 text-right">
                 <a href="${link.url}">${title}</a>
             </h3>
-            
-            <a href="${link.url}">
-                <!-- Description -->
-                <c:if test="${not empty description}">
-                    <p class="description lead">${description}</p>
-                </c:if>
-            
-                <!-- Image -->
-                <c:if test="${not empty image}">
-                    <img src="${image}" alt="" class="center-block" />
-                </c:if>
-            </a>
+
+            <!-- Description -->
+            <c:if test="${not empty description}">
+                <p class="description lead">${description}</p>
+            </c:if>
+        
+            <!-- Image -->
+            <c:if test="${not empty image}">
+                <img src="${image}" alt="" class="center-block" />
+            </c:if>
         </article>
     </div>
 </li>

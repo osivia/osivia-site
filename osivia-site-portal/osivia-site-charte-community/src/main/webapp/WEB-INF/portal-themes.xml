@@ -2,7 +2,7 @@
 <themes>
     <theme>
         <name>osivia-community</name>
-        <link rel="shortcut icon" type="image/x-icon" href="/themes/glissade/images/favicon/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/themes/glissade/images/osivia.ico" />
         
         <!-- CSS -->
         <link rel="stylesheet" id="main_css" href="/themes/osivia-site.min.css" type="text/css" />

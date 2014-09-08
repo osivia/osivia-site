@@ -5,47 +5,14 @@
 <html>
 
 <head>
-    <p:region regionName="header-metadata" />
-
-    <meta charset="UTF-8">
-    <meta content="text">
-    <meta http-equiv="default-style" content="main_css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    
-    <p:headerContent />
-    <p:theme themeName="osivia-site-charte-commercial" />
+    <jsp:include page="../includes/head.jsp" />
 </head>
 
 
 <body class="with-drawer">
-    <!-- Barre d'outils -->
-    <p:region regionName="toolbar" />
+    <jsp:include page="../includes/header.jsp" />
     
-    <header class="container">
-        <div class="banner">
-            <!-- Logo -->
-            <p:region regionName="logo" />
-            
-            <!-- Raccourcis -->
-            <p:region regionName="shortcuts" cms="true" />
-        </div>
-        
-        <div class="navigation-bar">
-            <!-- Navigation top menu -->
-            <div class="navigation-top-menu">
-                <p:region regionName="top-menu" regionID="navigation-menu" cms="true" />
-            </div>
-            
-            <!-- Recherche -->
-            <div class="navigation-search">
-                <p:region regionName="search" />
-            </div>
-            
-            <div class="navigation-line"></div>
-        </div>
-    </header>
-    
-     <div class="wrapper-outer">
+    <div class="wrapper-outer">
         <div class="wrapper-inner">
             <div id="page-content" class="container">
                 <!-- Notifications -->
@@ -68,20 +35,7 @@
         </div>
     </div>
 
-
-    <!-- Footer -->
-    <footer class="container">
-        <p:region regionName="footer-navigation" cms="true" />
-    </footer>
-    
-    
-    <!-- AJAX scripts -->
-    <p:region regionName="AJAXScripts" />
-    <!-- AJAX footer -->
-    <p:region regionName="AJAXFooter" />    
-    <!-- Page settings -->
-    <p:region regionName="pageSettings" />
-
+    <jsp:include page="../includes/footer.jsp" />
 </body>
 
 </html>
