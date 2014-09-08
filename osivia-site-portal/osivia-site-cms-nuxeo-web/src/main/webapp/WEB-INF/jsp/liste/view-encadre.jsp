@@ -34,10 +34,10 @@ pageContext.setAttribute("color", document.getString("zoom:color"));
 
 
 <li>
-    <div class="col-md-6">
+    <div class="col-xs-6">
         <article class="clearfix ${color}">
             <!-- Title -->
-            <h3 class="text-right">
+            <h3 class="h4 text-right">
                 <a href="${link.url}">${title}</a>
             </h3>
             

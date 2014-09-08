@@ -82,8 +82,9 @@
         
         & > * {
             height: @navigation-bar-height - @navigation-line-height;
-            padding: @navigation-line-height @padding-large-horizontal 0; 
-            
+            padding-top: @padding-small-vertical;
+            padding-left: @padding-large-horizontal;
+
             background-color: @body-bg;
         }
         
@@ -361,7 +362,7 @@ nav.menu-commercial {
     
     article {
         position: relative;
-        height: 200px;
+        height: 180px;
         overflow: hidden;
 
         margin-left: -2px;
@@ -374,6 +375,7 @@ nav.menu-commercial {
         background-color: @body-bg;
         
         h3 {
+            margin-top: @padding-large-horizontal;
             padding-left: @padding-small-horizontal;
             
             overflow: hidden;
