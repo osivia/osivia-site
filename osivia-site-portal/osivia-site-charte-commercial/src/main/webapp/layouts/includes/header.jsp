@@ -6,8 +6,26 @@
 
 <header class="container">
     <div class="banner">
+        <!-- Title -->
+        <p:region regionName="title" />
+    
+        <!-- Recherche -->
+        <a href="#search-input" class="btn btn-default accessibility-shortcut">
+            <i class="glyphicons halflings search"></i>
+            <span><is:getProperty key="SHORTCUT_SEARCH" /></span>
+        </a>
+        
+        <!-- Contenu -->
+        <a href="#page-content" class="btn btn-default accessibility-shortcut">
+            <i class="glyphicons book_open"></i>
+            <span><is:getProperty key="SHORTCUT_PAGE_CONTENT" /></span>
+        </a>
+    
         <!-- Logo -->
-        <p:region regionName="logo" />
+        <div class="clearfix">
+            <div class="header-line"></div>
+            <p:region regionName="logo" cms="true" />
+        </div>
         
         <!-- Raccourcis -->
         <p:region regionName="shortcuts" cms="true" />
