@@ -13,12 +13,14 @@
 	<packaging>jar</packaging>
 	<name>Site OSIVIA - Nuxeo Objects Custom</name>
 
+<!--
 	<properties>
+	 
 		<nuxeo.version>5.6.0-HF26</nuxeo.version>
 		<nuxeo.layout.version>5.6</nuxeo.layout.version>
 		<nuxeo.test.version>5.6.0-HF17</nuxeo.test.version>
 	</properties>
-
+ -->
 	<dependencies>
 	</dependencies>
 
