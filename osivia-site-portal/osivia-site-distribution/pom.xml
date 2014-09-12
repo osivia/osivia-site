@@ -104,6 +104,7 @@
             <version>${fichepersonne.version}</version>
             <type>war</type>
         </dependency>
+        <!-- 
         <dependency>
             <groupId>toutatice-services.identite</groupId>
             <artifactId>toutatice-identite-gestiongroupes-portail</artifactId>
@@ -128,7 +129,8 @@
             <version>${participantswks.version}</version>
             <type>war</type>
         </dependency>        
-        
+         -->
+         
         <!-- collab tools -->                
         <dependency>
             <groupId>org.osivia.services</groupId>
@@ -164,12 +166,7 @@
             <version>${osivia-services-contact.version}</version>
             <type>war</type>
         </dependency>
-        <dependency>
-            <groupId>toutatice-services.identite</groupId>
-            <artifactId>toutatice-identite-fichepersonne-portail</artifactId>
-            <version>${fichepersonne.version}</version>
-            <type>war</type>
-        </dependency>
+
         
         <dependency>
             <groupId>org.osivia.services</groupId>
@@ -178,6 +175,7 @@
             <type>war</type>
         </dependency>
         
+        <!-- 
         <dependency>
             <groupId>toutatice-services.faq</groupId>
             <artifactId>toutatice-faq-portail</artifactId>
@@ -191,6 +189,7 @@
             <version>${osivia-services-calendar.version}</version>
             <type>war</type>
         </dependency>
+         -->
     </dependencies>
 
 

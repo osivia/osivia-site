@@ -23,23 +23,25 @@
 
 
     <properties>
-        <openttc.version>1.2.1-SNAPSHOT</openttc.version>
-        <openttc.addons.collab.tools.version>1.1.3-SNAPSHOT</openttc.addons.collab.tools.version>
-        <openttc.addons.generic.ui.version>1.0.1-SNAPSHOT</openttc.addons.generic.ui.version>
-        <wiki.version>1.1.1-SNAPSHOT</wiki.version>
-        <migration.version>1.0.0-SNAPSHOT</migration.version>
-        <profile.version>3.0-osivia-SNAPSHOT</profile.version>
+        <openttc.version>2.0.0-rc1</openttc.version>
+        <openttc.addons.collab.tools.version>2.0.0-rc1</openttc.addons.collab.tools.version>
+        <openttc.addons.generic.ui.version>1.0.1</openttc.addons.generic.ui.version>
+        <wiki.version>1.2-rc1</wiki.version>
+        <migration.version>1.0-rc1</migration.version>
+        <profile.version>3.0-osivia-rc1</profile.version>
         <nuxeo.version>5.8.0-HF19</nuxeo.version>
         <!-- <openttc.addons.responsive.pv.version>1.0-SNAPSHOT</openttc.addons.responsive.pv.version> <profile.version>3.0-osivia-SNAPSHOT</profile.version> -->
     </properties>
 
     <dependencies>
         <!-- CAS -->
+        <!-- 
         <dependency>
             <groupId>org.nuxeo.ecm.platform</groupId>
             <artifactId>nuxeo-platform-login-cas2</artifactId>
             <version>${nuxeo.version}</version>
         </dependency>
+         -->
         <dependency>
             <groupId>org.nuxeo.ecm.platform</groupId>
             <artifactId>nuxeo-platform-login-portal-sso</artifactId>
@@ -74,7 +76,7 @@
 
         <!-- wiki -->
         <dependency>
-            <groupId>org.osivia.ecm.nuxeo</groupId>
+            <groupId>org.osivia.services</groupId>
             <artifactId>osivia-nuxeo-wiki</artifactId>
             <version>${wiki.version}</version>
         </dependency>

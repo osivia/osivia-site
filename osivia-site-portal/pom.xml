@@ -15,27 +15,34 @@
 
     <properties>
         <!-- Toutatice -->
-        <toutatice.version>3.3.0-SNAPSHOT</toutatice.version>
+        <toutatice.version>3.3.0-rc2</toutatice.version>
         
         <!-- identity -->
-        <toutatice.annuaire.version>2.3.5-osivia-SNAPSHOT</toutatice.annuaire.version>
-        <osivia-services-directory.version>1.0.0-SNAPSHOT</osivia-services-directory.version>
-        <fichepersonne.version>3.0-osivia-SNAPSHOT</fichepersonne.version>
+        <toutatice.annuaire.version>3.0.0-osivia-rc1</toutatice.annuaire.version>
+        <osivia-services-directory.version>1.0-rc1</osivia-services-directory.version>
+        <fichepersonne.version>3.0-osivia-rc1</fichepersonne.version>
+        <!-- 
         <ficheprofil.version>3.0-osivia-SNAPSHOT</ficheprofil.version>
         <gestiongroupe.version>3.0-osivia-SNAPSHOT</gestiongroupe.version>
         <gestionworkspace.version>3.0-osivia-SNAPSHOT</gestionworkspace.version>
         <participantswks.version>3.0-osivia-SNAPSHOT</participantswks.version>
+         -->
         <identity-sso.version>3.0.4</identity-sso.version>
         
+        <!-- 
         <toutatice-faq.version>3.1-RC4</toutatice-faq.version>
-        <osivia-services-wiki.version>1.2-SNAPSHOT</osivia-services-wiki.version>
-        <osivia-services-forum.version>1.1-SNAPSHOT</osivia-services-forum.version>
+         -->
+        <osivia-services-wiki.version>1.2-rc1</osivia-services-wiki.version>
+        <osivia-services-forum.version>1.1-rc1</osivia-services-forum.version>
         <osivia-services-contact.version>1.0-RC4</osivia-services-contact.version>
-        <osivia-services-download-tracker.version>1.1-SNAPSHOT</osivia-services-download-tracker.version>
+        
+        <osivia-services-download-tracker.version>1.1-rc1</osivia-services-download-tracker.version>
+        <!-- 
         <osivia-services-calendar.version>1.0-SNAPSHOT</osivia-services-calendar.version>
+         -->
         
         <!-- Admin tools -->
-        <osivia-services-java-melody-integration.version>1.0-RC2</osivia-services-java-melody-integration.version>
+        <osivia-services-java-melody-integration.version>1.1-rc1</osivia-services-java-melody-integration.version>
     </properties>
 
 
