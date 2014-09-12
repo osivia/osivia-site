@@ -349,136 +349,6 @@ nav.menu-commercial {
 
 
 
-// List template : encadre
-
-.nuxeo-list-encadre {
-    li > * {
-        padding: 0;
-    }
-    
-    article {
-        position: relative;
-        height: 180px;
-        overflow: hidden;
-
-        margin-left: -2px;
-        margin-bottom: -2px;
-
-        border-style: solid;
-        border-width: 2px;
-        border-color: #ccc;
-
-        background-color: @body-bg;
-        
-        h3 {
-            margin-top: @padding-large-horizontal;
-            padding-left: @padding-small-horizontal;
-            
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            
-            background-color: @navigation-active-bg;
-            
-            a {
-                padding: 0 @padding-small-horizontal;
-            
-                background-color: @body-bg;
-                color: @active-text;
-            
-                &:HOVER, &:FOCUS {
-                    color: darken(@active-text, 15%);
-                }
-            }
-        }
-        
-        a, a:HOVER, a:FOCUS {
-            color: inherit;
-        }
-        
-        .description, img {
-            padding: 0 @padding-small-horizontal;
-            max-width: 100%;
-            max-height: 100px;
-            overflow: hidden;
-        }
-        
-        &.inverted {
-            background-color: @navigation-active-bg;
-            
-            h3 {
-                background-color: @body-bg;
-                
-                a {
-                    background-color: @navigation-active-bg;
-                }
-            }
-        }
-        
-        &.green {
-            h3 {
-                background-color: @link-color;
-                
-                a {
-                    color: @link-color;
-                    
-                    &:HOVER, &:FOCUS {
-                        color: @link-hover-color;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-// List template : reference
-
-.nuxeo-list-reference {
-    li > div {
-        padding: 0 @padding-small-horizontal;
-        margin-bottom: @padding-large-vertical;
-    }
-    
-    article {
-        height: 500px;
-        overflow: auto;
-        
-        border-style: solid;
-        border-width: 2px;
-        border-color: #ccc;
-        
-        h3 {
-            padding-right: 0;
-            
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            
-            background-color: @navigation-active-bg;
-            
-            & > * {
-                padding: 0 @padding-small-horizontal;
-                
-                background-color: @body-bg;
-            }
-        }
-        
-        & > * {
-            padding: 0 @padding-small-horizontal;
-        }
-    }
-    
-    img {
-        max-height: 200px;
-        max-width: 100%;
-        
-        margin-bottom: @padding-base-vertical;
-    }
-}
-
-
-
 // List template : footer-links
 
 .nuxeo-list-footer-links {
@@ -493,6 +363,112 @@ nav.menu-commercial {
             
             &:HOVER, &:FOCUS {
                 color: #fff;
+            }
+        }
+    }
+}
+
+
+
+// Zoom templates
+
+.zoom {
+    article.encadre, article.reference {
+        overflow: hidden;
+    
+        border-style: solid;
+        border-width: 2px;
+        border-color: #ccc;
+        
+        h3 {
+            margin-top: @padding-large-horizontal;
+            padding-right: 0;
+            
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            
+            background-color: @navigation-active-bg;
+            
+            & > a {
+                padding: 0 @padding-small-horizontal;
+                
+                background-color: @body-bg;
+                color: @active-text;
+                
+                &:HOVER, &:FOCUS {
+                    color: darken(@active-text, 15%);
+                }
+            }
+        }
+        
+        & > * {
+            padding: 0 @padding-small-horizontal;
+        }
+    }
+    
+    article.encadre {
+        height: 180px;
+        
+        &.inverse {
+            background-color: @navigation-active-bg;
+            
+            h3 {
+                background-color: @body-bg;
+                
+                a {
+                    background-color: @navigation-active-bg;
+                }
+            }
+        }
+        
+        &.vert {
+            h3 {
+                background-color: @link-color;
+                
+                a {
+                    color: @link-color;
+                    
+                    &:HOVER, &:FOCUS {
+                        color: @link-hover-color;
+                    }
+                }
+            }
+        }
+        
+        img {
+            max-height: 100px;
+        }
+    }
+    
+    article.reference {
+        height: 500px;
+        
+        img {
+            max-height: 200px;
+        }
+    }
+}
+
+
+
+// Links templates
+
+.links {
+    footer & {
+        background-color: @active-text;
+        text-align: center;
+        
+        .list-inline > li {
+            padding: 0 @padding-large-vertical;
+            
+            a {
+                color: @gray-lighter;
+                text-transform: uppercase;
+                
+                &:HOVER, &:FOCUS {
+                    color: #fff;
+                }
             }
         }
     }

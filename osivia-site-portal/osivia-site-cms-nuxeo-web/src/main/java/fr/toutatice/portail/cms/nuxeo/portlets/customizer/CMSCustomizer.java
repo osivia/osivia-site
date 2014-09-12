@@ -49,10 +49,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
     /** News list template. */
     private static final String STYLE_NEWS = "actualite";
-    /** Frame list template. */
-    private static final String STYLE_FRAME = "encadre";
-    /** Reference list template. */
-    private static final String STYLE_REFERENCE = "reference";
     /** Blog list template. */
     private static final String STYLE_BLOG = "blog";
     /** Slider list template. */
@@ -61,10 +57,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     private static final String STYLE_FORUM = "forum";
     /** Tile list template. */
     private static final String STYLE_TILE = "tuile";
-    /** Footer links list template. */
-    private static final String STYLE_FOOTER_LINKS = "footer-links";
-    /** Shortcuts list template. */
-    private static final String STYLE_SHORTCUTS = "shortcuts";
     /** Roadmap list template. */
     private static final String STYLE_ROADMAP = "roadmap";
     /** Roadmap distribution list template. */
@@ -110,10 +102,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
 
         // News
         templates.add(new ListTemplate(STYLE_NEWS, bundle.getString("LIST_TEMPLATE_NEWS"), SCHEMAS_ANNONCE));
-        // Frame
-        templates.add(new ListTemplate(STYLE_FRAME, bundle.getString("LIST_TEMPLATE_FRAME"), SCHEMAS_ZOOM));
-        // Reference
-        templates.add(new ListTemplate(STYLE_REFERENCE, bundle.getString("LIST_TEMPLATE_REFERENCE"), SCHEMAS_ANNONCE));
         // Blog
         templates.add(new ListTemplate(STYLE_BLOG, bundle.getString("LIST_TEMPLATE_BLOG"), SCHEMAS_BLOG));
         // Forum
@@ -122,10 +110,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         templates.add(new ListTemplate(STYLE_SLIDER, bundle.getString("LIST_TEMPLATE_SLIDER"), SCHEMAS_ANNONCE));
         // Tiles
         templates.add(new ListTemplate(STYLE_TILE, bundle.getString("LIST_TEMPLATE_TILES"), SCHEMAS_ZOOM));
-        // Footer links
-        templates.add(new ListTemplate(STYLE_FOOTER_LINKS, bundle.getString("LIST_TEMPLATE_FOOTER_LINKS"), SCHEMAS_ZOOM));
-        // Shortcuts
-        templates.add(new ListTemplate(STYLE_SHORTCUTS, bundle.getString("LIST_TEMPLATE_SHORCUTS"), SCHEMAS_ZOOM));
 
         // Roadmap
         templates.add(new ListTemplate(STYLE_ROADMAP, bundle.getString("LIST_TEMPLATE_ROADMAP"), SCHEMAS_DISTRIB));
