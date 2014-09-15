@@ -32,11 +32,13 @@
                     
                         <div class="row">
                             <div class="col-md-6">
-                                <p:region regionName="col2" cms="true" />
+                                <p:region regionName="col2-top" cms="true" />
+                                <p:region regionName="col2-bottom" cms="true" />
                             </div>
                             
                             <div class="col-md-6">
-                                <p:region regionName="col3" cms="true" />
+                                <p:region regionName="col3-top" cms="true" />
+                                <p:region regionName="col3-bottom" cms="true" />
                             </div>
                         </div>
                     </div>

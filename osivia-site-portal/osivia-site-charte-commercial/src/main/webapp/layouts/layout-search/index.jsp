@@ -17,7 +17,7 @@
         <p:region regionName="notifications" />
 
         <!-- Content -->
-        <p:region regionName="maximized" />
+        <p:region regionName="center" cms="false" />
     </div>
 
     <jsp:include page="../includes/footer.jsp" />

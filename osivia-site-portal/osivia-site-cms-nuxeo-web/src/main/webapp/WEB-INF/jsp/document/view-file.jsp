@@ -46,7 +46,9 @@ pageContext.setAttribute("description", document.getString("dc:description"));
 // Menubar customization
 @SuppressWarnings("unchecked")
 List<MenubarItem> menubar = (List<MenubarItem>) request.getAttribute(Constants.PORTLET_ATTR_MENU_BAR);
-menubar.add(new MenubarItem(null, "Télécharger...", MenubarItem.ORDER_PORTLET_SPECIFIC, url, null, "portlet-menuitem download", null));
+MenubarItem item = new MenubarItem(null, "Télécharger", MenubarItem.ORDER_PORTLET_SPECIFIC, url, null, "portlet-menuitem download", null);
+item.setGlyphicon("download_alt");
+menubar.add(item);
 
 %>
 
@@ -58,7 +60,7 @@ menubar.add(new MenubarItem(null, "Télécharger...", MenubarItem.ORDER_PORTLET_SP
         <c:if test="${not empty filename}">
             <p>
                 <a href="${url}">
-                    <img class="icon" src="${pageContext.request.contextPath}${icon}" alt="${filename}">
+                    <img class="icon" src="${pageContext.request.contextPath}${icon}" alt="">
                     <span>${filename}</span>
                 </a>
                 <span>(${fileSize} Ko)</span>

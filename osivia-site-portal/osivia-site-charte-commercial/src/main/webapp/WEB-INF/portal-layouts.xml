@@ -11,7 +11,8 @@
             <region name="top-menu" />
             <region name="center" />
             <region name="col1" />
-            <region name="col2" />
+            <region name="col2-top" />
+            <region name="col2-bottom" />
             <region name="footer-navigation" />
         </regions>
     </layout>
@@ -26,8 +27,10 @@
             <region name="top-menu" />
             <region name="center" />
             <region name="col1" />
-            <region name="col2" />
-            <region name="col3" />
+            <region name="col2-top" />
+            <region name="col2-bottom" />
+            <region name="col3-top" />
+            <region name="col3-bottom" />
             <region name="footer-navigation" />
         </regions>
     </layout>
@@ -43,6 +46,19 @@
             <region name="center" />
             <region name="col1" />
             <region name="col2" />
+            <region name="footer-navigation" />
+        </regions>
+    </layout>
+    
+    <layout>
+        <name>osivia-site-commercial-search</name>
+        <uri>/layouts/layout-search/index.jsp</uri>
+        <uri state="maximized">/layouts/layout-search/maximized.jsp</uri>
+        <regions>
+            <region name="logo" />
+            <region name="shortcuts" />
+            <region name="top-menu" />
+            <region name="center" />
             <region name="footer-navigation" />
         </regions>
     </layout>

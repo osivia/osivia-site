@@ -17,21 +17,18 @@
             <div id="page-content" class="container">
                 <!-- Notifications -->
                 <p:region regionName="notifications" />
-
+        
                 <div class="row">
                     <!-- Menu -->
                     <div id="drawer">
                         <div class="col-sm-4 col-lg-3">
-                            <p:region regionName="col1" cms="true" />
+                            <p:region regionName="col1" cms="false" />
                         </div>
                     </div>
                     
                     <!-- Content -->
                     <div class="col-sm-8 col-lg-9">
-                        <p:region regionName="center" cms="true" />
-                    
-                        <p:region regionName="col2-top" cms="true" />
-                        <p:region regionName="col2-bottom" cms="true" />
+                        <p:region regionName="maximized" />
                     </div>
                 </div>
             </div>
