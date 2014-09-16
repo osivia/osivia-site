@@ -7,7 +7,7 @@ nuxeo.navigationSchemas=wcm_navigation
 
 #temps maxi d'exécution par portlet, au dela de ce temps, le traitement
 #est interrompu (en secondes)
-portlets.maxExecutionDelay=5
+portlets.maxExecutionDelay=3600
 portlets.maxExecution.excludedPortlets=toutatice-portail-administration-portletInstance
 
 #timeout des caches en secondes
