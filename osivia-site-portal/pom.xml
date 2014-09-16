@@ -51,7 +51,6 @@
         <module>osivia-site-charte-commercial</module>
         <module>osivia-site-charte-community</module>
         <module>osivia-site-cms-nuxeo-web</module>
-        <module>osivia-site-portlet-solutions</module>
         <module>osivia-site-internationalization-customizer</module>
         <module>osivia-site-attributes-bundles-customizer</module>
         <module>osivia-site-regions-customizer</module>

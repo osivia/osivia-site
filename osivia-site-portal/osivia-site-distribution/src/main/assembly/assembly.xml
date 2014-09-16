@@ -19,7 +19,6 @@
                 <include>${project.groupId}:osivia-site-charte-community:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-regions-customizer:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-cms-nuxeo-web:war:${project.version}</include>
-                <include>${project.groupId}:osivia-site-portlet-solutions:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-internationalization-customizer:war:${project.version}</include>
                 <include>${project.groupId}:osivia-site-ldap-connector:war:${project.version}</include>
                 <!-- collab tools -->
