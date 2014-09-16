@@ -6,9 +6,14 @@
 <div class="btn-toolbar">
     <div class="btn-group">
         <c:forEach var="link" items="${links}">
-            <a href="${link.href}" class="btn btn-default" target="_blank">
-                <c:if test="${not empty link.icon}">
-                    <i class="glyphicons ${link.icon}"></i>
+            <c:remove var="target" />
+            <c:if test="${link.external}">
+                <c:set var="target" value="_blank" />
+            </c:if>
+        
+            <a href="${link.url}" target="${target}" class="btn btn-default">
+                <c:if test="${not empty link.glyphicon}">
+                    <i class="glyphicons ${link.glyphicon}"></i>
                 </c:if>
                 
                 <span>${link.title}</span>

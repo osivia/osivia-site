@@ -3,10 +3,15 @@
 <%@ page isELIgnored="false" %>
 
 
+<c:if test="${external}">
+    <c:set var="target" value="_blank" />
+</c:if>
+
+
 <article class="encadre vert clearfix">
     <!-- Title -->
     <h3 class="h4 text-right">
-        <a href="${url}">${title}</a>
+        <a href="${url}" target="${target}">${title}</a>
     </h3>
     
     <!-- Picture -->
