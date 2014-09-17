@@ -2,9 +2,9 @@
 <themes>
     <theme>
         <name>osivia-site-charte-commercial</name>
-        <link rel="shortcut icon" type="image/x-icon" href="/img/osivia.ico" />
+        <link rel="icon" href="/img/osivia.ico" />
         
         <!-- CSS -->
-        <link rel="stylesheet" id="main_css" href="/css/osivia-site.min.css" type="text/css" />        
+        <link rel="stylesheet" href="/css/osivia-site.min.css" title="OSIVIA.com" />        
     </theme>
 </themes>

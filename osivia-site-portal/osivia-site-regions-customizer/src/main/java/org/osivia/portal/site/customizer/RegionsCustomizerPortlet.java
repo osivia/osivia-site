@@ -99,14 +99,10 @@ public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomi
                 // Add title
                 renderedRegion.customizeRenderedRegion("title", "/header/title.jsp");
             }
-
-            // Replace default headers infos
-            renderedRegion.customizeRenderedRegion("header-metadata", "/header/header-metadata.jsp");
             
             if (StringUtils.equals(contextPath, charteCommunityContextPath)) {
                 // Replace default toolbar
                 renderedRegion.customizeRenderedRegion("toolbar", "/header/toolbar.jsp");
-
                 // Add logo
                 renderedRegion.customizeRenderedRegion("logo", "/header/logo.jsp");
                 // Replace tabs

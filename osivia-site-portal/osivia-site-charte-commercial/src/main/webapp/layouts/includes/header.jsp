@@ -1,4 +1,5 @@
 <%@ taglib prefix="p" uri="portal-layout"%>
+<%@ taglib uri="internationalization" prefix="is" %>
 
 
 <!-- Barre d'outils -->

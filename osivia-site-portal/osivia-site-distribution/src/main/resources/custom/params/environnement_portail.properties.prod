@@ -1,6 +1,8 @@
 #page d'erreur par défaut
 error.defaultPageUri=/osivia-site-charte-community/error/errorPage.jsp
 
+# Adapt page header resources
+osivia.adaptResource=true
 
 #schemas additionnels de navigation (separés par une virgule)
 nuxeo.navigationSchemas=wcm_navigation

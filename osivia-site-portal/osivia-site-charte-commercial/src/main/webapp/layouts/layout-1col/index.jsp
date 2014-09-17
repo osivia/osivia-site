@@ -17,7 +17,9 @@
         <p:region regionName="notifications" />
 
         <!-- Content -->
-        <p:region regionName="center" cms="false" />
+        <p:region regionName="center" cms="true" />
+        
+        <p:region regionName="col1" cms="true" />
     </div>
 
     <jsp:include page="../includes/footer.jsp" />
