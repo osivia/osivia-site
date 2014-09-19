@@ -5,6 +5,8 @@
 
 <head>
     <p:region regionName="header-metadata" />
+    
+    <meta http-equiv="default-style" content="OSIVIA.org">
 
 	<p:headerContent />
 	<p:theme themeName="osivia-community" />

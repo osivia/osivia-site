@@ -2,10 +2,10 @@
 <themes>
     <theme>
         <name>osivia-community</name>
-        <link rel="shortcut icon" type="image/x-icon" href="/themes/glissade/images/osivia.ico" />
+        <link rel="icon" href="/themes/glissade/images/osivia.ico" />
         
         <!-- CSS -->
-        <link rel="stylesheet" id="main_css" href="/themes/osivia-site.min.css" type="text/css" />
-        <link rel="stylesheet" id="roadmap_css" href="/themes/roadmap/style.css" type="text/css" />
+        <link rel="stylesheet" href="/themes/osivia-site.min.css" title="OSIVIA.org" />
+        <link rel="stylesheet" href="/themes/roadmap/style.css" />
     </theme>
 </themes>
