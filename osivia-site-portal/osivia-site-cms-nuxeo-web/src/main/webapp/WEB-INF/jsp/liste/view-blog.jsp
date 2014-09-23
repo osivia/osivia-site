@@ -27,14 +27,21 @@ pageContext.setAttribute("lien", nuxeoController.getLink(document).getUrl());
 // Description
 pageContext.setAttribute("description", document.getString("dc:description"));
 // Contenu
-pageContext.setAttribute("contenu", document.getString("webp:content"));
+pageContext.setAttribute("contenu", nuxeoController.transformHTMLContent(document.getString("webp:content")));
 
 %>
 
 
-<li class="blog-post">
-    <div class="blog-post-date">${date}</div>
-    <div class="blog-post-title"><a href="${lien}">${titre}</a></div>
-    <div class="blog-post-description">${description}</div>
-    <div class="blog-post-content">${contenu}</div>        
+<li class="list-group-item blog-post">
+    <!-- Date -->
+    <p>${date}</p>
+    
+    <!-- Title -->
+    <p class="h3"><a href="${lien}">${titre}</a></p>
+    
+    <!-- Description -->
+    <p class="lead">${description}</p>
+    
+    <!-- Content -->
+    <div>${contenu}</div>      
 </li>
