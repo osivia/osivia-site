@@ -1,7 +1,7 @@
 <div class="pull-left">
     <h1>
         <a href="${requestScope['osivia.home.url']}">
-            <img src="${pageContext.request.contextPath}/themes/glissade/images/logo-osivia.png" alt="">
+            <img src="${pageContext.request.contextPath}/img/logo-osivia.png" alt="">
             <span>OSIVIA.org</span>
         </a>
         

@@ -4,61 +4,22 @@
 <html>
 
 <head>
-    <p:region regionName="header-metadata" />
-    
-    <meta http-equiv="default-style" content="OSIVIA.org">
-
-	<p:headerContent />
-	<p:theme themeName="osivia-community" />
+    <jsp:include page="../includes/head.jsp" />
 </head>
 
 <body>
-    <!-- Barre d'outils -->
-    <p:region regionName="toolbar" />
+    <jsp:include page="../includes/header.jsp" />
 
-    <!-- Header -->
-    <header class="container-fluid">
-        <!-- Bannière -->
-        <div class="clearfix">
-            <!-- Logo -->
-            <p:region regionName="logo" />
+    <div id="page-content" class="container-fluid">
+        <!-- Notifications -->
+        <p:region regionName="notifications" />
+        <!-- Breadcrumb -->
+        <p:region regionName="breadcrumb" />
 
-            <!-- Recherche -->
-            <p:region regionName="search" />
-        </div>
+        <p:region regionName="maximized" />
+    </div>
 
-        <!-- Onglets -->
-        <p:region regionName="tabs" />
-    </header>
-
-
-            <div class="container-fluid">
-                <!-- Notifications -->
-                <p:region regionName="notifications" />
-        		<!-- Breadcrumb -->
-                <p:region regionName="breadcrumb" />
-        
-                <div class="row">
-
-                        <div class="col-sm-12">
-                            <p:region regionName="maximized" />
-                        </div>
-
-                </div>
-            </div>
-
-    <!-- Footer -->
-    <footer class="container-fluid">
-        <p:region regionName="footer" />
-    </footer>
-
-
-    <!-- AJAX scripts -->
-    <p:region regionName="AJAXScripts" />
-    <!-- AJAX footer -->
-    <p:region regionName="AJAXFooter" />    
-    <!-- Page settings -->
-    <p:region regionName="pageSettings" />
+    <jsp:include page="../includes/footer.jsp" />
 </body>
 
 </html>

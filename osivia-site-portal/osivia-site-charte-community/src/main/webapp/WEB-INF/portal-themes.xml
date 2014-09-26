@@ -2,7 +2,7 @@
 <themes>
     <theme>
         <name>osivia-community</name>
-        <link rel="icon" href="/themes/glissade/images/osivia.ico" />
+        <link rel="icon" href="/img/osivia.ico" />
         
         <!-- CSS -->
         <link rel="stylesheet" href="/themes/osivia-site.min.css" title="OSIVIA.org" />
