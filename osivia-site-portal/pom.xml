@@ -15,7 +15,7 @@
 
     <properties>
         <!-- Toutatice -->
-        <toutatice.version>3.3.0-SNAPSHOT</toutatice.version>
+        <toutatice.version>3.3.0-RC7</toutatice.version>
         
         <!-- identity -->
         <toutatice.annuaire.version>3.0.0-osivia-rc1</toutatice.annuaire.version>
