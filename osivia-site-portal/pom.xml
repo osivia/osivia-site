@@ -15,7 +15,7 @@
 
     <properties>
         <!-- Toutatice -->
-        <toutatice.version>3.3.0-SNAPSHOT</toutatice.version>
+        <toutatice.version>3.3.0-RC8</toutatice.version>
         
         <!-- identity -->
         <toutatice.annuaire.version>3.0.0-osivia-rc1</toutatice.annuaire.version>
@@ -33,7 +33,7 @@
         <toutatice-faq.version>3.1-RC4</toutatice-faq.version>
          -->
         <osivia-services-wiki.version>1.2-rc2</osivia-services-wiki.version>
-        <osivia-services-forum.version>1.1-rc1</osivia-services-forum.version>
+        <osivia-services-forum.version>1.1-RC2</osivia-services-forum.version>
         <osivia-services-contact.version>1.0-RC4</osivia-services-contact.version>
         
         <osivia-services-download-tracker.version>1.1-rc1</osivia-services-download-tracker.version>
