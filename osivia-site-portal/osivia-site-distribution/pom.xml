@@ -140,13 +140,6 @@
         </dependency>
 
         <dependency>
-            <groupId>toutatice-portail.cms</groupId>
-            <artifactId>toutatice-portail-cms-nuxeo-distribution</artifactId>
-            <version>${toutatice.version}</version>
-            <type>zip</type>
-        </dependency>
-        
-        <dependency>
             <groupId>org.osivia.services</groupId>
             <artifactId>osivia-services-java-melody-integration</artifactId>
             <version>${osivia-services-java-melody-integration.version}</version>
@@ -205,6 +198,16 @@
 
         <profile>
             <id>unpack</id>
+            
+            <dependencies>
+                <dependency>
+                    <groupId>toutatice-portail.cms</groupId>
+                    <artifactId>toutatice-portail-cms-nuxeo-distribution</artifactId>
+                    <version>${toutatice.version}</version>
+                    <type>zip</type>
+                </dependency>
+            </dependencies>
+            
             <build>
                 <defaultGoal>package</defaultGoal>
                 <plugins>
@@ -240,6 +243,7 @@
 
         <profile>
             <id>pack</id>
+            
             <build>
                 <defaultGoal>package</defaultGoal>
                 <plugins>
