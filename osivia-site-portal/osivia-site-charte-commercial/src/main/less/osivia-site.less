@@ -178,7 +178,9 @@
 // Page content
 
 #page-content {
-    padding-top: @line-height-computed;
+    @media screen and (max-width: @screen-xs-max) {
+        padding-top: @line-height-computed;
+    }
 }
 
 
