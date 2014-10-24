@@ -304,7 +304,7 @@ nav.menu-commercial {
 
 // List template : slider
 
-.nuxeo-list-slider {
+.bxslider-container {
     .bxslider-slide {
         .row.title {
             margin-bottom: 10px;
@@ -339,46 +339,23 @@ nav.menu-commercial {
 
 // List template : actualite
 
-.nuxeo-list-actualite {
-    article {
-        margin-bottom: @line-height-computed;
+article.actualite {
+    margin-bottom: @line-height-computed;
+    
+    .vignette {
+        margin-right: 20px;
         
-        .vignette {
-            margin-right: 20px;
-            
-            border-style: solid;
-            border-width: 3px;
-            border-color: @link-color;
-            
-            &:HOVER, &:FOCUS {
-                border-color: @link-hover-color;
-            }
-        }
+        border-style: solid;
+        border-width: 3px;
+        border-color: @link-color;
         
-        .date {
-            color: @active-text;
+        &:HOVER, &:FOCUS {
+            border-color: @link-hover-color;
         }
     }
-}
-
-
-
-// List template : footer-links
-
-.nuxeo-list-footer-links {
-    background-color: @active-text;
     
-    .list-inline > li {
-        padding: 0 @padding-large-vertical;
-        
-        a {
-            color: @gray-lighter;
-            text-transform: uppercase;
-            
-            &:HOVER, &:FOCUS {
-                color: #fff;
-            }
-        }
+    .date {
+        color: @active-text;
     }
 }
 

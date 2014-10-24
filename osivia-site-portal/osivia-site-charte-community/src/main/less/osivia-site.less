@@ -56,6 +56,16 @@ header, #page-content {
     &:HOVER, &:FOCUS {
         background-color: @link-hover-color;
     }
+    
+    &.droppable-active {
+        color: @state-info-bg;
+        background-color: @state-info-text;
+    }
+    
+    &.droppable-hover {
+        color: @state-success-bg;
+        background-color: @state-success-text;
+    }
 }
 
 #tabs {
@@ -100,6 +110,37 @@ header, #page-content {
         
         & a.list-group-item {
             .osivia-site-menu-item;
+        }
+    }
+}
+
+
+
+.sortable-container {
+    .sortable-handle {
+        cursor: move;
+    }
+}
+
+
+.draggable {
+    .draggable-handle {
+        cursor: move;
+    }
+}
+
+
+.droppable {
+    &.droppable-active {
+        &, & * {
+            color: @state-info-text;
+            border-color: @state-info-border;
+        }
+    }
+    
+    &.droppable-hover {
+        & > a {
+            background-color: @state-info-bg;
         }
     }
 }
