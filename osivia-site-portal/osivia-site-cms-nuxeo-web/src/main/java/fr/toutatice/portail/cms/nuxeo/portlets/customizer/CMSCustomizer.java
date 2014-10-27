@@ -57,10 +57,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     private static final String STYLE_FORUM = "forum";
     /** Tile list template. */
     private static final String STYLE_TILE = "tuile";
-    /** Roadmap list template. */
-    private static final String STYLE_ROADMAP = "roadmap";
-    /** Roadmap distribution list template. */
-    private static final String STYLE_DISTRIB = "distrib";
 
     /** Annonce schemas. */
     private static final String SCHEMAS_ANNONCE = "dublincore,common, toutatice, note, annonce";
@@ -72,8 +68,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     private static final String SCHEMAS_FORUM = "dublincore, common, toutatice";
     /** Zoom schemas. */
     private static final String SCHEMAS_ZOOM = "dublincore, common, toutatice, zoom";
-    /** Roadmap schemas. */
-    private static final String SCHEMAS_DISTRIB = "dublincore, toutatice, roadmapdistrib";
 
 
     /** Permalink URL identifier. */
@@ -110,11 +104,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         templates.add(new ListTemplate(STYLE_SLIDER, bundle.getString("LIST_TEMPLATE_SLIDER"), SCHEMAS_ANNONCE));
         // Tiles
         templates.add(new ListTemplate(STYLE_TILE, bundle.getString("LIST_TEMPLATE_TILES"), SCHEMAS_ZOOM));
-
-        // Roadmap
-        templates.add(new ListTemplate(STYLE_ROADMAP, bundle.getString("LIST_TEMPLATE_ROADMAP"), SCHEMAS_DISTRIB));
-        // Roadmap distribution
-        templates.add(new ListTemplate(STYLE_DISTRIB, bundle.getString("LIST_TEMPLATE_ROADMAP_DISTRIBUTION"), SCHEMAS_DISTRIB));
 
         return templates;
     }
@@ -256,14 +245,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         }
         if ("Thread".equals(doc.getType())) {
             return this.getForumThreadPlayer(ctx);
-        }
-
-        // Roadmap
-        if ("Product".equals(doc.getType())) {
-            return this.getRoadmapPlayer(ctx);
-        }
-        if ("Distribution".equals(doc.getType())) {
-            return this.getDistributionPlayer(ctx);
         }
 
         // Calendar
@@ -474,105 +455,6 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         return linkProps;
     }
 
-
-    /**
-     * Get roadmap player.
-     *
-     * @param ctx CMS context
-     * @return CMS forum player
-     * @throws CMSException
-     */
-    private CMSHandlerProperties getRoadmapPlayer(CMSServiceCtx ctx) throws CMSException {
-        Map<String, String> windowProperties = new HashMap<String, String>();
-        windowProperties.put("osivia.nuxeoRequest", this.createRoadmapPlayerRequest(ctx));
-        // windowProperties.put("osivia.displayNuxeoRequest", "1");
-        // windowProperties.put("osivia.hideTitle", "1");
-        windowProperties.put("osivia.title", "Roadmap");
-        windowProperties.put("osivia.cms.style", CMSCustomizer.STYLE_ROADMAP);
-        windowProperties.put("osivia.hideDecorators", "1");
-        windowProperties.put("theme.dyna.partial_refresh_enabled", "false");
-        windowProperties.put(Constants.WINDOW_PROP_SCOPE, ctx.getScope());
-        windowProperties.put("osivia.ajaxLink", "1");
-        windowProperties.put(Constants.WINDOW_PROP_VERSION, ctx.getDisplayLiveVersion());
-
-        CMSHandlerProperties linkProps = new CMSHandlerProperties();
-        linkProps.setWindowProperties(windowProperties);
-        linkProps.setPortletInstance("toutatice-portail-cms-nuxeo-viewListPortletInstance");
-
-        return linkProps;
-    }
-
-    /**
-     * Utility method used to create roadmap player request.
-     *
-     * @param cmsContext CMS context
-     * @return request
-     * @throws CMSException
-     */
-    private String createRoadmapPlayerRequest(CMSServiceCtx cmsContext) throws CMSException {
-        // Document
-        Document document = (Document) cmsContext.getDoc();
-        // Publication infos
-        CMSPublicationInfos pubInfos = this.getCmsService().getPublicationInfos(cmsContext, document.getPath());
-
-        StringBuilder request = new StringBuilder();
-        // request.append("ecm:uuid = '").append(document.getId()).append("' ");
-        request.append("ecm:parentId = '").append(pubInfos.getLiveId()).append("' ");
-        // request.append("AND ecm:primaryType = 'Thread' ");
-        request.append("ORDER BY rmpd:releaseDate DESC ");
-        return request.toString();
-    }
-
-    /**
-     * Get distribution player.
-     *
-     * @param ctx CMS context
-     * @return CMS forum player
-     * @throws CMSException
-     */
-    private CMSHandlerProperties getDistributionPlayer(CMSServiceCtx ctx) throws CMSException {
-        Document document = (Document) ctx.getDoc();
-
-        Map<String, String> windowProperties = new HashMap<String, String>();
-        windowProperties.put("osivia.nuxeoRequest", this.createDistributionPlayerRequest(ctx));
-        // windowProperties.put("osivia.displayNuxeoRequest", "1");
-        windowProperties.put("osivia.hideTitle", "1");
-        windowProperties.put("osivia.title", document.getTitle());
-        windowProperties.put("osivia.cms.style", CMSCustomizer.STYLE_DISTRIB);
-        windowProperties.put("osivia.hideDecorators", "1");
-        windowProperties.put("theme.dyna.partial_refresh_enabled", "false");
-        windowProperties.put(Constants.WINDOW_PROP_SCOPE, ctx.getScope());
-        windowProperties.put("osivia.ajaxLink", "1");
-        windowProperties.put(Constants.WINDOW_PROP_VERSION, ctx.getDisplayLiveVersion());
-
-        CMSHandlerProperties linkProps = new CMSHandlerProperties();
-        linkProps.setWindowProperties(windowProperties);
-        linkProps.setPortletInstance("toutatice-portail-cms-nuxeo-viewListPortletInstance");
-
-        return linkProps;
-    }
-
-    /**
-     * Utility method used to create roadmap player request.
-     *
-     * @param cmsContext CMS context
-     * @return request
-     * @throws CMSException
-     */
-    private String createDistributionPlayerRequest(CMSServiceCtx cmsContext) throws CMSException {
-        // Document
-        Document document = (Document) cmsContext.getDoc();
-
-        // Publication infos
-        // CMSPublicationInfos pubInfos = this.getCmsService().getPublicationInfos(cmsContext, document.getPath());
-
-        StringBuilder request = new StringBuilder();
-        request.append("ecm:uuid = '").append(document.getId()).append("' ");
-        // request.append("ecm:parentId = '").append(pubInfos.getLiveId()).append("' ");
-        // request.append("AND ecm:primaryType = 'Thread' ");
-        request.append("ORDER BY rmpd:releaseDate DESC ");
-        return request.toString();
-    }
 
     /**
      * {@inheritDoc}
