@@ -43,7 +43,7 @@
             <region name="col3" />
         </regions>
     </layout>
-    
+    <!-- 
     <layout>
         <name>osivia-community-3col-top</name>
         <uri>/layouts/osivia-3c-top/index.jsp</uri>
@@ -68,4 +68,5 @@
             <region name="col3" />
         </regions>
     </layout>
+     -->
 </layouts>

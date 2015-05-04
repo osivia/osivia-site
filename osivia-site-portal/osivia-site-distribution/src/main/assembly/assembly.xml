@@ -47,7 +47,7 @@
             <scope>runtime</scope>
             <includes>
                 <include>org.osivia.portal.identity:osivia-portal-identity-sso-lib:jar:3.0.4</include>
-                <include>outils.ldap:toutatice-annuaire:jar:${toutatice.annuaire.version}</include>
+                <include>outils.ldap:toutatice-annuaire-interfaces:jar:${toutatice.annuaire.version}</include>
                 <include>org.osivia.services:osivia-services-java-melody-integration:jar:${osivia-services-java-melody-integration.version}</include>
             </includes>
         </dependencySet>

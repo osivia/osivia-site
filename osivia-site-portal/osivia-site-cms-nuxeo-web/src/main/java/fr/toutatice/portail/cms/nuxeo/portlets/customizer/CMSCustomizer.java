@@ -478,45 +478,42 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
      * @return customized CMS item types
      */
     private List<CMSItemType> getCustomizedCMSItemTypes() {
-        List<CMSItemType> customizedTypes = new ArrayList<CMSItemType>();
 
-        // === FAQ === //
-        // FAQ folder
-        customizedTypes.add(new CMSItemType("FaqFolder", true, false, false, false, true, Arrays.asList("Question"), null));
-        // FAQ question
-        customizedTypes.add(new CMSItemType("Question", false, false, false, false, true, new ArrayList<String>(0), null));
+    	List<CMSItemType> customizedTypes = new ArrayList<CMSItemType>();
 
-        // === BLOG === //
-        // Blog site
-        customizedTypes.add(new CMSItemType("BlogSite", true, false, false, true, true, Arrays.asList("BlogPost"), "/default/templates/blogSite"));
+        // Blog
+        customizedTypes.add(new CMSItemType("BlogSite", true, true, true, false, true, true, Arrays.asList("BlogPost", "ContextualLink"), null,
+                "glyphicons glyphicons-blog", true));
         // Blog post
-        customizedTypes.add(new CMSItemType("BlogPost", false, false, false, true, true, new ArrayList<String>(0), null));
-
-        // === WIKI === //
-        // Wiki book
-        customizedTypes.add(new CMSItemType("WikiBook", true, true, true, true, true, Arrays.asList("WikiSection"), null));
-        // Wiki section
-        customizedTypes.add(new CMSItemType("WikiSection", true, true, true, true, true, Arrays.asList("WikiSection"), null));
-
-        // === FORUM === //
+        customizedTypes.add(new CMSItemType("BlogPost", false, false, false, false, true, true, new ArrayList<String>(0), null, "glyphicons glyphicons-blog"));
+        // FAQ folder
+        customizedTypes.add(new CMSItemType("FaqFolder", true, false, false, false, false, true, Arrays.asList("Question"), null,
+                "glyphicons glyphicons-circle-question-mark"));
+        // FAQ question
+        customizedTypes.add(new CMSItemType("Question", false, false, false, false, false, true, new ArrayList<String>(0), null,
+                "glyphicons glyphicons-circle-question-mark"));
         // Forum
-        customizedTypes.add(new CMSItemType("Forum", true, true, false, true, true, Arrays.asList("Thread"), null));
+        customizedTypes
+                .add(new CMSItemType("Forum", true, true, false, false, true, true, Arrays.asList("Thread"), null, "glyphicons glyphicons-conversation"));
         // Forum thread
-        customizedTypes.add(new CMSItemType("Thread", false, false, false, true, true, new ArrayList<String>(0), null));
+        customizedTypes.add(new CMSItemType("Thread", false, false, false, false, true, true, new ArrayList<String>(0), null, "glyphicons glyphicons-chat"));
 
-        // === ROADMAP === //
-        // Project
-        customizedTypes.add(new CMSItemType("Product", true, true, true, true, true, Arrays.asList("Distribution"), null));
-        // Distribution
-        customizedTypes.add(new CMSItemType("Distribution", false, true, true, true, true, new ArrayList<String>(0), null));
-
-        // === AGENDA === //
         // Agenda
-        customizedTypes.add(new CMSItemType("Agenda", false, true, false, false, true, Arrays.asList("VEVENT"), null));
-        // Events
-        customizedTypes.add(new CMSItemType("VEVENT", false, false, false, false, true, new ArrayList<String>(0), null));
+        customizedTypes.add(new CMSItemType("Agenda", true, true, false, false, true, true, Arrays.asList("VEVENT"), null, "glyphicons glyphicons-calendar"));
+        // Agenda event
+        customizedTypes
+                .add(new CMSItemType("VEVENT", false, false, false, false, true, true, new ArrayList<String>(0), null, "glyphicons glyphicons-calendar"));
+
+
+        // Wiki book
+        customizedTypes.add(new CMSItemType("WikiBook", true, true, true, true, true, true, Arrays.asList("WikiSection"), null, "book"));
+        // Wiki section
+        customizedTypes.add(new CMSItemType("WikiSection", true, true, true, true, true, true, Arrays.asList("WikiSection"), null, "book"));
+
+
 
         return customizedTypes;
+        
     }
 
 }

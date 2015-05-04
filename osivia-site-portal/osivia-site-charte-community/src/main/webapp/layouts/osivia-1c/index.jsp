@@ -11,11 +11,12 @@
     <jsp:include page="../includes/header.jsp" />
 
     <div id="page-content" class="container-fluid">
+		<!-- Content navbar -->
+        <jsp:include page="../includes/content-navbar.jsp" />
         <!-- Notifications -->
         <p:region regionName="notifications" />
-        <!-- Breadcrumb -->
-        <p:region regionName="breadcrumb" />
 
+		<p:region regionName="back" />
         <p:region regionName="col1" />
     </div>
 
