@@ -5,7 +5,7 @@
 <p:region regionName="toolbar" />
 
 <!-- Header -->
-<header class="container-fluid">
+<header class="container-fluid hidden-xs">
     <!-- Bannière -->
     <div class="clearfix">
         <!-- Logo -->

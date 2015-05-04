@@ -15,27 +15,27 @@
     <div class="wrapper-outer">
         <div class="wrapper-inner">
             <div id="page-content" class="container-fluid">
-            	<!-- Content navbar -->
+                <!-- Content navbar -->
                 <jsp:include page="../includes/content-navbar.jsp" />
+                
                 <!-- Notifications -->
                 <p:region regionName="notifications" />
 
-
                 <div class="row">
-                    <!-- Menu -->
+                    <!-- Drawer -->
                     <div id="drawer">
-                    	<p:region regionName="drawer-toolbar" />
-                    
-                        <div class="col-sm-5 col-md-4 col-lg-3">
+                        <p:region regionName="drawer-toolbar" />
+                        
+                        <div class="col-sm-4 col-lg-3">
                             <p:region regionName="col1" />
                         </div>
                     </div>
                     
                     <!-- Content -->
                     <div class="col-sm-7 col-md-8 col-lg-9">
-                    	<!-- Back -->
+                        <!-- Back -->
                         <p:region regionName="back" />
-                        
+                    
                         <p:region regionName="maximized" />
                     </div>
                 </div>

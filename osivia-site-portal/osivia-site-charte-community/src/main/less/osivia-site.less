@@ -14,6 +14,22 @@ header, #page-content {
 }
 
 
+// Page content
+#page-content {
+    @media screen and (max-width: @screen-xs-max) {
+        padding-top: @padding-small-vertical;
+        padding-bottom: @padding-small-vertical;
+    }
+}
+
+// Wrapper
+@media screen and (max-width: @screen-xs-max) {
+    .wrapper-outer {
+        padding-top: @navbar-height;
+    }
+}
+
+
 // Logo
 #logo {
     & h1 {        

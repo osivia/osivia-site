@@ -2,7 +2,7 @@
 
 
 <!-- Footer -->
-<footer class="container-fluid"></footer>
+<footer class="container-fluid hidden-xs"></footer>
 
 
 <!-- AJAX scripts -->
