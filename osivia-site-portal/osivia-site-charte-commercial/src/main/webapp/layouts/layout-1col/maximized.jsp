@@ -9,32 +9,23 @@
 </head>
 
 
-<body class="with-drawer">
+<body>
     <jsp:include page="../includes/header.jsp" />
     
     <div class="wrapper-outer">
         <div class="wrapper-inner">
             <div id="page-content" class="container">
+                <jsp:include page="../includes/navigation-bar.jsp" />
+            
                 <!-- Notifications -->
                 <p:region regionName="notifications" />
         
-                <div class="row">
-                    <!-- Menu -->
-                    <div id="drawer">
-                        <div class="col-sm-4 col-lg-3">
-                            <p:region regionName="col1" cms="true" />
-                        </div>
-                    </div>
-                    
-                    <!-- Content -->
-                    <div class="col-sm-8 col-lg-9">
-                        <p:region regionName="maximized" />
-                    </div>
-                </div>
+                <!-- Content -->
+                <p:region regionName="maximized" />
             </div>
         </div>
     </div>
-
+    
     <jsp:include page="../includes/footer.jsp" />
 </body>
 

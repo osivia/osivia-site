@@ -1,0 +1,23 @@
+.links {
+    footer & {
+        background-color: @active-text;
+        text-align: center;
+        
+        .list-inline {
+            margin-bottom: 0;
+            
+            > li {
+                padding: 0 @padding-large-vertical;
+                
+                a {
+                    color: @gray-lighter;
+                    text-transform: uppercase;
+                    
+                    &:HOVER, &:FOCUS {
+                        color: #fff;
+                    }
+                }
+            }
+        } 
+    }
+}

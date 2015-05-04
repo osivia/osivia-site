@@ -25,8 +25,7 @@
                     <outputDirectory>${project.basedir}/src/main/webapp/css</outputDirectory>
                     <compress>true</compress>
                     <includes>
-                        <include>osivia-site.less</include>
-                        <include>tiles.less</include>
+                        <include>*.less</include>
                     </includes>
                     <outputFileFormat>{fileName}.min.css</outputFileFormat>
                 </configuration>

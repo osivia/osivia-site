@@ -12,12 +12,17 @@
 <body>
     <jsp:include page="../includes/header.jsp" />
     
-    <div id="page-content" class="container">
-        <!-- Notifications -->
-        <p:region regionName="notifications" />
-
-        <!-- Content -->
-        <p:region regionName="maximized" />
+    <div class="wrapper-outer">
+        <div class="wrapper-inner">
+            <div id="page-content" class="container">
+                <jsp:include page="../includes/navigation-bar.jsp" />
+            
+                <!-- Notifications -->
+                <p:region regionName="notifications" />
+        
+                <p:region regionName="maximized" />
+            </div>
+        </div>
     </div>
 
     <jsp:include page="../includes/footer.jsp" />

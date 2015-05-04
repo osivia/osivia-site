@@ -7,14 +7,8 @@
 <%@ page isELIgnored="false"%>
 
 
-<script src="${pageContext.request.contextPath}/bxslider/jquery.bxslider.min.js"></script>
-<link href="${pageContext.request.contextPath}/bxslider/jquery.bxslider.css" rel="stylesheet" />
-
-<script src="${pageContext.request.contextPath}/js/bxslider-integration.js"></script>
-
-
 <div class="bxslider-container">
-    <ul class="list-unstyled bxslider clearfix">
+    <ul class="list-unstyled bxslider bxslider-com clearfix">
         <c:forEach var="document" items="${documents}" varStatus="status">
             <!-- Document properties -->
             <c:set var="description" value="${document.properties['dc:description']}" />
@@ -47,7 +41,7 @@
                                         
                                         <c:otherwise>
                                             <p class="${titleClass}">
-                                                <a href="#" onclick="goToSlide(${innerStatus.index})">${innerDocument.title}</a>
+                                                <a href="#" onclick="goToSlide(event, ${innerStatus.index})" class="no-ajax-link">${innerDocument.title}</a>
                                             </p>
                                         </c:otherwise>
                                     </c:choose>
@@ -73,7 +67,7 @@
                     
                     <div class="col-sm-6">
                         <!-- Image -->
-                        <img src="${imageURL}" alt="" class="center-block" />
+                        <img src="${imageURL}" alt="" class="img-responsive center-block" />
                     </div>
                 </article>
             </li>

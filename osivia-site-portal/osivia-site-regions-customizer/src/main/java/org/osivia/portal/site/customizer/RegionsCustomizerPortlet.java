@@ -94,21 +94,27 @@ public class RegionsCustomizerPortlet extends GenericPortlet implements ICustomi
             IRenderedRegions renderedRegion = (IRenderedRegions) attributes.get(IRenderedRegions.CUSTOMIZER_ATTRIBUTE_RENDERED_REGIONS);
 
             if (StringUtils.equals(contextPath, charteCommercialContextPath)) {
+                // Remove default back
+                renderedRegion.removeRenderedRegion("back");
                 // Remove default breadcrumb
                 renderedRegion.removeRenderedRegion("breadcrumb");
+                // Customize toolbar (obsolete with portal version 4.1.0)
+                renderedRegion.customizeRenderedRegion("toolbar", "/regions/web-toolbar.jsp");
+                // Customize drawer toolbar (obsolete with portal version 4.1.0)
+                renderedRegion.customizeRenderedRegion("drawer-toolbar", "/regions/drawer-toolbar.jsp");
                 // Add title
-                renderedRegion.customizeRenderedRegion("title", "/header/title.jsp");
+                renderedRegion.customizeRenderedRegion("title", "/regions/title.jsp");
             }
             
             if (StringUtils.equals(contextPath, charteCommunityContextPath)) {
                 // Replace default toolbar
-                renderedRegion.customizeRenderedRegion("toolbar", "/header/toolbar.jsp");
+                renderedRegion.customizeRenderedRegion("toolbar", "/regions/toolbar.jsp");
                 // Add logo
-                renderedRegion.customizeRenderedRegion("logo", "/header/logo.jsp");
+                renderedRegion.customizeRenderedRegion("logo", "/regions/logo.jsp");
                 // Replace tabs
                 renderedRegion.customizeRenderedRegion("tabs", "/header/tabs.jsp");
-                // Replace footer
-                renderedRegion.customizeRenderedRegion("footer", "/footer/footer.jsp");
+                // Remove footer
+                renderedRegion.removeRenderedRegion("footer");
             }
         }
     }
