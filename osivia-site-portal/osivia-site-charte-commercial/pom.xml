@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.osivia.site</groupId>
         <artifactId>osivia-site-portal-parent</artifactId>
-        <version>1.4</version>
+        <version>1.5-SNAPSHOT</version>
     </parent>
 
     <artifactId>osivia-site-charte-commercial</artifactId>
