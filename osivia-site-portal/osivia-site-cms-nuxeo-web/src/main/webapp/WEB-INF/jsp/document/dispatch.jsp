@@ -3,8 +3,7 @@
 <%@ page isELIgnored="false"%>
 
 
-<c:set var="type" value="${document.type}" />
-
+<c:set var="type" value="${document.type.name}" />
 
 <c:choose>
     <c:when test="${'Annonce' == type}">

@@ -10,9 +10,12 @@
 <div class="bxslider-container">
     <ul class="list-unstyled bxslider bxslider-com clearfix">
         <c:forEach var="document" items="${documents}" varStatus="status">
+
+        	
             <!-- Document properties -->
             <c:set var="description" value="${document.properties['dc:description']}" />
-            <c:set var="content"><ttc:transform document="${document}" property="note:note" /></c:set>
+            <c:set var="content" value="${document.properties['note:note']}" />
+            <!-- <c:set var="content"><ttc:transform document="${document}" property="note:note" /></c:set> -->
             <c:set var="imageURL"><ttc:getImageURL document="${document}" property="annonce:image" /></c:set>
         
         

@@ -52,7 +52,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
     /** Blog list template. */
     private static final String STYLE_BLOG = "blog";
     /** Slider list template. */
-    private static final String STYLE_SLIDER = "slider";
+    private static final String STYLE_SLIDER_HOME = "slider-home";
     /** Forum list template. */
     private static final String STYLE_FORUM = "forum";
     /** Tile list template. */
@@ -101,7 +101,7 @@ public class CMSCustomizer extends DefaultCMSCustomizer {
         // Forum
         templates.add(new ListTemplate(STYLE_FORUM, bundle.getString("LIST_TEMPLATE_FORUM"), SCHEMAS_FORUM));
         // Slider
-        templates.add(new ListTemplate(STYLE_SLIDER, bundle.getString("LIST_TEMPLATE_SLIDER"), SCHEMAS_ANNONCE));
+        templates.add(new ListTemplate(STYLE_SLIDER_HOME, bundle.getString("LIST_TEMPLATE_SLIDER_HOME"), SCHEMAS_ANNONCE));
         // Tiles
         templates.add(new ListTemplate(STYLE_TILE, bundle.getString("LIST_TEMPLATE_TILES"), SCHEMAS_ZOOM));
 
