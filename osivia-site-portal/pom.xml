@@ -15,17 +15,20 @@
 
     <properties>
         <!-- Toutatice -->
-        <toutatice.version>4.0.2-SNAPSHOT</toutatice.version>
+        <toutatice.version>4.0.2</toutatice.version>
         
         <!-- identity -->
         <toutatice.annuaire.version>4.0.1</toutatice.annuaire.version>
+        
         <fichepersonne.version>4.0</fichepersonne.version>
+        <gestionpersonnes.version>4.0</gestionpersonnes.version>
+        <ficheprofil.version>4.0</ficheprofil.version>
+        <gestiongroupe.version>4.0</gestiongroupe.version>
+        <creationpersonnes.version>3.1-osivia-RC1</creationpersonnes.version>
         <!-- 
-        <ficheprofil.version>3.0-osivia-SNAPSHOT</ficheprofil.version>
-        <gestiongroupe.version>3.0-osivia-SNAPSHOT</gestiongroupe.version>
         <gestionworkspace.version>3.0-osivia-SNAPSHOT</gestionworkspace.version>
         <participantswks.version>3.0-osivia-SNAPSHOT</participantswks.version>
-         -->
+ 		-->
         <identity-sso.version>3.0.4</identity-sso.version>
         
         <!-- 
