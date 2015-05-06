@@ -10,8 +10,11 @@
 <div class="tiles">
     <ul class="list-unstyled">
         <c:forEach var="document" items="${documents}">
+
+        
             <!-- Document properties -->
-            <ttc:documentLink document="${document}" var="link" />
+            <ttc:documentLink document="${document}" var="link" property="zoom:path"/>
+            
             <c:remove var="target" />
             <c:if test="${link.external}">
                 <c:set var="target" value="_blank" />
