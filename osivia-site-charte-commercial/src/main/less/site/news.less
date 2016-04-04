@@ -1,0 +1,19 @@
+article.actualite {
+    margin-bottom: @line-height-computed;
+    
+    .vignette {
+        margin-right: 20px;
+        
+        border-style: solid;
+        border-width: 3px;
+        border-color: @link-color;
+        
+        &:HOVER, &:FOCUS {
+            border-color: @link-hover-color;
+        }
+    }
+    
+    .date {
+        color: @active-text;
+    }
+}

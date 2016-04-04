@@ -1,0 +1,42 @@
+.banner {
+    position: relative;
+
+    .header-line {
+        position: absolute;
+        top: 66px;
+        left: 0;
+        height: 18px;
+        width: 100%;
+        z-index: -1;
+        
+        background-color: @navigation-active-bg;
+    }
+    
+    #logo img {
+        margin: 10px 0;
+        padding-right: 5px;
+        background-color: #fff;
+    }
+    
+    #shortcuts {
+        position: absolute;
+        top: @padding-small-vertical;
+        right: 0;
+        z-index: 3;
+    }
+    
+    .accessibility-shortcut {
+        position: absolute;
+        top: -100px;
+        left: 320px;
+        z-index: 4;
+        
+        &:FOCUS {
+            top: @padding-small-vertical;
+        }
+    }
+    
+    .portlet-container {
+        margin: 0;
+    }
+}

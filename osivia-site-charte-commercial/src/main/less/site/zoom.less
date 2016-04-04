@@ -1,0 +1,77 @@
+.zoom {
+    article.encadre, article.reference {
+        overflow: hidden;
+    
+        border-style: solid;
+        border-width: 2px;
+        border-color: #ccc;
+        
+        h3 {
+            margin-top: @padding-large-horizontal;
+            padding-right: 0;
+            
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            
+            background-color: @navigation-active-bg;
+            
+            & > a {
+                padding: 0 @padding-small-horizontal;
+                
+                background-color: @body-bg;
+                color: @active-text;
+                
+                &:HOVER, &:FOCUS {
+                    color: darken(@active-text, 15%);
+                }
+            }
+        }
+        
+        & > * {
+            padding: 0 @padding-small-horizontal;
+        }
+    }
+    
+    article.encadre {
+        height: 180px;
+        
+        &.inverse {
+            background-color: @navigation-active-bg;
+            
+            h3 {
+                background-color: @body-bg;
+                
+                a {
+                    background-color: @navigation-active-bg;
+                }
+            }
+        }
+        
+        &.vert {
+            h3 {
+                background-color: @link-color;
+                
+                a {
+                    color: @link-color;
+                    
+                    &:HOVER, &:FOCUS {
+                        color: @link-hover-color;
+                    }
+                }
+            }
+        }
+        
+        img {
+            max-height: 100px;
+        }
+    }
+    
+    article.reference {
+        height: 500px;
+        
+        img {
+            max-height: 200px;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+nav.menu-commercial {    
+    & > a {
+        margin-bottom: @line-height-computed;
+    }
+    
+    ul {
+        padding: 7px 0;
+        
+        background-color: @navigation-bg;
+        
+        li {
+            padding-left: 25px;
+            
+            a {
+                display: block;
+                padding: 10px 5px;
+                
+                border-top: 1px solid @gray;
+                
+                color: @text-color;
+                text-decoration: none;
+                text-transform: uppercase;
+                white-space: nowrap;   
+            }
+            
+            &.active, &:HOVER {
+                background-color: @navigation-active-bg;
+            }
+            
+            &:FIRST-CHILD a {
+                border-top: none;
+            }
+        }
+    }
+}
