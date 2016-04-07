@@ -1,0 +1,50 @@
+//
+// OSIVIA Site - Tabs
+// --------------------------------------------------
+
+
+// Bootstrap variables
+@import "../bootstrap/variables.less";
+
+
+.tabs-community {
+    margin: 0 floor(@grid-gutter-width / -2) @line-height-computed;
+    padding: 0 floor(@grid-gutter-width / 2);
+    
+    background-color: @nav-bg;
+    
+    
+    ul {
+        margin: 0 -1px;
+        
+        li {
+            padding: 0 1px;
+            
+            a {
+                display: inline-block;
+                
+                padding: 0 30px;
+                
+                color: #fff;
+                background-color: @nav-bg;
+                
+                line-height: 52px;
+                font-family: sans-serif;
+                text-decoration: none;
+                text-transform: uppercase;
+                
+                &:hover, &:focus {
+                    background-color: @link-hover-color;
+                }
+            }
+            
+            &.active {
+                a {
+                    background-color: @link-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+}

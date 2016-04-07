@@ -1,0 +1,49 @@
+//
+// OSIVIA Site - Navigation menu
+// --------------------------------------------------
+
+
+// Bootstrap variables
+@import "../bootstrap/variables.less";
+
+
+.osivia-site-menu() {
+    background-color: @nav-bg;
+}
+
+.osivia-site-menu-item() {
+    background-color: @nav-bg;
+    color: #fff;
+    
+    &.active {
+        background-color: @link-color;
+        font-weight: bold;
+    }
+    
+    &:hover, &:focus {
+        background-color: @link-hover-color;
+    }
+    
+    &.droppable-active {
+        color: @state-info-bg;
+        background-color: @state-info-text;
+    }
+    
+    &.droppable-hover {
+        color: @state-success-bg;
+        background-color: @state-success-text;
+    }
+}
+
+
+.nuxeo-publish-navigation {
+    & li.list-group-item {
+        .osivia-site-menu;
+        
+        border-color: lighten(@nav-bg, 15%);
+        
+        & a.list-group-item {
+            .osivia-site-menu-item;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+//
+// OSIVIA Site - Layout
+// --------------------------------------------------
+
+
+// Bootstrap variables
+@import "../bootstrap/variables.less";
+
+
+// Content background
+header, #page-content {
+    background-color: @content-bg;   
+}
+
+
+// Header
+header {
+    h1 {
+        margin-bottom: @line-height-computed;
+        
+        a {
+            &, &:hover, &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+    
+    form {
+        margin: @line-height-computed 0;       
+    }
+}
+
+
+// Page content
+#page-content {
+    @media screen and (max-width: @screen-xs-max) {
+        padding-top: @padding-small-vertical;
+        padding-bottom: @padding-small-vertical;
+    }
+}

@@ -15,16 +15,17 @@
             <unpack>false</unpack>
             <scope>runtime</scope>
             <includes>
-                <!-- Demo -->
-                <include>${project.groupId}:demo-charte:war:${project.version}</include>
-                <include>${project.groupId}:demo-charte-web:war:${project.version}</include>
-                <include>${project.groupId}:demo-customizer:war:${project.version}</include>
+                <!-- OSIVIA Site -->
+                <include>${project.groupId}:osivia-site-charte-commercial:war:${project.version}</include>
+                <include>${project.groupId}:osivia-site-charte-community:war:${project.version}</include>
+                <include>${project.groupId}:osivia-site-customizer:war:${project.version}</include>
                 <!-- Toutatice CMS -->
                 <include>toutatice-portail.cms:toutatice-portail-cms-nuxeo-web:war:${toutatice.version}</include>
                 <!-- Directory -->
                 <include>org.osivia.services.directory:osivia-services-directory-ear:ear:${directory.version}</include>
-                <!-- Collaboration -->
+                <!-- Services -->
                 <include>org.osivia.services:osivia-services-collaboration-ear:ear:${collaboration.version}</include>
+                <include>org.osivia.services:osivia-services-wiki:war:${wiki.version}</include>
             </includes>
         </dependencySet>
         
