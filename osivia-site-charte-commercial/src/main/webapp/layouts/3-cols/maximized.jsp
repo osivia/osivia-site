@@ -28,6 +28,11 @@
                     
                     <!-- Content -->
                     <div class="col-sm-8 col-lg-9">
+                        <!-- Menubar -->
+                        <div class="simple-menubar">
+                            <p:region regionName="menubar" />
+                        </div>
+                    
                         <p:region regionName="maximized" />
                     </div>
                 </div>

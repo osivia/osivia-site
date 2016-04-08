@@ -11,7 +11,7 @@
 <article class="reference clearfix">
     <!-- Title -->
     <h3 class="h4 text-right">
-        <a href="${url}" target="${target}">${title}</a>
+        <a href="${url}" target="${target}" class="no-ajax-link">${title}</a>
     </h3>
     
     <!-- Picture -->

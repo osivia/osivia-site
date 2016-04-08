@@ -16,10 +16,15 @@
         <div class="wrapper-inner">
             <div id="page-content" class="container">
                 <jsp:include page="../includes/navigation-bar.jsp" />
-            
+
                 <!-- Notifications -->
                 <p:region regionName="notifications" />
         
+                <!-- Menubar -->
+                <div class="simple-menubar">
+                    <p:region regionName="menubar" />
+                </div>
+                
                 <!-- Content -->
                 <p:region regionName="maximized" />
             </div>

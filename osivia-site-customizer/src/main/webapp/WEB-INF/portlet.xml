@@ -44,5 +44,19 @@
             <title>Internationalization customizer</title>
         </portlet-info>
     </portlet>
+    
+    
+    <portlet>
+        <portlet-name>osivia-site-attributes-customizer</portlet-name>
+        <portlet-class>org.osivia.site.customizer.attributes.AttributesCustomizer</portlet-class>
+
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+          
+        <portlet-info>
+            <title>Attributes customizer</title>
+        </portlet-info>
+    </portlet>
 
 </portlet-app>

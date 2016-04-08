@@ -2,7 +2,7 @@
 
 
 <!-- Footer -->
-<footer class="container">
+<footer class="container hidden-xs">
     <p:region regionName="footer-navigation" cms="true" />
 </footer>
 

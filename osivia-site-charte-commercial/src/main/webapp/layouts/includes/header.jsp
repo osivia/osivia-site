@@ -5,7 +5,7 @@
 <!-- Barre d'outils -->
 <p:region regionName="toolbar" />
 
-<header class="container">
+<header class="container hidden-xs">
     <div class="banner">
         <!-- Title -->
         <p:region regionName="title" />

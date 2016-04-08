@@ -16,7 +16,7 @@
         <div class="wrapper-inner">
             <div id="page-content" class="container">
                 <jsp:include page="../includes/navigation-bar.jsp" />
-            
+                
                 <!-- Notifications -->
                 <p:region regionName="notifications" />
 
@@ -28,6 +28,11 @@
                     
                     <!-- Content -->
                     <div class="col-sm-8 col-lg-9">
+                        <!-- Menubar -->
+                        <div class="simple-menubar">
+                            <p:region regionName="menubar" />
+                        </div>
+                    
                         <p:region regionName="center" cms="true" />
                         <p:region regionName="col2-top" cms="true" />
                         <p:region regionName="col2-bottom" cms="true" />

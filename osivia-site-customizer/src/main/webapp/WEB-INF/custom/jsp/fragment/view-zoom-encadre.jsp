@@ -8,7 +8,7 @@
 </c:if>
 
 
-<article class="encadre clearfix">
+<article class="encadre clearfix no-ajax-link">
     <!-- Title -->
     <h3 class="h4 text-right">
         <a href="${url}" target="${target}">${title}</a>
