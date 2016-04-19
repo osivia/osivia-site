@@ -21,6 +21,14 @@
                 <a href="${userPage.url}">
                     <span>${userPage.name}</span>
                 </a>
+                
+                <!-- Close -->
+                <c:if test="${not empty userPage.closePageUrl}">
+                    <a href="${userPage.closePageUrl}" class="page-close">
+                        <i class="glyphicons glyphicons-remove"></i>
+                        <span class="sr-only"><op:translate key="CLOSE" /></span>
+                    </a>
+                </c:if>
             </li>
         </c:forEach>
     </ul>

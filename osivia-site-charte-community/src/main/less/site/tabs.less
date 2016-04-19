@@ -15,36 +15,58 @@
     
     
     ul {
-        margin: 0 -1px;
+        margin: 0;
         
         li {
+            position: relative;
+            
             padding: 0 1px;
             
             a {
-                display: inline-block;
-                
-                padding: 0 30px;
-                
-                color: #fff;
-                background-color: @nav-bg;
-                
-                line-height: 52px;
                 font-family: sans-serif;
                 text-decoration: none;
                 text-transform: uppercase;
-                
-                &:hover, &:focus {
-                    background-color: @link-hover-color;
+
+                &.page-close {
+                    position: absolute;
+                    top: @padding-small-vertical;
+                    right: floor(((@padding-large-horizontal * 2) - @line-height-computed) / 2);
+                    
+                    height: @line-height-computed;
+                    width: @line-height-computed;
+                    
+                    color: #ccc;
+                    text-align: center;
+                    
+                    &:hover, &:focus {
+                        color: #fff;
+                    }
+                }
+
+                &:not(.page-close) {
+                    padding: @padding-large-horizontal (@padding-large-horizontal * 2);
+                    
+                    color: #eee;
+                    
+                    &:hover, &:focus {
+                        color: #fff;
+                        background-color: @link-hover-color;
+                    }
                 }
             }
             
             &.active {
+                background-color: @link-color;
+                
                 a {
-                    background-color: @link-color;
+                    color: #fff;
                     font-weight: bold;
+                    
+                    &:hover, &:focus {
+                        background-color: transparent;
+                    }
                 }
             }
         }
     }
-
 }
