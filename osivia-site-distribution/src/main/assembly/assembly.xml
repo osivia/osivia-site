@@ -26,6 +26,7 @@
                 <!-- Services -->
                 <include>org.osivia.services:osivia-services-collaboration-ear:ear:${collaboration.version}</include>
                 <include>org.osivia.services:osivia-services-wiki:war:${wiki.version}</include>
+                <include>org.osivia.services.traces:osivia-services-traces-connector:war:${traces.version}</include>
             </includes>
         </dependencySet>
         
