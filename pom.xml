@@ -149,14 +149,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>2.2.1</version>
-                    <configuration>
-                        <tagBase>http://www.osivia.org/repos/osivia-site/tags</tagBase>
-                        <releaseProfiles>unpack,pack</releaseProfiles>
-                        <preparationGoals>clean install</preparationGoals>
-                        <goals>deploy</goals>
-                        <arguments>-Prelease</arguments>
-                    </configuration>
+                    <version>2.5.3</version>
                 </plugin>
                 
                 <!-- Eclipse -->
@@ -177,7 +170,10 @@
     
     
     <scm>
-        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-site/trunk</developerConnection>
+		<url>https://github.com/osivia/osivia-site</url>
+		<connection>scm:git:ssh://osivia-jenkins@github.com/osivia/osivia-site.git</connection>
+		<developerConnection>scm:git:ssh://osivia-jenkins@github.com/osivia/osivia-site.git</developerConnection>     
+		<tag>HEAD</tag>   
     </scm>
     
     
